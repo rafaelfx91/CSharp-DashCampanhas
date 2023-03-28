@@ -41,6 +41,7 @@
             this.geradorDeSenhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.validarFrasePUSHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -109,6 +110,8 @@
             // 
             // pUSHToolStripMenuItem
             // 
+            this.pUSHToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.validarFrasePUSHToolStripMenuItem});
             this.pUSHToolStripMenuItem.Name = "pUSHToolStripMenuItem";
             this.pUSHToolStripMenuItem.Size = new System.Drawing.Size(102, 41);
             this.pUSHToolStripMenuItem.Text = "PUSH";
@@ -144,6 +147,13 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            // 
+            // validarFrasePUSHToolStripMenuItem
+            // 
+            this.validarFrasePUSHToolStripMenuItem.Name = "validarFrasePUSHToolStripMenuItem";
+            this.validarFrasePUSHToolStripMenuItem.Size = new System.Drawing.Size(334, 42);
+            this.validarFrasePUSHToolStripMenuItem.Text = "Validar frase PUSH";
+            this.validarFrasePUSHToolStripMenuItem.Click += new System.EventHandler(this.validarFrasePUSHToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -182,6 +192,7 @@
         private System.Windows.Forms.ToolStripMenuItem sAIRToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aGENDAMENTOCAMPANHASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem geradorDeSenhasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem validarFrasePUSHToolStripMenuItem;
     }
 }
 

@@ -77,9 +77,16 @@ namespace replace_campanhas
             frmSenhas.Show();
 
         }
-    
-    
-    
+
+        private void validarFrasePUSHToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmValidarFrasePush frmPush = new frmValidarFrasePush
+            {
+                MdiParent = this
+            };
+            frmPush.Show();
+
+        }
     }
 }
 

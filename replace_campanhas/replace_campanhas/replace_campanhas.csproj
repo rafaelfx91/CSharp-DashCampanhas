@@ -117,6 +117,12 @@
     <Compile Include="frmValidaFraseSMS.Designer.cs">
       <DependentUpon>frmValidaFraseSMS.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmValidarFrasePush.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValidarFrasePush.Designer.cs">
+      <DependentUpon>frmValidarFrasePush.cs</DependentUpon>
+    </Compile>
     <Compile Include="LimparString.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmValidaFraseSMS.resx">
       <DependentUpon>frmValidaFraseSMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmValidarFrasePush.resx">
+      <DependentUpon>frmValidarFrasePush.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
