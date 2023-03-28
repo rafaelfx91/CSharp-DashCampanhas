@@ -1,0 +1,11 @@
+C:\Users\rafae\source\repos\replace_campanhas\replace_campanhas\bin\Release\replace_campanhas.exe.config
+C:\Users\rafae\source\repos\replace_campanhas\replace_campanhas\bin\Release\replace_campanhas.exe
+C:\Users\rafae\source\repos\replace_campanhas\replace_campanhas\bin\Release\replace_campanhas.pdb
+C:\Users\rafae\source\repos\replace_campanhas\replace_campanhas\obj\Release\replace_campanhas.csproj.AssemblyReference.cache
+C:\Users\rafae\source\repos\replace_campanhas\replace_campanhas\obj\Release\replace_campanhas.csproj.SuggestedBindingRedirects.cache
+C:\Users\rafae\source\repos\replace_campanhas\replace_campanhas\obj\Release\replace_campanhas.Form1.resources
+C:\Users\rafae\source\repos\replace_campanhas\replace_campanhas\obj\Release\replace_campanhas.Properties.Resources.resources
+C:\Users\rafae\source\repos\replace_campanhas\replace_campanhas\obj\Release\replace_campanhas.csproj.GenerateResource.cache
+C:\Users\rafae\source\repos\replace_campanhas\replace_campanhas\obj\Release\replace_campanhas.csproj.CoreCompileInputs.cache
+C:\Users\rafae\source\repos\replace_campanhas\replace_campanhas\obj\Release\replace_campanhas.exe
+C:\Users\rafae\source\repos\replace_campanhas\replace_campanhas\obj\Release\replace_campanhas.pdb
