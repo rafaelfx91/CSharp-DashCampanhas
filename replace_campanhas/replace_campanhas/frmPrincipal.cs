@@ -87,6 +87,15 @@ namespace replace_campanhas
             frmPush.Show();
 
         }
+
+        private void validarHtmlToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmValidaHtml html = new frmValidaHtml
+            {
+                MdiParent = this
+            };
+            html.Show();
+        }
     }
 }
 

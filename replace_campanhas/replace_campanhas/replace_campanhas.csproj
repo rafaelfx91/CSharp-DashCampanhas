@@ -117,6 +117,12 @@
     <Compile Include="frmValidaFraseSMS.Designer.cs">
       <DependentUpon>frmValidaFraseSMS.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmValidaHtml.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValidaHtml.Designer.cs">
+      <DependentUpon>frmValidaHtml.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmValidarFrasePush.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmValidaFraseSMS.resx">
       <DependentUpon>frmValidaFraseSMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmValidaHtml.resx">
+      <DependentUpon>frmValidaHtml.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmValidarFrasePush.resx">
       <DependentUpon>frmValidarFrasePush.cs</DependentUpon>

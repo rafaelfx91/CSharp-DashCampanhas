@@ -34,6 +34,7 @@
             this.sASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerarNomeNoSASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aGENDAMENTOCAMPANHASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checklistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validarFraseSMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pUSHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,7 +43,8 @@
             this.geradorDeSenhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checklistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hTMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.validarHtmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +52,7 @@
             // lblVersion
             // 
             this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(1111, 0);
+            this.lblVersion.Location = new System.Drawing.Point(689, 0);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(45, 13);
             this.lblVersion.TabIndex = 11;
@@ -63,11 +65,12 @@
             this.sASToolStripMenuItem,
             this.sMSToolStripMenuItem,
             this.pUSHToolStripMenuItem,
+            this.hTMLToolStripMenuItem,
             this.fERRAMENTASToolStripMenuItem,
             this.sAIRToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1280, 45);
+            this.menuStrip1.Size = new System.Drawing.Size(1200, 45);
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "mnPrincipal";
             // 
@@ -94,6 +97,12 @@
             this.aGENDAMENTOCAMPANHASToolStripMenuItem.Size = new System.Drawing.Size(428, 42);
             this.aGENDAMENTOCAMPANHASToolStripMenuItem.Text = "Agendamento campanhas";
             this.aGENDAMENTOCAMPANHASToolStripMenuItem.Click += new System.EventHandler(this.aGENDAMENTOCAMPANHASToolStripMenuItem_Click);
+            // 
+            // checklistToolStripMenuItem
+            // 
+            this.checklistToolStripMenuItem.Name = "checklistToolStripMenuItem";
+            this.checklistToolStripMenuItem.Size = new System.Drawing.Size(428, 42);
+            this.checklistToolStripMenuItem.Text = "Checklist";
             // 
             // sMSToolStripMenuItem
             // 
@@ -150,24 +159,33 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::replace_campanhas.Properties.Resources.plusoft;
-            this.pictureBox1.Location = new System.Drawing.Point(1211, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(789, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(57, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // checklistToolStripMenuItem
+            // hTMLToolStripMenuItem
             // 
-            this.checklistToolStripMenuItem.Name = "checklistToolStripMenuItem";
-            this.checklistToolStripMenuItem.Size = new System.Drawing.Size(428, 42);
-            this.checklistToolStripMenuItem.Text = "Checklist";
+            this.hTMLToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.validarHtmlToolStripMenuItem});
+            this.hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
+            this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(106, 41);
+            this.hTMLToolStripMenuItem.Text = "HTML";
+            // 
+            // validarHtmlToolStripMenuItem
+            // 
+            this.validarHtmlToolStripMenuItem.Name = "validarHtmlToolStripMenuItem";
+            this.validarHtmlToolStripMenuItem.Size = new System.Drawing.Size(251, 42);
+            this.validarHtmlToolStripMenuItem.Text = "Validar html";
+            this.validarHtmlToolStripMenuItem.Click += new System.EventHandler(this.validarHtmlToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 620);
+            this.ClientSize = new System.Drawing.Size(1200, 695);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.menuStrip1);
@@ -202,6 +220,8 @@
         private System.Windows.Forms.ToolStripMenuItem geradorDeSenhasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem validarFrasePUSHToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checklistToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hTMLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem validarHtmlToolStripMenuItem;
     }
 }
 
