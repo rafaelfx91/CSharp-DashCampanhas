@@ -73,6 +73,8 @@ namespace replace_campanhas
             frase = frase.Replace("³", "");
             frase = frase.Replace("²", "");
             frase = frase.Replace("¹", "");
+            frase = frase.Replace("~", "");
+            frase = frase.Replace("^", "");
             //frase = frase.Replace("*", "");
 
             for (int i = 0; i < comAcentos.Length; i++)

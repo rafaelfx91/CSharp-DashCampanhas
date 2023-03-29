@@ -82,9 +82,9 @@ namespace replace_campanhas
             }
             lblCaracterTitulo.Text = "Caracters: " + totalValue;
 
-            if (totalValue >= limite)
+            if (totalValue > limite)
                 lblCaracterTitulo.ForeColor = Color.Red;
-            if (totalValue < limite)
+            if (totalValue <= limite)
                 lblCaracterTitulo.ForeColor = Color.Black;
         }
 
@@ -102,9 +102,9 @@ namespace replace_campanhas
             }
             lblCaracterMsg.Text = "Caracters: " + totalValue;
 
-            if (totalValue >= limite)
+            if (totalValue > limite)
                 lblCaracterMsg.ForeColor = Color.Red;
-            if (totalValue < limite)
+            if (totalValue <= limite)
                 lblCaracterMsg.ForeColor = Color.Black;
         }
     
