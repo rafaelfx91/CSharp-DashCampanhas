@@ -24,11 +24,18 @@ namespace replace_campanhas
         //
         public string tratarEmote(string entrada)
         {
-            entrada = entrada.Replace(@"U+", "{");
-            entrada = entrada.Replace(@"u+", "{");
-            var indexInicial = entrada.LastIndexOf("{");
-            var insert = entrada.Insert(indexInicial + 6, "}");
-            return insert;
+
+            if (entrada.Contains("U+"))
+            {
+                entrada = entrada.Replace(@"U+", "{");
+                entrada = entrada.Replace(@"u+", "{");
+                var indexInicial = entrada.LastIndexOf("{");
+                var insert = entrada.Insert(indexInicial + 6, "}");
+                return insert;
+            }
+
+            return entrada;
+
         }
 
 
