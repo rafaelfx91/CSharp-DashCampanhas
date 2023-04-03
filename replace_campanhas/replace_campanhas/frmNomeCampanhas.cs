@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace replace_campanhas
 {
@@ -93,6 +94,11 @@ namespace replace_campanhas
         private void txtFraseEntrada_TextChanged(object sender, EventArgs e)
         {
             qtdCaracteres();
+        }
+
+        private void btnCopiar_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(txtFraseSaida.Text);
         }
     }
 }

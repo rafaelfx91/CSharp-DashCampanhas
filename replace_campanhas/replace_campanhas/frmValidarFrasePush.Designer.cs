@@ -41,6 +41,8 @@
             this.lblCaracterMsg = new System.Windows.Forms.Label();
             this.txtMsgSaida = new System.Windows.Forms.TextBox();
             this.lblMsgSaida = new System.Windows.Forms.Label();
+            this.btnCopiarTitulo = new System.Windows.Forms.Button();
+            this.btnCopiaMensagem = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCaracterTitulo
@@ -56,7 +58,7 @@
             // btnLimpar
             // 
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(116, 422);
+            this.btnLimpar.Location = new System.Drawing.Point(506, 422);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(98, 43);
             this.btnLimpar.TabIndex = 32;
@@ -67,7 +69,7 @@
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(220, 422);
+            this.btnSair.Location = new System.Drawing.Point(610, 422);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(98, 43);
             this.btnSair.TabIndex = 31;
@@ -172,11 +174,35 @@
             this.lblMsgSaida.TabIndex = 37;
             this.lblMsgSaida.Text = "Mensagem saida";
             // 
+            // btnCopiarTitulo
+            // 
+            this.btnCopiarTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCopiarTitulo.Location = new System.Drawing.Point(116, 422);
+            this.btnCopiarTitulo.Name = "btnCopiarTitulo";
+            this.btnCopiarTitulo.Size = new System.Drawing.Size(156, 43);
+            this.btnCopiarTitulo.TabIndex = 39;
+            this.btnCopiarTitulo.Text = "Copiar titulo";
+            this.btnCopiarTitulo.UseVisualStyleBackColor = true;
+            this.btnCopiarTitulo.Click += new System.EventHandler(this.btnCopiarTitulo_Click);
+            // 
+            // btnCopiaMensagem
+            // 
+            this.btnCopiaMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCopiaMensagem.Location = new System.Drawing.Point(278, 422);
+            this.btnCopiaMensagem.Name = "btnCopiaMensagem";
+            this.btnCopiaMensagem.Size = new System.Drawing.Size(222, 43);
+            this.btnCopiaMensagem.TabIndex = 40;
+            this.btnCopiaMensagem.Text = "Copiar mensagem";
+            this.btnCopiaMensagem.UseVisualStyleBackColor = true;
+            this.btnCopiaMensagem.Click += new System.EventHandler(this.btnCopiaMensagem_Click);
+            // 
             // frmValidarFrasePush
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 470);
+            this.Controls.Add(this.btnCopiaMensagem);
+            this.Controls.Add(this.btnCopiarTitulo);
             this.Controls.Add(this.txtMsgSaida);
             this.Controls.Add(this.lblMsgSaida);
             this.Controls.Add(this.lblCaracterMsg);
@@ -212,5 +238,7 @@
         private System.Windows.Forms.Label lblCaracterMsg;
         private System.Windows.Forms.TextBox txtMsgSaida;
         private System.Windows.Forms.Label lblMsgSaida;
+        private System.Windows.Forms.Button btnCopiarTitulo;
+        private System.Windows.Forms.Button btnCopiaMensagem;
     }
 }

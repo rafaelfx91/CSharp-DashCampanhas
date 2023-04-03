@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace replace_campanhas
 {
@@ -107,7 +108,15 @@ namespace replace_campanhas
             if (totalValue <= limite)
                 lblCaracterMsg.ForeColor = Color.Black;
         }
-    
-    
+
+        private void btnCopiarTitulo_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(txtTituloSaida.Text);
+        }
+
+        private void btnCopiaMensagem_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(txtMsgSaida.Text);
+        }
     }
 }
