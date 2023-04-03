@@ -54,9 +54,9 @@
             this.lblFraseEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFraseEntrada.Location = new System.Drawing.Point(15, 7);
             this.lblFraseEntrada.Name = "lblFraseEntrada";
-            this.lblFraseEntrada.Size = new System.Drawing.Size(159, 25);
+            this.lblFraseEntrada.Size = new System.Drawing.Size(274, 25);
             this.lblFraseEntrada.TabIndex = 4;
-            this.lblFraseEntrada.Text = "Frase entrada";
+            this.lblFraseEntrada.Text = "Nome campanha entrada";
             // 
             // lblFraseSaida
             // 
@@ -64,9 +64,9 @@
             this.lblFraseSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFraseSaida.Location = new System.Drawing.Point(12, 137);
             this.lblFraseSaida.Name = "lblFraseSaida";
-            this.lblFraseSaida.Size = new System.Drawing.Size(136, 25);
+            this.lblFraseSaida.Size = new System.Drawing.Size(251, 25);
             this.lblFraseSaida.TabIndex = 6;
-            this.lblFraseSaida.Text = "Frase saida";
+            this.lblFraseSaida.Text = "Nome campanha saida";
             // 
             // txtFraseSaida
             // 
