@@ -46,6 +46,19 @@ namespace replace_campanhas
              
 
         }
+        public int validaNomeHtml(string caminhoarquivo)
+        {
+            string caminhoArquivo = txtCaminhoArquivo.Text;
+            string nomeHtml = System.IO.Path.GetFileName(caminhoArquivo);
+            LimparString ls = new LimparString();
+
+            if (ls.verificaChars(nomeHtml) == 1)
+                return 1;
+            
+            return 0;
+
+        }
+        
 
 
         //
@@ -86,29 +99,42 @@ namespace replace_campanhas
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                     txtCaminhoArquivo.Text = openFileDialog1.FileName;
 
-                carregaHtmlWebbroser(txtCaminhoArquivo.Text);
-                camposCoringas(txtCaminhoArquivo.Text);
 
-                var countCoringas = 0;
-                var htmlFile = txtCaminhoArquivo.Text;
-                string htmlText = File.ReadAllText(htmlFile);
-                MatchCollection matches = Regex.Matches(htmlText, "<\\$.*?\\$>");
-
-                foreach (Match match in matches)
+                if (validaNomeHtml(txtCaminhoArquivo.Text) == 1)
                 {
-                    string conteudoChaves = match.Value.Substring(2, match.Value.Length - 4);
-                    //MessageBox.Show(" " + conteudoChaves);
-                    txtCoringas.Text += "<$" + conteudoChaves + "$>"+" ; ";
-                    countCoringas++;
+                    throw new Exception("Opa o nome do seu arquivo nao pode possuir espaços ou caracteres especiais!\n"
+                                       + "exemplo: OS123.html");
+                    //MessageBox.Show("Opa o nome do seu arquivo nao pode possuir espaços ou caracteres especiais!"
+                    //                + "exemplo: OS123.html"
+                    //                , "Aviso"
+                    //                , MessageBoxButtons.OK
+                    //                , MessageBoxIcon.Warning);
+
                 }
-
-
-                lblCoringas.Text = "Campos coringas: " + countCoringas.ToString();
+                else
+                { 
+                    carregaHtmlWebbroser(txtCaminhoArquivo.Text);
+                    var countCoringas = 0;
+                    var htmlFile = txtCaminhoArquivo.Text;
+                    string htmlText = File.ReadAllText(htmlFile);
+                    MatchCollection matches = Regex.Matches(htmlText, "<\\$.*?\\$>");
+                    foreach (Match match in matches)
+                    {
+                        string conteudoChaves = match.Value.Substring(2, match.Value.Length - 4);
+                        //MessageBox.Show(" " + conteudoChaves);
+                        txtCoringas.Text += "<$" + conteudoChaves + "$>" + " ; ";
+                        countCoringas++;
+                    }
+                    lblCoringas.Text = "Campos coringas: " + countCoringas.ToString();
+                }
 
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message
+                                , "Aviso"
+                                , MessageBoxButtons.OK
+                                , MessageBoxIcon.Warning);
             }
 
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -85,6 +86,29 @@ namespace replace_campanhas
             return frase;
 
         }//public string caracteresLimpos(string FraseEntrada)
+
+        public int verificaChars(string nome)
+        {
+            string comAcentos = "ÄÅÁÂÀÃäáâàãÉÊËÈéêëèÍÎÏÌíîïìÖÓÔÒÕöóôòõÜÚÛüúûùÇçº¹²³";
+            string semAcentos = "AAAAAAaaaaaEEEEeeeeIIIIiiiiOOOOOoooooUUUuuuuCc    ";
+            var aviso = "";
+
+            for (int i = 0; i < comAcentos.Length; i++)
+            {
+                if (nome.Contains(comAcentos[i]))
+                {
+                    //aviso += comAcentos[i] + ", ";
+                    return 1;
+                }
+            }
+            if (nome.Contains(" "))
+            {
+                return 1;
+            }
+
+            return 0;
+
+        }//public void verificaChars(string nome)
 
     }//public class LimparStrin
 
