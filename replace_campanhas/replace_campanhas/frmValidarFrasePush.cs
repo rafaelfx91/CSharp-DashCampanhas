@@ -55,8 +55,25 @@ namespace replace_campanhas
         private void btnGerar_Click(object sender, EventArgs e)
         {
 
-            txtTituloSaida.Text = tratarEmote(txtTituloEntrada.Text);
-            txtMsgSaida.Text = tratarEmote(txtMsgEntrada.Text);
+            var quantidadeTitulo = tratarEmote(txtTituloEntrada.Text).Length;
+            var quantidadeMsg = tratarEmote(txtMsgEntrada.Text).Length;
+
+
+            if (quantidadeTitulo <= 50)
+                txtTituloSaida.Text = tratarEmote(txtTituloEntrada.Text);
+            else
+                MessageBox.Show("Opa a seu titulo excede os 50 caracteres!"
+                , "Aviso"
+                , MessageBoxButtons.OK
+                , MessageBoxIcon.Warning);
+
+            if (quantidadeMsg <= 200)
+                txtMsgSaida.Text = tratarEmote(txtMsgEntrada.Text);
+            else
+                MessageBox.Show("Opa a sua mensagem excede os 200 caracteres!"
+                , "Aviso"
+                , MessageBoxButtons.OK
+                , MessageBoxIcon.Warning);
 
         }
 
@@ -85,6 +102,7 @@ namespace replace_campanhas
 
             if (totalValue > limite)
                 lblCaracterTitulo.ForeColor = Color.Red;
+
             if (totalValue <= limite)
                 lblCaracterTitulo.ForeColor = Color.Black;
         }

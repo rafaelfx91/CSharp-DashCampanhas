@@ -234,6 +234,12 @@
     <Compile Include="frmAgendamentoCampanha.Designer.cs">
       <DependentUpon>frmAgendamentoCampanha.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCheckList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckList.Designer.cs">
+      <DependentUpon>frmCheckList.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGeradordeSenhas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -275,6 +281,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAgendamentoCampanha.resx">
       <DependentUpon>frmAgendamentoCampanha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckList.resx">
+      <DependentUpon>frmCheckList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGeradordeSenhas.resx">
       <DependentUpon>frmGeradordeSenhas.cs</DependentUpon>

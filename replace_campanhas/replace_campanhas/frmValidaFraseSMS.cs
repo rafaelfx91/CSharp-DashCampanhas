@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace replace_campanhas
 {
@@ -37,9 +38,9 @@ namespace replace_campanhas
             }
             lblCaracteresCampanha.Text = "Caracters: " + totalValue;
 
-            if (totalValue >= 160)
+            if (totalValue >= 161)
                 lblCaracteresCampanha.ForeColor = Color.Red;
-            if (totalValue < 160)
+            if (totalValue < 161)
                 lblCaracteresCampanha.ForeColor = Color.Black;
 
         }//public void qtdCaracteres()
@@ -69,10 +70,14 @@ namespace replace_campanhas
 
             var frase = ls.caracteresLimpos(txtFraseEntrada.Text);
 
-            if (frase.Length > 160)
+            if (frase.Length >= 161)
             {
-                txtFraseSaida.ForeColor = Color.Red;
-                txtFraseSaida.Text = frase;
+                MessageBox.Show("Opa a sua mensageme excede os 160 caracteres!"
+                                , "Aviso"
+                                , MessageBoxButtons.OK
+                                , MessageBoxIcon.Warning);
+                //txtFraseSaida.ForeColor = Color.Red;
+                //txtFraseSaida.Text = frase;
             }
             else
             {

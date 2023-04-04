@@ -21,12 +21,13 @@ namespace replace_campanhas
         public frmPrincipal()
         {
             InitializeComponent();
+            this.MinimumSize = new Size(870, 700);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             lblVersion.Text = "Verion: V2 Alfa";
-            this.MaximizeBox = false;
+            //this.MaximizeBox = false;
         }
 
 
@@ -95,6 +96,23 @@ namespace replace_campanhas
                 MdiParent = this
             };
             html.Show();
+        }
+
+        private void checklistToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCheckList checklist = new frmCheckList
+            {
+                MdiParent = this
+            };
+            //checklist.Show();
+        }
+
+        private void testeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int width = this.Width;
+            int height = this.Height;
+            string message = "O tamanho atual da janela é " + width.ToString() + " x " + height.ToString();
+            MessageBox.Show(message);
         }
     }
 }

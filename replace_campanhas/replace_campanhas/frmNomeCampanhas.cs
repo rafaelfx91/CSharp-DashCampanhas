@@ -38,9 +38,9 @@ namespace replace_campanhas
             }
             lblCaracteresCampanha.Text = "Caracters: " + totalValue;
 
-            if (totalValue >= 60)
+            if (totalValue >= 61)
                 lblCaracteresCampanha.ForeColor = Color.Red;
-            if (totalValue < 60)
+            if (totalValue <= 60)
                 lblCaracteresCampanha.ForeColor = Color.Black;
 
         }//public void qtdCaracteres()
