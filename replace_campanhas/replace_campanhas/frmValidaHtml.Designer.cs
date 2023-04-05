@@ -134,7 +134,7 @@
             this.Controls.Add(this.wbPecaEmail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmValidaHtml";
-            this.Text = "frmValidaHtml";
+            this.Text = "Valida nome do html";
             this.Load += new System.EventHandler(this.frmValidaHtml_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
