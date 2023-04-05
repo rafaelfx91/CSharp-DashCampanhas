@@ -56,25 +56,18 @@ namespace replace_campanhas
         {
 
             txtFraseSaida.Text = "";
-            //txtFraseSaida.ForeColor = Color.Black;
-            //txtBoxColors("B", "");
-
             LimparString ls = new LimparString();
-
             var frase = ls.fraseLimpa(txtFraseEntrada.Text);
-
-            if (frase.Length > 60)
+            if (frase.Length >= 61)
             {
-                txtFraseSaida.ForeColor = Color.Red;
-                //txtFraseSaida.Text = "Frase maior que 60 Caracteres";
-                txtFraseSaida.Text = frase;
+                //txtFraseSaida.ForeColor = Color.Red;
+                //txtFraseSaida.Text = frase.Substring(0,59) + " aqui";
+                txtFraseSaida.Text = $"{frase.Substring(0, 60)}"; ;
             }
             else
             {
                 txtFraseSaida.Text = frase;
             }
-
-
         }
 
 

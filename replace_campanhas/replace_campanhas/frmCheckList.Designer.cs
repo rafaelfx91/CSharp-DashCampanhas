@@ -49,7 +49,7 @@
             // 
             this.lblTipoOS.AutoSize = true;
             this.lblTipoOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoOS.Location = new System.Drawing.Point(12, 51);
+            this.lblTipoOS.Location = new System.Drawing.Point(34, 51);
             this.lblTipoOS.Name = "lblTipoOS";
             this.lblTipoOS.Size = new System.Drawing.Size(110, 25);
             this.lblTipoOS.TabIndex = 32;
@@ -59,7 +59,7 @@
             // 
             this.chkClaroPay.AutoSize = true;
             this.chkClaroPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkClaroPay.Location = new System.Drawing.Point(128, 55);
+            this.chkClaroPay.Location = new System.Drawing.Point(150, 55);
             this.chkClaroPay.Name = "chkClaroPay";
             this.chkClaroPay.Size = new System.Drawing.Size(99, 22);
             this.chkClaroPay.TabIndex = 33;
@@ -78,7 +78,7 @@
             // 
             this.chkMovel.AutoSize = true;
             this.chkMovel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkMovel.Location = new System.Drawing.Point(233, 55);
+            this.chkMovel.Location = new System.Drawing.Point(255, 55);
             this.chkMovel.Name = "chkMovel";
             this.chkMovel.Size = new System.Drawing.Size(72, 22);
             this.chkMovel.TabIndex = 35;
