@@ -26,7 +26,7 @@ namespace replace_campanhas
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lblVersion.Text = "Verion: V2 Alfa";
+            lblVersion.Text = "Verion: V2.5 Alfa";
             //this.MaximizeBox = false;
         }
 
@@ -34,11 +34,17 @@ namespace replace_campanhas
         //MENU NOME CAMPANHA
         private void gerarNomeNoSASToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmNomeCampanhas frmnomeOsSAS = new frmNomeCampanhas
+            foreach (Form form in this.MdiChildren)
             {
-                MdiParent = this
-            };
-            frmnomeOsSAS.Show();
+                if (form.Name == "frmNomeCampanhas")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmNomeCampanhas novoFormFilho = new frmNomeCampanhas();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
         }
 
         private void tbValidarCampanhas_Click(object sender, EventArgs e)
@@ -48,11 +54,17 @@ namespace replace_campanhas
 
         private void validarFraseSMSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmValidaFraseSMS frmValidaFraseSMS = new frmValidaFraseSMS
+            foreach (Form form in this.MdiChildren)
             {
-                MdiParent = this
-            };
-            frmValidaFraseSMS.Show();
+                if (form.Name == "frmValidaFraseSMS")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmValidaFraseSMS novoFormFilho = new frmValidaFraseSMS();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
         }
 
         private void sAIRToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,49 +74,77 @@ namespace replace_campanhas
 
         private void aGENDAMENTOCAMPANHASToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAgendamentoCampanha frmAgendarCampanhas = new frmAgendamentoCampanha
+            foreach (Form form in this.MdiChildren)
             {
-                MdiParent = this
-            };
-            frmAgendarCampanhas.Show();
+                if (form.Name == "frmAgendamentoCampanha")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmAgendamentoCampanha novoFormFilho = new frmAgendamentoCampanha();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
         }
 
         private void geradorDeSenhasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmGeradordeSenhas frmSenhas = new frmGeradordeSenhas
+            foreach (Form form in this.MdiChildren)
             {
-                MdiParent = this
-            };
-            frmSenhas.Show();
-
+                if (form.Name == "frmGeradordeSenhas")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmGeradordeSenhas novoFormFilho = new frmGeradordeSenhas();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
         }
 
         private void validarFrasePUSHToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmValidarFrasePush frmPush = new frmValidarFrasePush
+            foreach (Form form in this.MdiChildren)
             {
-                MdiParent = this
-            };
-            frmPush.Show();
-
+                if (form.Name == "frmValidarFrasePush")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmValidarFrasePush novoFormFilho = new frmValidarFrasePush();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
         }
 
         private void validarHtmlToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmValidaHtml html = new frmValidaHtml
+            foreach (Form form in this.MdiChildren)
             {
-                MdiParent = this
-            };
-            html.Show();
+                if (form.Name == "frmValidaHtml")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmValidaHtml novoFormFilho = new frmValidaHtml();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
         }
 
         private void checklistToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCheckList checklist = new frmCheckList
+            foreach (Form form in this.MdiChildren)
             {
-                MdiParent = this
-            };
-            //checklist.Show();
+                if (form.Name == "frmCheckList")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmCheckList novoFormFilho = new frmCheckList();
+            novoFormFilho.MdiParent = this;
+            //novoFormFilho.Show();
         }
 
         private void testeToolStripMenuItem_Click(object sender, EventArgs e)

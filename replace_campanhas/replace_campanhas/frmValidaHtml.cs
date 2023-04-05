@@ -104,12 +104,6 @@ namespace replace_campanhas
                 {
                     throw new Exception("Opa o nome do seu arquivo nao pode possuir espaços ou caracteres especiais!\n"
                                        + "exemplo: OS123.html");
-                    //MessageBox.Show("Opa o nome do seu arquivo nao pode possuir espaços ou caracteres especiais!"
-                    //                + "exemplo: OS123.html"
-                    //                , "Aviso"
-                    //                , MessageBoxButtons.OK
-                    //                , MessageBoxIcon.Warning);
-
                 }
                 else
                 { 
