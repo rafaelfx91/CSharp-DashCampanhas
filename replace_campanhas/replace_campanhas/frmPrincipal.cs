@@ -154,6 +154,21 @@ namespace replace_campanhas
             string message = "O tamanho atual da janela é " + width.ToString() + " x " + height.ToString();
             MessageBox.Show(message);
         }
+
+        private void testarLinksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmValidaLink")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmValidaLink novoFormFilho = new frmValidaLink();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
     }
 }
 

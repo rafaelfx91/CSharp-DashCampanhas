@@ -270,6 +270,12 @@
     <Compile Include="frmValidaHtml.Designer.cs">
       <DependentUpon>frmValidaHtml.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmValidaLink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValidaLink.Designer.cs">
+      <DependentUpon>frmValidaLink.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmValidarFrasePush.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmValidaHtml.resx">
       <DependentUpon>frmValidaHtml.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmValidaLink.resx">
+      <DependentUpon>frmValidaLink.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmValidarFrasePush.resx">
       <DependentUpon>frmValidarFrasePush.cs</DependentUpon>

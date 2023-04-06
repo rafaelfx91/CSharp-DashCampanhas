@@ -37,7 +37,6 @@ namespace replace_campanhas
             var variavelconstrucaodesenha = "";
             txtSenha.Text = "";
             Random rnd = new Random();
-            //var saidadesenha = "";
 
             //constroi a variavel com todos os caracters 
             if (chkNumeros.Checked)

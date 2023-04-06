@@ -93,3 +93,4 @@ C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_
 C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\bin\Debug\HtmlAgilityPack.xml
 C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmCheckList.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmValidaLink.resources

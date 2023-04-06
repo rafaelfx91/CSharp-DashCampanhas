@@ -43,8 +43,9 @@
             this.validarHtmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fERRAMENTASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.geradorDeSenhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testarLinksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,7 +138,8 @@
             // hTMLToolStripMenuItem
             // 
             this.hTMLToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.validarHtmlToolStripMenuItem});
+            this.validarHtmlToolStripMenuItem,
+            this.testarLinksToolStripMenuItem});
             this.hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
             this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(106, 41);
             this.hTMLToolStripMenuItem.Text = "HTML";
@@ -165,13 +167,6 @@
             this.geradorDeSenhasToolStripMenuItem.Text = "Gerador de senhas";
             this.geradorDeSenhasToolStripMenuItem.Click += new System.EventHandler(this.geradorDeSenhasToolStripMenuItem_Click);
             // 
-            // sAIRToolStripMenuItem
-            // 
-            this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
-            this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(90, 41);
-            this.sAIRToolStripMenuItem.Text = "SAIR";
-            this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
-            // 
             // testeToolStripMenuItem
             // 
             this.testeToolStripMenuItem.Name = "testeToolStripMenuItem";
@@ -179,6 +174,20 @@
             this.testeToolStripMenuItem.Text = "Teste";
             this.testeToolStripMenuItem.Visible = false;
             this.testeToolStripMenuItem.Click += new System.EventHandler(this.testeToolStripMenuItem_Click);
+            // 
+            // sAIRToolStripMenuItem
+            // 
+            this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
+            this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(90, 41);
+            this.sAIRToolStripMenuItem.Text = "SAIR";
+            this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
+            // 
+            // testarLinksToolStripMenuItem
+            // 
+            this.testarLinksToolStripMenuItem.Name = "testarLinksToolStripMenuItem";
+            this.testarLinksToolStripMenuItem.Size = new System.Drawing.Size(251, 42);
+            this.testarLinksToolStripMenuItem.Text = "Testar links";
+            this.testarLinksToolStripMenuItem.Click += new System.EventHandler(this.testarLinksToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -221,6 +230,7 @@
         private System.Windows.Forms.ToolStripMenuItem hTMLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem validarHtmlToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testarLinksToolStripMenuItem;
     }
 }
 
