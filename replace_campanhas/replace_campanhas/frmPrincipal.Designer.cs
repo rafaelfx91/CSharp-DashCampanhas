@@ -41,11 +41,12 @@
             this.validarFrasePUSHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hTMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validarHtmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testarLinksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fERRAMENTASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.geradorDeSenhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.testarLinksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.claroPayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,7 +124,8 @@
             // pUSHToolStripMenuItem
             // 
             this.pUSHToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.validarFrasePUSHToolStripMenuItem});
+            this.validarFrasePUSHToolStripMenuItem,
+            this.claroPayToolStripMenuItem});
             this.pUSHToolStripMenuItem.Name = "pUSHToolStripMenuItem";
             this.pUSHToolStripMenuItem.Size = new System.Drawing.Size(102, 41);
             this.pUSHToolStripMenuItem.Text = "PUSH";
@@ -150,6 +152,13 @@
             this.validarHtmlToolStripMenuItem.Size = new System.Drawing.Size(251, 42);
             this.validarHtmlToolStripMenuItem.Text = "Validar html";
             this.validarHtmlToolStripMenuItem.Click += new System.EventHandler(this.validarHtmlToolStripMenuItem_Click);
+            // 
+            // testarLinksToolStripMenuItem
+            // 
+            this.testarLinksToolStripMenuItem.Name = "testarLinksToolStripMenuItem";
+            this.testarLinksToolStripMenuItem.Size = new System.Drawing.Size(251, 42);
+            this.testarLinksToolStripMenuItem.Text = "Testar links";
+            this.testarLinksToolStripMenuItem.Click += new System.EventHandler(this.testarLinksToolStripMenuItem_Click);
             // 
             // fERRAMENTASToolStripMenuItem
             // 
@@ -182,12 +191,12 @@
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
-            // testarLinksToolStripMenuItem
+            // claroPayToolStripMenuItem
             // 
-            this.testarLinksToolStripMenuItem.Name = "testarLinksToolStripMenuItem";
-            this.testarLinksToolStripMenuItem.Size = new System.Drawing.Size(251, 42);
-            this.testarLinksToolStripMenuItem.Text = "Testar links";
-            this.testarLinksToolStripMenuItem.Click += new System.EventHandler(this.testarLinksToolStripMenuItem_Click);
+            this.claroPayToolStripMenuItem.Name = "claroPayToolStripMenuItem";
+            this.claroPayToolStripMenuItem.Size = new System.Drawing.Size(334, 42);
+            this.claroPayToolStripMenuItem.Text = "Claro Pay";
+            this.claroPayToolStripMenuItem.Click += new System.EventHandler(this.claroPayToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -231,6 +240,7 @@
         private System.Windows.Forms.ToolStripMenuItem validarHtmlToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testarLinksToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem claroPayToolStripMenuItem;
     }
 }
 

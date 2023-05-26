@@ -169,6 +169,21 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
+
+        private void claroPayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmValidaFrasePushV2")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmValidaFrasePushV2 novoFormFilho = new frmValidaFrasePushV2();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
     }
 }
 
