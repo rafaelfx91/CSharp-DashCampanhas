@@ -240,6 +240,12 @@
     <Compile Include="frmCheckList.Designer.cs">
       <DependentUpon>frmCheckList.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEmotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmotes.Designer.cs">
+      <DependentUpon>frmEmotes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGeradordeSenhas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCheckList.resx">
       <DependentUpon>frmCheckList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmotes.resx">
+      <DependentUpon>frmEmotes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGeradordeSenhas.resx">
       <DependentUpon>frmGeradordeSenhas.cs</DependentUpon>

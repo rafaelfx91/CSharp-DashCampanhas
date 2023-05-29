@@ -26,7 +26,7 @@ namespace replace_campanhas
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lblVersion.Text = "Verion: V2.5 Alfa";
+            lblVersion.Text = "Verion: V2.7 Alfa";
             //this.MaximizeBox = false;
         }
 
@@ -149,25 +149,25 @@ namespace replace_campanhas
 
         private void testeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int width = this.Width;
-            int height = this.Height;
-            string message = "O tamanho atual da janela é " + width.ToString() + " x " + height.ToString();
-            MessageBox.Show(message);
+            //int width = this.Width;
+            //int height = this.Height;
+            //string message = "O tamanho atual da janela é " + width.ToString() + " x " + height.ToString();
+            //MessageBox.Show(message);
         }
 
         private void testarLinksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form.Name == "frmValidaLink")
-                {
-                    form.Activate();
-                    return;
-                }
-            }
-            frmValidaLink novoFormFilho = new frmValidaLink();
-            novoFormFilho.MdiParent = this;
-            novoFormFilho.Show();
+           //foreach (Form form in this.MdiChildren)
+           //{
+           //    if (form.Name == "frmValidaLink")
+           //    {
+           //        form.Activate();
+           //        return;
+           //    }
+           //}
+           //frmValidaLink novoFormFilho = new frmValidaLink();
+           //novoFormFilho.MdiParent = this;
+           //novoFormFilho.Show();
         }
 
         private void claroPayToolStripMenuItem_Click(object sender, EventArgs e)
@@ -183,6 +183,11 @@ namespace replace_campanhas
             frmValidaFrasePushV2 novoFormFilho = new frmValidaFrasePushV2();
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
+        }
+
+        private void emotesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

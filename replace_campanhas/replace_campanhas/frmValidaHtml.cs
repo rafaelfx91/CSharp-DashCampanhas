@@ -59,6 +59,13 @@ namespace replace_campanhas
 
         }
         
+        public void LimparCampos()
+        {
+            wbPecaEmail.Navigate("");
+            txtCaminhoArquivo.Clear();
+            txtCoringas.Clear();
+            lblCoringas.Text = "Coringas";
+        }
 
 
         //
@@ -80,14 +87,13 @@ namespace replace_campanhas
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            wbPecaEmail.Navigate("");
-            txtCaminhoArquivo.Clear();
-            txtCoringas.Clear();
-            lblCoringas.Text = "Coringas";
+            LimparCampos();
         }
 
         private void btnAbrir_Click(object sender, EventArgs e)
         {
+            LimparCampos();
+
             try
             {
                 OpenFileDialog openFileDialog1 = new OpenFileDialog();
