@@ -26,14 +26,17 @@ namespace replace_campanhas
         public string tratarEmote(string entrada)
         {
 
-            if (entrada.Contains("U+"))
-            {
-                entrada = entrada.Replace(@"U+", "{");
-                entrada = entrada.Replace(@"u+", "{");
-                var indexInicial = entrada.LastIndexOf("{");
-                var insert = entrada.Insert(indexInicial + 6, "}");
-                return insert;
-            }
+            //if (entrada.Contains("U+"))
+            //{
+            //    //entrada = entrada.Replace(@"U+", "{");
+            //    //entrada = entrada.Replace(@"u+", "{");
+            //    //var indexInicial = entrada.LastIndexOf("{");
+            //    //var insert = entrada.Insert(indexInicial + 6, "}");
+            //    //return insert;
+            //}
+            LimparString ls = new LimparString();
+
+            entrada = ls.SubstituirEmote(entrada);
 
             return entrada;
 
@@ -54,7 +57,6 @@ namespace replace_campanhas
 
         private void btnGerar_Click(object sender, EventArgs e)
         {
-
             var quantidadeTitulo = tratarEmote(txtTituloEntrada.Text).Length;
             var quantidadeMsg = tratarEmote(txtMsgEntrada.Text).Length;
 

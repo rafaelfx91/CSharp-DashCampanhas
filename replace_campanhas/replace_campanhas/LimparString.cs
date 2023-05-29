@@ -110,6 +110,34 @@ namespace replace_campanhas
 
         }//public void verificaChars(string nome)
 
+        public string SubstituirEmote(string input)
+        {
+            Regex regex = new Regex(@"U\+(\w+)");
+            string resultado = regex.Replace(input, "{$1}");
+
+            resultado = resultado.Replace("{{", "{").Replace("}}", "}");
+
+            return resultado;
+
+        }//static string SubstituirEmote(string input)
+
+        public string SubstituirEmoteMostrar(string input)
+        {
+            Regex regex = new Regex(@"U\+(\w+)");
+            string resultado = regex.Replace(input, match =>
+            {
+                string hexCode = match.Groups[1].Value;
+                int unicodeValue = int.Parse(hexCode, System.Globalization.NumberStyles.HexNumber);
+                string emote = char.ConvertFromUtf32(unicodeValue);
+                return emote;
+            });
+
+            resultado = resultado.Replace("{", "").Replace("}", "");
+
+            return resultado;
+        }
+
+
     }//public class LimparStrin
 
 }//namespace replace_campanhas

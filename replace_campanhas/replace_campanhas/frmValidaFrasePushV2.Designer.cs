@@ -43,6 +43,7 @@
             this.txtMsgEntrada = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnMostrarEmote = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,9 +51,9 @@
             // btnCopiaMensagem
             // 
             this.btnCopiaMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCopiaMensagem.Location = new System.Drawing.Point(284, 422);
+            this.btnCopiaMensagem.Location = new System.Drawing.Point(271, 370);
             this.btnCopiaMensagem.Name = "btnCopiaMensagem";
-            this.btnCopiaMensagem.Size = new System.Drawing.Size(222, 43);
+            this.btnCopiaMensagem.Size = new System.Drawing.Size(209, 43);
             this.btnCopiaMensagem.TabIndex = 55;
             this.btnCopiaMensagem.Text = "Copiar mensagem";
             this.btnCopiaMensagem.UseVisualStyleBackColor = true;
@@ -61,9 +62,9 @@
             // btnCopiarTitulo
             // 
             this.btnCopiarTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCopiarTitulo.Location = new System.Drawing.Point(122, 422);
+            this.btnCopiarTitulo.Location = new System.Drawing.Point(117, 370);
             this.btnCopiarTitulo.Name = "btnCopiarTitulo";
-            this.btnCopiarTitulo.Size = new System.Drawing.Size(156, 43);
+            this.btnCopiarTitulo.Size = new System.Drawing.Size(148, 43);
             this.btnCopiarTitulo.TabIndex = 54;
             this.btnCopiarTitulo.Text = "Copiar titulo";
             this.btnCopiarTitulo.UseVisualStyleBackColor = true;
@@ -74,20 +75,17 @@
             this.txtMsgSaida.BackColor = System.Drawing.Color.DimGray;
             this.txtMsgSaida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMsgSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMsgSaida.Location = new System.Drawing.Point(93, 196);
+            this.txtMsgSaida.Location = new System.Drawing.Point(58, 188);
             this.txtMsgSaida.Multiline = true;
             this.txtMsgSaida.Name = "txtMsgSaida";
-            this.txtMsgSaida.Size = new System.Drawing.Size(444, 151);
+            this.txtMsgSaida.Size = new System.Drawing.Size(614, 151);
             this.txtMsgSaida.TabIndex = 53;
-            this.txtMsgSaida.Text = "txtTituloSaida.Text = txtTituloEntrada.TexttxtTituloSaida.Text = txtTituloEntrada" +
-    ".TexttxtTituloSaida.Text = txtTituloEntrada.TexttxtTituloSaida.Text = txtTituloE" +
-    "ntrada.TexttxtTituloSaida.Text asdasdsa";
             // 
             // lblCaracterMsg
             // 
             this.lblCaracterMsg.AutoSize = true;
             this.lblCaracterMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCaracterMsg.Location = new System.Drawing.Point(551, 59);
+            this.lblCaracterMsg.Location = new System.Drawing.Point(659, 59);
             this.lblCaracterMsg.Name = "lblCaracterMsg";
             this.lblCaracterMsg.Size = new System.Drawing.Size(121, 25);
             this.lblCaracterMsg.TabIndex = 51;
@@ -98,17 +96,16 @@
             this.txtTituloSaida.BackColor = System.Drawing.Color.DimGray;
             this.txtTituloSaida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTituloSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTituloSaida.Location = new System.Drawing.Point(93, 159);
+            this.txtTituloSaida.Location = new System.Drawing.Point(58, 151);
             this.txtTituloSaida.Name = "txtTituloSaida";
-            this.txtTituloSaida.Size = new System.Drawing.Size(444, 31);
+            this.txtTituloSaida.Size = new System.Drawing.Size(614, 31);
             this.txtTituloSaida.TabIndex = 50;
-            this.txtTituloSaida.Text = "test1 test2 test3 test4 test5 test6 0 ";
             // 
             // lblCaracterTitulo
             // 
             this.lblCaracterTitulo.AutoSize = true;
             this.lblCaracterTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCaracterTitulo.Location = new System.Drawing.Point(551, -3);
+            this.lblCaracterTitulo.Location = new System.Drawing.Point(659, -3);
             this.lblCaracterTitulo.Name = "lblCaracterTitulo";
             this.lblCaracterTitulo.Size = new System.Drawing.Size(121, 25);
             this.lblCaracterTitulo.TabIndex = 48;
@@ -117,7 +114,7 @@
             // btnLimpar
             // 
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(512, 422);
+            this.btnLimpar.Location = new System.Drawing.Point(664, 370);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(98, 43);
             this.btnLimpar.TabIndex = 47;
@@ -128,9 +125,9 @@
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(616, 422);
+            this.btnSair.Location = new System.Drawing.Point(768, 370);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(98, 43);
+            this.btnSair.Size = new System.Drawing.Size(68, 43);
             this.btnSair.TabIndex = 46;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
@@ -139,7 +136,7 @@
             // btnGerar
             // 
             this.btnGerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerar.Location = new System.Drawing.Point(18, 422);
+            this.btnGerar.Location = new System.Drawing.Point(13, 370);
             this.btnGerar.Name = "btnGerar";
             this.btnGerar.Size = new System.Drawing.Size(98, 43);
             this.btnGerar.TabIndex = 45;
@@ -150,9 +147,9 @@
             // txtTituloEntrada
             // 
             this.txtTituloEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTituloEntrada.Location = new System.Drawing.Point(13, 25);
+            this.txtTituloEntrada.Location = new System.Drawing.Point(12, 25);
             this.txtTituloEntrada.Name = "txtTituloEntrada";
-            this.txtTituloEntrada.Size = new System.Drawing.Size(690, 31);
+            this.txtTituloEntrada.Size = new System.Drawing.Size(824, 31);
             this.txtTituloEntrada.TabIndex = 42;
             this.txtTituloEntrada.TextChanged += new System.EventHandler(this.txtTituloEntrada_TextChanged);
             // 
@@ -181,14 +178,14 @@
             this.txtMsgEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMsgEntrada.Location = new System.Drawing.Point(13, 95);
             this.txtMsgEntrada.Name = "txtMsgEntrada";
-            this.txtMsgEntrada.Size = new System.Drawing.Size(690, 31);
+            this.txtMsgEntrada.Size = new System.Drawing.Size(823, 31);
             this.txtMsgEntrada.TabIndex = 44;
             this.txtMsgEntrada.TextChanged += new System.EventHandler(this.txtMsgEntrada_TextChanged);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::replace_campanhas.Properties.Resources.unnamed;
-            this.pictureBox2.Location = new System.Drawing.Point(556, 159);
+            this.pictureBox2.Location = new System.Drawing.Point(682, 151);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(138, 137);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,18 +195,30 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::replace_campanhas.Properties.Resources.ClaroPayFundo;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 140);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 132);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(655, 232);
+            this.pictureBox1.Size = new System.Drawing.Size(823, 232);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 56;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnMostrarEmote
+            // 
+            this.btnMostrarEmote.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarEmote.Location = new System.Drawing.Point(486, 370);
+            this.btnMostrarEmote.Name = "btnMostrarEmote";
+            this.btnMostrarEmote.Size = new System.Drawing.Size(174, 43);
+            this.btnMostrarEmote.TabIndex = 58;
+            this.btnMostrarEmote.Text = "Mostrar emote";
+            this.btnMostrarEmote.UseVisualStyleBackColor = true;
+            this.btnMostrarEmote.Click += new System.EventHandler(this.btnMostrarEmote_Click);
             // 
             // frmValidaFrasePushV2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 477);
+            this.ClientSize = new System.Drawing.Size(848, 423);
+            this.Controls.Add(this.btnMostrarEmote);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtMsgSaida);
             this.Controls.Add(this.txtTituloSaida);
@@ -251,5 +260,6 @@
         private System.Windows.Forms.TextBox txtMsgEntrada;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnMostrarEmote;
     }
 }

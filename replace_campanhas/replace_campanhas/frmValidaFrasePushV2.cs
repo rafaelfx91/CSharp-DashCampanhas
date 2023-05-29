@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,7 +20,14 @@ namespace replace_campanhas
             //txtMsgSaida.ForeColor = Color.DarkGray;
         }
 
-        private void txtTituloEntrada_TextChanged(object sender, EventArgs e)
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        public void ValidaTamanhoFrase()
         {
             int totalValue = 0;
             int limite = 37;
@@ -41,15 +49,36 @@ namespace replace_campanhas
             else
                 txtTituloSaida.Text = txtTituloEntrada.Text;
 
+        }
+
+
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+        ///
+
+
+
+
+        private void txtTituloEntrada_TextChanged(object sender, EventArgs e)
+        {
+            ValidaTamanhoFrase();
 
 
         }
 
         private void btnGerar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("a "+ pictureBox1.Width.ToString());
-            MessageBox.Show("a "+ pictureBox1.Height.ToString());
-              
+            LimparString ls = new LimparString();
+            txtTituloSaida.Text = ls.SubstituirEmote(txtTituloEntrada.Text);
+
+            txtMsgSaida.Text = ls.SubstituirEmote(txtMsgEntrada.Text);
+
         }
 
         private void txtMsgEntrada_TextChanged(object sender, EventArgs e)
@@ -98,9 +127,13 @@ namespace replace_campanhas
         {
             Clipboard.SetText(txtMsgSaida.Text);
         }
-    
-    
-    
-    
+
+        private void btnMostrarEmote_Click(object sender, EventArgs e)
+        {
+            LimparString ls = new LimparString();
+            txtTituloSaida.Text = ls.SubstituirEmoteMostrar(txtTituloEntrada.Text);
+
+            txtMsgSaida.Text = ls.SubstituirEmoteMostrar(txtMsgEntrada.Text);
+        }
     }
 }
