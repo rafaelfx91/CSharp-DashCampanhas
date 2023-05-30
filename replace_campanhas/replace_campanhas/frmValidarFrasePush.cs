@@ -59,8 +59,8 @@ namespace replace_campanhas
         {
             var quantidadeTitulo = tratarEmote(txtTituloEntrada.Text).Length;
             var quantidadeMsg = tratarEmote(txtMsgEntrada.Text).Length;
-
-
+            
+            
             if (quantidadeTitulo <= 50)
                 txtTituloSaida.Text = tratarEmote(txtTituloEntrada.Text);
             else
@@ -68,7 +68,7 @@ namespace replace_campanhas
                 , "Aviso"
                 , MessageBoxButtons.OK
                 , MessageBoxIcon.Warning);
-
+            
             if (quantidadeMsg <= 200)
                 txtMsgSaida.Text = tratarEmote(txtMsgEntrada.Text);
             else

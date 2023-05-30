@@ -26,7 +26,7 @@ namespace replace_campanhas
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lblVersion.Text = "Verion: V2.7 Alfa";
+            lblVersion.Text = "Verion: V2.8 Alfa";
             //this.MaximizeBox = false;
         }
 
@@ -149,10 +149,7 @@ namespace replace_campanhas
 
         private void testeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //int width = this.Width;
-            //int height = this.Height;
-            //string message = "O tamanho atual da janela é " + width.ToString() + " x " + height.ToString();
-            //MessageBox.Show(message);
+            
         }
 
         private void testarLinksToolStripMenuItem_Click(object sender, EventArgs e)

@@ -64,25 +64,26 @@ namespace replace_campanhas
 
         private void btnGerar_Click(object sender, EventArgs e)
         {
-            txtFraseSaida.ForeColor = Color.Black;
+           LimparString ls = new LimparString();
+            
+           txtFraseSaida.ForeColor = Color.Black;
+           
+           var frase = ls.RemoverCaracteresEspeciais(txtFraseEntrada.Text);
+           
+           if (frase.Length >= 161)
+           {
+               MessageBox.Show("Opa a sua mensageme excede os 160 caracteres!"
+                               , "Aviso"
+                               , MessageBoxButtons.OK
+                               , MessageBoxIcon.Warning);
+               //txtFraseSaida.ForeColor = Color.Red;
+               //txtFraseSaida.Text = frase;
+           }
+           else
+           {
+               txtFraseSaida.Text = frase;
+           }
 
-            LimparString ls = new LimparString();
-
-            var frase = ls.caracteresLimpos(txtFraseEntrada.Text);
-
-            if (frase.Length >= 161)
-            {
-                MessageBox.Show("Opa a sua mensageme excede os 160 caracteres!"
-                                , "Aviso"
-                                , MessageBoxButtons.OK
-                                , MessageBoxIcon.Warning);
-                //txtFraseSaida.ForeColor = Color.Red;
-                //txtFraseSaida.Text = frase;
-            }
-            else
-            {
-                txtFraseSaida.Text = frase;
-            }
         }
 
         private void txtFraseEntrada_TextChanged(object sender, EventArgs e)

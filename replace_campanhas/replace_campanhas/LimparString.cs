@@ -137,6 +137,12 @@ namespace replace_campanhas
             return resultado;
         }
 
+        public string RemoverCaracteresEspeciais(string texto)
+        {
+            // Utiliza expressão regular para substituir caracteres especiais por uma string vazia
+            return Regex.Replace(texto, "[^a-zA-Z0-9 :+=/{}]+", "");
+        }
+
 
     }//public class LimparStrin
 
