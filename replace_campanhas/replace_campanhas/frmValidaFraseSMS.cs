@@ -68,7 +68,7 @@ namespace replace_campanhas
             
            txtFraseSaida.ForeColor = Color.Black;
            
-           var frase = ls.RemoverCaracteresEspeciais(txtFraseEntrada.Text);
+           var frase = ls.RemoverCaracteresEspeciais2(txtFraseEntrada.Text);
            
            if (frase.Length >= 161)
            {

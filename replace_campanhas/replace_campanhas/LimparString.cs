@@ -140,7 +140,19 @@ namespace replace_campanhas
         public string RemoverCaracteresEspeciais(string texto)
         {
             // Utiliza expressão regular para substituir caracteres especiais por uma string vazia
-            return Regex.Replace(texto, "[^a-zA-Z0-9 :+=/{}%.,]+", "");
+            return Regex.Replace(texto, "[^a-zA-Z0-9 :+=/{}%.*,]+", "");
+        }
+        public string RemoverCaracteresEspeciais2(string texto)
+        {
+            string comAcentos = "ÄÅÁÂÀÃäáâàãÉÊËÈéêëèÍÎÏÌíîïìÖÓÔÒÕöóôòõÜÚÛüúûùÇç";
+            string semAcentos = "AAAAAAaaaaaEEEEeeeeIIIIiiiiOOOOOoooooUUUuuuuCc";
+
+            for (int i = 0; i < comAcentos.Length; i++)
+            {
+                texto = texto.Replace(comAcentos[i].ToString(), semAcentos[i].ToString());
+            }
+
+            return Regex.Replace(texto, "[^a-zA-Z0-9 :+=/{}%.*,]+", "");
         }
 
 
