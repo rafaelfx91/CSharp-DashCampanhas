@@ -48,6 +48,7 @@
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emotesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agendamentoCampanhasJIRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +81,7 @@
             // 
             this.sASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gerarNomeNoSASToolStripMenuItem,
+            this.agendamentoCampanhasJIRAToolStripMenuItem,
             this.aGENDAMENTOCAMPANHASToolStripMenuItem,
             this.checklistToolStripMenuItem});
             this.sASToolStripMenuItem.Name = "sASToolStripMenuItem";
@@ -89,21 +91,21 @@
             // gerarNomeNoSASToolStripMenuItem
             // 
             this.gerarNomeNoSASToolStripMenuItem.Name = "gerarNomeNoSASToolStripMenuItem";
-            this.gerarNomeNoSASToolStripMenuItem.Size = new System.Drawing.Size(428, 42);
+            this.gerarNomeNoSASToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
             this.gerarNomeNoSASToolStripMenuItem.Text = "Gerar nome no SAS";
             this.gerarNomeNoSASToolStripMenuItem.Click += new System.EventHandler(this.gerarNomeNoSASToolStripMenuItem_Click);
             // 
             // aGENDAMENTOCAMPANHASToolStripMenuItem
             // 
             this.aGENDAMENTOCAMPANHASToolStripMenuItem.Name = "aGENDAMENTOCAMPANHASToolStripMenuItem";
-            this.aGENDAMENTOCAMPANHASToolStripMenuItem.Size = new System.Drawing.Size(428, 42);
-            this.aGENDAMENTOCAMPANHASToolStripMenuItem.Text = "Agendamento campanhas";
+            this.aGENDAMENTOCAMPANHASToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.aGENDAMENTOCAMPANHASToolStripMenuItem.Text = "Agendamento campanhas (OLD)";
             this.aGENDAMENTOCAMPANHASToolStripMenuItem.Click += new System.EventHandler(this.aGENDAMENTOCAMPANHASToolStripMenuItem_Click);
             // 
             // checklistToolStripMenuItem
             // 
             this.checklistToolStripMenuItem.Name = "checklistToolStripMenuItem";
-            this.checklistToolStripMenuItem.Size = new System.Drawing.Size(428, 42);
+            this.checklistToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
             this.checklistToolStripMenuItem.Text = "Checklist (dev)";
             this.checklistToolStripMenuItem.Click += new System.EventHandler(this.checklistToolStripMenuItem_Click);
             // 
@@ -207,6 +209,13 @@
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
+            // agendamentoCampanhasJIRAToolStripMenuItem
+            // 
+            this.agendamentoCampanhasJIRAToolStripMenuItem.Name = "agendamentoCampanhasJIRAToolStripMenuItem";
+            this.agendamentoCampanhasJIRAToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.agendamentoCampanhasJIRAToolStripMenuItem.Text = "Agendamento campanhas (JIRA)";
+            this.agendamentoCampanhasJIRAToolStripMenuItem.Click += new System.EventHandler(this.agendamentoCampanhasJIRAToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,6 +260,7 @@
         private System.Windows.Forms.ToolStripMenuItem testarLinksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem claroPayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem emotesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agendamentoCampanhasJIRAToolStripMenuItem;
     }
 }
 

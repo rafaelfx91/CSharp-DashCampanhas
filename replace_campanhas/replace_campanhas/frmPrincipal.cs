@@ -26,7 +26,7 @@ namespace replace_campanhas
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lblVersion.Text = "Verion: V2.12F Alfa";
+            lblVersion.Text = "Verion: V2.14 Alfa";
             //this.MaximizeBox = false;
         }
 
@@ -185,6 +185,21 @@ namespace replace_campanhas
         private void emotesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void agendamentoCampanhasJIRAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmAgendamentoCampanhaJira")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmAgendamentoCampanhaJira novoFormFilho = new frmAgendamentoCampanhaJira();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
         }
     }
 }

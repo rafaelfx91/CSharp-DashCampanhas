@@ -96,3 +96,4 @@ C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_
 C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmValidaLink.resources
 C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmValidaFrasePushV2.resources
 C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmEmotes.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmAgendamentoCampanhaJira.resources

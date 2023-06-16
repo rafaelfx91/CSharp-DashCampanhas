@@ -234,6 +234,12 @@
     <Compile Include="frmAgendamentoCampanha.Designer.cs">
       <DependentUpon>frmAgendamentoCampanha.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAgendamentoCampanhaJira.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgendamentoCampanhaJira.Designer.cs">
+      <DependentUpon>frmAgendamentoCampanhaJira.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCheckList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +305,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAgendamentoCampanha.resx">
       <DependentUpon>frmAgendamentoCampanha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgendamentoCampanhaJira.resx">
+      <DependentUpon>frmAgendamentoCampanhaJira.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCheckList.resx">
       <DependentUpon>frmCheckList.cs</DependentUpon>
