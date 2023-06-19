@@ -80,8 +80,8 @@ namespace replace_campanhas
 
             var mensagemSaida = boasVindas+
                                 "\r\n\r\n" +
-                                "Solicito o "+ agendamento + " de agendamento da seguinte campanha\n"+
-                                "\r\n\r\n" +
+                                "Solicito o "+ agendamento + " de agendamento da seguinte campanha"+
+                                "\r\n" +
                                 "Campanhas: \r\n\n" +
                                 listAmx+
                                 "\r\n\r\n" +

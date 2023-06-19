@@ -26,7 +26,7 @@ namespace replace_campanhas
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lblVersion.Text = "Verion: V2.14 Alfa";
+            lblVersion.Text = "Verion: V2.15 Alfa";
             //this.MaximizeBox = false;
         }
 
