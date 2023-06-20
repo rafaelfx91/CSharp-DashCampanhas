@@ -152,7 +152,7 @@ namespace replace_campanhas
                 texto = texto.Replace(comAcentos[i].ToString(), semAcentos[i].ToString());
             }
 
-            return Regex.Replace(texto, "[^a-zA-Z0-9 :+=/{}%.*,!?$@#]+", "");
+            return Regex.Replace(texto, "[^a-zA-Z0-9 :+=/{}%.*,!?$@#-]+", "");
         }
 
 
