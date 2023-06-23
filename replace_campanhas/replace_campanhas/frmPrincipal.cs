@@ -24,6 +24,7 @@ namespace replace_campanhas
     {
         private const string MutexName = "MeuProgramaMutex";
         private Mutex mutex;
+        private FuncoesDeveloper fd = new FuncoesDeveloper();
 
         [DllImport("user32.dll")]
         private static extern bool SetForegroundWindow(IntPtr hWnd);
@@ -63,11 +64,7 @@ namespace replace_campanhas
 
         public void desabilitaForms()
         {
-            //DESKTOP - G34V8GD
-            var nome = Environment.MachineName;
-            //var nomeCompleto = Dns.GetHostEntry(nome).HostName;
-
-            if (nome == "DESKTOP-G34V8GD")
+            if (fd.validaConfigsDev2())
             {
                 agendamentoEmailJIRAToolStripMenuItem.Visible = true;
                 checklistToolStripMenuItem.Visible = true;
@@ -77,6 +74,22 @@ namespace replace_campanhas
                 emotesToolStripMenuItem.Visible = true;
                 emailDeDiagramaToolStripMenuItem.Visible = true;
             }
+                
+
+            //DESKTOP - G34V8GD
+            //var nome = Environment.MachineName;
+            //var nomeCompleto = Dns.GetHostEntry(nome).HostName;
+
+            //if (nome == "DESKTOP-G34V8GD")
+            //{
+            //    agendamentoEmailJIRAToolStripMenuItem.Visible = true;
+            //    checklistToolStripMenuItem.Visible = true;
+            //    aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = true;
+            //    testarLinksToolStripMenuItem.Visible = true;
+            //    testeToolStripMenuItem.Visible = true;
+            //    emotesToolStripMenuItem.Visible = true;
+            //    emailDeDiagramaToolStripMenuItem.Visible = true;
+            //}
 
         }
         public static bool VerificaProgramaEmExecucao()

@@ -40,10 +40,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gbBoasVindas = new System.Windows.Forms.GroupBox();
             this.gbAgendamento = new System.Windows.Forms.GroupBox();
-            this.rdrAgendamento = new System.Windows.Forms.RadioButton();
-            this.rdrCancelamento = new System.Windows.Forms.RadioButton();
             this.rdrPausa = new System.Windows.Forms.RadioButton();
+            this.rdrCancelamento = new System.Windows.Forms.RadioButton();
+            this.rdrAgendamento = new System.Windows.Forms.RadioButton();
             this.txtCopiar = new System.Windows.Forms.Button();
+            this.chkDev = new System.Windows.Forms.CheckBox();
             this.gbBoasVindas.SuspendLayout();
             this.gbAgendamento.SuspendLayout();
             this.SuspendLayout();
@@ -176,17 +177,16 @@
             this.gbAgendamento.TabIndex = 40;
             this.gbAgendamento.TabStop = false;
             // 
-            // rdrAgendamento
+            // rdrPausa
             // 
-            this.rdrAgendamento.AutoSize = true;
-            this.rdrAgendamento.Checked = true;
-            this.rdrAgendamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdrAgendamento.Location = new System.Drawing.Point(16, 19);
-            this.rdrAgendamento.Name = "rdrAgendamento";
-            this.rdrAgendamento.Size = new System.Drawing.Size(139, 24);
-            this.rdrAgendamento.TabIndex = 34;
-            this.rdrAgendamento.Text = "Agendamento";
-            this.rdrAgendamento.UseVisualStyleBackColor = true;
+            this.rdrPausa.AutoSize = true;
+            this.rdrPausa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdrPausa.Location = new System.Drawing.Point(16, 79);
+            this.rdrPausa.Name = "rdrPausa";
+            this.rdrPausa.Size = new System.Drawing.Size(77, 24);
+            this.rdrPausa.TabIndex = 36;
+            this.rdrPausa.Text = "Pausa";
+            this.rdrPausa.UseVisualStyleBackColor = true;
             // 
             // rdrCancelamento
             // 
@@ -199,16 +199,18 @@
             this.rdrCancelamento.Text = "Camcelamento";
             this.rdrCancelamento.UseVisualStyleBackColor = true;
             // 
-            // rdrPausa
+            // rdrAgendamento
             // 
-            this.rdrPausa.AutoSize = true;
-            this.rdrPausa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdrPausa.Location = new System.Drawing.Point(16, 79);
-            this.rdrPausa.Name = "rdrPausa";
-            this.rdrPausa.Size = new System.Drawing.Size(77, 24);
-            this.rdrPausa.TabIndex = 36;
-            this.rdrPausa.Text = "Pausa";
-            this.rdrPausa.UseVisualStyleBackColor = true;
+            this.rdrAgendamento.AutoSize = true;
+            this.rdrAgendamento.Checked = true;
+            this.rdrAgendamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdrAgendamento.Location = new System.Drawing.Point(16, 19);
+            this.rdrAgendamento.Name = "rdrAgendamento";
+            this.rdrAgendamento.Size = new System.Drawing.Size(139, 24);
+            this.rdrAgendamento.TabIndex = 34;
+            this.rdrAgendamento.TabStop = true;
+            this.rdrAgendamento.Text = "Agendamento";
+            this.rdrAgendamento.UseVisualStyleBackColor = true;
             // 
             // txtCopiar
             // 
@@ -221,11 +223,23 @@
             this.txtCopiar.UseVisualStyleBackColor = true;
             this.txtCopiar.Click += new System.EventHandler(this.txtCopiar_Click);
             // 
+            // chkDev
+            // 
+            this.chkDev.AutoSize = true;
+            this.chkDev.Location = new System.Drawing.Point(536, 442);
+            this.chkDev.Name = "chkDev";
+            this.chkDev.Size = new System.Drawing.Size(44, 17);
+            this.chkDev.TabIndex = 54;
+            this.chkDev.Text = "dev";
+            this.chkDev.UseVisualStyleBackColor = true;
+            this.chkDev.Visible = false;
+            // 
             // frmAgendamentoCampanhaJira
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 478);
+            this.Controls.Add(this.chkDev);
             this.Controls.Add(this.txtCopiar);
             this.Controls.Add(this.gbAgendamento);
             this.Controls.Add(this.gbBoasVindas);
@@ -267,5 +281,6 @@
         private System.Windows.Forms.RadioButton rdrCancelamento;
         private System.Windows.Forms.RadioButton rdrAgendamento;
         private System.Windows.Forms.Button txtCopiar;
+        private System.Windows.Forms.CheckBox chkDev;
     }
 }

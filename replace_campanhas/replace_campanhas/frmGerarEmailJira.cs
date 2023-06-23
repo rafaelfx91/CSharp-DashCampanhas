@@ -13,9 +13,19 @@ namespace replace_campanhas
 {
     public partial class frmGerarEmailJira : Form
     {
+        protected bool pcDeveloper = false;
+        FuncoesDeveloper fd = new FuncoesDeveloper();
+
         public frmGerarEmailJira()
         {
             InitializeComponent();
+        }
+        private void frmGerarEmailJira_Load(object sender, EventArgs e)
+        {
+            setBoasVindas(DateTime.Now.ToString("HH"));
+            if (fd.validaConfigsDev2())
+                chkDev.Visible= true;
+
         }
 
         public void setBoasVindas(string hora)
@@ -43,16 +53,9 @@ namespace replace_campanhas
                 txtAmx.ReadOnly = true;
         }
 
-
-
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void frmGerarEmailJira_Load(object sender, EventArgs e)
-        {
-            setBoasVindas(DateTime.Now.ToString("HH"));
         }
 
         private void rdrTBClaropayCorrentista_Click(object sender, EventArgs e)
@@ -96,7 +99,7 @@ namespace replace_campanhas
             if (rdrBoatarde.Checked)
                 boasVindas = "Boa tarde!";
             if (rdrBoanoite.Checked)
-                boasVindas = "Bboa noite!";
+                boasVindas = "Boa noite!";
 
             var agendamento = String.Empty;
 
@@ -144,25 +147,26 @@ namespace replace_campanhas
                         "09:00 as 21:00";
             }
 
-
-
-
-
-            var listAmx = txtAmx.Text;
+            var listAmx = txtListaAmx.Text;
 
             var mensagemSaida = boasVindas +
                                 "\r\n" +
-                                "Solicito o " + agendamento + " de agendamento da seguinte campanha" +
-                                "\r\n\r\n" +
+                                "Solicito o " + agendamento + " de agendamento da seguinte campanha\r\n\r\n" +
                                 dias+
                                 "\r\n\r\n" +
                                 horas +
                                 "\r\n\r\n" +
-                                "Campanhas:" +
+                                "Campanhas:\r\n\r\n" +
                                 listAmx +
                                 "\r\n\r\n" +
                                 "Obrigado."
                                 ;
+
+            if (chkDev.Checked)
+                mensagemSaida = "----------------------------\r\n"+
+                                "EMAIL\r\n" +
+                                "----------------------------\r\n"+
+                                mensagemSaida;
 
             txtSaida.Text = mensagemSaida;
 
@@ -191,5 +195,6 @@ namespace replace_campanhas
 
 
         }
+    
     }
 }

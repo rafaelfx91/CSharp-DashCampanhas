@@ -12,6 +12,8 @@ namespace replace_campanhas
 {
     public partial class frmAgendamentoCampanhaJira : Form
     {
+        FuncoesDeveloper fd = new FuncoesDeveloper();
+
         public frmAgendamentoCampanhaJira()
         {
             InitializeComponent();
@@ -21,6 +23,9 @@ namespace replace_campanhas
         private void frmAgendamentoCampanhaJira_Load(object sender, EventArgs e)
         {
             setBoasVindas(DateTime.Now.ToString("HH"));
+            if (fd.validaConfigsDev2())
+                chkDev.Visible = true;
+            
         }
 
         public void setBoasVindas(string hora)
@@ -88,6 +93,12 @@ namespace replace_campanhas
                                 "Obrigado."
                                 ;
 
+            if (chkDev.Checked)
+                mensagemSaida = "----------------------------\r\n" +
+                                "AGENDAMENTO\r\n" +
+                                "----------------------------\r\n" +
+                                mensagemSaida;
+
             txtSaida.Text = mensagemSaida;
 
             /*
@@ -106,5 +117,7 @@ namespace replace_campanhas
         {
             Clipboard.SetText(txtSaida.Text);
         }
+    
+    
     }
 }

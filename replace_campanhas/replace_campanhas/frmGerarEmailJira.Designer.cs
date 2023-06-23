@@ -54,8 +54,9 @@
             this.chkQuarta = new System.Windows.Forms.CheckBox();
             this.chkTerca = new System.Windows.Forms.CheckBox();
             this.chkSegunda = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtListaAmx = new System.Windows.Forms.TextBox();
             this.lblamx = new System.Windows.Forms.Label();
+            this.chkDev = new System.Windows.Forms.CheckBox();
             this.gbAgendamento.SuspendLayout();
             this.gbBoasVindas.SuspendLayout();
             this.gbGatilho.SuspendLayout();
@@ -358,14 +359,14 @@
             this.chkSegunda.Text = "Segunda";
             this.chkSegunda.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtListaAmx
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(13, 265);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(214, 205);
-            this.textBox1.TabIndex = 52;
+            this.txtListaAmx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtListaAmx.Location = new System.Drawing.Point(13, 265);
+            this.txtListaAmx.Multiline = true;
+            this.txtListaAmx.Name = "txtListaAmx";
+            this.txtListaAmx.Size = new System.Drawing.Size(214, 205);
+            this.txtListaAmx.TabIndex = 52;
             // 
             // lblamx
             // 
@@ -377,12 +378,24 @@
             this.lblamx.TabIndex = 51;
             this.lblamx.Text = "AMX Campanhas";
             // 
+            // chkDev
+            // 
+            this.chkDev.AutoSize = true;
+            this.chkDev.Location = new System.Drawing.Point(612, 493);
+            this.chkDev.Name = "chkDev";
+            this.chkDev.Size = new System.Drawing.Size(44, 17);
+            this.chkDev.TabIndex = 53;
+            this.chkDev.Text = "dev";
+            this.chkDev.UseVisualStyleBackColor = true;
+            this.chkDev.Visible = false;
+            // 
             // frmGerarEmailJira
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 526);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.chkDev);
+            this.Controls.Add(this.txtListaAmx);
             this.Controls.Add(this.lblamx);
             this.Controls.Add(this.gbDiasSemana);
             this.Controls.Add(this.label1);
@@ -438,7 +451,8 @@
         private System.Windows.Forms.CheckBox chkQuarta;
         private System.Windows.Forms.CheckBox chkTerca;
         private System.Windows.Forms.CheckBox chkSegunda;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtListaAmx;
         private System.Windows.Forms.Label lblamx;
+        private System.Windows.Forms.CheckBox chkDev;
     }
 }

@@ -312,6 +312,7 @@
     <Compile Include="frmValidarFrasePush.Designer.cs">
       <DependentUpon>frmValidarFrasePush.cs</DependentUpon>
     </Compile>
+    <Compile Include="FuncoesDeveloper.cs" />
     <Compile Include="LimparString.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
