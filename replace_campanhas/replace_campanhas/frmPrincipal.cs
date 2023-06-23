@@ -24,7 +24,7 @@ namespace replace_campanhas
     {
         private const string MutexName = "MeuProgramaMutex";
         private Mutex mutex;
-        private FuncoesDeveloper fd = new FuncoesDeveloper();
+        private FuncoesDeveloper fd;
 
         [DllImport("user32.dll")]
         private static extern bool SetForegroundWindow(IntPtr hWnd);
@@ -33,15 +33,20 @@ namespace replace_campanhas
         {
             InitializeComponent();
             this.MinimumSize = new Size(870, 700);
-
-            
         }
 
+        public frmPrincipal(string[] args)
+        {
+            InitializeComponent();
+            this.MinimumSize = new Size(870, 700);
+            fd = new FuncoesDeveloper(args);
+            //MessageBox.Show(args[0]);
+        }
+
+        //private void Form1_Load(object sender, EventArgs e)
         private void Form1_Load(object sender, EventArgs e)
         {
             lblVersion.Text = "Verion: V2.20 Alfa";
-            //this.MaximizeBox = false;
-            //teste();
             desabilitaForms();
 
             if (VerificaProgramaEmExecucao())
@@ -74,23 +79,17 @@ namespace replace_campanhas
                 emotesToolStripMenuItem.Visible = true;
                 emailDeDiagramaToolStripMenuItem.Visible = true;
             }
-                
-
-            //DESKTOP - G34V8GD
-            //var nome = Environment.MachineName;
-            //var nomeCompleto = Dns.GetHostEntry(nome).HostName;
-
-            //if (nome == "DESKTOP-G34V8GD")
-            //{
-            //    agendamentoEmailJIRAToolStripMenuItem.Visible = true;
-            //    checklistToolStripMenuItem.Visible = true;
-            //    aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = true;
-            //    testarLinksToolStripMenuItem.Visible = true;
-            //    testeToolStripMenuItem.Visible = true;
-            //    emotesToolStripMenuItem.Visible = true;
-            //    emailDeDiagramaToolStripMenuItem.Visible = true;
-            //}
-
+            else
+            {
+                agendamentoEmailJIRAToolStripMenuItem.Visible = false;
+                checklistToolStripMenuItem.Visible = false;
+                aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = false;
+                testarLinksToolStripMenuItem.Visible = false;
+                testeToolStripMenuItem.Visible = false;
+                emotesToolStripMenuItem.Visible = false;
+                emailDeDiagramaToolStripMenuItem.Visible = false;
+            }
+              
         }
         public static bool VerificaProgramaEmExecucao()
         {
@@ -114,6 +113,7 @@ namespace replace_campanhas
                 }
             }
         }
+
         //protected override void Dispose(bool disposing)
         //{
         //    if (disposing)

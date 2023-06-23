@@ -13,8 +13,8 @@ namespace replace_campanhas
 {
     public partial class frmGerarEmailJira : Form
     {
-        protected bool pcDeveloper = false;
-        FuncoesDeveloper fd = new FuncoesDeveloper();
+        //private bool pcDeveloper = false;
+        private FuncoesDeveloper fd = new FuncoesDeveloper();
 
         public frmGerarEmailJira()
         {

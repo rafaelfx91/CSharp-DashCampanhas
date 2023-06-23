@@ -12,7 +12,7 @@ namespace replace_campanhas
 {
     public partial class frmAgendamentoCampanhaJira : Form
     {
-        FuncoesDeveloper fd = new FuncoesDeveloper();
+        private FuncoesDeveloper fd = new FuncoesDeveloper();
 
         public frmAgendamentoCampanhaJira()
         {

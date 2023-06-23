@@ -12,11 +12,15 @@ namespace replace_campanhas
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPrincipal());
+            Application.Run(new frmPrincipal(args));
+            //if(args.Count() != 0)
+            //    Application.Run(new frmPrincipal());
+            //if (args.Count() >= 0)
+            //    Application.Run(new frmPrincipal(args));
         }
     }
 }

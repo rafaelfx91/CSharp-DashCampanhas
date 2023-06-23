@@ -10,6 +10,32 @@ namespace replace_campanhas
 {
     public class FuncoesDeveloper
     {
+        private bool developer = false;
+
+        public FuncoesDeveloper()
+        {
+
+        }
+
+        public FuncoesDeveloper(string[] args)
+        {
+            verificaArgumentos(args);
+        }
+
+        public void verificaArgumentos(string[] args)
+        {
+            foreach (var item in args)
+            {
+
+
+
+
+            }
+
+
+            developer = true;
+        }
+
         public bool validaConfigsDev(string nomePC)
         {
             if (nomePC == "DESKTOP-G34V8GD")
@@ -40,5 +66,6 @@ namespace replace_campanhas
         }
 
     }
+
 
 }
