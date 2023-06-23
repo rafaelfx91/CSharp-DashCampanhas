@@ -92,7 +92,7 @@ namespace replace_campanhas
 
             var mensagemSaida = boasVindas + " "+ Solicitante+" tudo bem ?"+
                                 "\r\n"+
-                                "Segue diagrama, " +disparo+" em anexo para aparovação";
+                                "Segue diagrama, " +disparo+" em anexo para aprovação";
 
             txtSaida.Text = mensagemSaida;
 

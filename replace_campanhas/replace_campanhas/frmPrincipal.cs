@@ -3,13 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 //ing System.Windows.Forms.show;
@@ -19,18 +22,35 @@ namespace replace_campanhas
 {
     public partial class frmPrincipal : Form
     {
+        private const string MutexName = "MeuProgramaMutex";
+        private Mutex mutex;
+
+        [DllImport("user32.dll")]
+        private static extern bool SetForegroundWindow(IntPtr hWnd);
+
         public frmPrincipal()
         {
             InitializeComponent();
             this.MinimumSize = new Size(870, 700);
+
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lblVersion.Text = "Verion: V2.19 Alfa";
+            lblVersion.Text = "Verion: V2.20 Alfa";
             //this.MaximizeBox = false;
             //teste();
             desabilitaForms();
+
+            if (VerificaProgramaEmExecucao())
+            {
+                //MessageBox.Show("Programa já está em execução.");
+                TragaProgramaExistenteParaFrente();
+                Application.Exit();
+            }
+            else
+                mutex = new Mutex(true, MutexName);
         }
 
         public void teste()
@@ -59,6 +79,41 @@ namespace replace_campanhas
             }
 
         }
+        public static bool VerificaProgramaEmExecucao()
+        {
+            return Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length > 1;
+            //Process currentProcess = Process.GetCurrentProcess();
+            //Process[] processes = Process.GetProcessesByName(currentProcess.ProcessName);
+            //return processes.Length > 1;
+        }
+
+        private void TragaProgramaExistenteParaFrente()
+        {
+            Process currentProcess = Process.GetCurrentProcess();
+            Process[] processes = Process.GetProcessesByName(currentProcess.ProcessName);
+
+            foreach (Process process in processes)
+            {
+                if (process.Id != currentProcess.Id)
+                {
+                    SetForegroundWindow(process.MainWindowHandle);
+                    break;
+                }
+            }
+        }
+        //protected override void Dispose(bool disposing)
+        //{
+        //    if (disposing)
+        //    {
+        //        if (mutex != null)
+        //        {
+        //            mutex.ReleaseMutex();
+        //            mutex.Dispose();
+        //        }
+        //    }
+        //    base.Dispose(disposing);
+        //}
+
 
         //MENU NOME CAMPANHA
         private void gerarNomeNoSASToolStripMenuItem_Click(object sender, EventArgs e)
