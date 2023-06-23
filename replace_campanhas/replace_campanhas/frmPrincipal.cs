@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Mail;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -26,10 +27,38 @@ namespace replace_campanhas
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lblVersion.Text = "Verion: V2.18 Alfa";
+            lblVersion.Text = "Verion: V2.19 Alfa";
             //this.MaximizeBox = false;
+            //teste();
+            desabilitaForms();
         }
 
+        public void teste()
+        {
+            var nome = Environment.MachineName;
+            var nomeCompleto = Dns.GetHostEntry(nome).HostName;
+            MessageBox.Show(nome);
+            MessageBox.Show(nomeCompleto);
+        }
+
+        public void desabilitaForms()
+        {
+            //DESKTOP - G34V8GD
+            var nome = Environment.MachineName;
+            //var nomeCompleto = Dns.GetHostEntry(nome).HostName;
+
+            if (nome == "DESKTOP-G34V8GD")
+            {
+                agendamentoEmailJIRAToolStripMenuItem.Visible = true;
+                checklistToolStripMenuItem.Visible = true;
+                aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = true;
+                testarLinksToolStripMenuItem.Visible = true;
+                testeToolStripMenuItem.Visible = true;
+                emotesToolStripMenuItem.Visible = true;
+                emailDeDiagramaToolStripMenuItem.Visible = true;
+            }
+
+        }
 
         //MENU NOME CAMPANHA
         private void gerarNomeNoSASToolStripMenuItem_Click(object sender, EventArgs e)
@@ -216,6 +245,24 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
+
+        private void emailDeDiagramaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmGerarEmailDiagrama")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmGerarEmailDiagrama novoFormFilho = new frmGerarEmailDiagrama();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
+
+
+
     }
 }
 

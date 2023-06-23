@@ -36,6 +36,8 @@
             this.agendamentoCampanhasJIRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aGENDAMENTOCAMPANHASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checklistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agendamentoEmailJIRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.emailDeDiagramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validarFraseSMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pUSHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +51,6 @@
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emotesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agendamentoEmailJIRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,7 +86,8 @@
             this.agendamentoCampanhasJIRAToolStripMenuItem,
             this.aGENDAMENTOCAMPANHASToolStripMenuItem,
             this.checklistToolStripMenuItem,
-            this.agendamentoEmailJIRAToolStripMenuItem});
+            this.agendamentoEmailJIRAToolStripMenuItem,
+            this.emailDeDiagramaToolStripMenuItem});
             this.sASToolStripMenuItem.Name = "sASToolStripMenuItem";
             this.sASToolStripMenuItem.Size = new System.Drawing.Size(78, 41);
             this.sASToolStripMenuItem.Text = "SAS";
@@ -109,6 +111,7 @@
             this.aGENDAMENTOCAMPANHASToolStripMenuItem.Name = "aGENDAMENTOCAMPANHASToolStripMenuItem";
             this.aGENDAMENTOCAMPANHASToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
             this.aGENDAMENTOCAMPANHASToolStripMenuItem.Text = "Agendamento campanhas (OLD)";
+            this.aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = false;
             this.aGENDAMENTOCAMPANHASToolStripMenuItem.Click += new System.EventHandler(this.aGENDAMENTOCAMPANHASToolStripMenuItem_Click);
             // 
             // checklistToolStripMenuItem
@@ -116,7 +119,24 @@
             this.checklistToolStripMenuItem.Name = "checklistToolStripMenuItem";
             this.checklistToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
             this.checklistToolStripMenuItem.Text = "Checklist (dev)";
+            this.checklistToolStripMenuItem.Visible = false;
             this.checklistToolStripMenuItem.Click += new System.EventHandler(this.checklistToolStripMenuItem_Click);
+            // 
+            // agendamentoEmailJIRAToolStripMenuItem
+            // 
+            this.agendamentoEmailJIRAToolStripMenuItem.Name = "agendamentoEmailJIRAToolStripMenuItem";
+            this.agendamentoEmailJIRAToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.agendamentoEmailJIRAToolStripMenuItem.Text = "Agendamento email (JIRA)";
+            this.agendamentoEmailJIRAToolStripMenuItem.Visible = false;
+            this.agendamentoEmailJIRAToolStripMenuItem.Click += new System.EventHandler(this.agendamentoEmailJIRAToolStripMenuItem_Click);
+            // 
+            // emailDeDiagramaToolStripMenuItem
+            // 
+            this.emailDeDiagramaToolStripMenuItem.Name = "emailDeDiagramaToolStripMenuItem";
+            this.emailDeDiagramaToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.emailDeDiagramaToolStripMenuItem.Text = "Envio de diagrama";
+            this.emailDeDiagramaToolStripMenuItem.Visible = false;
+            this.emailDeDiagramaToolStripMenuItem.Click += new System.EventHandler(this.emailDeDiagramaToolStripMenuItem_Click);
             // 
             // sMSToolStripMenuItem
             // 
@@ -177,6 +197,7 @@
             this.testarLinksToolStripMenuItem.Name = "testarLinksToolStripMenuItem";
             this.testarLinksToolStripMenuItem.Size = new System.Drawing.Size(312, 42);
             this.testarLinksToolStripMenuItem.Text = "Testar links (dev)";
+            this.testarLinksToolStripMenuItem.Visible = false;
             this.testarLinksToolStripMenuItem.Click += new System.EventHandler(this.testarLinksToolStripMenuItem_Click);
             // 
             // fERRAMENTASToolStripMenuItem
@@ -209,6 +230,7 @@
             this.emotesToolStripMenuItem.Name = "emotesToolStripMenuItem";
             this.emotesToolStripMenuItem.Size = new System.Drawing.Size(331, 42);
             this.emotesToolStripMenuItem.Text = "Emotes (dev)";
+            this.emotesToolStripMenuItem.Visible = false;
             this.emotesToolStripMenuItem.Click += new System.EventHandler(this.emotesToolStripMenuItem_Click);
             // 
             // sAIRToolStripMenuItem
@@ -217,13 +239,6 @@
             this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(90, 41);
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
-            // 
-            // agendamentoEmailJIRAToolStripMenuItem
-            // 
-            this.agendamentoEmailJIRAToolStripMenuItem.Name = "agendamentoEmailJIRAToolStripMenuItem";
-            this.agendamentoEmailJIRAToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
-            this.agendamentoEmailJIRAToolStripMenuItem.Text = "Agendamento email (JIRA)";
-            this.agendamentoEmailJIRAToolStripMenuItem.Click += new System.EventHandler(this.agendamentoEmailJIRAToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -271,6 +286,7 @@
         private System.Windows.Forms.ToolStripMenuItem emotesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agendamentoCampanhasJIRAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agendamentoEmailJIRAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem emailDeDiagramaToolStripMenuItem;
     }
 }
 
