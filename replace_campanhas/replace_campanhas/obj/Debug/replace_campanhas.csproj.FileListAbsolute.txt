@@ -98,3 +98,4 @@ C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_
 C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmEmotes.resources
 C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmAgendamentoCampanhaJira.resources
 C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmGerarEmailJira.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmGerarEmailDiagrama.resources

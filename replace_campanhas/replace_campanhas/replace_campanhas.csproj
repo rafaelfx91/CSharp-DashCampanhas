@@ -258,6 +258,12 @@
     <Compile Include="frmGeradordeSenhas.Designer.cs">
       <DependentUpon>frmGeradordeSenhas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGerarEmailDiagrama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGerarEmailDiagrama.Designer.cs">
+      <DependentUpon>frmGerarEmailDiagrama.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGerarEmailJira.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGeradordeSenhas.resx">
       <DependentUpon>frmGeradordeSenhas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGerarEmailDiagrama.resx">
+      <DependentUpon>frmGerarEmailDiagrama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGerarEmailJira.resx">
       <DependentUpon>frmGerarEmailJira.cs</DependentUpon>

@@ -57,22 +57,63 @@ namespace replace_campanhas
             if (rdrBoanoite.Checked)
                 boasVindas = "Bboa noite!";
 
-
             var Solicitante = String.Empty;
-            var SolicitanteEmail = String.Empty;
 
             if (chkJessica.Checked)
-            {
-                
-            }
+                Solicitante = "Jessica";            
+            if (chkCarol.Checked)
+                Solicitante = "Carol";            
+            if (chkBarbara.Checked)
+                Solicitante = "Barbara";            
+            if (chkCamila.Checked)
+                Solicitante = "Camila";
+
+            var SolicitanteEmail = String.Empty;
+
+            if (chkEmailJessica.Checked)
+                SolicitanteEmail += "jessica.vissirini.terceiros@claro.com.br;";
+            if (chkEmailCarol.Checked)
+                SolicitanteEmail += "caroline.csantos@claro.com.br;";
+            if (chkEmailBarbara.Checked)
+                SolicitanteEmail += "barbara.noguchi@claro.com.br;";
+            if (chkEmailCamila.Checked)
+                SolicitanteEmail += "camila.corrales@claro.com.br;";
+
+            var disparo = String.Empty;
+
+            if (chkPush.Checked)
+                disparo = " frase push,";
+            if (chkEmail.Checked)
+                disparo = " peça de email,";
+            if (chkSms.Checked)
+                disparo = " frase sms,";
+
+            txtEmalSaida.Text = SolicitanteEmail;
+
+            var mensagemSaida = boasVindas + " "+ Solicitante+" tudo bem ?"+
+                                "\r\n"+
+                                "Segue diagrama, " +disparo+" em anexo para aparovação";
+
+            txtSaida.Text = mensagemSaida;
 
 
+        }
 
-            var mensagemSaida = ""+
-                                "";
-
-
-
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtEmalSaida.Clear();
+            txtSaida.Clear();
+            chkJessica.Checked = false;
+            chkCarol.Checked = false;
+            chkBarbara.Checked = false;
+            chkCamila.Checked = false;
+            chkEmailJessica.Checked = false;
+            chkEmailCarol.Checked = false;
+            chkEmailBarbara.Checked = false;
+            chkEmailCamila.Checked = false;
+            chkPush.Checked = false;
+            chkEmail.Checked = false;
+            chkSms.Checked = false;
         }
     }
 }
