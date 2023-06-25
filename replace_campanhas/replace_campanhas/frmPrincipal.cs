@@ -22,7 +22,7 @@ namespace replace_campanhas
 {
     public partial class frmPrincipal : Form
     {
-        private const string MutexName = "MeuProgramaMutex";
+        private const string MutexName = "PlusoftDash";
         private Mutex mutex;
         private FuncoesDeveloper fd;
 
@@ -44,9 +44,9 @@ namespace replace_campanhas
         }
 
         //private void Form1_Load(object sender, EventArgs e)
-        private void Form1_Load(object sender, EventArgs e)
+        private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            lblVersion.Text = "Verion: V2.20 Alfa";
+            lblVersion.Text = "Verion: V2.21 Alfa";
             desabilitaForms();
 
             if (VerificaProgramaEmExecucao())
@@ -92,6 +92,7 @@ namespace replace_campanhas
             }
               
         }
+
         public static bool VerificaProgramaEmExecucao()
         {
             return Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length > 1;
@@ -329,8 +330,6 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
-
-
 
     }
 }
