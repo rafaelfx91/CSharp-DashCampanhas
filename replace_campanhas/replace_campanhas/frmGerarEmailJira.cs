@@ -14,16 +14,24 @@ namespace replace_campanhas
     public partial class frmGerarEmailJira : Form
     {
         //private bool pcDeveloper = false;
-        private FuncoesDeveloper fd = new FuncoesDeveloper();
+        //private FuncoesDeveloper fd = new FuncoesDeveloper();
+        private FuncoesDeveloper fd;
 
         public frmGerarEmailJira()
         {
             InitializeComponent();
         }
+
+        public frmGerarEmailJira(FuncoesDeveloper fd)
+        {
+            InitializeComponent();
+            this.fd= fd;
+        }
+
         private void frmGerarEmailJira_Load(object sender, EventArgs e)
         {
             setBoasVindas(DateTime.Now.ToString("HH"));
-            if (fd.validaConfigsDev2())
+            if (fd.validaConfigsDev3())
                 chkDev.Visible= true;
 
         }

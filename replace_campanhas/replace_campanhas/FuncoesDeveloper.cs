@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,7 @@ namespace replace_campanhas
 
         }
 
+
         public FuncoesDeveloper(string[] args)
         {
             verificaArgumentos(args);
@@ -24,16 +26,21 @@ namespace replace_campanhas
 
         public void verificaArgumentos(string[] args)
         {
-            foreach (var item in args)
+            //-devS
+
+            for (int i = 0; i < args.Count(); i++)
             {
+                args[i] = args[i].Trim();
 
-
-
-
+                if (args[i] == "-devS")
+                    developer = true;
+                
             }
 
 
-            developer = true;
+
+
+            
         }
 
         public bool validaConfigsDev(string nomePC)
@@ -49,6 +56,15 @@ namespace replace_campanhas
         public bool validaConfigsDev2()
         {
             if (pegaNomePc() == "DESKTOP-G34V8GD")
+                return true;
+            else
+                return false;
+
+
+        }      
+        public bool validaConfigsDev3()
+        {
+            if (developer)
                 return true;
             else
                 return false;

@@ -12,7 +12,8 @@ namespace replace_campanhas
 {
     public partial class frmAgendamentoCampanhaJira : Form
     {
-        private FuncoesDeveloper fd = new FuncoesDeveloper();
+        //private FuncoesDeveloper fd = new FuncoesDeveloper();
+        private FuncoesDeveloper fd;
 
         public frmAgendamentoCampanhaJira()
         {
@@ -20,10 +21,17 @@ namespace replace_campanhas
             this.MaximizeBox = false;
         }
 
+        public frmAgendamentoCampanhaJira(FuncoesDeveloper fd)
+        {
+            InitializeComponent();
+            this.MaximizeBox = false;
+            this.fd = fd;
+        }
+
         private void frmAgendamentoCampanhaJira_Load(object sender, EventArgs e)
         {
             setBoasVindas(DateTime.Now.ToString("HH"));
-            if (fd.validaConfigsDev2())
+            if (fd.validaConfigsDev3())
                 chkDev.Visible = true;
             
         }

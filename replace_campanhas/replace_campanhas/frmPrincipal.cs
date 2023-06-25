@@ -69,7 +69,8 @@ namespace replace_campanhas
 
         public void desabilitaForms()
         {
-            if (fd.validaConfigsDev2())
+            //if (fd.validaConfigsDev2())
+            if (fd.validaConfigsDev3())
             {
                 agendamentoEmailJIRAToolStripMenuItem.Visible = true;
                 checklistToolStripMenuItem.Visible = true;
@@ -294,7 +295,7 @@ namespace replace_campanhas
                     return;
                 }
             }
-            frmAgendamentoCampanhaJira novoFormFilho = new frmAgendamentoCampanhaJira();
+            frmAgendamentoCampanhaJira novoFormFilho = new frmAgendamentoCampanhaJira(fd);
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
@@ -309,7 +310,7 @@ namespace replace_campanhas
                     return;
                 }
             }
-            frmGerarEmailJira novoFormFilho = new frmGerarEmailJira();
+            frmGerarEmailJira novoFormFilho = new frmGerarEmailJira(fd);
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
