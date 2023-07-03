@@ -12,6 +12,8 @@ namespace replace_campanhas
 {
     public partial class frmGerarEmailDiagrama : Form
     {
+        FuncoesDiversas fdiversas = new FuncoesDiversas();
+
         public frmGerarEmailDiagrama()
         {
             InitializeComponent();
@@ -20,25 +22,35 @@ namespace replace_campanhas
         private void frmGerarEmailDiagrama_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
-            setBoasVindas(DateTime.Now.ToString("HH"));
+            setBoasVindas();
+           
         }
 
-        public void setBoasVindas(string hora)
+        public void setBoasVindas()
         {
-            try
-            {
-                var horas = int.Parse(hora);
-                if ((horas >= 00) && (horas < 12))
-                    rdrBomdia.Checked = true;
-                if ((horas >= 12) && (horas < 19))
-                    rdrBoatarde.Checked = true;
-                if ((horas >= 19) && (horas < 00))
-                    rdrBoanoite.Checked = true;
-            }
-            catch (Exception ex)
-            {
+            var bv = fdiversas.setBoasVindas(DateTime.Now.ToString("HH"));
+            
+            if (bv == 0)
+                rdrBomdia.Checked = true;
+            if (bv == 1)
+                rdrBoatarde.Checked = true;
+            if (bv == 2)
                 rdrBoanoite.Checked = true;
-            }
+
+            //try
+            //{
+            //    var horas = int.Parse(hora);
+            //    if ((horas >= 00) && (horas < 12))
+            //        rdrBomdia.Checked = true;
+            //    if ((horas >= 12) && (horas < 19))
+            //        rdrBoatarde.Checked = true;
+            //    if ((horas >= 19) && (horas < 00))
+            //        rdrBoanoite.Checked = true;
+            //}
+            //catch (Exception ex)
+            //{
+            //    rdrBoanoite.Checked = true;
+            //}
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -82,11 +94,11 @@ namespace replace_campanhas
             var disparo = String.Empty;
 
             if (chkPush.Checked)
-                disparo = " frase push,";
+                disparo = " disparo de push,";
             if (chkEmail.Checked)
-                disparo = " peça de email,";
+                disparo = " disparo de email, ";
             if (chkSms.Checked)
-                disparo = " frase sms,";
+                disparo = " disparo de sms, ";
 
             txtEmalSaida.Text = SolicitanteEmail;
 

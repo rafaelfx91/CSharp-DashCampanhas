@@ -14,6 +14,7 @@ namespace replace_campanhas
     {
         //private FuncoesDeveloper fd = new FuncoesDeveloper();
         private FuncoesDeveloper fd;
+        FuncoesDiversas fdiversas = new FuncoesDiversas();
 
         public frmAgendamentoCampanhaJira()
         {
@@ -30,27 +31,35 @@ namespace replace_campanhas
 
         private void frmAgendamentoCampanhaJira_Load(object sender, EventArgs e)
         {
-            setBoasVindas(DateTime.Now.ToString("HH"));
+            setBoasVindas();
             if (fd.validaConfigsDev3())
                 chkDev.Visible = true;
             
         }
 
-        public void setBoasVindas(string hora)
+        public void setBoasVindas()
         {
-            try
-            {
-                var horas = int.Parse(hora);
-                if ( (horas >= 00) && (horas < 12) )
-                    rdrBomdia.Checked = true;
-                if ((horas >= 12) && (horas < 19))
-                    rdrBoatarde.Checked = true;
-                if ((horas >= 19) && (horas < 00))
-                    rdrBoanoite.Checked = true;
-            }
-            catch(Exception ex) { 
-                rdrBoanoite.Checked= true;
-            }
+            var bv = fdiversas.setBoasVindas(DateTime.Now.ToString("HH"));
+
+            if (bv == 0)
+                rdrBomdia.Checked = true;
+            if (bv == 1)
+                rdrBoatarde.Checked = true;
+            if (bv == 2)
+                rdrBoanoite.Checked = true;
+            //try
+            //{
+            //    var horas = int.Parse(hora);
+            //    if ( (horas >= 00) && (horas < 12) )
+            //        rdrBomdia.Checked = true;
+            //    if ((horas >= 12) && (horas < 19))
+            //        rdrBoatarde.Checked = true;
+            //    if ((horas >= 19) && (horas < 00))
+            //        rdrBoanoite.Checked = true;
+            //}
+            //catch(Exception ex) { 
+            //    rdrBoanoite.Checked= true;
+            //}
         }
 
 
@@ -68,7 +77,6 @@ namespace replace_campanhas
             txtAmx.Clear();
             txtSaida.Clear();   
         }
-
         private void btnGerar_Click(object sender, EventArgs e)
         {
             var boasVindas = String.Empty;
@@ -120,7 +128,6 @@ namespace replace_campanhas
             Obrigado   
              */
         }
-
         private void txtCopiar_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(txtSaida.Text);

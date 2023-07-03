@@ -16,6 +16,7 @@ namespace replace_campanhas
         //private bool pcDeveloper = false;
         //private FuncoesDeveloper fd = new FuncoesDeveloper();
         private FuncoesDeveloper fd;
+        FuncoesDiversas fdiversas = new FuncoesDiversas();
 
         public frmGerarEmailJira()
         {
@@ -30,29 +31,43 @@ namespace replace_campanhas
 
         private void frmGerarEmailJira_Load(object sender, EventArgs e)
         {
-            setBoasVindas(DateTime.Now.ToString("HH"));
+            setBoasVindas();
             if (fd.validaConfigsDev3())
                 chkDev.Visible= true;
 
         }
 
-        public void setBoasVindas(string hora)
+        public void setBoasVindas()
         {
-            try
-            {
-                var horas = int.Parse(hora);
-                if ((horas >= 00) && (horas < 12))
-                    rdrBomdia.Checked = true;
-                if ((horas >= 12) && (horas < 19))
-                    rdrBoatarde.Checked = true;
-                if ((horas >= 19) && (horas < 00))
-                    rdrBoanoite.Checked = true;
-            }
-            catch (Exception ex)
-            {
+            var bv = fdiversas.setBoasVindas(DateTime.Now.ToString("HH"));
+
+            if (bv == 0)
+                rdrBomdia.Checked = true;
+            if (bv == 1)
+                rdrBoatarde.Checked = true;
+            if (bv == 2)
                 rdrBoanoite.Checked = true;
-            }
+
+            //try
+            //{
+            //    var horas = int.Parse(hora);
+            //    if ((horas >= 00) && (horas < 12))
+            //        rdrBomdia.Checked = true;
+            //    if ((horas >= 12) && (horas < 19))
+            //        rdrBoatarde.Checked = true;
+            //    if ((horas >= 19) && (horas < 00))
+            //        rdrBoanoite.Checked = true;
+            //}
+            //catch (Exception ex)
+            //{
+            //    rdrBoanoite.Checked = true;
+            //}
         }
+
+
+
+
+
         public void txtAmxRead(){
 
             if (rdrOSAMX.Checked) 

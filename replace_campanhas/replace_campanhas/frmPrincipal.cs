@@ -43,7 +43,6 @@ namespace replace_campanhas
             //MessageBox.Show(args[0]);
         }
 
-        //private void Form1_Load(object sender, EventArgs e)
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             lblVersion.Text = "Verion: V2.21 Alfa";

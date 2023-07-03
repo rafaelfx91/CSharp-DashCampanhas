@@ -269,7 +269,7 @@
             this.Controls.Add(this.btnGerar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmAgendamentoCampanha";
-            this.Text = "Agendamento de campanhas";
+            this.Text = "Agendamento de campanhas OLD";
             this.Load += new System.EventHandler(this.frmAgendamentoCampanha_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
