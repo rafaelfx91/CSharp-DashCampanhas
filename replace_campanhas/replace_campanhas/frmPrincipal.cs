@@ -78,6 +78,7 @@ namespace replace_campanhas
                 testeToolStripMenuItem.Visible = true;
                 emotesToolStripMenuItem.Visible = true;
                 emailDeDiagramaToolStripMenuItem.Visible = true;
+                encriptadorToolStripMenuItem.Visible = true;
             }
             else
             {
@@ -88,6 +89,7 @@ namespace replace_campanhas
                 testeToolStripMenuItem.Visible = false;
                 emotesToolStripMenuItem.Visible = false;
                 emailDeDiagramaToolStripMenuItem.Visible = false;
+                encriptadorToolStripMenuItem.Visible = false;
             }
               
         }
@@ -330,6 +332,22 @@ namespace replace_campanhas
             novoFormFilho.Show();
         }
 
+        private void encriptadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmEncriptador")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmEncriptador novoFormFilho = new frmEncriptador();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+
+        }
     }
 }
 

@@ -228,6 +228,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="crypto.cs" />
     <Compile Include="frmAgendamentoCampanha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +252,12 @@
     </Compile>
     <Compile Include="frmEmotes.Designer.cs">
       <DependentUpon>frmEmotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEncriptador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEncriptador.Designer.cs">
+      <DependentUpon>frmEncriptador.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGeradordeSenhas.cs">
       <SubType>Form</SubType>
@@ -328,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmotes.resx">
       <DependentUpon>frmEmotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEncriptador.resx">
+      <DependentUpon>frmEncriptador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGeradordeSenhas.resx">
       <DependentUpon>frmGeradordeSenhas.cs</DependentUpon>

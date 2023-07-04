@@ -51,6 +51,7 @@
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emotesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.encriptadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -205,7 +206,8 @@
             this.fERRAMENTASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.geradorDeSenhasToolStripMenuItem,
             this.testeToolStripMenuItem,
-            this.emotesToolStripMenuItem});
+            this.emotesToolStripMenuItem,
+            this.encriptadorToolStripMenuItem});
             this.fERRAMENTASToolStripMenuItem.Name = "fERRAMENTASToolStripMenuItem";
             this.fERRAMENTASToolStripMenuItem.Size = new System.Drawing.Size(221, 41);
             this.fERRAMENTASToolStripMenuItem.Text = "FERRAMENTAS";
@@ -239,6 +241,14 @@
             this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(90, 41);
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
+            // 
+            // encriptadorToolStripMenuItem
+            // 
+            this.encriptadorToolStripMenuItem.Name = "encriptadorToolStripMenuItem";
+            this.encriptadorToolStripMenuItem.Size = new System.Drawing.Size(331, 42);
+            this.encriptadorToolStripMenuItem.Text = "Encriptador";
+            this.encriptadorToolStripMenuItem.Visible = false;
+            this.encriptadorToolStripMenuItem.Click += new System.EventHandler(this.encriptadorToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -287,6 +297,7 @@
         private System.Windows.Forms.ToolStripMenuItem agendamentoCampanhasJIRAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agendamentoEmailJIRAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem emailDeDiagramaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem encriptadorToolStripMenuItem;
     }
 }
 
