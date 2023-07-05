@@ -23,7 +23,6 @@ namespace replace_campanhas
 
         }
 
-
         public FuncoesDeveloper(string[] args)
         {
             verificaArgumentos(args);
@@ -31,7 +30,6 @@ namespace replace_campanhas
 
         public void verificaArgumentos(string[] args)
         {
-            //-devS
 
             for (int i = 0; i < args.Count(); i++)
             {
@@ -74,6 +72,7 @@ namespace replace_campanhas
 
 
         }      
+        
         public bool validaConfigsDev3()
         {
             if (developer)
@@ -89,7 +88,14 @@ namespace replace_campanhas
             else
                 return "";
         }
-
+        
+        public bool validaSenhaCrypt2()
+        {
+            if (crypt)
+                return crypt;
+            else
+                return crypt;
+        }
 
         public string pegaNomePc()
         {

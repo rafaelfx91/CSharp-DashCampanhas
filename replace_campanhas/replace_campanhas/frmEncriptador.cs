@@ -48,19 +48,23 @@ namespace replace_campanhas
         private void btnGerar_Click(object sender, EventArgs e)
         {
             txtFraseSaida.Clear();
-
-            if (!String.IsNullOrEmpty(txtSenha.Text))
+            try
             {
-                if (rdrEncripta.Checked)
-                    txtFraseSaida.Text = cp.Encrypt(txtFraseEntrada.Text, txtSenha.Text);
-                if (rdrDecripta.Checked)
-                    txtFraseSaida.Text = cp.Decrypt(txtFraseEntrada.Text, txtSenha.Text);
-            }
-            else
+                if (!String.IsNullOrEmpty(txtSenha.Text))
+                {
+                    if (rdrEncripta.Checked)
+                        txtFraseSaida.Text = cp.Encrypt(txtFraseEntrada.Text, txtSenha.Text);
+                    if (rdrDecripta.Checked)
+                        txtFraseSaida.Text = cp.Decrypt(txtFraseEntrada.Text, txtSenha.Text);
+                }
+                else
+                {
+                    txtSenha.Text = "123";
+                }
+            }catch(Exception ex)
             {
-                txtSenha.Text = "123";
+                MessageBox.Show("Verifique se a senha esta correta","Erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-
 
 
             

@@ -47,7 +47,8 @@ namespace replace_campanhas
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            lblVersion.Text = "Verion: V2.22C Alfa";
+            lblVersion.Text = "Versão: V2.22F Alfa";
+            
             desabilitaForms();
 
             if (VerificaProgramaEmExecucao())
@@ -93,7 +94,13 @@ namespace replace_campanhas
                 emailDeDiagramaToolStripMenuItem.Visible = false;
                 encriptadorToolStripMenuItem.Visible = false;
             }
-              
+
+            if (fd.validaSenhaCrypt2())
+                encriptadorToolStripMenuItem.Visible = true;
+            else
+                encriptadorToolStripMenuItem.Visible = false;
+
+
         }
 
         public static bool VerificaProgramaEmExecucao()
