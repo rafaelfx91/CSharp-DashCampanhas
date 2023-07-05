@@ -27,6 +27,7 @@ namespace replace_campanhas
             InitializeComponent();
             txtSenha.PasswordChar = '*';
             txtSenha.Text = fd.validaSenhaCrypt();
+            this.MaximizeBox = false;
             //txtSenha.Text = senha;
         }
 
@@ -60,6 +61,8 @@ namespace replace_campanhas
                 else
                 {
                     txtSenha.Text = "123";
+                    txtSenha.PasswordChar = '\0';
+                    senhaVisivel = !senhaVisivel;
                 }
             }catch(Exception ex)
             {

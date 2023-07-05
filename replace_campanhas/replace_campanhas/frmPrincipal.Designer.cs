@@ -48,9 +48,9 @@
             this.testarLinksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fERRAMENTASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.geradorDeSenhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.encriptadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emotesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.encriptadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -86,9 +86,9 @@
             this.gerarNomeNoSASToolStripMenuItem,
             this.agendamentoCampanhasJIRAToolStripMenuItem,
             this.aGENDAMENTOCAMPANHASToolStripMenuItem,
-            this.checklistToolStripMenuItem,
             this.agendamentoEmailJIRAToolStripMenuItem,
-            this.emailDeDiagramaToolStripMenuItem});
+            this.emailDeDiagramaToolStripMenuItem,
+            this.checklistToolStripMenuItem});
             this.sASToolStripMenuItem.Name = "sASToolStripMenuItem";
             this.sASToolStripMenuItem.Size = new System.Drawing.Size(78, 41);
             this.sASToolStripMenuItem.Text = "SAS";
@@ -189,15 +189,15 @@
             // validarHtmlToolStripMenuItem
             // 
             this.validarHtmlToolStripMenuItem.Name = "validarHtmlToolStripMenuItem";
-            this.validarHtmlToolStripMenuItem.Size = new System.Drawing.Size(312, 42);
+            this.validarHtmlToolStripMenuItem.Size = new System.Drawing.Size(299, 42);
             this.validarHtmlToolStripMenuItem.Text = "Validar html";
             this.validarHtmlToolStripMenuItem.Click += new System.EventHandler(this.validarHtmlToolStripMenuItem_Click);
             // 
             // testarLinksToolStripMenuItem
             // 
             this.testarLinksToolStripMenuItem.Name = "testarLinksToolStripMenuItem";
-            this.testarLinksToolStripMenuItem.Size = new System.Drawing.Size(312, 42);
-            this.testarLinksToolStripMenuItem.Text = "Testar links (dev)";
+            this.testarLinksToolStripMenuItem.Size = new System.Drawing.Size(299, 42);
+            this.testarLinksToolStripMenuItem.Text = "Testar links (CP)";
             this.testarLinksToolStripMenuItem.Visible = false;
             this.testarLinksToolStripMenuItem.Click += new System.EventHandler(this.testarLinksToolStripMenuItem_Click);
             // 
@@ -215,14 +215,22 @@
             // geradorDeSenhasToolStripMenuItem
             // 
             this.geradorDeSenhasToolStripMenuItem.Name = "geradorDeSenhasToolStripMenuItem";
-            this.geradorDeSenhasToolStripMenuItem.Size = new System.Drawing.Size(331, 42);
-            this.geradorDeSenhasToolStripMenuItem.Text = "Gerador de senhas";
+            this.geradorDeSenhasToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
+            this.geradorDeSenhasToolStripMenuItem.Text = "Gerar senhas";
             this.geradorDeSenhasToolStripMenuItem.Click += new System.EventHandler(this.geradorDeSenhasToolStripMenuItem_Click);
+            // 
+            // encriptadorToolStripMenuItem
+            // 
+            this.encriptadorToolStripMenuItem.Name = "encriptadorToolStripMenuItem";
+            this.encriptadorToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
+            this.encriptadorToolStripMenuItem.Text = "Encriptador 256Bits";
+            this.encriptadorToolStripMenuItem.Visible = false;
+            this.encriptadorToolStripMenuItem.Click += new System.EventHandler(this.encriptadorToolStripMenuItem_Click);
             // 
             // testeToolStripMenuItem
             // 
             this.testeToolStripMenuItem.Name = "testeToolStripMenuItem";
-            this.testeToolStripMenuItem.Size = new System.Drawing.Size(331, 42);
+            this.testeToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
             this.testeToolStripMenuItem.Text = "Teste (CP)";
             this.testeToolStripMenuItem.Visible = false;
             this.testeToolStripMenuItem.Click += new System.EventHandler(this.testeToolStripMenuItem_Click);
@@ -230,18 +238,10 @@
             // emotesToolStripMenuItem
             // 
             this.emotesToolStripMenuItem.Name = "emotesToolStripMenuItem";
-            this.emotesToolStripMenuItem.Size = new System.Drawing.Size(331, 42);
+            this.emotesToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
             this.emotesToolStripMenuItem.Text = "Emotes (CP)";
             this.emotesToolStripMenuItem.Visible = false;
             this.emotesToolStripMenuItem.Click += new System.EventHandler(this.emotesToolStripMenuItem_Click);
-            // 
-            // encriptadorToolStripMenuItem
-            // 
-            this.encriptadorToolStripMenuItem.Name = "encriptadorToolStripMenuItem";
-            this.encriptadorToolStripMenuItem.Size = new System.Drawing.Size(331, 42);
-            this.encriptadorToolStripMenuItem.Text = "Encriptador";
-            this.encriptadorToolStripMenuItem.Visible = false;
-            this.encriptadorToolStripMenuItem.Click += new System.EventHandler(this.encriptadorToolStripMenuItem_Click);
             // 
             // sAIRToolStripMenuItem
             // 

@@ -26,6 +26,7 @@ namespace replace_campanhas
         public frmGerarEmailJira(FuncoesDeveloper fd)
         {
             InitializeComponent();
+            this.MaximizeBox = false;
             this.fd= fd;
         }
 

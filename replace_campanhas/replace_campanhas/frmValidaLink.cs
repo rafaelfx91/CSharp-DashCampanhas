@@ -15,6 +15,7 @@ namespace replace_campanhas
         public frmValidaLink()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)

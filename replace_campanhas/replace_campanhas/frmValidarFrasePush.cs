@@ -16,6 +16,7 @@ namespace replace_campanhas
         public frmValidarFrasePush()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         //

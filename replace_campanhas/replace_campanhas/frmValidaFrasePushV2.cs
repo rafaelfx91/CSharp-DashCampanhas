@@ -16,6 +16,7 @@ namespace replace_campanhas
         public frmValidaFrasePushV2()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
             //txtTituloSaida.ForeColor = Color.White;
             //txtMsgSaida.ForeColor = Color.DarkGray;
         }
