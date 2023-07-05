@@ -47,7 +47,7 @@ namespace replace_campanhas
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            lblVersion.Text = "Verion: V2.21 Alfa";
+            lblVersion.Text = "Verion: V2.22C Alfa";
             desabilitaForms();
 
             if (VerificaProgramaEmExecucao())
