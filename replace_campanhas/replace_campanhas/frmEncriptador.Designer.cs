@@ -37,6 +37,9 @@
             this.txtFraseEntrada = new System.Windows.Forms.TextBox();
             this.txtFraseSaida = new System.Windows.Forms.TextBox();
             this.lblFraseSaida = new System.Windows.Forms.Label();
+            this.rdrEncripta = new System.Windows.Forms.RadioButton();
+            this.rdrDecripta = new System.Windows.Forms.RadioButton();
+            this.btnVerSenha = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLimpar
@@ -77,7 +80,7 @@
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(79, 7);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(208, 22);
+            this.txtSenha.Size = new System.Drawing.Size(173, 22);
             this.txtSenha.TabIndex = 55;
             // 
             // lblSenha
@@ -128,11 +131,48 @@
             this.lblFraseSaida.TabIndex = 58;
             this.lblFraseSaida.Text = "Frase de saida";
             // 
+            // rdrEncripta
+            // 
+            this.rdrEncripta.AutoSize = true;
+            this.rdrEncripta.Checked = true;
+            this.rdrEncripta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdrEncripta.Location = new System.Drawing.Point(349, 5);
+            this.rdrEncripta.Name = "rdrEncripta";
+            this.rdrEncripta.Size = new System.Drawing.Size(94, 24);
+            this.rdrEncripta.TabIndex = 60;
+            this.rdrEncripta.Text = "Encripta";
+            this.rdrEncripta.UseVisualStyleBackColor = true;
+            // 
+            // rdrDecripta
+            // 
+            this.rdrDecripta.AutoSize = true;
+            this.rdrDecripta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdrDecripta.Location = new System.Drawing.Point(349, 35);
+            this.rdrDecripta.Name = "rdrDecripta";
+            this.rdrDecripta.Size = new System.Drawing.Size(95, 24);
+            this.rdrDecripta.TabIndex = 61;
+            this.rdrDecripta.Text = "Decripta";
+            this.rdrDecripta.UseVisualStyleBackColor = true;
+            // 
+            // btnVerSenha
+            // 
+            this.btnVerSenha.BackgroundImage = global::replace_campanhas.Properties.Resources.olho;
+            this.btnVerSenha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVerSenha.Location = new System.Drawing.Point(258, 7);
+            this.btnVerSenha.Name = "btnVerSenha";
+            this.btnVerSenha.Size = new System.Drawing.Size(27, 22);
+            this.btnVerSenha.TabIndex = 62;
+            this.btnVerSenha.UseVisualStyleBackColor = true;
+            this.btnVerSenha.Click += new System.EventHandler(this.btnVerSenha_Click);
+            // 
             // frmEncriptador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(455, 450);
+            this.Controls.Add(this.btnVerSenha);
+            this.Controls.Add(this.rdrDecripta);
+            this.Controls.Add(this.rdrEncripta);
             this.Controls.Add(this.txtFraseSaida);
             this.Controls.Add(this.lblFraseSaida);
             this.Controls.Add(this.txtFraseEntrada);
@@ -160,5 +200,8 @@
         private System.Windows.Forms.TextBox txtFraseEntrada;
         private System.Windows.Forms.TextBox txtFraseSaida;
         private System.Windows.Forms.Label lblFraseSaida;
+        private System.Windows.Forms.RadioButton rdrEncripta;
+        private System.Windows.Forms.RadioButton rdrDecripta;
+        private System.Windows.Forms.Button btnVerSenha;
     }
 }

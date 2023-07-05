@@ -12,6 +12,11 @@ namespace replace_campanhas
     public class FuncoesDeveloper
     {
         private bool developer = false;
+        private bool crypt = false;
+        private string cryptSenha = "";
+
+        //-devS
+        //-cryptS123
 
         public FuncoesDeveloper()
         {
@@ -33,7 +38,14 @@ namespace replace_campanhas
                 args[i] = args[i].Trim();
 
                 if (args[i] == "-devS")
-                    developer = true;
+                    developer = true; 
+                if (args[i].Contains("-cryptS"))
+                {
+                   cryptSenha = args[i].Replace("-cryptS","");
+                   crypt = true;
+                }
+
+                    
                 
             }
 
@@ -68,9 +80,16 @@ namespace replace_campanhas
                 return true;
             else
                 return false;
-
-
         }
+
+        public string validaSenhaCrypt()
+        {
+            if (crypt)
+                return cryptSenha;
+            else
+                return "";
+        }
+
 
         public string pegaNomePc()
         {

@@ -39,6 +39,8 @@ namespace replace_campanhas
         {
             InitializeComponent();
             this.MinimumSize = new Size(870, 700);
+            //string [] args2 = { "-devS", "-cryptS123" };
+            //fd = new FuncoesDeveloper(args2);
             fd = new FuncoesDeveloper(args);
             //MessageBox.Show(args[0]);
         }
@@ -343,7 +345,7 @@ namespace replace_campanhas
                     return;
                 }
             }
-            frmEncriptador novoFormFilho = new frmEncriptador();
+            frmEncriptador novoFormFilho = new frmEncriptador(fd);
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
 

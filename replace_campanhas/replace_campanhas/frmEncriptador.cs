@@ -13,19 +13,29 @@ namespace replace_campanhas
     public partial class frmEncriptador : Form
     {
        
-        crypto cp = new crypto();   
-        
+        private crypto cp = new crypto();
+        private FuncoesDeveloper fd;
+        private bool senhaVisivel = false;
+
         public frmEncriptador()
         {
             InitializeComponent();
         }
 
-        public frmEncriptador(string senha)
+        public frmEncriptador(FuncoesDeveloper fd)
         {
             InitializeComponent();
-            txtSenha.Text = senha;
+            txtSenha.PasswordChar = '*';
+            txtSenha.Text = fd.validaSenhaCrypt();
+            //txtSenha.Text = senha;
         }
 
+        public void limpaTxt()
+        {
+            txtFraseEntrada.Clear();
+            txtFraseSaida.Clear();
+            //txtSenha.Clear();
+        }
 
 
 
@@ -37,19 +47,44 @@ namespace replace_campanhas
 
         private void btnGerar_Click(object sender, EventArgs e)
         {
+            txtFraseSaida.Clear();
+
+            if (!String.IsNullOrEmpty(txtSenha.Text))
+            {
+                if (rdrEncripta.Checked)
+                    txtFraseSaida.Text = cp.Encrypt(txtFraseEntrada.Text, txtSenha.Text);
+                if (rdrDecripta.Checked)
+                    txtFraseSaida.Text = cp.Decrypt(txtFraseEntrada.Text, txtSenha.Text);
+            }
+            else
+            {
+                txtSenha.Text = "123";
+            }
+
+
+
+            
 
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            txtFraseEntrada.Clear();
-            txtFraseSaida.Clear();
-            txtSenha.Clear();
+            limpaTxt();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnVerSenha_Click(object sender, EventArgs e)
+        {
+            senhaVisivel = !senhaVisivel; // Alterna o estado da exibição da senha
+            if (senhaVisivel)
+                txtSenha.PasswordChar = '\0'; // Exibe a senha (caracteres visíveis)
+            else
+                txtSenha.PasswordChar = '*'; // Oculta a senha (caracteres substituídos por '*')
+
         }
     }
 }

@@ -51,8 +51,6 @@ namespace replace_campanhas
                 }
             }
         }
-
-
         public string Encrypt(string plainText, string passPhrase)
         {
             byte[] saltStringBytes = GenerateBitsOfRandomEntropy(32);
@@ -89,9 +87,6 @@ namespace replace_campanhas
                 }
             }
         }
-
-
-
         private byte[] GenerateBitsOfRandomEntropy(int num)
         {
             var randomBytes = new byte[num]; 

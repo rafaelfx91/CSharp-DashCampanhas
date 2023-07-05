@@ -50,8 +50,8 @@
             this.geradorDeSenhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emotesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.encriptadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,7 +119,7 @@
             // 
             this.checklistToolStripMenuItem.Name = "checklistToolStripMenuItem";
             this.checklistToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
-            this.checklistToolStripMenuItem.Text = "Checklist (dev)";
+            this.checklistToolStripMenuItem.Text = "Checklist (CP)";
             this.checklistToolStripMenuItem.Visible = false;
             this.checklistToolStripMenuItem.Click += new System.EventHandler(this.checklistToolStripMenuItem_Click);
             // 
@@ -127,7 +127,7 @@
             // 
             this.agendamentoEmailJIRAToolStripMenuItem.Name = "agendamentoEmailJIRAToolStripMenuItem";
             this.agendamentoEmailJIRAToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
-            this.agendamentoEmailJIRAToolStripMenuItem.Text = "Agendamento email (JIRA)";
+            this.agendamentoEmailJIRAToolStripMenuItem.Text = "Agendamento email (CP)(JIRA)";
             this.agendamentoEmailJIRAToolStripMenuItem.Visible = false;
             this.agendamentoEmailJIRAToolStripMenuItem.Click += new System.EventHandler(this.agendamentoEmailJIRAToolStripMenuItem_Click);
             // 
@@ -135,7 +135,7 @@
             // 
             this.emailDeDiagramaToolStripMenuItem.Name = "emailDeDiagramaToolStripMenuItem";
             this.emailDeDiagramaToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
-            this.emailDeDiagramaToolStripMenuItem.Text = "Envio de diagrama";
+            this.emailDeDiagramaToolStripMenuItem.Text = "Envio de diagrama (CP)";
             this.emailDeDiagramaToolStripMenuItem.Visible = false;
             this.emailDeDiagramaToolStripMenuItem.Click += new System.EventHandler(this.emailDeDiagramaToolStripMenuItem_Click);
             // 
@@ -205,9 +205,9 @@
             // 
             this.fERRAMENTASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.geradorDeSenhasToolStripMenuItem,
+            this.encriptadorToolStripMenuItem,
             this.testeToolStripMenuItem,
-            this.emotesToolStripMenuItem,
-            this.encriptadorToolStripMenuItem});
+            this.emotesToolStripMenuItem});
             this.fERRAMENTASToolStripMenuItem.Name = "fERRAMENTASToolStripMenuItem";
             this.fERRAMENTASToolStripMenuItem.Size = new System.Drawing.Size(221, 41);
             this.fERRAMENTASToolStripMenuItem.Text = "FERRAMENTAS";
@@ -223,7 +223,7 @@
             // 
             this.testeToolStripMenuItem.Name = "testeToolStripMenuItem";
             this.testeToolStripMenuItem.Size = new System.Drawing.Size(331, 42);
-            this.testeToolStripMenuItem.Text = "Teste";
+            this.testeToolStripMenuItem.Text = "Teste (CP)";
             this.testeToolStripMenuItem.Visible = false;
             this.testeToolStripMenuItem.Click += new System.EventHandler(this.testeToolStripMenuItem_Click);
             // 
@@ -231,16 +231,9 @@
             // 
             this.emotesToolStripMenuItem.Name = "emotesToolStripMenuItem";
             this.emotesToolStripMenuItem.Size = new System.Drawing.Size(331, 42);
-            this.emotesToolStripMenuItem.Text = "Emotes (dev)";
+            this.emotesToolStripMenuItem.Text = "Emotes (CP)";
             this.emotesToolStripMenuItem.Visible = false;
             this.emotesToolStripMenuItem.Click += new System.EventHandler(this.emotesToolStripMenuItem_Click);
-            // 
-            // sAIRToolStripMenuItem
-            // 
-            this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
-            this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(90, 41);
-            this.sAIRToolStripMenuItem.Text = "SAIR";
-            this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
             // encriptadorToolStripMenuItem
             // 
@@ -249,6 +242,13 @@
             this.encriptadorToolStripMenuItem.Text = "Encriptador";
             this.encriptadorToolStripMenuItem.Visible = false;
             this.encriptadorToolStripMenuItem.Click += new System.EventHandler(this.encriptadorToolStripMenuItem_Click);
+            // 
+            // sAIRToolStripMenuItem
+            // 
+            this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
+            this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(90, 41);
+            this.sAIRToolStripMenuItem.Text = "SAIR";
+            this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
