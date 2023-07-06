@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -45,16 +47,27 @@ namespace replace_campanhas
 
         }
 
+        public string tipoCampanha(string nomeCampanha)
+        {
+            switch (nomeCampanha) {
+                case string a when a.Contains("SMS"): return "SMS";
+                case string b when b.Contains("EMAIL"): return "EMAIL";
+                case string c when c.Contains("PUSH"): return "PUSH";
+                case string d when d.Contains("WIB"): return "WIBPUSH";
+                case string e when e.Contains("RCS"): return "RCS";
+            }
+            return "";
+        }
+
 
         private void btnGerar_Click(object sender, EventArgs e)
         {
-            var listaCampanhas = txtListaDeCampanhas.Text.Split(';');
-            listaCampanhas = listaCampanhas.Where(x => !string.IsNullOrEmpty(x)).ToArray();
-            //var listaAmx = txtListaDeCampanhas.Text.Split();
-            //nome
-            //amx
-            //espaço vazio
-            //nome
+            //var listaCampanhas = txtListaDeCampanhas.Text.Split(';');
+            //listaCampanhas = listaCampanhas.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+
+            string[] valorEntrada = txtListaDeCampanhas.Text.Split(';');
+            var listaCampanhas = valorEntrada.Select(x => x.TrimEnd(';')).ToArray();
+            //listaCampanhas = listaCampanhas.Where(x => !string.IsNullOrEmpty(x)).ToArray();
 
             WorkBook workBook = WorkBook.Load(txtCaminhoArquivo.Text);
             WorkSheet workSheet = workBook.WorkSheets[1];
@@ -82,21 +95,28 @@ namespace replace_campanhas
 
             for (int i = 0; i < listaCampanhas.Count(); i++)
             {
+                string[] partes = listaCampanhas[i].Split(' ');
+
+                if (partes.Length != 2)
+                { 
+                    continue;
+                }
+
                 if (rdrAgendamento.Checked)
                 {
 
                 }
                 if (rdrCancelamento.Checked)
                 {
-                    workSheet[colunaA[i]].Value = listaCampanhas[i];
-                    workSheet[colunaB[i]].Value = listaCampanhas[i];
+                    workSheet[colunaA[i]].Value = partes[0];
+                    workSheet[colunaB[i]].Value = partes[1];
                     workSheet[colunaC[i]].Value = "CAMPANHA";
                     workSheet[colunaD[i]].Value = "";
                     workSheet[colunaE[i]].Value = "DELETAR";
                     workSheet[colunaF[i]].Value = "Exclusao do schedule";
                     workSheet[colunaG[i]].Value = "Campanha comum";
                     workSheet[colunaH[i]].Value = "";
-                    workSheet[colunaI[i]].Value = "";//sms push 
+                    workSheet[colunaI[i]].Value = tipoCampanha(partes[0]);//sms push 
                     workSheet[colunaJ[i]].Value = "";
                     workSheet[colunaK[i]].Value = "";
                     workSheet[colunaL[i]].Value = "";
@@ -105,18 +125,41 @@ namespace replace_campanhas
                     workSheet[colunaO[i]].Value = "";
                     workSheet[colunaP[i]].Value = "";
                     workSheet[colunaQ[i]].Value = "";
-                    
-
-
                 }
                 if (rdrPausa.Checked)
                 {
-
+                    workSheet[colunaA[i]].Value = partes[0];
+                    workSheet[colunaB[i]].Value = partes[1];
+                    workSheet[colunaC[i]].Value = "CAMPANHA";
+                    workSheet[colunaD[i]].Value = "";
+                    workSheet[colunaE[i]].Value = "PAUSA";
+                    workSheet[colunaF[i]].Value = "Exclusao do schedule";
+                    workSheet[colunaG[i]].Value = "Campanha comum";
+                    workSheet[colunaH[i]].Value = "";
+                    workSheet[colunaI[i]].Value = tipoCampanha(partes[0]);//sms push 
+                    workSheet[colunaJ[i]].Value = "";
+                    workSheet[colunaK[i]].Value = "";
+                    workSheet[colunaL[i]].Value = "";
+                    workSheet[colunaM[i]].Value = "";
+                    workSheet[colunaN[i]].Value = "";
+                    workSheet[colunaO[i]].Value = "";
+                    workSheet[colunaP[i]].Value = "";
+                    workSheet[colunaQ[i]].Value = "";
                 }
             }
 
-            workBook.SaveAs("C:\\Users\\rafae\\OneDrive\\Área de Trabalho\\Claro\\Agendamento_claro\\sample.xlsx");
-
+            var caminhoSalvar = ""; 
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            //saveFileDialog.InitialDirectory = txtCaminhoArquivo.Text;
+            saveFileDialog.Title = "Salvar Arquivo";
+            saveFileDialog.Filter = "Excel|*.xlsx|" +
+                                "Todos os arquivos|*.*";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                caminhoSalvar = saveFileDialog.FileName;
+                workBook.SaveAs(caminhoSalvar);
+                MessageBox.Show("Salvo");
+            }
 
 
         }
@@ -134,7 +177,7 @@ namespace replace_campanhas
         private void btnAbrir_Click(object sender, EventArgs e)
         {
             txtCaminhoArquivo.Text = "";
-            //var caminho = "C:\\Users\\rafae\\OneDrive\\Área de Trabalho\\Claro\\Agendamento_claro\\teste.xlsx";
+            //var caminho = "a";
             //WorkBook workBook = WorkBook.Load(caminho);
             //WorkSheet workSheet = workBook.WorkSheets[1];
             //WorkSheet firstSheet = workBook.DefaultWorkSheet;
@@ -146,10 +189,11 @@ namespace replace_campanhas
             try
             {
                 OpenFileDialog abrirArquivo = new OpenFileDialog();
-                abrirArquivo.InitialDirectory = "c:\\";
+                //abrirArquivo.InitialDirectory = "c:\\";
+                abrirArquivo.InitialDirectory = Directory.GetCurrentDirectory(); 
                 abrirArquivo.Title = "Selecionar Arquivo";
-                abrirArquivo.Filter = "Excel|.xlsx|" +
-                "Todos os arquivos|*.*";
+                abrirArquivo.Filter = "Excel|*.xlsx|" +
+                                    "Todos os arquivos|*.*";
                 if (abrirArquivo.ShowDialog() == DialogResult.OK)
                     txtCaminhoArquivo.Text = abrirArquivo.FileName;
 
@@ -167,6 +211,47 @@ namespace replace_campanhas
                 , MessageBoxIcon.Warning);
             }
 
+
+        }
+
+        private void btnTeste_Click(object sender, EventArgs e)
+        {
+            //string[] valorEntrada = { "CampanhaTeste123 AMX123;", "CampanhaTeste456 AMX456;" };
+            //var listaCampanhas = valorEntrada.Select(x => x.TrimEnd(';')).ToArray();
+            //
+            //WorkBook workBook = WorkBook.Load("a");
+            //WorkSheet workSheet = workBook.WorkSheets[1];
+            //WorkSheet firstSheet = workBook.DefaultWorkSheet;
+            //
+            //string[] colunaA = { "A4", "A5", "A6" };
+            //string[] colunaB = { "B4", "B5", "B6" };
+            //string[] colunaC = { "C4", "C5", "C6" };
+            //
+            //for (int i = 0; i < listaCampanhas.Length; i++)
+            //{
+            //    string[] partes = listaCampanhas[i].Split(' ');
+            //
+            //    if (partes.Length == 2)
+            //    {
+            //        workSheet[colunaA[i]].Value = partes[0]; // CampanhaTeste
+            //        workSheet[colunaB[i]].Value = partes[1]; // AMX
+            //        workSheet[colunaC[i]].Value = "CAMPANHA";
+            //    }
+            //    else
+            //    {
+            //        // Caso a lista de campanhas não esteja no formato esperado
+            //        // Você pode lidar com isso de acordo com a lógica do seu programa
+            //    }
+            //}
+            //
+            //MessageBox.Show("teste");
+
+            //SaveFileDialog saveFileDialog = new SaveFileDialog();
+            //saveFileDialog.Title = "Salvar Arquivo";
+            //saveFileDialog.Filter = "Excel|.xlsx|" +
+            //                    "Todos os arquivos|*.*";
+            //if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            //    MessageBox.Show("Salvou");
 
         }
     }

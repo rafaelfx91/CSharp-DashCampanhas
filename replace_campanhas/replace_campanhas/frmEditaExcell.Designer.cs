@@ -39,6 +39,7 @@
             this.rdrAgendamento = new System.Windows.Forms.RadioButton();
             this.txtListaDeCampanhas = new System.Windows.Forms.TextBox();
             this.lblListaCampanhas = new System.Windows.Forms.Label();
+            this.btnTeste = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLimpar
@@ -157,11 +158,23 @@
             this.lblListaCampanhas.TabIndex = 57;
             this.lblListaCampanhas.Text = "Lista de campanhas";
             // 
+            // btnTeste
+            // 
+            this.btnTeste.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTeste.Location = new System.Drawing.Point(690, 424);
+            this.btnTeste.Name = "btnTeste";
+            this.btnTeste.Size = new System.Drawing.Size(98, 43);
+            this.btnTeste.TabIndex = 58;
+            this.btnTeste.Text = "Teste";
+            this.btnTeste.UseVisualStyleBackColor = true;
+            this.btnTeste.Click += new System.EventHandler(this.btnTeste_Click);
+            // 
             // frmEditaExcell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 523);
+            this.ClientSize = new System.Drawing.Size(800, 559);
+            this.Controls.Add(this.btnTeste);
             this.Controls.Add(this.lblListaCampanhas);
             this.Controls.Add(this.txtListaDeCampanhas);
             this.Controls.Add(this.rdrPausa);
@@ -193,5 +206,6 @@
         private System.Windows.Forms.RadioButton rdrAgendamento;
         private System.Windows.Forms.TextBox txtListaDeCampanhas;
         private System.Windows.Forms.Label lblListaCampanhas;
+        private System.Windows.Forms.Button btnTeste;
     }
 }
