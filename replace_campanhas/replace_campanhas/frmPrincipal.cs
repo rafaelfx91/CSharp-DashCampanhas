@@ -1,10 +1,10 @@
 ﻿using IronXL;
 using System;
+using System.Diagnostics;
+using System.Drawing;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -39,9 +39,9 @@ namespace replace_campanhas
         {
             InitializeComponent();
             this.MinimumSize = new Size(870, 700);
-            //string [] args2 = { "-devS", "-cryptS123" };
-            //fd = new FuncoesDeveloper(args2);
-            fd = new FuncoesDeveloper(args);
+            string [] args2 = { "-devS", "-cryptS123" };//dev
+            fd = new FuncoesDeveloper(args2);//dev
+            //fd = new FuncoesDeveloper(args);
             //MessageBox.Show(args[0]);
         }
 
@@ -78,10 +78,12 @@ namespace replace_campanhas
                 checklistToolStripMenuItem.Visible = true;
                 aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = true;
                 testarLinksToolStripMenuItem.Visible = true;
+                //envioDeEmailToolStripMenuItem.Visible = true;
                 testeToolStripMenuItem.Visible = true;
-                emotesToolStripMenuItem.Visible = true;
                 emailDeDiagramaToolStripMenuItem.Visible = true;
                 encriptadorToolStripMenuItem.Visible = true;
+                envioDeEmailToolStripMenuItem.Visible = true;
+                geradorDeExcellStripMenuItem.Visible = true;
             }
             else
             {
@@ -89,10 +91,12 @@ namespace replace_campanhas
                 checklistToolStripMenuItem.Visible = false;
                 aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = false;
                 testarLinksToolStripMenuItem.Visible = false;
+                //envioDeEmailToolStripMenuItem.Visible = false;
                 testeToolStripMenuItem.Visible = false;
-                emotesToolStripMenuItem.Visible = false;
                 emailDeDiagramaToolStripMenuItem.Visible = false;
                 encriptadorToolStripMenuItem.Visible = false;
+                envioDeEmailToolStripMenuItem.Visible = false;
+                geradorDeExcellStripMenuItem.Visible = false;
             }
 
             if (fd.validaSenhaCrypt2())
@@ -141,6 +145,14 @@ namespace replace_campanhas
 
 
         //MENU NOME CAMPANHA
+       
+        
+        
+        
+        
+        
+        
+        
         private void gerarNomeNoSASToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
@@ -256,11 +268,6 @@ namespace replace_campanhas
             //novoFormFilho.Show();
         }
 
-        private void testeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
- 
-        }
-
         private void testarLinksToolStripMenuItem_Click(object sender, EventArgs e)
         {
            //foreach (Form form in this.MdiChildren)
@@ -289,11 +296,6 @@ namespace replace_campanhas
             frmValidaFrasePushV2 novoFormFilho = new frmValidaFrasePushV2();
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
-        }
-
-        private void emotesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void agendamentoCampanhasJIRAToolStripMenuItem_Click(object sender, EventArgs e)
@@ -357,6 +359,61 @@ namespace replace_campanhas
             novoFormFilho.Show();
 
         }
+
+        private void envioDeEmailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmEnvioDeEmail")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmEnvioDeEmail novoFormFilho = new frmEnvioDeEmail();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
+
+        private void testeToolStripMenuItem_Click(object sender, EventArgs e)//TESTE rapido e facil
+        {
+            try
+            {
+                //var caminho = "C:\\Users\\rafae\\OneDrive\\Área de Trabalho\\Claro\\Agendamento_claro\\teste.xlsx";
+                //WorkBook workBook = WorkBook.Load(caminho);
+                //WorkSheet workSheet = workBook.WorkSheets[1];
+                //WorkSheet firstSheet = workBook.DefaultWorkSheet;
+                //var cellValue = workSheet["A4"].StringValue;
+                //MessageBox.Show(cellValue);
+                //workSheet["A4"].Value = "TESTE";
+                //workBook.SaveAs("sample.xlsx");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERRO"+ex.Message);
+            }
+
+        }
+
+        private void geradorDeExcellStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmEditaExcell")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmEditaExcell novoFormFilho = new frmEditaExcell();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+
+        }
+
+
+
     }
 }
 

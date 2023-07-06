@@ -17,7 +17,7 @@
         <member name="P:IronXL.Cells.CellsInternal.PhysicalCells">
             <summary>
             In contrast to enumerator of <see cref="T:IronXL.Cells.CellsInternal"/> which will
-            create all the missing cells in it's <see cref="P:IronXL.Cells.CellsInternal.RangeAddresses"/> 
+            create all the missing cells in it's <see cref="T:IronXL.RangeAddress"/> 
             this property allows to only get cells that cactually exist on the
             sheet.
             </summary>
@@ -173,9 +173,10 @@
             <summary>
             Property to get or set the cell's value as a hyperlink.
             <para>Available link types are:</para>
-            <para>A URL starting with http:// , https:// or file://</para>
+            <para>A URL starting with http:// , https:// or ftp://</para>
             <para>An Email starting with mailto:</para>
-            <para>An Document containing an absolute or relative file path</para>
+            <para>A file by specifying absolute path starting with file:///</para>
+            <para>A cell or defined name in the current spreadsheet</para>
             </summary>
         </member>
         <member name="P:IronXL.Cell.IsNumeric">
@@ -1504,34 +1505,50 @@
         </member>
         <member name="P:IronXL.License.IsLicensed">
             <summary>
-            Determines whether this instance of IronXL is Licensed. <para>Will return false unless a <see
-            cref="P:IronXL.License.LicenseKey"></see> is set to a valid trial or full license key in IronXL.License.LicenseKey,
-            Web.Config , App.Config or appsettings.json in .Net Core.</para>
-            <para>See https://ironsoftware.com/csharp/excel/licensing/ and https://ironsoftware.com/csharp/excel/docs/license/license-keys/</para>
+            Determines whether this instance of IronXL is Licensed.
+            <para>Will return <c>false</c> unless a <see cref="P:IronXL.License.LicenseKey"></see>
+            is set to a valid trial or full license key in 
+            <see cref="P:IronXL.License.LicenseKey"/> property, <c>Web.Config</c>,
+            <c>App.Config</c> or <c>appsettings.json</c> in .Net Core.
+            </para>
+            <para>
+            See https://ironsoftware.com/csharp/excel/licensing/ and 
+            https://ironsoftware.com/csharp/excel/docs/license/license-keys/
+            </para>
             </summary>
-            <returns>True if the license key given is valid.</returns>
+            <returns><c>true</c> if the license key given is valid.</returns>
         </member>
         <member name="P:IronXL.License.LicenseKey">
-             <summary>
-             Removes watermarks. Get Licensed at https://ironsoftware.com/csharp/excel/licensing/ <para>For .Net framework applications, a
-             license key can alternatively be added to Web.Config or App.Config XML file using  &lt;add
-             key="IronXL.LicenseKey" value="IRONXL-LICENSE-KEY"/&gt; within the appSettings tag. See
-             https://ironsoftware.com/csharp/excel/docs/license/license-keys/</para>
-             <para>For .Net Core applications, a license key  may
-             be added to appsettings.json where the key name is "IronXL.LicenseKey" and the value is a valid IronXL
-             trial or full license key.</para>
-             <para>See https://ironsoftware.com/csharp/excel/licensing/ for licensing options.</para>
-            
-             </summary>
-            
+            <summary>
+            Get Licensed at https://ironsoftware.com/csharp/excel/licensing/
+            <para>
+            For .Net framework applications, a license key can alternatively be
+            added to <c>Web.Config</c> or <c>App.Config</c> XML file using
+            <c>&lt;add key="IronXL.LicenseKey" value="IRONXL-LICENSE-KEY"/&gt;</c>
+            within the appSettings node.
+            See https://ironsoftware.com/csharp/excel/docs/license/license-keys/
+            </para>
+            <para>
+            For .Net Core applications, a license key  may be added to 
+            <c>appsettings.json</c> where the key name is <c>"IronXL.LicenseKey"</c>
+            and the value is a valid IronXL trial or full license key.
+            </para>
+            <para>
+            See https://ironsoftware.com/csharp/excel/licensing/ for licensing 
+            options.
+            </para>
+            </summary>
         </member>
         <member name="M:IronXL.License.IsValidLicense(System.String)">
             <summary>
-            Determines whether a string license key is valid. <para>See https://ironsoftware.com/csharp/excel/licensing/ for trial,
-            development and commercial deployment licensing options.</para>
+            Determines whether a string license key is valid.
+            <para>
+            See https://ironsoftware.com/csharp/excel/licensing/ for trial,
+            development and commercial deployment licensing options.
+            </para>
             </summary>
             <param name="licenseKey">IronXL license key as a string</param>
-            <returns>True if the license key given is valid.</returns>
+            <returns><c>true</c> if the license key given is valid.</returns>
         </member>
         <member name="T:IronXL.Logging.Logger">
             <summary>
@@ -2265,106 +2282,322 @@
             A class that represents a range of cells
             </summary>
         </member>
+        <member name="P:IronXL.Range.RangeAddress">
+            <summary>
+            Address of this range.
+            </summary>
+        </member>
         <member name="P:IronXL.Range.RangeAddressAsString">
             <summary>
-            Gets a string representation of this range address.
-            <para>E.g. "A1:B25"</para>
+            Gets a string representation of this <see cref="T:IronXL.Range"/>'s 
+            <see cref="P:IronXL.Range.RangeAddress"/>.
+            <para>
+            E.g. "A1:B25"
+            </para>
             </summary>
-            <value>
-            The range address as string.
-            </value>
+        </member>
+        <member name="P:IronXL.Range.Count">
+            <summary>
+            The number of all cells (empty and otherwise) in this range.
+            </summary>
+        </member>
+        <member name="P:IronXL.Range.ColumnCount">
+            <summary>
+            The number of columns in this range, including empty ones.
+            </summary>
+        </member>
+        <member name="P:IronXL.Range.RowCount">
+            <summary>
+            The number of rows in this range, including empty ones.
+            </summary>
+        </member>
+        <member name="P:IronXL.Range.Style">
+            <summary>
+            Style of all cells within this range.
+            </summary>
+        </member>
+        <member name="P:IronXL.Range.WorkBook">
+            <summary>
+            The workbook this <see cref="T:IronXL.Range"/> belongs to.
+            </summary>
         </member>
         <member name="P:IronXL.Range.IsEmpty">
             <summary>
-            Property that indicates if range is empty.
+            Property that indicates if the range is empty.
+            </summary>
+        </member>
+        <member name="P:IronXL.Range.Rows">
+            <summary>
+            Array of rows (including empty ones) within the current range.
+            The rows contain <see cref="T:IronXL.Cell"/> objects.
+            </summary>
+        </member>
+        <member name="P:IronXL.Range.Columns">
+            <summary>
+            Array of columns (including empty ones) within the current range.
+            The columns contain <see cref="T:IronXL.Cell"/> objects.
             </summary>
         </member>
         <member name="P:IronXL.Range.Value">
             <summary>
             Property to get or set range value.
-            <para>If range contains one cell: {get} returns the cell value, {set} changes the cell value</para>
-            <para>If range contains more than one cell: {get} returns the sum of all numeric cells within range, {set} changes the value of every cell within the range. </para>
+            <para>
+            If range contains one cell:
+            {get} returns the cell value;
+            {set} changes the cell value
+            </para>
+            <para>
+            If range contains more than one cell:
+            {get} returns the sum of all numeric cells within range;
+            {set} changes the value of every cell within the range.
+            </para>
             </summary>
         </member>
         <member name="P:IronXL.Range.FormatString">
             <summary>
             Property to get or set range format string.
-            <para>If range contains one cell: {get} returns the cell format string; {set} changes the cell format string</para>
-            <para>If range contains more than one cell: {get} returns the format string if all cells within range have the same format string, otherwise returns <c>null</c>; {set} changes the format string of every cell within the range. </para>
+            <para>
+            If range contains one cell:
+            {get} returns the cell format string;
+            {set} changes the cell format string
+            </para>
+            <para>
+            If range contains more than one cell:
+            {get} returns the format string if all cells within range have the
+            same format string, otherwise returns <c>null</c>;
+            {set} changes the format string of every cell within the range.
+            </para>
             </summary>
             <remarks>
-            You can find the list of the built-in format strings in the class <see cref="T:IronXL.Formatting.BuiltinFormats"/>.
+            You can find the list of the built-in format strings in the
+            class <see cref="T:IronXL.Formatting.BuiltinFormats"/>.
             </remarks>
-            <seealso cref="T:IronXL.Formatting.BuiltinFormats"/>
         </member>
         <member name="P:IronXL.Range.Formula">
             <summary>
             Property to get or set range formula.
-            <para>If range contains one cell: {get} returns the cell formula; {set} changes the cell formula</para>
-            <para>If range contains more than one cell: {get} returns the formula if all cells within range have the same formula, otherwise returns <c>null</c>; {set} changes the formula of every cell within the range. </para>
+            <para>
+            If range contains one cell:
+            {get} returns the cell formula;
+            {set} changes the cell formula
+            </para>
+            <para>
+            If range contains more than one cell:
+            {get} returns the formula if all cells within range have the same
+            formula, otherwise returns <c>null</c>;
+            {set} changes the formula of every cell within the range.</para>
             </summary>
         </member>
-        <member name="P:IronXL.Range.Rows">
+        <member name="P:IronXL.Range.StringValue">
             <summary>
-            List of Excel rows within the current range. The rows contain 
-            <see cref="T:IronXL.Cell"/> objects.
+            Gets or sets the <see cref="T:System.String"/> value of this
+            <see cref="T:IronXL.Range"/> of cells.
+            <para>
+            Getting the StringValue will return formatted <see cref="T:System.String"/>
+            values. Columns will be delimited by TABS. Rows delimited by
+            NEWLINE
+            </para>
+            <para>
+            Setting the StringValue will set all cells in with the same
+            <see cref="T:System.String"/> value.
+            </para>
             </summary>
+            <value>
+            The string value of all of the cells. Numbers and dates will be
+            rendered into readable strings; as displayed in Excel. Formulas
+            will be calculated.
+            <para>
+            Error end NAN cells will return as a null string.
+            </para>
+            </value>
         </member>
-        <member name="P:IronXL.Range.AllRowsInRange">
+        <member name="P:IronXL.Range.DateTimeValue">
             <summary>
-            List of Excel ALL rows within the current range. Calling this method
-            will create all rows that this range spans over .The rows contain 
-            <see cref="T:IronXL.Cell"/> objects.
+            Gets or sets the nullable <see cref="T:System.DateTime"/> value of this
+            <see cref="T:IronXL.Range"/> of cells.
+            <para>
+            Getting the DateTimeValue will return highest (MAX) DateTime
+            in the Range, or <c>null</c> if no <see cref="T:System.DateTime"/> is found.
+            </para>
+            <para>
+            Setting the DateTimeValue will set all cells in with the same
+            <see cref="T:System.DateTime"/> value.
+            </para>
             </summary>
+            <value>
+            The MAX <see cref="T:System.DateTime"/> of all of the cells.
+            </value>
         </member>
-        <member name="P:IronXL.Range.Columns">
+        <member name="P:IronXL.Range.BoolValue">
             <summary>
-            List of Excel columns within the current range. The Columns contains <see cref="T:IronXL.Cell"/> objects.
+            Gets or sets the <see cref="T:System.Boolean"/> value of this
+            <see cref="T:IronXL.Range"/> of cells.
+            <para>
+            Getting the BoolValue will return true only if ALL cells in the
+            range are true. Numeric cells greater than zero are treated as
+            TRUE. [Logical AND Operator Applied]</para><para>Setting the
+            BoolValue will set all cells in with the same <see cref="T:System.Boolean"/>
+            value. </para>
             </summary>
+            <value>
+            The boolean AND aggregate value of the cells.
+            <para>Error end NAN cells will return as a false .</para>
+            </value>
         </member>
-        <member name="P:IronXL.Range.AllColumnsInRange">
+        <member name="P:IronXL.Range.IntValue">
             <summary>
-            List of Excel columns within the current range. The Columns contains <see cref="T:IronXL.Cell"/> objects.
+            Gets or sets the <see cref="T:System.Int32"/>  value of this
+            <see cref="T:IronXL.Range"/> of cells.
+            <para>
+            Getting the IntValue will return the SUM of all numeric
+            cells in the Range.</para><para>Setting the IntValue will set all
+            cells in with the same <see cref="T:System.Int32"/> value.
+            </para>
             </summary>
+            <value>
+            The <see cref="T:System.Int32"/> SUM of all of the cells.
+            <para>
+            Error end NAN cells will count as 0
+            </para>
+            </value>
         </member>
-        <member name="P:IronXL.Range.Style">
+        <member name="P:IronXL.Range.DoubleValue">
             <summary>
-            Style of all cells within range.
+            Gets or sets the double value of all Cells in this Rance.
             </summary>
+            <value>
+            The double value.
+            </value>
         </member>
-        <member name="P:IronXL.Range.WorkBook">
+        <member name="P:IronXL.Range.DecimalValue">
             <summary>
-            The workbook this range belongs to.
+            Gets or sets the <see cref="T:System.Decimal"/> value of this
+            <see cref="T:IronXL.Range"/> of cells.
+            <para>
+            Getting the DecimalValue will return the SUM of all numeric cells
+            in the Range.</para><para>Setting the DecimalValue will set all
+            cells in with the same <see cref="T:System.Decimal"/> value.
+            </para>
+            </summary>
+            <value>
+            The <see cref="T:System.Decimal"/> SUM of all of the cells.
+            <para>
+            Error end NAN cells will count as 0
+            </para>
+            </value>
+        </member>
+        <member name="P:IronXL.Range.FloatValue">
+            <summary>
+            Gets or sets the <see cref="T:System.Single"/> value of this
+            <see cref="T:IronXL.Range"/> of cells.
+            <para>
+            Getting the FloatValue will return the SUM of all numeric cells in
+            the Range.</para><para>Setting the FloatValue will set all cells in
+            with the same <see cref="T:System.Single"/> value.
+            </para>
+            </summary>
+            <value>
+            The <see cref="T:System.Single"/> SUM of all of the cells.
+            <para>
+            Error end NAN cells will count as 0
+            </para>
+            </value>
+        </member>
+        <member name="P:IronXL.Range.Int64Value">
+            <summary>
+            <para>Synonym of <see cref="P:IronXL.Range.LongValue"/></para>
+            Gets or sets the <see cref="T:System.Int64"/> (Int64) value of this
+            <see cref="T:IronXL.Range"/> of cells.
+            <para>
+            Getting the LongValue will return the SUM of all numeric
+            cells in the Range.</para><para>Setting the LongValue will set all
+            cells in with the same <see cref="T:System.Int64"/> value.
+            </para>
+            </summary>
+            <value>
+            The <see cref="T:System.Int64"/> SUM of all of the cells.
+            <para>Error end NAN cells will count as 0</para>
+            </value>
+        </member>
+        <member name="P:IronXL.Range.LongValue">
+            <summary>
+            Gets or sets the <see cref="T:System.Int64"/> (Int64) value of this
+            <see cref="T:IronXL.Range"/> of cells.
+            <para>
+            Getting the LongValue will return the SUM of all numeric
+            cells in the Range.</para><para>Setting the LongValue will set all
+            cells in with the same <see cref="T:System.Int64"/> value.
+            </para>
+            </summary>
+            <value>
+            The <see cref="T:System.Int64"/> SUM of all of the cells.
+            <para>Error end NAN cells will count as 0</para>
+            </value>
+        </member>
+        <member name="P:IronXL.Range.Int32Value">
+            <summary>
+            Synonym of <see cref="P:IronXL.Range.IntValue"/>
+            <para>
+            Gets or sets the <see cref="T:System.Int32"/> (Int32) value of this
+            <see cref="T:IronXL.Range"/> of cells.
+            </para>
+            <para>
+            Getting the LongValue will return the SUM of all numeric cells in
+            the Range.</para><para>Setting the LongValue will set all cells in
+            with the same <see cref="T:System.Int32"/> value.
+            </para>
+            </summary>
+            <value>
+            The <see cref="T:System.Int32"/>SUM of all of the cells.
+            <para>
+            Error end NAN cells will count as 0
+            </para>
+            </value>
+        </member>
+        <member name="M:IronXL.Range.ClearContents">
+            <summary>
+            Empties the contents of the <see cref="T:IronXL.Range"/>, leaving all 
+            <see cref="T:IronXL.Cell"/>s empty.
             </summary>
         </member>
         <member name="M:IronXL.Range.GetEnumerator">
             <summary>
             IEnumerable implementation.
             </summary>
-            <returns>An IEnumerator allowing for-each logical iteration of cells with Ranges.</returns>
+            <returns>An IEnumerator allowing for-each logical iteration of
+            cells with Ranges.</returns>
         </member>
         <member name="M:IronXL.Range.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             Gets the enumerator for the Range.
             </summary>
-            <returns>An IEnumerator allowing Ranges to be treated as IEnumerable; and play nicely with System.Linq.</returns>
+            <returns>An IEnumerator allowing Ranges to be treated as
+            IEnumerable; and play nicely with System.Linq.</returns>
+        </member>
+        <member name="M:IronXL.Range.ToArray">
+            <summary>
+            Converts the worksheet to flattened array of cells.
+            </summary>
+            <returns> An array of <see cref="T:IronXL.Cell"/> objects.</returns>
         </member>
         <member name="M:IronXL.Range.op_Addition(IronXL.Range,IronXL.Range)">
             <summary>
-            Overloaded + operator, see also <see cref="M:IronXL.Range.AddRange(IronXL.Range)" />
+            Overloaded + operator, see also <see cref="M:IronXL.Range.AddRange(IronXL.Range)"/>
             </summary>
-            <param name="a">This Range.</param>
-            <param name="b">Another Range. Both Ranges will be joined in the result.</param>
+            <param name="a">This <see cref="T:IronXL.Range"/>.</param>
+            <param name="b">Another Range. Both Ranges will be joined in the
+            result.</param>
             <returns>
             The combination of both ranges' areas.
             </returns>
         </member>
         <member name="M:IronXL.Range.op_Subtraction(IronXL.Range,IronXL.Range)">
             <summary>
-            Overloaded - operator, see also <see cref="M:IronXL.Range.SubtractRange(IronXL.Range)" />
+            Overloaded - operator, see also <see cref="M:IronXL.Range.SubtractRange(IronXL.Range)"/>
             </summary>
-            <param name="a">This Range.</param>
-            <param name="b">Another Range which will be subtracted from the first range.</param>
+            <param name="a">This <see cref="T:IronXL.Range"/>.</param>
+            <param name="b">Another Range which will be subtracted from the
+            first range.</param>
             <returns>
             All cells in your Range, with any cells in the second Range removed.
             </returns>
@@ -2387,7 +2620,8 @@
         </member>
         <member name="M:IronXL.Range.Min">
             <summary>
-            Returns minimum value of all numeric cells within this range.
+            Returns minimum value of all numeric cells within this
+            <see cref="T:IronXL.Range"/>.
             </summary>
             <returns>
             The min value as a decimal.
@@ -2403,240 +2637,361 @@
         </member>
         <member name="M:IronXL.Range.AddRange(IronXL.Range)">
             <summary>
-            Add another range to this current range. Basically, the result is union of two ranges.
+            Add another <see cref="T:IronXL.Range"/> to this current <see cref="T:IronXL.Range"/>.
+            After this operation, the current <see cref="T:IronXL.Range"/> will be
+            extended to span over both ranges. So if range A is A1:B2 and range
+            B is C3:D4, then after calling this method, range A will be A1:D4.
             </summary>
-            <param name="range">The range to add to the current working range.</param>
+            <param name="range">The range to add to the current range.</param>
             <returns>
-            This Range allowing a fluent coding style.
+            This <see cref="T:IronXL.Range"/> allowing a fluent coding style.
+            </returns>
+        </member>
+        <member name="M:IronXL.Range.AddRange(IronXL.RangeAddress)">
+            <summary>
+            Add another <see cref="T:IronXL.RangeAddress"/> to this current
+            <see cref="T:IronXL.Range"/>.
+            After this operation, the current <see cref="T:IronXL.Range"/> will be
+            extended to span over both ranges. So if range A is A1:B2 and range
+            B is C3:D4, then after calling this method, range A will be A1:D4.
+            </summary>
+            <param name="address">The range address to add to the current
+            range.</param>
+            <returns>
+            This <see cref="T:IronXL.Range"/> allowing a fluent coding style.
             </returns>
         </member>
         <member name="M:IronXL.Range.SubtractRange(IronXL.Range)">
             <summary>
-            Subtracts a range from the current. Result is first range without intersection of two ranges.
+            Subtracts a <see cref="T:IronXL.Range"/> from the current rnage. If the 
+            <paramref name="range"/> is only partially intersecting with the 
+            current range, the intersection will be cleared of contents, but 
+            the range coordiantes will remain. So if range A is A1:B2 and range
+            B is B2:C3, then after calling this method, range A - A1:A1 is 
+            subtracted from range B - A1:B2, the B range will remain A1:B2, 
+            but the contents of the A1 will be cleared. On the other hand, 
+            if the suntrackted range is intersecting entire columns or entire 
+            rows of the this range, starting from one of it's edges, this 
+            intersection will be removed from this range.
+            So if range A is A1:B2 and range B is A1:C1, then after calling
+            this method, range A will be A2:B2. Another example is if range A
+            is A1:B2 and range B is A1:B2, then after calling this method, 
+            the range A will be removed completely.
             </summary>
-            <param name="range">The range to remove from the current working range.</param>
+            <param name="range">The range to remove from the current range.</param>
             <returns>
-            This Range allowing a fluent coding style.
+            This <see cref="T:IronXL.Range"/> allowing a fluent coding style.
             </returns>
+        </member>
+        <member name="M:IronXL.Range.SubtractRange(IronXL.RangeAddress)">
+            <summary>
+            Subtracts a <see cref="P:IronXL.Range.RangeAddress"/> from the current rnage. If the 
+            <paramref name="address"/> is only partially intersecting with the 
+            current range, the intersection will be cleared of contents, but 
+            the range coordiantes will remain. So if range A is A1:B2 and range
+            B is B2:C3, then after calling this method, range A - A1:A1 is 
+            subtracted from range B - A1:B2, the B range will remain A1:B2, 
+            but the contents of the A1 will be cleared. On the other hand, 
+            if the suntrackted range is intersecting entire columns or entire 
+            rows of the this range, starting from one of it's edges, this 
+            intersection will be removed from this range.
+            So if range A is A1:B2 and range B is A1:C1, then after calling
+            this method, range A will be A2:B2. Another example is if range A
+            is A1:B2 and range B is A1:B2, then after calling this method, 
+            the range A will be removed completely.
+            </summary>
+            <param name="address">The address to remove from the current range.</param>
+            <returns>
+            This <see cref="T:IronXL.Range"/> allowing a fluent coding style.
+            </returns>
+        </member>
+        <member name="M:IronXL.Range.RemoveRow(System.Int32)">
+            <summary>
+            Removes the <see cref="T:IronXL.RangeRow"/> with specified number 
+            from this <see cref="T:IronXL.Range"/>. If after the deletion the worksheet
+            row is left empty, all rows below the deleted row will be 
+            shifted up.
+            </summary>
+            <param name="rowNumber">The number of the row to remove</param>
+        </member>
+        <member name="M:IronXL.Range.RemoveRow(IronXL.RangeRow)">
+            <summary>
+            Removes the <see cref="T:IronXL.RangeRow"/> from this <see cref="T:IronXL.Range"/>.
+            If after the deletion the worksheet row is left empty, all rows
+            below the deleted row will be shifted up.
+            </summary>
+            <param name="row">The row to remove</param>
+        </member>
+        <member name="M:IronXL.Range.RemoveColumn(System.String)">
+            <summary>
+            Removes the <see cref="T:IronXL.RangeColumn"/> with specified  letter name from this
+            <see cref="T:IronXL.Range"/>. If after the deletion the worksheet column is left
+            empty, all columns to the right of the deleted column will be 
+            shifted to the left.
+            </summary>
+            <param name="columnName">The letter name of the column to remove</param>
+        </member>
+        <member name="M:IronXL.Range.RemoveColumn(System.Int32)">
+            <summary>
+            Removes the <see cref="T:IronXL.RangeColumn"/> with specified number from this
+            <see cref="T:IronXL.Range"/>. If after the deletion the worksheet column is left
+            empty, all columns to the right of the deleted column will be 
+            shifted to the left.
+            </summary>
+            <param name="columnNumber">The number of the column to remove</param>
+        </member>
+        <member name="M:IronXL.Range.RemoveColumn(IronXL.RangeColumn)">
+            <summary>
+            Removes the specified <see cref="T:IronXL.RangeColumn"/> from this
+            <see cref="T:IronXL.Range"/>. If after the deletion the worksheet column is left
+            empty, all columns to the right of the deleted column will be 
+            shifted to the left.
+            </summary>
+            <param name="column">The column to remove</param>
+        </member>
+        <member name="M:IronXL.Range.InsertRow(System.Int32)">
+            <summary>
+            Inserts a new row into the worksheet at the specified position.
+            All rows below the <paramref name="rowIndex"/> will be shifted down 
+            one of row.
+            </summary>
+            <param name="rowIndex">A 0-based index of the position where to
+            insert a new row</param>
+            <returns><see cref="T:IronXL.RangeRow"/> that was created in
+            the process</returns>
+        </member>
+        <member name="M:IronXL.Range.InsertRows(System.Int32,System.Int32)">
+            <summary>
+            Inserts specified nunmber of new <see cref="T:IronXL.RangeRow"/>s into the
+            worksheet at the specified position. All rows below the 
+            <paramref name="rowIndex"/> will be shifted down 
+            <paramref name="rowsCount"/> number of rows.
+            </summary>
+            <param name="rowIndex">A 0-based index of the position where to
+            start inserting new rows</param>
+            <param name="rowsCount">Number of rows to insert</param>
+            <returns><see cref="T:IronXL.RangeRow"/>s that were created in
+            the process</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:IronXL.Range.InsertColumn(System.Int32)">
+            <summary>
+            Inserts a new column into the worksheet at the specified position.
+            All columns to the right of the <paramref name="columnIndex"/> will
+            be shifted right one of column.
+            </summary>
+            <param name="columnIndex">A 0-based index of the position where to
+            insert a new column</param>
+            <returns><see cref="T:IronXL.RangeColumn"/> that was created in
+            the process</returns>
+        </member>
+        <member name="M:IronXL.Range.InsertColumn(System.String)">
+            <summary>
+            Inserts a new column into the worksheet at the specified position.
+            All columns to the right of the <paramref name="columnLetter"/> will
+            be shifted right one of column.
+            </summary>
+            <param name="columnLetter">A letter of the position where to start
+            insert a new column</param>
+            <returns><see cref="T:IronXL.RangeColumn"/> that was created in
+            the process</returns>
+        </member>
+        <member name="M:IronXL.Range.InsertColumns(System.String,System.Int32)">
+            <summary>
+            Inserts specified nunmber of new <see cref="T:IronXL.RangeColumn"/>s into the
+            worksheet at the specified position. All columns to the right of the 
+            <paramref name="columnLetter"/> will be shifted right 
+            <paramref name="columnsCount"/> number of columns.
+            </summary>
+            <param name="columnLetter">A letter of the position where to start
+            inserting new columns</param>
+            <param name="columnsCount">Number of columns to insert</param>
+            <returns><see cref="T:IronXL.RangeColumn"/>s that were created in
+            the process</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:IronXL.Range.InsertColumns(System.Int32,System.Int32)">
+            <summary>
+            Inserts specified nunmber of new <see cref="T:IronXL.RangeColumn"/>s into the
+            worksheet at the specified position. All columns to the right of the 
+            <paramref name="columnIndex"/> will be shifted right 
+            <paramref name="columnsCount"/> number of columns.
+            </summary>
+            <param name="columnIndex">A 0-based index of the position where to
+            start inserting new columns</param>
+            <param name="columnsCount">Number of columns to insert</param>
+            <returns><see cref="T:IronXL.RangeColumn"/>s that were created in
+            the process</returns>
+            <exception cref="T:System.ArgumentException"></exception>
         </member>
         <member name="M:IronXL.Range.SortAscending">
             <summary>
-            Sort current range in ascending order.  This updates the cell positions within your WorkSheets.
+            Sort current range in ascending order. This updates the cell
+            positions within your WorkSheets.
             </summary>
             <returns>
-            This Range, allowing for a fluent code style.
+            This <see cref="T:IronXL.Range"/>, allowing for a fluent code style.
             </returns>
         </member>
         <member name="M:IronXL.Range.SortDescending">
             <summary>
-            Sort current range in descending order. This updates the cell positions within your WorkSheets.
+            Sort current range in descending order. This updates the cell
+            positions within your WorkSheets.
             </summary>
             <returns>
-            This Range, allowing for a fluent code style.
+            This <see cref="T:IronXL.Range"/>, allowing for a fluent code style.
             </returns>
         </member>
         <member name="M:IronXL.Range.SortByColumn(System.String,IronXL.SortOrder)">
             <summary>
-            Sort current range by specified column. This updates the row positions within your WorkSheet.
-            Range has to be rectangular: first and last rows numbers in all columns should be the same,
-            and first and last columns numbers in all rows should be the same.
+            Sort current range by specified column. This updates the row
+            positions within your WorkSheet.
+            Range has to be rectangular: first and last rows numbers in all
+            columns should be the same, first and last columns numbers in all
+            rows should be the same.
             </summary>
-            <param name="column">Column name in the string form. For example "A" or "AB".
+            <param name="column">Column name in the string form. For example
+            "A" or "AB".
             Column should intersect current range</param>
             <param name="sortOrder">Direction of the sort</param>
-            <returns>This Range, allowing for a fluent code style.</returns>
-            <exception cref="T:System.InvalidOperationException">Thrown if range is not of rectangular shape</exception>
-            <exception cref="T:System.ArgumentException">Thrown if <paramref name="column"/> name is not a valid
-            column name</exception>
-            <exception cref="T:System.IndexOutOfRangeException">Thrown if <paramref name="column"/> is out of 
-            current range's bounds</exception>
+            <returns>This <see cref="T:IronXL.Range"/>, allowing for a fluent code style.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if range is not
+            of rectangular shape</exception>
+            <exception cref="T:System.ArgumentException">Thrown if
+            <paramref name="column"/> name is not a valid column name</exception>
+            <exception cref="T:System.IndexOutOfRangeException">Thrown if
+            <paramref name="column"/> is out of current range's bounds</exception>
         </member>
         <member name="M:IronXL.Range.SortByColumn(System.Int32,IronXL.SortOrder)">
             <summary>
-            Sort current range by specified column. This updates the row positions within your WorkSheet.
-            Range has to be rectangular: first and last rows numbers in all columns should be the same,
-            and first and last columns numbers in all rows should be the same.
+            Sort current range by specified column. This updates the row
+            positions within your WorkSheet. Range has to be rectangular: first
+            and last rows numbers in all columns should be the same, and first
+            and last columns numbers in all rows should be the same.
             </summary>
-            <param name="columnNumber">Zero-based column index. Column should intersect current range</param>
+            <param name="columnNumber">Zero-based column index. Column should
+            intersect current range</param>
             <param name="sortOrder">Direction of the sort</param>
-            <returns>This Range, allowing for a fluent code style.</returns>
-            <exception cref="T:System.InvalidOperationException">Thrown if range is not of rectangular shape</exception>
-            <exception cref="T:System.IndexOutOfRangeException">Thrown if <paramref name="columnNumber"/> is out of 
-            current range's bounds</exception>
+            <returns>This <see cref="T:IronXL.Range"/>, allowing for a fluent code style.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if range is not
+            of rectangular shape</exception>
+            <exception cref="T:System.IndexOutOfRangeException">Thrown if
+            <paramref name="columnNumber"/> is out of current range's bounds</exception>
         </member>
         <member name="M:IronXL.Range.Trim">
             <summary>
             Removes all empty rows and columns on the range borders.
             </summary>
             <returns>
-            This Range, allowing for a fluent code style.
+            This <see cref="T:IronXL.Range"/>, allowing for a fluent code style.
             </returns>
         </member>
         <member name="M:IronXL.Range.ToDataTable(System.Boolean)">
             <summary>
-            Get <see cref="T:System.Data.DataTable" /> representation of current range.
+            Get <see cref="T:System.Data.DataTable"/> representation of current range.
             <para>Useful when working with DataGrids, System.Data, SQL or Entity Framework</para>
             </summary>
             <param name="useFirstRowAsColumnNames">Indicates whether to use first row as column names or not</param>
             <returns>
-            A <see cref="T:System.Data.DataTable" /> representation of current range.
+            A <see cref="T:System.Data.DataTable"/> representation of current range.
             </returns>
         </member>
         <member name="M:IronXL.Range.SetCellValue(System.Int32,System.Int32,System.Object)">
             <summary>
-            Set a single cell value using its row and column indexes.
+            Set a single cell value using its row and column 0-based indexes.
             </summary>
-            <param name="rowIndex">Row index within this <see cref="T:IronXL.Range"/>.<para>The first row is numbered 0.</para></param>
-            <param name="columnIndex">Column index within this <see cref="T:IronXL.Range"/>.<para>The first column is numbered 0.</para></param>
+            <param name="rowIndex">Row index within this <see cref="T:IronXL.Range"/>.
+            <para>
+            The first row is numbered 0.
+            </para>
+            </param>
+            <param name="columnIndex">Column index within this
+            <see cref="T:IronXL.Range"/>.
+            <para>
+            The first column is numbered 0.
+            </para>
+            </param>
             <param name="value">Value for the cell.</param>
         </member>
         <member name="M:IronXL.Range.GetValue``1">
             <summary>
             Method for getting a range's value.
-            <para>If range contains one cell then method calls <see cref="M:IronXL.Cell.GetValue``1" /> of this cell</para><para>If range contains more than one cell then method tries to cast <see cref="M:IronXL.Range.Sum" /> of all numeric cells within range to <typeparamref name="TType" /></para><para>Use Try/Catch to avoid possible exceptions from this method if cell content types are inconsistent or contain formula errors.</para>
+            <para>
+            If range contains one cell then method calls
+            <see cref="M:IronXL.Cell.GetValue``1"/> of this cell
+            </para>
+            <para>
+            If range contains more than one cell then method tries to cast
+            <see cref="M:IronXL.Range.Sum"/> of all numeric cells within range to
+            <typeparamref name="TType"/>
+            </para>
+            <para>
+            Use Try/Catch to avoid possible exceptions from this method if cell
+            content types are inconsistent or contain formula errors.</para>
             </summary>
-            <typeparam name="TType">The .net type to which the cell's value will be cast.</typeparam>
+            <typeparam name="TType">The .net type to which the cell's value
+            will be cast.</typeparam>
             <returns>
             The value of the cell, cast as TType
             </returns>
-            <exception cref="T:System.ArgumentException">Range value cannot be casted to {type.Name}</exception>
+            <exception cref="T:System.ArgumentException">Range value cannot be casted to
+            {type.Name}</exception>
         </member>
         <member name="M:IronXL.Range.TryGetValue``1(``0@)">
             <summary>
             Method for safely getting a range's total value.
-            <para>If range contains one cell then method calls <see cref="M:IronXL.Cell.GetValue``1" /> of this cell</para><para>If range contains more than one cell then method tries to cast <see cref="M:IronXL.Range.Sum" /> of all numeric cells within range to <typeparamref name="TType" /></para><para>Use Try/Catch to avoid possible exceptions from this method if cell content types are inconsistent or contain formula errors.</para>
+            <para>If range contains one cell then method calls
+            <see cref="M:IronXL.Cell.GetValue``1"/> of this cell
+            </para>
+            <para>
+            If range contains more than one cell then method tries to cast
+            <see cref="M:IronXL.Range.Sum"/> of all numeric cells within range to
+            <typeparamref name="TType"/>
+            </para>
+            <para>
+            Use Try/Catch to avoid possible exceptions from this method if cell
+            content types are inconsistent or contain formula errors.
+            </para>
             </summary>
-            <typeparam name="TType">The .net type to which the cell's value will be cast.</typeparam>
+            <typeparam name="TType">The .net type to which the cell's value
+            will be cast.</typeparam>
             <param name="value">The sum value of the range, expressed as TType.</param>
             <returns>
             <c>true</c> if the range's content could be cast to TType.
             </returns>
-            <exception cref="T:System.ArgumentException">Range value cannot be casted to {type.Name}</exception>
-        </member>
-        <member name="P:IronXL.Range.DateTimeValue">
-            <summary>
-            Gets or sets the nullable <see cref="T:System.DateTime" /> value of this Range of cells.
-            <para>Getting the DateTimeValue will return highest (MAX) DateTime in the Range, or <c>null</c> if no <see cref="T:System.DateTime" /> is found.</para><para>Setting the DateTimeValue will set all cells in with the same <see cref="T:System.DateTime" /> value. </para>
-            </summary>
-            <value>
-            The MAX <see cref="T:System.DateTime" /> of all of the cells.
-            </value>
+            <exception cref="T:System.ArgumentException">Range value cannot be casted
+            to {type.Name}</exception>
         </member>
         <member name="M:IronXL.Range.ToString">
             <summary>
-            Returns the <see cref="P:IronXL.Range.StringValue"/> of this Range.
+            Returns the <see cref="P:IronXL.Range.StringValue"/> of this <see cref="T:IronXL.Range"/>.
             </summary>
             <returns>
-            A <see cref="T:System.String" /> that represents this instance.
+            A <see cref="T:System.String"/> that represents this instance.
             </returns>
-        </member>
-        <member name="P:IronXL.Range.StringValue">
-            <summary>
-            Gets or sets the <see cref="T:System.String" /> value of this Range of cells.
-            <para>Getting the StringValue will return formatted <see cref="T:System.String" />  values.  Columns will be delimited by TABS.  Rows delimited by NEWLINE</para><para>Setting the StringValue will set all cells in with the same <see cref="T:System.String" />  value. </para>
-            </summary>
-            <value>
-            The string value of all of the cells. Numbers and dates will be rendered into readable strings; as displayed in Excel. Formulas will be calculated.
-            <para>Error end NAN cells will return as a null string.</para>
-            </value>
-        </member>
-        <member name="P:IronXL.Range.BoolValue">
-            <summary>
-            Gets or sets the <see cref="T:System.Boolean" />  value of this Range of cells.
-            <para>Getting the BoolValue will return true only if ALL cells in the range are true. Numeric cells greater than zero are treated as TRUE. [Logical AND Operator Applied]</para><para>Setting the BoolValue will set all cells in with the same <see cref="T:System.Boolean" /> value. </para>
-            </summary>
-            <value>
-            The boolean AND aggregate value of the cells.
-            <para>Error end NAN cells will return as a false .</para>
-            </value>
-        </member>
-        <member name="P:IronXL.Range.IntValue">
-            <summary>
-            Gets or sets the <see cref="T:System.Int32" />  value of this Range of cells.
-            <para>Getting the IntValue will return the SUM of all numeric cells in the Range.</para><para>Setting the IntValue will set all cells in with the same <see cref="T:System.Int32" /> value. </para>
-            </summary>
-            <value>
-            The <see cref="T:System.Int32" /> SUM of all of the cells.
-            <para>Error end NAN cells will count as 0</para>
-            </value>
-        </member>
-        <member name="P:IronXL.Range.DoubleValue">
-            <summary>
-            Gets or sets the double value of all Cells in this Rance.
-            </summary>
-            <value>
-            The double value.
-            </value>
-        </member>
-        <member name="P:IronXL.Range.DecimalValue">
-            <summary>
-            Gets or sets the <see cref="T:System.Decimal" />  value of this Range of cells.
-            <para>Getting the DecimalValue will return the SUM of all numeric cells in the Range.</para><para>Setting the DecimalValue will set all cells in with the same <see cref="T:System.Decimal" /> value. </para>
-            </summary>
-            <value>
-            The <see cref="T:System.Decimal" /> SUM of all of the cells.
-            <para>Error end NAN cells will count as 0</para>
-            </value>
-        </member>
-        <member name="M:IronXL.Range.ClearContents">
-            <summary>
-            Empties the contents of the <see cref="T:IronXL.Range"/>, leaving all <see cref="T:IronXL.Cell">Cells</see> empty.
-            </summary>
-        </member>
-        <member name="P:IronXL.Range.FloatValue">
-            <summary>
-            Gets or sets the <see cref="T:System.Single" />  value of this Range of cells.
-            <para>Getting the FloatValue will return the SUM of all numeric cells in the Range.</para><para>Setting the FloatValue will set all cells in with the same <see cref="T:System.Single" /> value. </para>
-            </summary>
-            <value>
-            The <see cref="T:System.Single" /> SUM of all of the cells.
-            <para>Error end NAN cells will count as 0</para>
-            </value>
-        </member>
-        <member name="P:IronXL.Range.Int64Value">
-            <summary>
-            <para>Synonym of <see cref="P:IronXL.Range.LongValue" /></para>
-            Gets or sets the <see cref="T:System.Int64" /> (Int64) value of this Range of cells.
-            <para>Getting the LongValue will return the SUM of all numeric cells in the Range.</para><para>Setting the LongValue will set all cells in with the same <see cref="T:System.Int64" /> value. </para>
-            </summary>
-            <value>
-            The <see cref="T:System.Int64" /> SUM of all of the cells.
-            <para>Error end NAN cells will count as 0</para>
-            </value>
-        </member>
-        <member name="P:IronXL.Range.LongValue">
-            <summary>
-            Gets or sets the <see cref="T:System.Int64" /> (Int64) value of this Range of cells.
-            <para>Getting the LongValue will return the SUM of all numeric cells in the Range.</para><para>Setting the LongValue will set all cells in with the same <see cref="T:System.Int64" /> value. </para>
-            </summary>
-            <value>
-            The <see cref="T:System.Int64" /> SUM of all of the cells.
-            <para>Error end NAN cells will count as 0</para>
-            </value>
-        </member>
-        <member name="P:IronXL.Range.Int32Value">
-            <summary>
-            <para>Synonym of <see cref="P:IronXL.Range.IntValue" /></para>
-            Gets or sets the <see cref="T:System.Int32" /> (Int32) value of this Range of cells.
-            <para>Getting the LongValue will return the SUM of all numeric cells in the Range.</para><para>Setting the LongValue will set all cells in with the same <see cref="T:System.Int32" /> value. </para>
-            </summary>
-            <value>
-            The <see cref="T:System.Int32" /> SUM of all of the cells.
-            <para>Error end NAN cells will count as 0</para>
-            </value>
         </member>
         <member name="M:IronXL.Range.Copy(IronXL.WorkSheet,System.String)">
             <summary>
-            Copies the specified range to the sheet and inserts it at the specified point.
-            <para>E.g. Pastes this range to a WorkSheet at a specified cell location</para>
+            Copies the specified range to the sheet and inserts it at the
+            specified point.
+            <para>
+            E.g. Pastes this <see cref="T:IronXL.Range"/> to a WorkSheet at a specified
+            cell location
+            </para>
             </summary>
-            <param name="pointToInsert">The cell at which to paste the range.  E.g. "A11"</param>
-            <param name="sheet">The worksheet to paste this <see cref="T:IronXL.Range"/> into.</param>
+            <param name="pointToInsert">The cell at which to paste the range.
+            E.g. "A11"</param>
+            <param name="targetWorkSheet">The worksheet to paste this
+            <see cref="T:IronXL.Range"/> into.</param>
         </member>
         <member name="M:IronXL.Range.Replace(System.String,System.String)">
             <summary>
-            <para>Textual and numeric Find and Replace.</para>
-            Replaces all found occurrences of "oldValue"  with the "newValue". Works with all string and numeric values.
+            Textual and numeric Find and Replace.
+            <para>
+            Replaces all found occurrences of <paramref name="oldValue"/> with
+            the <paramref name="newValue"/>.
+            Works with all string and numeric values.
+            </para>
             </summary>
             <param name="oldValue">The string to find.</param>
             <param name="newValue">The string to replace oldValue with.</param>
@@ -2646,58 +3001,19 @@
             Saves the current range as named table with the specified name.
             </summary>
             <param name="tableName">the name of the table</param>
-            <param name="showFilter">show filter on the header. Default value is <c>true</c>.</param>
+            <param name="showFilter">show filter on the header. Default value
+            is <c>true</c>.</param>
             <param name="tableStyle">table style properties</param>
-            <exception cref="T:System.NotSupportedException">Only XLSX supports named tables.</exception>
+            <exception cref="T:System.NotSupportedException">Only XLSX supports named
+            tables.</exception>
         </member>
         <member name="M:IronXL.Range.SaveAsNamedRange(System.String,System.Boolean)">
             <summary>
-            Saves he current range as a new named range.
+            Saves the current range as a new named range.
             </summary>
             <param name="nameOfRange">The user-defined name.</param>
-            <param name="globalName">Sets the range as global if set to <c>true</c>. Default value is <c>true</c>.</param>
-        </member>
-        <member name="M:IronXL.Range.GetAllRows">
-            <summary>
-            Get a list of all rows that overlap this <see cref="T:IronXL.Range"/>
-            </summary>
-        </member>
-        <member name="M:IronXL.Range.GetAllPhysicalRows">
-            <summary>
-            Get a list of only the rows that actually exist in this range
-            </summary>
-        </member>
-        <member name="M:IronXL.Range.GetRows(System.Boolean)">
-            <summary>
-            Gets the list of rows that this <see cref="T:IronXL.Range"/> spans over. Is
-            able to create rows to fill the range with rows if needed, or only
-            return the rows that actually exist on the sheet.
-            </summary>
-            <param name="createIfNull">Indicates wether the method should 
-            create the rows that are overlapped by this <see cref="T:IronXL.Range"/> and
-            add them to the resulting array, or only get existing rows</param>
-            <returns></returns>
-        </member>
-        <member name="M:IronXL.Range.GetAllColumns">
-            <summary>
-            Get a list of all columns that overlap this <see cref="T:IronXL.Range"/>
-            </summary>
-        </member>
-        <member name="M:IronXL.Range.GetAllPhysicalColumns">
-            <summary>
-            Get a list of only the columns that actually exist in this range
-            </summary>
-        </member>
-        <member name="M:IronXL.Range.GetColumns(System.Boolean)">
-            <summary>
-            Gets the list of columns that this <see cref="T:IronXL.Range"/> spans over. Is
-            able to create columns to fill the range with columns if needed, or only
-            return the columns that actually exist on the sheet.
-            </summary>
-            <param name="createIfNull">Indicates wether the method should 
-            create the columns that are overlapped by this <see cref="T:IronXL.Range"/> and
-            add them to the resulting array, or only get existing columns</param>
-            <returns></returns>
+            <param name="globalName">Sets the range as global if set to
+            <c>true</c>. Default value is <c>true</c>.</param>
         </member>
         <member name="M:IronXL.Range.Row(System.Int32)">
             <summary>
@@ -2709,6 +3025,16 @@
         <member name="M:IronXL.Range.Column(System.Int32)">
             <summary>
             Get a column by index
+            </summary>
+        </member>
+        <member name="P:IronXL.Range.AllRowsInRange">
+            <summary>
+            <see cref="P:IronXL.Range.Rows"/> is now doing same thing as this
+            </summary>
+        </member>
+        <member name="P:IronXL.Range.AllColumnsInRange">
+            <summary>
+            <see cref="P:IronXL.Range.Columns"/> is now doing same thing as this
             </summary>
         </member>
         <member name="T:IronXL.RangeAddress">
@@ -2746,10 +3072,20 @@
             Amount of rows within this address.
             </summary>
         </member>
+        <member name="P:IronXL.RangeAddress.Location">
+            <summary>
+            Gets the Range / Cells location in Excel Address selector notation.
+            E.G. "A1:B16"
+            </summary>
+            <value>
+            The Range's location expressed as an Excel Address selector string.
+            </value>
+        </member>
         <member name="M:IronXL.RangeAddress.Extend(IronXL.RangeAddress)">
             <summary>
             Combines two range addresses.
-            The result is range address where the last column and the last row have maximum values among two combined addresses.
+            The result is range address where the last column and the last
+            row have maximum values among two combined addresses.
             </summary>
             <param name="rangeAddress">The range address.</param>
             <returns>The result range address.</returns>
@@ -2758,30 +3094,46 @@
             <summary>
             Check whether this range address contains target cell.
             </summary>
-            <param name="row">The row of the cell.  zero based.</param>
-            <param name="col">The column of the cell.  zero based. E.g. column A is 0</param>
-            <returns><c>true</c> if that specified cell falls within this RangeAddress </returns>
-        </member>
-        <member name="P:IronXL.RangeAddress.Location">
-            <summary>
-            Gets the Range / Cells location in Excel Address selector notation.  E.G. "A1:B16"
-            </summary>
-            <value>
-            The Range's location expressed as an Excel Address selector string.
-            </value>
-        </member>
-        <member name="M:IronXL.RangeAddress.ToString">
-            <summary>
-            Converts to string of the location of the range in Excel Address selector notation.  E.G. "A4:D87"
-            </summary>
-            <returns>
-            A <see cref="T:System.String" /> that represents this instance.
-            </returns>
+            <param name="row">The row of the cell. Zero based.</param>
+            <param name="col">The column of the cell. Zero based. E.g.
+            column A is 0</param>
+            <returns><c>true</c> if the specified cell falls within
+            this <see cref="T:IronXL.RangeAddress"/></returns>
         </member>
         <member name="M:IronXL.RangeAddress.IsEqual(IronXL.RangeAddress)">
             <summary>
             Checks whether two ranges are equal.
             </summary>
+        </member>
+        <member name="M:IronXL.RangeAddress.GetIntersection(IronXL.RangeAddress)">
+            <summary>
+            Gets the intersection of two ranges. Returns null if the ranges do
+            not intersect.
+            </summary>
+            <param name="range"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IronXL.RangeAddress.ToString">
+            <summary>
+            Converts to string of the location of the range in Excel Address
+            selector notation. E.G. "A4:D87"
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:IronXL.RangeAddress.Equals(System.Object)">
+            <summary>
+            Compares two ranges.
+            </summary>
+            <param name="obj">The range to compare with the current range.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IronXL.RangeAddress.GetHashCode">
+            <summary>
+            Gets the hash code of this instance.
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:IronXL.Ranges.RangeAddresses">
             <summary>
@@ -2793,19 +3145,19 @@
             Add single range address to current range addresses list.
             </summary>
         </member>
-        <member name="M:IronXL.Ranges.RangeAddresses.Add(IronXL.Ranges.RangeAddresses)">
+        <member name="M:IronXL.Ranges.RangeAddresses.AddRange(IronXL.Ranges.RangeAddresses)">
             <summary>
             Add list of addresses to current range addresses list.
             </summary>
         </member>
-        <member name="M:IronXL.Ranges.RangeAddresses.Delete(IronXL.RangeAddress)">
+        <member name="M:IronXL.Ranges.RangeAddresses.Subtract(IronXL.RangeAddress)">
             <summary>
-            Delete single range address from current range addresses list.
+            Subtract single range address from current range addresses list.
             </summary>
         </member>
-        <member name="M:IronXL.Ranges.RangeAddresses.Delete(IronXL.Ranges.RangeAddresses)">
+        <member name="M:IronXL.Ranges.RangeAddresses.Subtract(IronXL.Ranges.RangeAddresses)">
             <summary>
-            Delete list of addresses from current range addresses list.
+            Subtract list of addresses from current range addresses list.
             </summary>
         </member>
         <member name="M:IronXL.Ranges.RangeAddresses.GetEnumerator">
@@ -2818,9 +3170,19 @@
             A class that represents a single column of cells.
             </summary>
         </member>
-        <member name="P:IronXL.RangeColumn.RangeAddress">
+        <member name="M:IronXL.RangeColumn.RemoveColumn">
             <summary>
-            Address of the column.
+            Removes the column from the worksheet.
+            </summary>
+        </member>
+        <member name="P:IronXL.RangeColumn.ColumnNumber">
+            <summary>
+            0-based index of the column.
+            </summary>
+        </member>
+        <member name="P:IronXL.RangeColumn.ColumnLetter">
+            <summary>
+            Gets the letter anme of the column.
             </summary>
         </member>
         <member name="P:IronXL.RangeColumn.Width">
@@ -2833,36 +3195,61 @@
             Gets or sets a value indicating whether this column is hidden.
             </summary>
         </member>
-        <member name="M:IronXL.RangeColumn.AddRange(IronXL.Range)">
-            <summary>
-            Add range to the current column if they can be combined.
-            </summary>
-            <param name="range">The range to add to the current working range.</param>
-            <returns>
-            This Range allowing a fluent coding style.
-            </returns>
-            <exception cref="T:System.InvalidOperationException">This range cannot be added to the current column because they are not on the same line or cannot be combined in one column</exception>
-        </member>
-        <member name="M:IronXL.RangeColumn.SubtractRange(IronXL.Range)">
-            <summary>
-            Subtract range from the current column if it can be subtracted.
-            </summary>
-            <param name="range">The range to remove from the current working range.</param>
-            <returns>
-            This Range allowing a fluent coding style.
-            </returns>
-            <exception cref="T:System.InvalidOperationException">This range cannot be subtracted from the current column because result column isn't continuous</exception>
-        </member>
         <member name="M:IronXL.RangeColumn.AutoSizeColumn">
             <summary>
             Changes width of the column to fit the content.
+            NOTE: This method measures the text in the cell based on the font 
+            that is used for the cell. If the exact font is not found on the 
+            machine it will try to measure it with a defalt font. If the 
+            default could not be found, it will try to use any font available. 
+            Finally if there are no fonts found the exception will be thrown.
             </summary>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:SixLabors.Fonts.FontException">Trown when no fonts found istalled 
+            on the machine.</exception>
         </member>
         <member name="M:IronXL.RangeColumn.AutoSizeColumn(System.Boolean)">
             <summary>
             Changes width of the column to fit the content.
+            NOTE: This method measures the text in the cell based on the font 
+            that is used for the cell. If the exact font is not found on the 
+            machine it will try to measure it with a defalt font. If the 
+            default could not be found, it will try to use any font available. 
+            Finally if there are no fonts found the exception will be thrown.
             </summary>
-            <param name="useMergedCells">If true, the width of merged cells will be used to calculate the width of the column.</param>
+            <param name="useMergedCells">If true, the width of merged cells will 
+            be taken into account.</param>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:SixLabors.Fonts.FontException">Trown when no fonts found istalled 
+            on the machine.</exception>
+        </member>
+        <member name="M:IronXL.RangeColumn.InsertColumns(System.Int32,System.Int32)">
+            <summary>
+            Not supported in <see cref="T:IronXL.RangeColumn"/>
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:IronXL.RangeColumn.InsertColumn(System.Int32)">
+            <summary>
+            Not supported in <see cref="T:IronXL.RangeColumn"/>
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:IronXL.RangeColumn.InsertColumns(System.String,System.Int32)">
+            <summary>
+            Not supported in <see cref="T:IronXL.RangeColumn"/>
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:IronXL.RangeColumn.InsertColumn(System.String)">
+            <summary>
+            Not supported in <see cref="T:IronXL.RangeColumn"/>
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
         </member>
         <member name="T:IronXL.RangeRow">
             <summary>
@@ -2871,12 +3258,12 @@
         </member>
         <member name="M:IronXL.RangeRow.RemoveRow">
             <summary>
-            Removes this Row from the current <see cref="T:IronXL.WorkSheet"/>;
+            Removes the row from the worksheet.
             </summary>
         </member>
-        <member name="P:IronXL.RangeRow.RangeAddress">
+        <member name="P:IronXL.RangeRow.RowNumber">
             <summary>
-            Address of the row.
+            0-based index of the row.
             </summary>
         </member>
         <member name="P:IronXL.RangeRow.Height">
@@ -2889,36 +3276,47 @@
             Gets or sets a value indicating whether this row is hidden.
             </summary>
         </member>
-        <member name="M:IronXL.RangeRow.AddRange(IronXL.Range)">
-            <summary>
-            Add range to the current row if they can be combined.
-            </summary>
-            <param name="range">The range to add to the current working range.</param>
-            <returns>
-            This Range allowing a fluent coding style.
-            </returns>
-            <exception cref="T:System.InvalidOperationException">This range cannot be added to the current row because they are not on the same line or cannot be combined in one row</exception>
-        </member>
         <member name="M:IronXL.RangeRow.AutoSizeRow">
             <summary>
-            Adjusts the row height to fit the contents.
+            Changes height of the row to fit the content.
+            NOTE: This method measures the text in the cell based on the font 
+            that is used for the cell. If the exact font is not found on the 
+            machine it will try to measure it with a defalt font. If the 
+            default could not be found, it will try to use any font available. 
+            Finally if there are no fonts found the exception will be thrown.
             </summary>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:SixLabors.Fonts.FontException">Trown when no fonts found istalled 
+            on the machine.</exception>
         </member>
         <member name="M:IronXL.RangeRow.AutoSizeRow(System.Boolean)">
             <summary>
-            Adjusts the row height to fit the contents.
+            Changes height of the row to fit the content.
+            NOTE: This method measures the text in the cell based on the font 
+            that is used for the cell. If the exact font is not found on the 
+            machine it will try to measure it with a defalt font. If the 
+            default could not be found, it will try to use any font available. 
+            Finally if there are no fonts found the exception will be thrown.
             </summary>
-            <param name="useMergedCells">whether to use the contents of merged cells when calculating the height of the row</param>
+            <param name="useMergedCells">If true, the height of merged cells 
+            will be considered.</param>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:SixLabors.Fonts.FontException">Trown when no fonts found istalled 
+            on the machine.</exception>
         </member>
-        <member name="M:IronXL.RangeRow.SubtractRange(IronXL.Range)">
+        <member name="M:IronXL.RangeRow.InsertRows(System.Int32,System.Int32)">
             <summary>
-            Subtract range from the current row if it can be subtracted
+            Not supported in <see cref="T:IronXL.RangeRow"/>
             </summary>
-            <param name="range">The range to remove from the current working range.</param>
-            <returns>
-            This Range allowing a fluent coding style.
-            </returns>
-            <exception cref="T:System.InvalidOperationException">This range cannot be subtracted from the current row because result row isn't continuous</exception>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:IronXL.RangeRow.InsertRow(System.Int32)">
+            <summary>
+            Not supported in <see cref="T:IronXL.RangeRow"/>
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
         </member>
         <member name="T:IronXL.Styles.HorizontalAlignment">
             <summary>
@@ -3325,6 +3723,22 @@
             Method for setting border color with <see cref="P:IronXL.Styles.IBorder.Color"/> value
             </summary>
             <param name="color">Color value</param>
+        </member>
+        <member name="M:IronXL.Styles.IBorder.SetBorderStyle(System.String,IronXL.Styles.BorderType)">
+            <summary>
+            Method for setting border type and color.
+            Default border type is thin.
+            </summary>
+            <param name="rgb">Color rgb value</param>
+            <param name="type">Border type enum</param>
+        </member>
+        <member name="M:IronXL.Styles.IBorder.SetBorderStyle(IronSoftware.Drawing.Color,IronXL.Styles.BorderType)">
+            <summary>
+            Method for setting border type and color.
+            Default border type is thin.
+            </summary>
+            <param name="color">Color value</param>
+            <param name="type">Border type enum</param>
         </member>
         <member name="T:IronXL.Styles.IFont">
             <summary>
@@ -4190,9 +4604,9 @@
              <param name="filename">The path of the file to import.</param>
              <param name="fileFormat">The excel file format to generate with the imported data. 
              XLS or XLSX. XLSX is preferred and default.</param>
-             <param name="ListDelimiter">The column list delimiter. Default (null) will refer 
+             <param name="listDelimiter">The column list delimiter. Default (null) will refer 
              to the system default settings.</param>
-             <param name="ConvertFieldValues">Converts field values when loading CSV/TSV files. 
+             <param name="convertFieldValues">Converts field values when loading CSV/TSV files. 
              Default value is <c>TRUE</c>.</param>
              <returns>The imported spreadsheet as a <see cref="T:IronXL.WorkBook"/> object</returns>
             
@@ -4418,7 +4832,7 @@
         </member>
         <member name="M:IronXL.WorkBook.SetupWorkBook(NPOI.SS.UserModel.IWorkbook,System.String)">
             <summary>
-            Sets <see cref="P:IronXL.WorkBook.WorkbookInternal">WorkbookInternal</see>, <see cref="P:IronXL.WorkBook.UsedColorIndexes">UsedColorIndexes</see>,
+            Sets <see cref="P:IronXL.WorkBook._workbookInternal">WorkbookInternal</see>, <see cref="P:IronXL.WorkBook._usedColorIndexes">UsedColorIndexes</see>,
             <see cref="P:IronXL.WorkBook.WorkSheets">WorkSheets</see> and <see cref="P:IronXL.WorkBook.Metadata">Metadata</see> properties from 
             provided <see cref="T:NPOI.SS.UserModel.IWorkbook"/>
             </summary>
@@ -4449,11 +4863,9 @@
             Class that stands for single sheet within Excel file.
             </summary>
         </member>
-        <member name="P:IronXL.WorkSheet.RowCount">
+        <member name="P:IronXL.WorkSheet.RangeAddress">
             <summary>
-            The number of rows in the used range of this <see cref="T:IronXL.WorkSheet"/>.
-            <para>If used range of this <see cref="T:IronXL.WorkSheet"/> is, for exeample, 
-            A11:A20, then <see cref="P:IronXL.WorkSheet.RowCount"/> will return 10</para>
+            Address of the working range of this <see cref="T:IronXL.WorkSheet"/>.
             </summary>
         </member>
         <member name="P:IronXL.WorkSheet.PhysicalRowCount">
@@ -4463,13 +4875,6 @@
             <para>If used range of this <see cref="T:IronXL.WorkSheet"/> is, for exeample, 
             A11:A20, but there is only one cell on it at address A11 and row 
             20 was hidden, then <see cref="P:IronXL.WorkSheet.PhysicalRowCount"/> will return 2</para>
-            </summary>
-        </member>
-        <member name="P:IronXL.WorkSheet.ColumnCount">
-            <summary>
-            The number of columns in the used range of this <see cref="T:IronXL.WorkSheet"/>.
-            <para>If used range of this <see cref="T:IronXL.WorkSheet"/> is, for exeample, 
-            B1:K1, then <see cref="P:IronXL.WorkSheet.RowCount"/> will return 10</para>
             </summary>
         </member>
         <member name="P:IronXL.WorkSheet.PhysicalColumnCount">
@@ -4530,15 +4935,18 @@
             Gets or sets a value indicating whether to display grid-lines.
             </summary>
             <value>
-              <c>true</c> if the sheet displays grid-lines; otherwise, <c>false</c>.
+            <c>true</c> if the sheet displays grid-lines; otherwise,
+            <c>false</c>.
             </value>
         </member>
         <member name="P:IronXL.WorkSheet.IsPrintGridlines">
             <summary>
-            Gets or sets a value indicating whether to display grid-lines when printing.
+            Gets or sets a value indicating whether to display grid-lines when 
+            printing.
             </summary>
             <value>
-              <c>true</c> if this sheet displays  print grid-lines; otherwise, <c>false</c>.
+            <c>true</c> if this sheet displays  print grid-lines; otherwise,
+            <c>false</c>.
             </value>
         </member>
         <member name="P:IronXL.WorkSheet.FitToPage">
@@ -4548,15 +4956,18 @@
         </member>
         <member name="P:IronXL.WorkSheet.HorizontallyCenter">
             <summary>
-            Determine whether printed output for this sheet will be horizontally centered.
+            Determine whether printed output for this sheet will be
+            horizontally centered.
             </summary>
         </member>
         <member name="P:IronXL.WorkSheet.VerticallyCenter">
             <summary>
-            Determine whether printed output for this sheet will be vertically centered.
+            Determine whether printed output for this sheet will be vertically
+            centered.
             </summary>
             <value>
-              <c>true</c> if the sheet is vertically centered; otherwise, <c>false</c>.
+            <c>true</c> if the sheet is vertically centered; otherwise, 
+            <c>false</c>.
             </value>
         </member>
         <member name="P:IronXL.WorkSheet.Header">
@@ -4582,17 +4993,26 @@
         </member>
         <member name="P:IronXL.WorkSheet.FirstFilledCell">
             <summary>
-            Gets the first filled (physically existing) cell, returns <c>null</c> if the worksheet does not contain a filled (physically existing) cell.
+            Gets the first filled (physically existing) cell, returns 
+            <c>null</c> if the worksheet does not contain a filled (physically
+            existing) cell.
             </summary>
         </member>
         <member name="P:IronXL.WorkSheet.LastFilledCell">
             <summary>
-            Gets the last filled (physically existing) cell, returns <c>null</c> if the worksheet does not contain a filled (physically existing) cell.
+            Gets the last filled (physically existing) cell, returns
+            <c>null</c> if the worksheet does not contain a filled (physically
+            existing) cell.
             </summary>
         </member>
         <member name="P:IronXL.WorkSheet.FilledCells">
             <summary>
             Gets the collection of filled (physically existing) cells. 
+            </summary>
+        </member>
+        <member name="M:IronXL.WorkSheet.GetMergedRegions">
+            <summary>
+            Retrieve a list of merged regions. 
             </summary>
         </member>
         <member name="M:IronXL.WorkSheet.SetAutoFilter(System.String)">
@@ -4603,8 +5023,9 @@
         </member>
         <member name="M:IronXL.WorkSheet.SetAutoFilter(System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
-            Enable filtering for a range of cells defined with the row and column coordinates.
-            <para>e.g. if <paramref name="firstColumn"/> equals 0, Excel column coordinate will equal "A"</para>
+            Enable filtering for a range of cells defined with the row and
+            column coordinates. <para>e.g. if <paramref name="firstColumn"/>
+            equals 0, Excel column coordinate will equal "A"</para>
             </summary>
             <param name="firstRow">First row of the range to filter.</param>
             <param name="lastRow">Last of the range to filter.</param>
@@ -4619,9 +5040,12 @@
         <member name="M:IronXL.WorkSheet.GetRange(System.String)">
             <summary>
             Get range with specified range address
-            <para>E.g. Range myRange = mySheet.GetRange("A1:C62")</para>
+            <para>
+            E.g. Range myRange = mySheet.GetRange("A1:C62")
+            </para>
             </summary>
-            <param name="range">The range address within the sheet. E.g. "B12:B29"</param>
+            <param name="range">The range address within the sheet. E.g.
+            "B12:B29"</param>
             <returns>The specified <see cref="T:IronXL.Range"/></returns>
         </member>
         <member name="M:IronXL.WorkSheet.SetRowBreak(System.Int32)">
@@ -4648,26 +5072,31 @@
             </summary>
             <param name="column">The column index.</param>
         </member>
-        <member name="M:IronXL.WorkSheet.ToArray">
-            <summary>
-            Converts the worksheet to flattened array of cells.
-            </summary>
-            <returns> An array of <see cref="T:IronXL.Cell"/> objects.</returns>
-        </member>
         <member name="M:IronXL.WorkSheet.GetCellAt(System.Int32,System.Int32)">
             <summary>
-            Returns the cell at a given row/column number within a worksheet. Useful for iterating a worksheet;
+            Returns the cell at a given row/column number within a worksheet.
+            Useful for iterating a worksheet;
             </summary>
-            <param name="rowIndex">Row index within this worksheet.<para>The first row is numbered 0.</para></param>
-            <param name="columnIndex">Column index within this worksheet.<para>The first column is numbered 0.</para></param>
-            <returns>A <see cref="T:IronXL.Cell"/> object. Use <see cref="P:IronXL.Cell.Value"/> to get the value. <c>null</c> if cell is not filled.</returns>
+            <param name="rowIndex">Row index within this worksheet.
+            <para>
+            The first row is numbered 0.
+            </para>
+            </param>
+            <param name="columnIndex">Column index within this worksheet.
+            <para>
+            The first column is numbered 0.
+            </para>
+            </param>
+            <returns>A <see cref="T:IronXL.Cell"/> object. Use <see cref="P:IronXL.Cell.Value"/>
+            to get the value. <c>null</c> if cell is not filled.</returns>
         </member>
         <member name="M:IronXL.WorkSheet.GetRow(System.Int32)">
             <summary>
             Returns the Row at rowIndex.  The first row is counted as 0;
             <para>Synonym of <see cref="M:IronXL.Range.Row(System.Int32)"/></para>
             </summary>
-            <param name="rowIndex">The index (zero-based number) of the row to return</param>
+            <param name="rowIndex">The index (zero-based number) of the row to
+            return</param>
             <returns>A Row within the WorkSheet.</returns>
             <seealse cref="T:IronXL.RangeRow"/>
             <seealse cref="M:IronXL.Range.Row(System.Int32)"/>
@@ -4676,16 +5105,21 @@
             <summary>
             Returns a Column by name  <para>E.g. "A" or "B" </para>
             </summary>
-            <param name="columnName"> Column heading letter.  For Example "A" or "B" </param>
+            <param name="columnName"> Column heading letter.  For Example "A"
+            or "B" </param>
             <returns>A Column within the WorkSheet.</returns>
             <seealse cref="T:IronXL.RangeColumn"/>
         </member>
         <member name="M:IronXL.WorkSheet.GetColumn(System.Int32)">
             <summary>
-            Returns the Column at columnIndex.  The first column "A" is counted as 0;
-            <para>Synonym of <see cref="M:IronXL.Range.Column(System.Int32)"/></para>
+            Returns the Column at columnIndex.  The first column "A" is counted
+            as 0;
+            <para>
+            Synonym of <see cref="M:IronXL.Range.Column(System.Int32)"/>
+            </para>
             </summary>
-            <param name="columnIndex">The index (zero-based number) of the column to return</param>
+            <param name="columnIndex">The index (zero-based number) of the
+            column to return</param>
             <returns>A Column within the WorkSheet.</returns>
             <seealse cref="T:IronXL.RangeRow"/>
             <seealse cref="M:IronXL.Range.Row(System.Int32)"/>
@@ -4699,9 +5133,12 @@
         <member name="M:IronXL.WorkSheet.SetPrintArea(System.String)">
             <summary>
             Sets the print area for this worksheet.
-            <para>E.g. "A1:X82"</para>
+            <para>
+            E.g. "A1:X82"
+            </para>
             </summary>
-            <param name="range">The cell range to specify as the print area.  E.g. "A1:X82"</param>
+            <param name="range">The cell range to specify as the print area.
+            E.g. "A1:X82"</param>
         </member>
         <member name="M:IronXL.WorkSheet.SetZoom(System.Int32)">
             <summary>
@@ -4714,7 +5151,8 @@
             <summary>
             Merges the specified range into a single cell.
             </summary>
-            <param name="range">The Excel range selector as a string.  E.g. "B1:C1"</param>
+            <param name="range">The Excel range selector as a string.  E.g.
+            "B1:C1"</param>
             <returns>
             Index of the created merged region. See <see cref="M:IronXL.WorkSheet.Unmerge(System.Int32)"/>.
             </returns>
@@ -4722,21 +5160,30 @@
         <member name="M:IronXL.WorkSheet.Unmerge(System.Int32)">
             <summary>
             Un-Merges the specified merge region by index.
-            <para> To learn about indexes, see <see cref="M:IronXL.WorkSheet.Merge(System.String)" />.</para>
+            <para>
+            To learn about indexes, see <see cref="M:IronXL.WorkSheet.Merge(System.String)" />.
+            </para>
             </summary>
-            <param name="index">The index. To learn about indexes see <see cref="M:IronXL.WorkSheet.Merge(System.String)" /></param>
+            <param name="index">The index. To learn about indexes see
+            <see cref="M:IronXL.WorkSheet.Merge(System.String)" /></param>
         </member>
         <member name="M:IronXL.WorkSheet.Unmerge(System.String)">
             <summary>
             Un-Merges a specified range of cells.
             </summary>
-            <param name="range">The Excel range selector for the merged region as a string. E.g. "B1:C1"</param>
-            <exception cref="T:System.ArgumentException">Merged region was not found.</exception>
+            <param name="range">The Excel range selector for the merged region
+            as a string. E.g. "B1:C1"</param>
+            <exception cref="T:System.ArgumentException">Merged region was not
+            found.</exception>
         </member>
         <member name="M:IronXL.WorkSheet.CreateFreezePane(System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
-            Creates a freeze pane. Any existing freeze pane or split pane is overwritten.
-            <para>All parameters are 0-based row and column coordinates. E.g. if colSplit equals 1, Excel column coordinate will equal "B"</para>
+            Creates a freeze pane. Any existing freeze pane or split pane is 
+            overwritten.
+            <para>
+            All parameters are 0-based row and column coordinates. E.g. 
+            if colSplit equals 1, Excel column coordinate will equal "B"
+            </para>
             </summary>
             <param name="colSplit">Horizontal position of split.</param>
             <param name="rowSplit">Vertical position of split.</param>
@@ -4745,16 +5192,24 @@
         </member>
         <member name="M:IronXL.WorkSheet.CreateFreezePane(System.Int32,System.Int32)">
             <summary>
-            Creates a freeze pane. Any existing freeze pane or split pane is overwritten.
-            <para>All parameters are 0-based row and column coordinates. E.g. if colSplit equals 1, Excel column coordinate will equal "B"</para>
+            Creates a freeze pane. Any existing freeze pane or split pane is
+            overwritten.
+            <para>
+            All parameters are 0-based row and column coordinates. E.g.
+            if colSplit equals 1, Excel column coordinate will equal "B"
+            </para>
             </summary>
             <param name="colSplit">Horizontal position of split.</param>
             <param name="rowSplit">Vertical position of split.</param>
         </member>
         <member name="M:IronXL.WorkSheet.CreateSplitPane(System.Int32,System.Int32,System.Int32,System.Int32,IronXL.Options.PanePosition)">
             <summary>
-            Creates a split pane. Any existing freeze pane or split pane is overwritten.
-            <para>Integer parameters are 0-based row and column coordinates. E.g. if ySplitPos equals 1, Excel column coordinate will equal "B"</para>
+            Creates a split pane. Any existing freeze pane or split pane is
+            overwritten.
+            <para>
+            Integer parameters are 0-based row and column coordinates.
+            E.g. if ySplitPos equals 1, Excel column coordinate will equal "B"
+            </para>
             </summary>
             <param name="xSplitPos">Horizontal position of split in px.</param>
             <param name="ySplitPos">Vertical position of split in px.</param>
@@ -4771,22 +5226,31 @@
             <summary>
             Copies worksheet to another workbook with the specified name.
             </summary>
-            <param name="workBook">The WorkBook where this worksheet will be copied to.</param>
+            <param name="targetWorkbook">The WorkBook where this worksheet will be
+            copied to.</param>
             <param name="name">The new name of the copied worksheet.</param>
-            <exception cref="T:System.ArgumentException">Duplicate sheet names are not allowed.</exception>
+            <exception cref="T:System.ArgumentException">Duplicate sheet names are not
+            allowed.</exception>
         </member>
         <member name="M:IronXL.WorkSheet.CopySheet(System.String)">
             <summary>
-            Duplicates this <see cref="T:IronXL.WorkSheet" /> within the same excel <see cref="T:IronXL.WorkBook" />.
+            Duplicates this <see cref="T:IronXL.WorkSheet" /> within the same excel
+            <see cref="T:IronXL.WorkBook" />.
             </summary>
             <param name="name">The name of the new  <see cref="T:IronXL.WorkSheet" /></param>
-            <returns>This <see cref="T:IronXL.WorkSheet"/> allowing for a fluent, in-line coding style. </returns>
-            <exception cref="T:System.ArgumentException">Duplicate sheet names are not allowed.</exception>
+            <returns>This <see cref="T:IronXL.WorkSheet"/> allowing for a fluent,
+            in-line coding style. </returns>
+            <exception cref="T:System.ArgumentException">Duplicate sheet names are not
+            allowed.</exception>
         </member>
         <member name="M:IronXL.WorkSheet.InsertImage(System.String,System.String,System.Int32,System.String,System.Int32)">
             <summary>
-            Inserts image from the specified path to the worksheet. The size of the picture is defined by col/row coordinates.
-            <para>Integer parameters are 0-based row coordinates. E.g. if row1 equals 1, Excel row coordinate will equal 2</para>
+            Inserts image from the specified path to the worksheet. The size of
+            the picture is defined by col/row coordinates.
+            <para>
+            Integer parameters are 0-based row coordinates. E.g. if row1
+            equals 1, Excel row coordinate will equal 2
+            </para>
             </summary>
             <param name="path">The path to the image file.</param>
             <param name="col1">The left column to place the image, e.g. "A".</param>
@@ -4794,12 +5258,17 @@
             <param name="col2">The right column to place the image, e.g. "C".</param>
             <param name="row2">The bottom row to place the image.</param>
             <returns>The inserted <see cref="T:IronXL.Drawing.Images.Image"/> object.</returns>
-            <exception cref="T:System.ArgumentException">Unsupported image format. Supported formats are: JPG/JPEG, BMP, PNG, GIF, TIFF</exception>
+            <exception cref="T:System.ArgumentException">Unsupported image format.
+            Supported formats are: JPG/JPEG, BMP, PNG, GIF, TIFF</exception>
         </member>
         <member name="M:IronXL.WorkSheet.InsertImage(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
-            Inserts image from the specified path to the worksheet. The size of the picture is defined by col/row coordinates.
-            <para>Integer parameters are 0-based row and column coordinates. E.g. if col1 equals 1, Excel column coordinate will equal "B"</para>
+            Inserts image from the specified path to the worksheet. The size
+            of the picture is defined by col/row coordinates.
+            <para>
+            Integer parameters are 0-based row and column coordinates. E.g. if
+            col1 equals 1, Excel column coordinate will equal "B"
+            </para>
             </summary>
             <param name="path">The path to the image file.</param>
             <param name="col1">The left column to place the image.</param>
@@ -4807,7 +5276,8 @@
             <param name="col2">The right column to place the image.</param>
             <param name="row2">The bottom row to place the image.</param>
             <returns>The inserted <see cref="T:IronXL.Drawing.Images.Image"/> object.</returns>
-            <exception cref="T:System.ArgumentException">Unsupported image format. Supported formats are: JPG/JPEG, BMP, PNG, GIF, TIFF</exception>
+            <exception cref="T:System.ArgumentException">Unsupported image format.
+            Supported formats are: JPG/JPEG, BMP, PNG, GIF, TIFF</exception>
         </member>
         <member name="M:IronXL.WorkSheet.InsertImage(System.Byte[],IronXL.Drawing.Images.ImageFormat,System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
@@ -4828,22 +5298,30 @@
         </member>
         <member name="M:IronXL.WorkSheet.RemoveImage(System.Int32)">
             <summary>
-            Removes the image by its id. Id can be retrieved from the <see cref="T:IronXL.Drawing.Images.IImage" /> object
+            Removes the image by its id. Id can be retrieved from the
+            <see cref="T:IronXL.Drawing.Images.IImage" /> object
             </summary>
             <param name="id">The image id [identifier].</param>
         </member>
         <member name="M:IronXL.WorkSheet.SaveAs(System.String)">
             <summary>
-            Exports the worksheet with as a new worksheet to: CSV, TSV, JSON, Excel or XML
+            Exports the worksheet with as a new worksheet to: CSV, TSV, JSON, 
+            Excel or XML
             </summary>
-            <param name="filename">The new filename. Export format will be detected by the file extension specified.</param>
-            <returns>This WorkSheet, allowing for an in-line fluent coding style.</returns>
-            <exception cref="T:System.FormatException">Unsupported extension. Supported formats for worksheet are: CSV, TSV, JSON, XML</exception>
+            <param name="filename">The new filename. Export format will be
+            detected by the file extension specified.</param>
+            <returns>This WorkSheet, allowing for an in-line fluent coding
+            style.</returns>
+            <exception cref="T:System.FormatException">Unsupported extension. Supported
+            formats for worksheet are: CSV, TSV, JSON, XML</exception>
         </member>
         <member name="M:IronXL.WorkSheet.SetRepeatingRows(System.Int32,System.Int32)">
             <summary>
             Set repeating rows for the print title of the worksheet.
-            <para>All parameters are 0-based coordinates. E.g. if startRow equals 1, Excel row coordinate will equal 2</para>
+            <para>
+            All parameters are 0-based coordinates. E.g. if startRow equals 1,
+            Excel row coordinate will equal 2
+            </para>
             </summary>
             <param name="startRow">The start 0-based row index.</param>
             <param name="endRow">The end 0-based row index.</param>
@@ -4851,7 +5329,10 @@
         <member name="M:IronXL.WorkSheet.SetRepeatingColumns(System.Int32,System.Int32)">
             <summary>
             Set repeating columns for the print title of the worksheet.
-            <para>All parameters are 0-based coordinates. E.g. if startColumn equals 2, Excel column coordinate will equal "C"</para>
+            <para>
+            All parameters are 0-based coordinates. E.g. if startColumn
+            equals 2, Excel column coordinate will equal "C"
+            </para>
             </summary>
             <param name="startColumn">The start 0-based column index.</param>
             <param name="endColumn">The end 0-based column index.</param>
@@ -4876,8 +5357,16 @@
         <member name="M:IronXL.WorkSheet.GroupRows(System.Int32,System.Int32)">
             <summary>
             Group multiple rows within the specified range together.
-            <para>Grouping and ungrouping is layered and calling <see cref="M:IronXL.WorkSheet.GroupRows(System.Int32,System.Int32)"/> twice requires two calls of <see cref="M:IronXL.WorkSheet.UngroupRows(System.Int32,System.Int32)"/> with appropriate ranges to remove all groupings.</para>
-            <para>All parameters are 0-based coordinates. E.g. if startRow equals 2, Excel row coordinate will equal 3</para>
+            <para>
+            Grouping and ungrouping is layered and calling 
+            <see cref="M:IronXL.WorkSheet.GroupRows(System.Int32,System.Int32)"/> twice requires two calls of 
+            <see cref="M:IronXL.WorkSheet.UngroupRows(System.Int32,System.Int32)"/> with appropriate ranges to remove all 
+            groupings.
+            </para>
+            <para>
+            All parameters are 0-based coordinates. E.g. if startRow
+            equals 2, Excel row coordinate will equal 3
+            </para>
             </summary>
             <param name="startRow">The start row index.</param>
             <param name="endRow">The end row index.</param>
@@ -4885,8 +5374,16 @@
         <member name="M:IronXL.WorkSheet.GroupColumns(System.Int32,System.Int32)">
             <summary>
             Group multiple columns within the specified range together.
-            <para>Grouping and ungrouping is layered and calling <see cref="M:IronXL.WorkSheet.GroupColumns(System.Int32,System.Int32)"/> twice requires two calls of <see cref="M:IronXL.WorkSheet.UngroupColumns(System.Int32,System.Int32)"/> with appropriate ranges to remove all groupings.</para>
-            <para>All parameters are 0-based coordinates. E.g. if startColumn equals 2, Excel column coordinate will equal "C"</para>
+            <para>
+            Grouping and ungrouping is layered and calling 
+            <see cref="M:IronXL.WorkSheet.GroupColumns(System.Int32,System.Int32)"/> twice requires two calls of 
+            <see cref="M:IronXL.WorkSheet.UngroupColumns(System.Int32,System.Int32)"/> with appropriate ranges to remove all 
+            groupings.
+            </para>
+            <para>
+            All parameters are 0-based coordinates. E.g. if startColumn equals
+            2, Excel column coordinate will equal "C"
+            </para>
             </summary>
             <param name="startColumn">The start column index.</param>
             <param name="endColumn">The end column index.</param>
@@ -4894,7 +5391,12 @@
         <member name="M:IronXL.WorkSheet.GroupColumns(System.String,System.String)">
             <summary>
             Group multiple columns within the specified range together.
-            <para>Grouping and ungrouping is layered and calling <see cref="M:IronXL.WorkSheet.GroupColumns(System.String,System.String)"/> twice requires two calls of <see cref="M:IronXL.WorkSheet.UngroupColumns(System.Int32,System.Int32)"/> with appropriate ranges to remove all groupings.</para>
+            <para>
+            Grouping and ungrouping is layered and calling
+            <see cref="M:IronXL.WorkSheet.GroupColumns(System.String,System.String)"/> twice requires two calls
+            of <see cref="M:IronXL.WorkSheet.UngroupColumns(System.Int32,System.Int32)"/> with appropriate ranges to remove
+            all groupings.
+            </para>
             </summary>
             <param name="startColumn">The start column value, e.g. "A".</param>
             <param name="endColumn">The end column value, e.g. "C"</param>
@@ -4902,8 +5404,12 @@
         <member name="M:IronXL.WorkSheet.UngroupRows(System.Int32,System.Int32)">
             <summary>
             Ungroup all rows within the specified range.
-            <para>Grouping and ungrouping is layered and calling <see cref="M:IronXL.WorkSheet.GroupRows(System.Int32,System.Int32)"/> twice requires two calls of <see cref="M:IronXL.WorkSheet.UngroupRows(System.Int32,System.Int32)"/> with appropriate ranges to remove all groupings.</para>
-            <para>All parameters are 0-based coordinates. E.g. if startRow equals 2, Excel row coordinate will equal 3</para>
+            <para>Grouping and ungrouping is layered and calling
+            <see cref="M:IronXL.WorkSheet.GroupRows(System.Int32,System.Int32)"/> twice requires two calls of
+            <see cref="M:IronXL.WorkSheet.UngroupRows(System.Int32,System.Int32)"/> with appropriate ranges to remove all
+            groupings.</para>
+            <para>All parameters are 0-based coordinates. E.g. if startRow
+            equals 2, Excel row coordinate will equal 3</para>
             </summary>
             <param name="startRow">The start row index.</param>
             <param name="endRow">The end row index.</param>
@@ -4911,8 +5417,12 @@
         <member name="M:IronXL.WorkSheet.UngroupColumns(System.Int32,System.Int32)">
             <summary>
             Ungroup all columns within the specified range.
-            <para>Grouping and ungrouping is layered and calling <see cref="M:IronXL.WorkSheet.GroupColumns(System.Int32,System.Int32)"/> twice requires two calls of <see cref="M:IronXL.WorkSheet.UngroupColumns(System.Int32,System.Int32)"/> with appropriate ranges to remove all groupings.</para>
-            <para>All parameters are 0-based coordinates. E.g. if startColumn equals 2, Excel column coordinate will equal "C"</para>
+            <para>Grouping and ungrouping is layered and calling
+            <see cref="M:IronXL.WorkSheet.GroupColumns(System.Int32,System.Int32)"/> twice requires two calls of
+            <see cref="M:IronXL.WorkSheet.UngroupColumns(System.Int32,System.Int32)"/> with appropriate ranges to remove all
+            groupings.</para>
+            <para>All parameters are 0-based coordinates. E.g. if startColumn
+            equals 2, Excel column coordinate will equal "C"</para>
             </summary>
             <param name="startColumn">The start column index.</param>
             <param name="endColumn">The end column index.</param>
@@ -4920,7 +5430,10 @@
         <member name="M:IronXL.WorkSheet.UngroupColumn(System.String,System.String)">
             <summary>
             Ungroup all columns within the specified range.
-            <para>Grouping and ungrouping is layered and calling <see cref="M:IronXL.WorkSheet.GroupColumns(System.String,System.String)"/> twice requires two calls of <see cref="M:IronXL.WorkSheet.UngroupColumns(System.Int32,System.Int32)"/> with appropriate ranges to remove all groupings.</para>
+            <para>Grouping and ungrouping is layered and calling
+            <see cref="M:IronXL.WorkSheet.GroupColumns(System.String,System.String)"/> twice requires two calls
+            of <see cref="M:IronXL.WorkSheet.UngroupColumns(System.Int32,System.Int32)"/> with appropriate ranges to remove
+            all groupings.</para>
             </summary>
             <param name="startColumn">The start column value, e.g. "A".</param>
             <param name="endColumn">The end column index, e.g. "C"</param>
@@ -4941,14 +5454,16 @@
             Saves the worksheet into a new excel file on disk.
             </summary>
             <param name="filename">The new Excel filename.</param>
-            <param name="excelFormat">The Excel format.  XLSX is preferred and default.</param>
+            <param name="excelFormat">The Excel format.  XLSX is preferred and
+            default.</param>
         </member>
         <member name="M:IronXL.WorkSheet.SaveAsCsv(System.String,System.String)">
             <summary>
             Saves the worksheet into a new CSV file.
             </summary>
             <param name="filename">The new CSV filename.</param>
-            <param name="delimiter">The CSV column delimiter.  leave this null for default system behavior.</param>
+            <param name="delimiter">The CSV column delimiter. Leave this null
+            for default system behavior.</param>
         </member>
         <member name="M:IronXL.WorkSheet.SaveAsXml(System.String)">
             <summary>
@@ -4965,7 +5480,10 @@
         <member name="M:IronXL.WorkSheet.CreateChart(IronXL.Drawing.Charts.ChartType,System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
             Creates the chart of the specified type with the specified sizes.
-            <para>Integer parameters are 0-based row and column coordinates. E.g. if col1 equals 1, Excel column coordinate will equal "B"</para>
+            <para>
+            Integer parameters are 0-based row and column coordinates.
+            E.g. if col1 equals 1, Excel column coordinate will equal "B"
+            </para>
             </summary>
             <param name="type">The type of the chart.</param>
             <param name="row1">The upper row coordinate.</param>
@@ -4973,12 +5491,14 @@
             <param name="row2">The lower row coordinate.</param>
             <param name="col2">The lower column coordinate.</param>
             <returns>Created chart object.</returns>
-            <exception cref="T:System.Exception">Charts for xls format are not currently supported. Try to use xlsx format as default.</exception>
+            <exception cref="T:System.Exception">Charts for xls format are not currently
+            supported. Try to use xlsx format as default.</exception>
         </member>
         <member name="M:IronXL.WorkSheet.CreateChart(IronXL.Drawing.Charts.ChartType,System.Int32,System.String,System.Int32,System.String)">
             <summary>
             Creates the chart of the specified type with the specified sizes.
-            <para>Integer parameters are 0-based row coordinates. E.g. if row1 equals 1, Excel row coordinate will equal 2</para>
+            <para>Integer parameters are 0-based row coordinates. E.g. if row1
+            equals 1, Excel row coordinate will equal 2</para>
             </summary>
             <param name="type">The type of the chart.</param>
             <param name="row1">The upper row coordinate.</param>
@@ -4986,7 +5506,8 @@
             <param name="row2">The lower row coordinate.</param>
             <param name="col2">The right column coordinate, e.g. "C".</param>
             <returns>Created chart object.</returns>
-            <exception cref="T:System.Exception">Charts for xls format are not currently supported. Try to use xlsx format as default.</exception>
+            <exception cref="T:System.Exception">Charts for xls format are not currently
+            supported. Try to use xlsx format as default.</exception>
         </member>
         <member name="M:IronXL.WorkSheet.RemoveChart(IronXL.Drawing.Charts.IChart)">
             <summary>
@@ -5000,7 +5521,8 @@
             </summary>
             <param name="nameOfRange">The user-defined name.</param>
             <param name="range">The range to be referred by name.</param>
-            <param name="globalName">Sets the range as global if set to <c>true</c>. Default value is <c>true</c>.</param>
+            <param name="globalName">Sets the range as global if set to 
+            <c>true</c>. Default value is <c>true</c>.</param>
         </member>
         <member name="M:IronXL.WorkSheet.AddNamedRange(System.String,System.String,System.Boolean)">
             <summary>
@@ -5008,7 +5530,8 @@
             </summary>
             <param name="nameOfRange">The user-defined name.</param>
             <param name="formula">The formula to be referred by name.</param>
-            <param name="globalName">Sets the range as global if set to <c>true</c>. Default value is <c>true</c>.</param>
+            <param name="globalName">Sets the range as global if set to
+            <c>true</c>. Default value is <c>true</c>.</param>
         </member>
         <member name="M:IronXL.WorkSheet.FindNamedRange(System.String)">
             <summary>
@@ -5035,88 +5558,82 @@
             </summary>
             <param name="tableName">the name of the table</param>
             <param name="range">the data range</param>
-            <param name="showFilter">show filter on the header. Default value is <c>true</c>.</param>
+            <param name="showFilter">show filter on the header. Default value
+            is <c>true</c>.</param>
             <param name="tableStyle">table style properties</param>
-            <exception cref="T:System.NotSupportedException">Only XLSX supports named tables.</exception>
+            <exception cref="T:System.NotSupportedException">Only XLSX supports named
+            tables.</exception>
         </member>
         <member name="M:IronXL.WorkSheet.GetNamedTableNames">
             <summary>
             Gets names of named tables.
             </summary>
-            <exception cref="T:System.NotSupportedException">Only XLSX supports named tables.</exception>
-        </member>
-        <member name="M:IronXL.WorkSheet.InsertRow(System.Int32)">
-            <summary>
-            Inserts a new row into the worksheet at the specified position.
-            </summary>
-            <param name="rowIndex">A zero-based index of the position where to insert a new row.</param>
-        </member>
-        <member name="M:IronXL.WorkSheet.InsertRows(System.Int32,System.Int32)">
-            <summary>
-            Inserts multiple rows into the worksheet.
-            </summary>
-            <param name="rowIndex">A zero-based index of the position where to insert a new row.</param>
-            <param name="rowsCount">Specifies the number of rows to insert. Default value is <c>1</c>.</param>
-        </member>
-        <member name="M:IronXL.WorkSheet.InsertColumn(System.Int32)">
-            <summary>
-            Inserts a new column into the worksheet at the specified position.
-            </summary>
-            <param name="columnIndex">A zero-based index of the position where to insert a new column.</param>
-        </member>
-        <member name="M:IronXL.WorkSheet.InsertColumn(System.String)">
-            <summary>
-            Inserts a column with the specified heading into the worksheet.
-            </summary>
-            <param name="columnLatter">The column heading latter of the first column to insert. e.g. "A" or "B"</param>
-        </member>
-        <member name="M:IronXL.WorkSheet.InsertColumns(System.String,System.Int32)">
-            <summary>
-            Inserts multiple columns into the worksheet.
-            </summary>
-            <param name="columnName">The column heading latter of the first column to insert. e.g. "A" or "B"</param>
-            <param name="columnsCount">Specifies the number of columns to insert. Default value is <c>1</c>.</param>
-        </member>
-        <member name="M:IronXL.WorkSheet.InsertColumns(System.Int32,System.Int32)">
-            <summary>
-            Inserts multiple columns into the worksheet.
-            </summary>
-            <param name="columnIndex">A zero-based index of the position where to insert a new column.</param>
-            <param name="columnsCount">Specifies the number of columns to insert. Default value is <c>1</c>.</param>
+            <exception cref="T:System.NotSupportedException">Only XLSX supports named
+            tables.</exception>
         </member>
         <member name="M:IronXL.WorkSheet.AutoSizeColumn(System.Int32)">
             <summary>
             Changes width of the column to fit the content.
+            NOTE: This method measures the text in the cell based on the font 
+            that is used for the cell. If the exact font is not found on the 
+            machine it will try to measure it with a defalt font. If the 
+            default could not be found, it will try to use any font available. 
+            Finally if there are no fonts found the exception will be thrown.
             </summary>
             <param name="columnIndex">0-based index of the column. Cannot be
-            outside of the bounds set by 0 and <see cref="P:IronXL.WorkSheet.ColumnCount"/>-1</param>
+            outside of the bounds set by 0 and <c>ColumnCount - 1</c></param>
             <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:SixLabors.Fonts.FontException">Trown when no fonts found istalled 
+            on the machine.</exception>
         </member>
         <member name="M:IronXL.WorkSheet.AutoSizeColumn(System.Int32,System.Boolean)">
             <summary>
             Changes width of the column to fit the content.
+            NOTE: This method measures the text in the cell based on the font 
+            that is used for the cell. If the exact font is not found on the 
+            machine it will try to measure it with a defalt font. If the 
+            default could not be found, it will try to use any font available. 
+            Finally if there are no fonts found the exception will be thrown.
             </summary>
             <param name="columnIndex">0-based index of the column. Cannot be
-            outside of the bounds set by 0 and <see cref="P:IronXL.WorkSheet.ColumnCount"/>-1</param>
-            <param name="useMergedCells">If true, the width of merged cells will be taken into account.</param>
+            outside of the bounds set by 0 and <c>ColumnCount - 1</c></param>
+            <param name="useMergedCells">If true, the width of merged cells will 
+            be taken into account.</param>
             <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:SixLabors.Fonts.FontException">Trown when no fonts found istalled 
+            on the machine.</exception>
         </member>
         <member name="M:IronXL.WorkSheet.AutoSizeRow(System.Int32)">
             <summary>
             Changes height of the row to fit the content.
+            NOTE: This method measures the text in the cell based on the font 
+            that is used for the cell. If the exact font is not found on the 
+            machine it will try to measure it with a defalt font. If the 
+            default could not be found, it will try to use any font available. 
+            Finally if there are no fonts found the exception will be thrown.
             </summary>
             <param name="rowIndex">0-based index of the row. Cannot be
-            outside of the bounds set by 0 and <see cref="P:IronXL.WorkSheet.RowCount"/>-1</param>
+            outside of the bounds set by 0 and <c>RowCount - 1</c></param>
             <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:SixLabors.Fonts.FontException">Trown when no fonts found istalled 
+            on the machine.</exception>
         </member>
         <member name="M:IronXL.WorkSheet.AutoSizeRow(System.Int32,System.Boolean)">
             <summary>
             Changes height of the row to fit the content.
+            NOTE: This method measures the text in the cell based on the font 
+            that is used for the cell. If the exact font is not found on the 
+            machine it will try to measure it with a defalt font. If the 
+            default could not be found, it will try to use any font available. 
+            Finally if there are no fonts found the exception will be thrown.
             </summary>
             <param name="rowIndex">0-based index of the row. Cannot be
-            outside of the bounds set by 0 and <see cref="P:IronXL.WorkSheet.RowCount"/>-1</param>
-            <param name="useMergedCells">If true, the height of merged cells will be considered.</param>
+            outside of the bounds set by 0 and <c>RowCount - 1</c></param>
+            <param name="useMergedCells">If true, the height of merged cells 
+            will be considered.</param>
             <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:SixLabors.Fonts.FontException">Trown when no fonts found istalled 
+            on the machine.</exception>
         </member>
         <member name="T:IronXL.WorksheetsCollection">
             <summary>
@@ -5144,7 +5661,7 @@
         </member>
         <member name="M:IronXL.WorksheetsCollection.Clear">
             <summary>
-            Clears the list of worksheets.
+            Delete all worksheets in the list.
             </summary>
         </member>
         <member name="M:IronXL.WorksheetsCollection.Contains(IronXL.WorkSheet)">

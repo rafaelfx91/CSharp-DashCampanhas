@@ -6,10 +6,19 @@
     <members>
         <member name="T:IronSoftware.Drawing.AnyBitmap">
             <summary>
-            <para>A universally compatible Bitmap format for .NET 7, .NET 6, .NET 5, and .NET Core. As well as compatiblity with Windows, NanoServer, IIS, macOS, Mobile, Xamarin, iOS, Android, Google Compute, Azure, AWS, and Linux.</para>
-            <para>Works nicely with popular Image and Bitmap formats such as System.Drawing.Bitmap, SkiaSharp, SixLabors.ImageSharp, Microsoft.Maui.Graphics.</para>
-            <para>Implicit casting means that using this class to input and output Bitmap and image types from public API's gives full compatibility to all image type fully supported by Microsoft.</para>
-            <para>Unlike System.Drawing.Bitmap this bitmap object is self-memory-managing and does not need to be explicitly 'used' or 'disposed'.</para>
+            <para>A universally compatible Bitmap format for .NET 7, .NET 6, .NET 5,
+            and .NET Core. As well as compatibility with Windows, NanoServer, 
+            IIS, macOS, Mobile, Xamarin, iOS, Android, Google Cloud, Azure, AWS, 
+            and Linux.</para>
+            <para>Works nicely with popular Image and Bitmap formats such as 
+            System.Drawing.Bitmap, SkiaSharp, SixLabors.ImageSharp, 
+            Microsoft.Maui.Graphics.</para>
+            <para>Implicit casting means that using this class to input and output 
+            Bitmap and image types from public API's gives full compatibility to 
+            all image type fully supported by Microsoft.</para>
+            <para>Unlike System.Drawing.Bitmap this bitmap object is 
+            self-memory-managing and does not need to be explicitly 'used' 
+            or 'disposed'.</para>
             </summary>
         </member>
         <member name="P:IronSoftware.Drawing.AnyBitmap.Width">
@@ -36,6 +45,9 @@
         <member name="M:IronSoftware.Drawing.AnyBitmap.ToString">
             <summary>
             A Base64 encoded string representation of the raw image binary data.
+            <br/><para><b>Further Documentation:</b><br/>
+            <a href="https://ironsoftware.com/open-source/csharp/drawing/examples/bitmap-to-string/">
+            Code Example</a></para>
             </summary>
             <returns>The bitmap data as a Base64 string.</returns>
             <seealso cref="M:System.Convert.ToBase64String(System.Byte[])"/>
@@ -49,96 +61,141 @@
         <member name="M:IronSoftware.Drawing.AnyBitmap.GetStream">
             <summary>
             The raw image data as a <see cref="T:System.IO.MemoryStream"/>
+            <br/><para><b>Further Documentation:</b><br/>
+            <a href="https://ironsoftware.com/open-source/csharp/drawing/examples/bitmap-to-stream/">
+            Code Example</a></para>
             </summary>
             <returns><see cref="T:System.IO.MemoryStream"/></returns>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.Clone">
             <summary>
             Creates an exact duplicate <see cref="T:IronSoftware.Drawing.AnyBitmap"/>
+            <br/><para><b>Further Documentation:</b><br/>
+            <a href="https://ironsoftware.com/open-source/csharp/drawing/examples/clone-anybitmap/">
+            Code Example</a></para>
             </summary>
             <returns></returns>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.Clone(IronSoftware.Drawing.CropRectangle)">
             <summary>
             Creates an exact duplicate <see cref="T:IronSoftware.Drawing.AnyBitmap"/> of the cropped area.
+            <br/><para><b>Further Documentation:</b><br/>
+            <a href="https://ironsoftware.com/open-source/csharp/drawing/examples/clone-anybitmap/">
+            Code Example</a></para>
             </summary>
-            <param name="Rectangle">Defines the portion of this <see cref="T:IronSoftware.Drawing.AnyBitmap"/> to copy.</param>
+            <param name="rectangle">Defines the portion of this 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/> to copy.</param>
             <returns></returns>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.ExportBytes(IronSoftware.Drawing.AnyBitmap.ImageFormat,System.Int32)">
             <summary>
-            Exports the Bitmap as bytes encoded in the <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/> of your choice.
-            <para>Add SkiaSharp, System.Drawing.Common, or SixLabors.ImageSharp to your project to enable this feature.</para>
+            Exports the Bitmap as bytes encoded in the 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/> of your choice.
+            <para>Add SkiaSharp, System.Drawing.Common, or SixLabors.ImageSharp
+            to your project to enable this feature.</para>
             </summary>
-            <param name="Format">An image encoding format.</param>
-            <param name="Lossy">JPEG and WebP encoding quality (ignored for all other values of <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/>). Higher values return larger file sizes. 0 is lowest quality , 100 is highest.</param>
+            <param name="format">An image encoding format.</param>
+            <param name="lossy">JPEG and WebP encoding quality (ignored for all
+            other values of <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/>). Higher values return 
+            larger file sizes. 0 is lowest quality , 100 is highest.</param>
             <returns>Transcoded image bytes.</returns>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.ExportFile(System.String,IronSoftware.Drawing.AnyBitmap.ImageFormat,System.Int32)">
             <summary>
-            Exports the Bitmap as a file encoded in the <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/> of your choice.
-            <para>Add SkiaSharp, System.Drawing.Common, or SixLabors.ImageSharp to your project to enable the encoding feature.</para>
+            Exports the Bitmap as a file encoded in the 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/> of your choice.
+            <para>Add SkiaSharp, System.Drawing.Common, or SixLabors.ImageSharp
+            to your project to enable the encoding feature.</para>
+            <para><b>Further Documentation:</b><br/>
+            <a href="https://ironsoftware.com/open-source/csharp/drawing/examples/export-anybitmap/">
+            Code Example</a></para>
             </summary>
-            <param name="File">A fully qualified file path.</param>
-            <param name="Format">An image encoding format.</param>
-            <param name="Lossy">JPEG and WebP encoding quality (ignored for all other values of <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/>). Higher values return larger file sizes. 0 is lowest quality, 100 is highest.</param>
+            <param name="file">A fully qualified file path.</param>
+            <param name="format">An image encoding format.</param>
+            <param name="lossy">JPEG and WebP encoding quality (ignored for all
+            other values of <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/>). Higher values return 
+            larger file sizes. 0 is lowest quality, 100 is highest.</param>
             <returns>Void. Saves a file to disk.</returns>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.ToStream(IronSoftware.Drawing.AnyBitmap.ImageFormat,System.Int32)">
             <summary>
-            Exports the Bitmap as a <see cref="T:System.IO.MemoryStream"/> encoded in the <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/> of your choice.
-            <para>Add SkiaSharp, System.Drawing.Common, or SixLabors.ImageSharp to your project to enable the encoding feature.</para>
+            Exports the Bitmap as a <see cref="T:System.IO.MemoryStream"/> encoded in the 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/> of your choice.
+            <para>Add SkiaSharp, System.Drawing.Common, or SixLabors.ImageSharp
+            to your project to enable the encoding feature.</para>
+            <para><b>Further Documentation:</b><br/>
+            <a href="https://ironsoftware.com/open-source/csharp/drawing/examples/bitmap-to-stream/">
+            Code Example</a></para>
             </summary>
-            <param name="Format">An image encoding format.</param>
-            <param name="Lossy">JPEG and WebP encoding quality (ignored for all other values of <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/>). Higher values return larger file sizes. 0 is lowest quality, 100 is highest.</param>
+            <param name="format">An image encoding format.</param>
+            <param name="lossy">JPEG and WebP encoding quality (ignored for all
+            other values of <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/>). Higher values return 
+            larger file sizes. 0 is lowest quality, 100 is highest.</param>
             <returns>Transcoded image bytes in a <see cref="T:System.IO.MemoryStream"/>.</returns>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.ToStreamFn(IronSoftware.Drawing.AnyBitmap.ImageFormat,System.Int32)">
             <summary>
-            Exports the Bitmap as a Func<see cref="T:System.IO.MemoryStream"/>> encoded in the <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/> of your choice.
-            <para>Add SkiaSharp, System.Drawing.Common, or SixLabors.ImageSharp to your project to enable the encoding feature.</para>
+            Exports the Bitmap as a Func<see cref="T:System.IO.MemoryStream"/>> encoded in 
+            the <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/> of your choice.
+            <para>Add SkiaSharp, System.Drawing.Common, or SixLabors.ImageSharp
+            to your project to enable the encoding feature.</para>
             </summary>
-            <param name="Format">An image encoding format.</param>
-            <param name="Lossy">JPEG and WebP encoding quality (ignored for all other values of <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/>). Higher values return larger file sizes. 0 is lowest quality, 100 is highest.</param>
-            <returns>Transcoded image bytes in a Func<see cref="T:System.IO.MemoryStream"/>>.</returns>
+            <param name="format">An image encoding format.</param>
+            <param name="lossy">JPEG and WebP encoding quality (ignored for all
+            other values of <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/>). Higher values return 
+            larger file sizes. 0 is lowest quality, 100 is highest.</param>
+            <returns>Transcoded image bytes in a Func <see cref="T:System.IO.MemoryStream"/>
+            </returns>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.ExportStream(System.IO.Stream,IronSoftware.Drawing.AnyBitmap.ImageFormat,System.Int32)">
             <summary>
-            Saves the Bitmap to an existing <see cref="T:System.IO.Stream"/> encoded in the <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/> of your choice.
-            <para>Add SkiaSharp, System.Drawing.Common, or SixLabors.ImageSharp to your project to enable the encoding feature.</para>
+            Saves the Bitmap to an existing <see cref="T:System.IO.Stream"/> encoded in the
+            <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/> of your choice.
+            <para>Add SkiaSharp, System.Drawing.Common, or SixLabors.ImageSharp
+            to your project to enable the encoding feature.</para>
             </summary>
-            <param name="Stream">An image encoding format.</param>
-            <param name="Format">An image encoding format.</param>
-            <param name="Lossy">JPEG and WebP encoding quality (ignored for all other values of <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/>). Higher values return larger file sizes. 0 is lowest quality, 100 is highest.</param>
+            <param name="stream">An image encoding format.</param>
+            <param name="format">An image encoding format.</param>
+            <param name="lossy">JPEG and WebP encoding quality (ignored for all
+            other values of <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/>). Higher values return 
+            larger file sizes. 0 is lowest quality, 100 is highest.</param>
             <returns>Void. Saves Transcoded image bytes to you <see cref="T:System.IO.Stream"/>.</returns>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.SaveAs(System.String)">
             <summary>
             Saves the raw image data to a file.
             </summary>
-            <param name="File">A fully qualified file path.</param>
+            <param name="file">A fully qualified file path.</param>
             <seealso cref="M:IronSoftware.Drawing.AnyBitmap.TrySaveAs(System.String)"/>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.SaveAs(System.String,IronSoftware.Drawing.AnyBitmap.ImageFormat,System.Int32)">
             <summary>
-            Saves the image data to a file. Allows for the image to be transcoded to popular image formats.
-            <para>Add SkiaSharp, System.Drawing.Common, or SixLabors.ImageSharp to your project to enable the encoding feature.</para>
+            Saves the image data to a file. Allows for the image to be 
+            transcoded to popular image formats.
+            <para>Add SkiaSharp, System.Drawing.Common, or SixLabors.ImageSharp
+            to your project to enable the encoding feature.</para>
             </summary>
-            <param name="File">A fully qualified file path.</param>
-            <param name="Format">An image encoding format.</param>
-            <param name="Lossy">JPEG and WebP encoding quality (ignored for all other values of <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/>). Higher values return larger file sizes. 0 is lowest quality , 100 is highest.</param>
+            <param name="file">A fully qualified file path.</param>
+            <param name="format">An image encoding format.</param>
+            <param name="lossy">JPEG and WebP encoding quality (ignored for all
+            other values of <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/>). Higher values return 
+            larger file sizes. 0 is lowest quality , 100 is highest.</param>
             <returns>Void.  Saves Transcoded image bytes to your File.</returns>
             <seealso cref="M:IronSoftware.Drawing.AnyBitmap.TrySaveAs(System.String,IronSoftware.Drawing.AnyBitmap.ImageFormat,System.Int32)"/>
             <seealso cref="M:IronSoftware.Drawing.AnyBitmap.TrySaveAs(System.String)"/>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.TrySaveAs(System.String,IronSoftware.Drawing.AnyBitmap.ImageFormat,System.Int32)">
             <summary>
-            Tries to Save the image data to a file. Allows for the image to be transcoded to popular image formats.
-            <para>Add SkiaSharp, System.Drawing.Common, or SixLabors.ImageSharp to your project to enable the encoding feature.</para>
+            Tries to Save the image data to a file. Allows for the image to be
+            transcoded to popular image formats.
+            <para>Add SkiaSharp, System.Drawing.Common, or SixLabors.ImageSharp
+            to your project to enable the encoding feature.</para>
             </summary>
-            <param name="File">A fully qualified file path.</param>
-            <param name="Format">An image encoding format.</param>
-            <param name="Lossy">JPEG and WebP encoding quality (ignored for all other values of <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/>). Higher values return larger file sizes. 0 is lowest quality , 100 is highest.</param>
+            <param name="file">A fully qualified file path.</param>
+            <param name="format">An image encoding format.</param>
+            <param name="lossy">JPEG and WebP encoding quality (ignored for all
+            other values of <see cref="T:IronSoftware.Drawing.AnyBitmap.ImageFormat"/>). Higher values return 
+            larger file sizes. 0 is lowest quality , 100 is highest.</param>
             <returns>returns true on success, false on failure.</returns>
             <seealso cref="M:IronSoftware.Drawing.AnyBitmap.SaveAs(System.String,IronSoftware.Drawing.AnyBitmap.ImageFormat,System.Int32)"/>
         </member>
@@ -147,49 +204,56 @@
             Tries to Save the raw image data to a file.
             <returns>returns true on success, false on failure.</returns>
             </summary>
-            <param name="File">A fully qualified file path.</param>
+            <param name="file">A fully qualified file path.</param>
             <seealso cref="M:IronSoftware.Drawing.AnyBitmap.SaveAs(System.String)"/>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.FromBitmap``1(``0)">
             <summary>
             Generic method to convert popular image types to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
-            <para> Support includes SixLabors.ImageSharp.Image, SkiaSharp.SKImage, SkiaSharp.SKBitmap, System.Drawing.Bitmap, System.Drawing.Image and Microsoft.Maui.Graphics formats.</para>
-            <para>Syntax sugar. Explicit casts already also exist to and from <see cref="T:IronSoftware.Drawing.AnyBitmap"/> and all supported types.</para>
+            <para> Support includes SixLabors.ImageSharp.Image, 
+            SkiaSharp.SKImage, SkiaSharp.SKBitmap, System.Drawing.Bitmap, 
+            System.Drawing.Image and Microsoft.Maui.Graphics formats.</para>
+            <para>Syntax sugar. Explicit casts already also exist to and from
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/> and all supported types.</para>
             </summary>
-            <typeparam name="T">The Type to cast from. Support includes SixLabors.ImageSharp.Image, SkiaSharp.SKImage, SkiaSharp.SKBitmap, System.Drawing.Bitmap, System.Drawing.Image and Microsoft.Maui.Graphics formats.</typeparam>
-            <param name="OtherBitmapFormat">A bitmap or image format from another graphics library.</param>
+            <typeparam name="T">The Type to cast from. Support includes 
+            SixLabors.ImageSharp.Image, SkiaSharp.SKImage, SkiaSharp.SKBitmap,
+            System.Drawing.Bitmap, System.Drawing.Image and 
+            Microsoft.Maui.Graphics formats.</typeparam>
+            <param name="otherBitmapFormat">A bitmap or image format from 
+            another graphics library.</param>
             <returns>A <see cref="T:IronSoftware.Drawing.AnyBitmap"/></returns>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.ToBitmap``1">
             <summary>
-            Generic method to convert <see cref="T:IronSoftware.Drawing.AnyBitmap"/> to popular image types.
-            <para> Support includes SixLabors.ImageSharp.Image, SkiaSharp.SKImage, SkiaSharp.SKBitmap, System.Drawing.Bitmap, System.Drawing.Image and Microsoft.Maui.Graphics formats.</para>
-            <para>Syntax sugar. Explicit casts already also exist to and from <see cref="T:IronSoftware.Drawing.AnyBitmap"/> and all supported types.</para>
+            Generic method to convert <see cref="T:IronSoftware.Drawing.AnyBitmap"/> to popular image
+            types.
+            <para> Support includes SixLabors.ImageSharp.Image, 
+            SkiaSharp.SKImage, SkiaSharp.SKBitmap, System.Drawing.Bitmap, 
+            System.Drawing.Image and Microsoft.Maui.Graphics formats.</para>
+            <para>Syntax sugar. Explicit casts already also exist to and from 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/> and all supported types.</para>
             </summary>
-            <typeparam name="T">The Type to cast to. Support includes SixLabors.ImageSharp.Image, SkiaSharp.SKImage, SkiaSharp.SKBitmap, System.Drawing.Bitmap, System.Drawing.Image and Microsoft.Maui.Graphics formats.</typeparam>
+            <typeparam name="T">The Type to cast to. Support includes 
+            SixLabors.ImageSharp.Image, SkiaSharp.SKImage, SkiaSharp.SKBitmap, 
+            System.Drawing.Bitmap, System.Drawing.Image and 
+            Microsoft.Maui.Graphics formats.</typeparam>
             <returns>A <see cref="T:IronSoftware.Drawing.AnyBitmap"/></returns>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.FromBytes(System.Byte[])">
             <summary>
             Create a new Bitmap from a a Byte Array.
             </summary>
-            <param name="Bytes">A ByteArray of image data in any common format.</param>
+            <param name="bytes">A ByteArray of image data in any common format.</param>
             <seealso cref="M:IronSoftware.Drawing.AnyBitmap.FromBytes(System.Byte[])"/>
             <seealso cref="M:IronSoftware.Drawing.AnyBitmap.#ctor(System.Byte[])"/>
-        </member>
-        <member name="M:IronSoftware.Drawing.AnyBitmap.#ctor(System.Byte[])">
-            <summary>
-            Construct a new Bitmap from binary data (bytes).
-            </summary>
-            <param name="Bytes">A ByteArray of image data in any common format.</param>
-            <seealso cref="M:IronSoftware.Drawing.AnyBitmap.FromBytes(System.Byte[])"/>
-            <seealso cref="T:IronSoftware.Drawing.AnyBitmap"/>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.FromStream(System.IO.MemoryStream)">
             <summary>
             Create a new Bitmap from a <see cref="T:System.IO.Stream"/> (bytes).
             </summary>
-            <param name="Stream">A <see cref="T:System.IO.Stream"/> of image data in any common format.</param>
+            <param name="stream">A <see cref="T:System.IO.Stream"/> of image data in any 
+            common format.</param>
             <seealso cref="M:IronSoftware.Drawing.AnyBitmap.FromStream(System.IO.Stream)"/>
             <seealso cref="T:IronSoftware.Drawing.AnyBitmap"/>
         </member>
@@ -197,15 +261,25 @@
             <summary>
             Create a new Bitmap from a <see cref="T:System.IO.Stream"/> (bytes).
             </summary>
-            <param name="Stream">A <see cref="T:System.IO.Stream"/> of image data in any common format.</param>
+            <param name="stream">A <see cref="T:System.IO.Stream"/> of image data in any 
+            common format.</param>
             <seealso cref="M:IronSoftware.Drawing.AnyBitmap.FromStream(System.IO.MemoryStream)"/>
+            <seealso cref="T:IronSoftware.Drawing.AnyBitmap"/>
+        </member>
+        <member name="M:IronSoftware.Drawing.AnyBitmap.#ctor(System.Byte[])">
+            <summary>
+            Construct a new Bitmap from binary data (bytes).
+            </summary>
+            <param name="bytes">A ByteArray of image data in any common format.</param>
+            <seealso cref="M:IronSoftware.Drawing.AnyBitmap.FromBytes(System.Byte[])"/>
             <seealso cref="T:IronSoftware.Drawing.AnyBitmap"/>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.#ctor(System.IO.MemoryStream)">
             <summary>
             Construct a new Bitmap from a <see cref="T:System.IO.Stream"/> (bytes).
             </summary>
-            <param name="Stream">A <see cref="T:System.IO.Stream"/> of image data in any common format.</param>
+            <param name="stream">A <see cref="T:System.IO.Stream"/> of image data in any 
+            common format.</param>
             <seealso cref="M:IronSoftware.Drawing.AnyBitmap.FromStream(System.IO.Stream)"/>
             <seealso cref="T:IronSoftware.Drawing.AnyBitmap"/>
         </member>
@@ -213,7 +287,8 @@
             <summary>
             Construct a new Bitmap from a <see cref="T:System.IO.Stream"/> (bytes).
             </summary>
-            <param name="Stream">A <see cref="T:System.IO.Stream"/> of image data in any common format.</param>
+            <param name="stream">A <see cref="T:System.IO.Stream"/> of image data in any 
+            common format.</param>
             <seealso cref="M:IronSoftware.Drawing.AnyBitmap.FromStream(System.IO.MemoryStream)"/>
             <seealso cref="T:IronSoftware.Drawing.AnyBitmap"/>
         </member>
@@ -221,23 +296,16 @@
             <summary>
             
             </summary>
-            <param name="original">The <see cref="T:IronSoftware.Drawing.AnyBitmap"/> from which to create the new <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.</param>
+            <param name="original">The <see cref="T:IronSoftware.Drawing.AnyBitmap"/> from which to 
+            create the new <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.</param>
             <param name="width">The width of the new AnyBitmap.</param>
             <param name="height">The height of the new AnyBitmap.</param>
-        </member>
-        <member name="M:IronSoftware.Drawing.AnyBitmap.FromFile(System.String)">
-            <summary>
-            Create a new Bitmap from a file.
-            </summary>
-            <param name="File">A fully qualified file path.</param>
-            <seealso cref="M:IronSoftware.Drawing.AnyBitmap.FromFile(System.String)"/>
-            <seealso cref="T:IronSoftware.Drawing.AnyBitmap"/>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.#ctor(System.String)">
             <summary>
             Construct a new Bitmap from a file.
             </summary>
-            <param name="File">A fully qualified file path./</param>
+            <param name="file">A fully qualified file path./</param>
             <seealso cref="M:IronSoftware.Drawing.AnyBitmap.FromFile(System.String)"/>
             <seealso cref="T:IronSoftware.Drawing.AnyBitmap"/>
         </member>
@@ -245,33 +313,73 @@
             <summary>
             Construct a new Bitmap from a Uri
             </summary>
-            <param name="Uri">The uri of the image.</param>
-            <seealso cref="M:IronSoftware.Drawing.AnyBitmap.FromUri(System.Uri)"/>
+            <param name="uri">The uri of the image.</param>
+            <seealso cref="M:IronSoftware.Drawing.AnyBitmap.FromUriAsync(System.Uri)"/>
             <seealso cref="T:IronSoftware.Drawing.AnyBitmap"/>
+        </member>
+        <member name="M:IronSoftware.Drawing.AnyBitmap.FromFile(System.String)">
+            <summary>
+            Create a new Bitmap from a file.
+            </summary>
+            <param name="file">A fully qualified file path.</param>
+            <seealso cref="M:IronSoftware.Drawing.AnyBitmap.FromFile(System.String)"/>
+            <seealso cref="T:IronSoftware.Drawing.AnyBitmap"/>
+        </member>
+        <member name="M:IronSoftware.Drawing.AnyBitmap.FromUriAsync(System.Uri)">
+            <summary>
+            Construct a new Bitmap from a Uri
+            </summary>
+            <param name="uri">The uri of the image.</param>
+            <returns></returns>
+            <seealso cref="T:IronSoftware.Drawing.AnyBitmap"/>
+            <seealso cref="M:IronSoftware.Drawing.AnyBitmap.FromUri(System.Uri)"/>
+            <seealso cref="M:IronSoftware.Drawing.AnyBitmap.FromUriAsync(System.Uri)"/>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.FromUri(System.Uri)">
             <summary>
             Construct a new Bitmap from a Uri
             </summary>
-            <param name="Uri">The uri of the image.</param>
+            <param name="uri">The uri of the image.</param>
             <returns></returns>
             <seealso cref="T:IronSoftware.Drawing.AnyBitmap"/>
-            <seealso cref="M:IronSoftware.Drawing.AnyBitmap.FromUri(System.Uri)"/>
+            <seealso cref="M:IronSoftware.Drawing.AnyBitmap.FromUriAsync(System.Uri)"/>
+        </member>
+        <member name="M:IronSoftware.Drawing.AnyBitmap.LoadAnyBitmapFromRGBBuffer(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Creates an AnyBitmap object from a buffer of RGB pixel data.
+            </summary>
+            <param name="buffer">An array of bytes representing the RGB pixel data. This should contain 3 bytes (one each for red, green, and blue) for each pixel in the image.</param>
+            <param name="width">The width of the image, in pixels.</param>
+            <param name="height">The height of the image, in pixels.</param>
+            <returns>An AnyBitmap object that represents the image defined by the provided pixel data, width, and height.</returns>
         </member>
         <member name="P:IronSoftware.Drawing.AnyBitmap.BitsPerPixel">
             <summary>
             Gets colors depth, in number of bits per pixel.
+            <br/><para><b>Further Documentation:</b><br/>
+            <a href="https://ironsoftware.com/open-source/csharp/drawing/examples/get-color-depth/">
+            Code Example</a></para>
             </summary>
         </member>
         <member name="P:IronSoftware.Drawing.AnyBitmap.FrameCount">
             <summary>
-            Returns the number of frames in our loaded Image.  Each “frame” is a page of an image such as  Tiff or Gif.  All other image formats return 1. 
+            Returns the number of frames in our loaded Image.  Each “frame” is
+            a page of an image such as  Tiff or Gif.  All other image formats 
+            return 1.
+            <br/><para><b>Further Documentation:</b><br/>
+            <a href="https://ironsoftware.com/open-source/csharp/drawing/examples/get-number-of-frames-in-anybitmap/">
+            Code Example</a></para>
             </summary>
             <seealso cref="P:IronSoftware.Drawing.AnyBitmap.GetAllFrames" />
         </member>
         <member name="P:IronSoftware.Drawing.AnyBitmap.GetAllFrames">
             <summary>
-            Returns all of the cloned frames in our loaded Image. Each "frame" is a page of an image such as Tiff or Gif. All other image formats return an IEnumerable of length 1.
+            Returns all of the cloned frames in our loaded Image. Each "frame" 
+            is a page of an image such as Tiff or Gif. All other image formats 
+            return an IEnumerable of length 1.
+            <br/><para><b>Further Documentation:</b><br/>
+            <a href="https://ironsoftware.com/open-source/csharp/drawing/examples/get-frame-from-anybitmap/">
+            Code Example</a></para>
             </summary>
             <seealso cref="P:IronSoftware.Drawing.AnyBitmap.FrameCount" />
             <seealso cref="N:System.Linq" />
@@ -281,56 +389,129 @@
             Creates a multi-frame TIFF image from multiple AnyBitmaps.
             <para>All images should have the same dimension.</para>
             <para>If not dimension will be scaling to the largest width and height.</para>
-            <para>The image dimension still the same with original dimension with black background.</para>
+            <para>The image dimension still the same with original dimension 
+            with black background.</para>
             </summary>
-            <param name="imagePaths">Array of fully qualified file path to merge into Tiff image.</param>
+            <param name="imagePaths">Array of fully qualified file path to merge
+            into Tiff image.</param>
             <returns></returns>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.CreateMultiFrameTiff(System.Collections.Generic.IEnumerable{IronSoftware.Drawing.AnyBitmap})">
             <summary>
             Creates a multi-frame TIFF image from multiple AnyBitmaps.
             <para>All images should have the same dimension.</para>
-            <para>If not dimension will be scaling to the largest width and height.</para>
-            <para>The image dimension still the same with original dimension with black background.</para>
+            <para>If not dimension will be scaling to the largest width and 
+            height.</para>
+            <para>The image dimension still the same with original dimension 
+            with black background.</para>
             </summary>
-            <param name="images">Array of <see cref="T:IronSoftware.Drawing.AnyBitmap"/> to merge into Tiff image.</param>
+            <param name="images">Array of <see cref="T:IronSoftware.Drawing.AnyBitmap"/> to merge into
+            Tiff image.</param>
             <returns></returns>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.CreateMultiFrameGif(System.Collections.Generic.IEnumerable{System.String})">
             <summary>
             Creates a multi-frame GIF image from multiple AnyBitmaps.
             <para>All images should have the same dimension.</para>
-            <para>If not dimension will be scaling to the largest width and height.</para>
-            <para>The image dimension still the same with original dimension with background transparent.</para>
+            <para>If not dimension will be scaling to the largest width and 
+            height.</para>
+            <para>The image dimension still the same with original dimension
+            with background transparent.</para>
             </summary>
-            <param name="imagePaths">Array of fully qualified file path to merge into Gif image.</param>
+            <param name="imagePaths">Array of fully qualified file path to merge
+            into Gif image.</param>
             <returns></returns>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.CreateMultiFrameGif(System.Collections.Generic.IEnumerable{IronSoftware.Drawing.AnyBitmap})">
             <summary>
             Creates a multi-frame GIF image from multiple AnyBitmaps.
             <para>All images should have the same dimension.</para>
-            <para>If not dimension will be scaling to the largest width and height.</para>
-            <para>The image dimension still the same with original dimension with background transparent.</para>
+            <para>If not dimension will be scaling to the largest width and 
+            height.</para>
+            <para>The image dimension still the same with original dimension 
+            with background transparent.</para>
             </summary>
-            <param name="images">Array of <see cref="T:IronSoftware.Drawing.AnyBitmap"/> to merge into Gif image.</param>
+            <param name="images">Array of <see cref="T:IronSoftware.Drawing.AnyBitmap"/> to merge into
+            Gif image.</param>
             <returns></returns>
+        </member>
+        <member name="M:IronSoftware.Drawing.AnyBitmap.RotateFlip(IronSoftware.Drawing.AnyBitmap.RotateMode,IronSoftware.Drawing.AnyBitmap.FlipMode)">
+            <summary>
+            Specifies how much an <see cref="T:IronSoftware.Drawing.AnyBitmap"/> is rotated and the 
+            axis used to flip the image.
+            </summary>
+            <param name="rotateMode">Provides enumeration over how the image 
+            should be rotated.</param>
+            <param name="flipMode">Provides enumeration over how a image 
+            should be flipped.</param>
+            <returns>Transformed image</returns>
+        </member>
+        <member name="M:IronSoftware.Drawing.AnyBitmap.RotateFlip(IronSoftware.Drawing.AnyBitmap.RotateFlipType)">
+            <summary>
+            Specifies how much an <see cref="T:IronSoftware.Drawing.AnyBitmap"/> is rotated and the 
+            axis used to flip the image.
+            </summary>
+            <param name="rotateFlipType">Provides enumeration over how the 
+            image should be rotated.</param>
+            <returns>Transformed image</returns>
+        </member>
+        <member name="M:IronSoftware.Drawing.AnyBitmap.RotateFlip(IronSoftware.Drawing.AnyBitmap,IronSoftware.Drawing.AnyBitmap.RotateMode,IronSoftware.Drawing.AnyBitmap.FlipMode)">
+            <summary>
+            Specifies how much an image is rotated and the axis used to flip 
+            the image.
+            </summary>
+            <param name="bitmap">The <see cref="T:IronSoftware.Drawing.AnyBitmap"/> to perform the 
+            transformation on.</param>
+            <param name="rotateMode">Provides enumeration over how the image 
+            should be rotated.</param>
+            <param name="flipMode">Provides enumeration over how a image 
+            should be flipped.</param>
+            <returns>Transformed image</returns>
+        </member>
+        <member name="M:IronSoftware.Drawing.AnyBitmap.Redact(IronSoftware.Drawing.CropRectangle,IronSoftware.Drawing.Color)">
+            <summary>
+            Creates a new bitmap with the region defined by the specified crop
+            rectangle redacted with the specified color.
+            </summary>
+            <param name="cropRectangle">The crop rectangle defining the region
+            to redact.</param>
+            <param name="color">The color to use for redaction.</param>
+            <returns>A new bitmap with the specified region redacted.</returns>
+        </member>
+        <member name="M:IronSoftware.Drawing.AnyBitmap.Redact(IronSoftware.Drawing.AnyBitmap,IronSoftware.Drawing.CropRectangle,IronSoftware.Drawing.Color)">
+            <summary>
+            Creates a new bitmap with the region defined by the specified crop
+            rectangle in the specified bitmap redacted with the specified color.
+            </summary>
+            <param name="bitmap">The bitmap to redact.</param>
+            <param name="cropRectangle">The crop rectangle defining the region
+            to redact.</param>
+            <param name="color">The color to use for redaction.</param>
+            <returns>A new bitmap with the specified region redacted.</returns>
         </member>
         <member name="P:IronSoftware.Drawing.AnyBitmap.Stride">
             <summary>
-            Gets the stride width (also called scan width) of the <see cref="T:IronSoftware.Drawing.AnyBitmap"/> object.
+            Gets the stride width (also called scan width) of the 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/> object.
             </summary>
         </member>
         <member name="P:IronSoftware.Drawing.AnyBitmap.Scan0">
             <summary>
-            Gets the address of the first pixel data in the <see cref="T:IronSoftware.Drawing.AnyBitmap"/>. This can also be thought of as the first scan line in the <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
+            Gets the address of the first pixel data in the 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/>. This can also be thought of as the first 
+            scan line in the <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
             </summary>
-            <returns>The address of the first 32bpp BGRA pixel data in the <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.</returns>
+            <returns>The address of the first 32bpp BGRA pixel data in the 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.</returns>
         </member>
         <member name="P:IronSoftware.Drawing.AnyBitmap.MimeType">
             <summary>
-            Returns the <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">HTTP MIME types</see> of the image. 
-            <para>must be one of the following: image/bmp, image/jpeg, image/png, image/gif, image/tiff, image/webp, or image/unknown.</para>
+            Returns the 
+            <see href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">
+            HTTP MIME types</see>
+            of the image. 
+            <para>must be one of the following: image/bmp, image/jpeg, 
+            image/png, image/gif, image/tiff, image/webp, or image/unknown.</para>
             </summary>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.GetImageFormat">
@@ -353,124 +534,207 @@
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.GetPixel(System.Int32,System.Int32)">
             <summary>
-            Gets the <see cref="T:IronSoftware.Drawing.Color"/> of the specified pixel in this <see cref="T:IronSoftware.Drawing.AnyBitmap"/>
+            Gets the <see cref="T:IronSoftware.Drawing.Color"/> of the specified pixel in this 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/>
             <para>This always return an Rgba32 color format.</para>
             </summary>
             <param name="x">The x-coordinate of the pixel to retrieve.</param>
             <param name="y">The y-coordinate of the pixel to retrieve.</param>
-            <returns>A <see cref="T:IronSoftware.Drawing.Color"/> structure that represents the color of the specified pixel.</returns>
+            <returns>A <see cref="T:IronSoftware.Drawing.Color"/> structure that represents the color 
+            of the specified pixel.</returns>
+        </member>
+        <member name="M:IronSoftware.Drawing.AnyBitmap.SetPixel(System.Int32,System.Int32,IronSoftware.Drawing.Color)">
+            <summary>
+            Sets the <see cref="T:IronSoftware.Drawing.Color"/> of the specified pixel in this 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/>
+            <para>Set in Rgb24 color format.</para>
+            </summary>
+            <param name="x">The x-coordinate of the pixel to retrieve.</param>
+            <param name="y">The y-coordinate of the pixel to retrieve.</param>
+            <param name="color">The color to set the pixel.</param>
+            <returns>void</returns>
+        </member>
+        <member name="M:IronSoftware.Drawing.AnyBitmap.GetRGBBuffer">
+            <summary>
+            Retrieves the RGB buffer from the image at the specified path.
+            </summary>
+            <returns>An array of bytes representing the RGB buffer of the image.</returns>
+            <remarks>
+            Each pixel is represented by three bytes in the order: red, green, blue.
+            The pixels are read from the image row by row, from top to bottom and left to right within each row.
+            </remarks>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.op_Implicit(SixLabors.ImageSharp.Image{SixLabors.ImageSharp.PixelFormats.Rgb24})~IronSoftware.Drawing.AnyBitmap">
             <summary>
-            Implicitly casts SixLabors.ImageSharp.Image objects to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
-            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as parameters or return types, you now automatically support ImageSharp as well.</para>
+            Implicitly casts SixLabors.ImageSharp.Image objects to 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
+            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as 
+            parameters or return types, you now automatically support ImageSharp
+            as well.</para>
             </summary>
-            <param name="Image">SixLabors.ImageSharp.Image will automatically be cast to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.</param>
+            <param name="image">SixLabors.ImageSharp.Image will automatically 
+            be cast to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.</param>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.op_Implicit(IronSoftware.Drawing.AnyBitmap)~SixLabors.ImageSharp.Image{SixLabors.ImageSharp.PixelFormats.Rgb24}">
             <summary>
-            Implicitly casts to SixLabors.ImageSharp.Image objects from <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
-            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as parameters or return types, you now automatically support ImageSharp as well.</para>
+            Implicitly casts to SixLabors.ImageSharp.Image objects from 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
+            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> 
+            as parameters or return types, you now automatically support 
+            ImageSharp as well.</para>
             </summary>
-            <param name="bitmap"><see cref="T:IronSoftware.Drawing.AnyBitmap"/> is implicitly cast to a SixLabors.ImageSharp.Image.</param>
+            <param name="bitmap"><see cref="T:IronSoftware.Drawing.AnyBitmap"/> is implicitly cast to 
+            a SixLabors.ImageSharp.Image.</param>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.op_Implicit(SixLabors.ImageSharp.Image{SixLabors.ImageSharp.PixelFormats.Rgba32})~IronSoftware.Drawing.AnyBitmap">
             <summary>
-            Implicitly casts SixLabors.ImageSharp.Image objects to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
-            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as parameters or return types, you now automatically support ImageSharp as well.</para>
+            Implicitly casts SixLabors.ImageSharp.Image objects to 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
+            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as 
+            parameters or return types, you now automatically support ImageSharp
+            as well.</para>
             </summary>
-            <param name="Image">SixLabors.ImageSharp.Image will automatically be cast to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.</param>
+            <param name="image">SixLabors.ImageSharp.Image will automatically be
+            cast to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.</param>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.op_Implicit(IronSoftware.Drawing.AnyBitmap)~SixLabors.ImageSharp.Image{SixLabors.ImageSharp.PixelFormats.Rgba32}">
             <summary>
-            Implicitly casts to SixLabors.ImageSharp.Image objects from <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
-            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as parameters or return types, you now automatically support ImageSharp as well.</para>
+            Implicitly casts to SixLabors.ImageSharp.Image objects from 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
+            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as 
+            parameters or return types, you now automatically support ImageSharp
+            as well.</para>
             </summary>
-            <param name="bitmap"><see cref="T:IronSoftware.Drawing.AnyBitmap"/> is implicitly cast to a SixLabors.ImageSharp.Image.</param>
+            <param name="bitmap"><see cref="T:IronSoftware.Drawing.AnyBitmap"/> is implicitly cast to
+            a SixLabors.ImageSharp.Image.</param>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.op_Implicit(SixLabors.ImageSharp.Image)~IronSoftware.Drawing.AnyBitmap">
             <summary>
-            Implicitly casts SixLabors.ImageSharp.Image objects to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
-            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as parameters or return types, you now automatically support ImageSharp as well.</para>
+            Implicitly casts SixLabors.ImageSharp.Image objects to 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
+            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as 
+            parameters or return types, you now automatically support ImageSharp
+            as well.</para>
             </summary>
-            <param name="Image">SixLabors.ImageSharp.Image will automatically be cast to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.</param>
+            <param name="image">SixLabors.ImageSharp.Image will automatically
+            be cast to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.</param>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.op_Implicit(IronSoftware.Drawing.AnyBitmap)~SixLabors.ImageSharp.Image">
             <summary>
-            Implicitly casts to SixLabors.ImageSharp.Image objects from <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
-            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as parameters or return types, you now automatically support ImageSharp as well.</para>
+            Implicitly casts to SixLabors.ImageSharp.Image objects from 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
+            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as 
+            parameters or return types, you now automatically support ImageSharp
+            as well.</para>
             </summary>
-            <param name="bitmap"><see cref="T:IronSoftware.Drawing.AnyBitmap"/> is implicitly cast to a SixLabors.ImageSharp.Image.</param>
+            <param name="bitmap"><see cref="T:IronSoftware.Drawing.AnyBitmap"/> is implicitly cast to
+            a SixLabors.ImageSharp.Image.</param>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.op_Implicit(SkiaSharp.SKImage)~IronSoftware.Drawing.AnyBitmap">
             <summary>
-            Implicitly casts SkiaSharp.SKImage objects to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
-            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as parameters or return types, you now automatically support SkiaSharp as well.</para>
+            Implicitly casts SkiaSharp.SKImage objects to 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
+            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as
+            parameters or return types, you now automatically support SkiaSharp
+            as well.</para>
             </summary>
-            <param name="Image">SkiaSharp.SKImage will automatically be cast to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.</param>
+            <param name="image">SkiaSharp.SKImage will automatically be cast to
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.</param>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.op_Implicit(IronSoftware.Drawing.AnyBitmap)~SkiaSharp.SKImage">
             <summary>
             Implicitly casts to SkiaSharp.SKImage objects from <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
-            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as parameters or return types, you now automatically support SkiaSharp.SKImage as well.</para>
+            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as 
+            parameters or return types, you now automatically support 
+            SkiaSharp.SKImage as well.</para>
             </summary>
-            <param name="bitmap"><see cref="T:IronSoftware.Drawing.AnyBitmap"/> is implicitly cast to a SkiaSharp.SKImage.</param>
+            <param name="bitmap"><see cref="T:IronSoftware.Drawing.AnyBitmap"/> is implicitly cast to 
+            a SkiaSharp.SKImage.</param>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.op_Implicit(SkiaSharp.SKBitmap)~IronSoftware.Drawing.AnyBitmap">
             <summary>
             Implicitly casts SkiaSharp.SKBitmap objects to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
-            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as parameters or return types, you now automatically support SkiaSharp as well.</para>
+            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as
+            parameters or return types, you now automatically support SkiaSharp
+            as well.</para>
             </summary>
-            <param name="Image">SkiaSharp.SKBitmap will automatically be cast to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.</param>
+            <param name="image">SkiaSharp.SKBitmap will automatically be cast
+            to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.</param>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.op_Implicit(IronSoftware.Drawing.AnyBitmap)~SkiaSharp.SKBitmap">
             <summary>
             Implicitly casts to SkiaSharp.SKBitmap objects from <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
-            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as parameters or return types, you now automatically support SkiaSharp.SKBitmap as well.</para>
+            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as 
+            parameters or return types, you now automatically support 
+            SkiaSharp.SKBitmap as well.</para>
             </summary>
-            <param name="bitmap"><see cref="T:IronSoftware.Drawing.AnyBitmap"/> is explicitly cast to a SkiaSharp.SKBitmap.</param>
+            <param name="bitmap"><see cref="T:IronSoftware.Drawing.AnyBitmap"/> is explicitly cast to 
+            a SkiaSharp.SKBitmap.</param>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.op_Implicit(Microsoft.Maui.Graphics.Platform.PlatformImage)~IronSoftware.Drawing.AnyBitmap">
             <summary>
-            Implicitly casts Microsoft.Maui.Graphics.Platform.PlatformImage objects to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
-            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as parameters or return types, you now automatically support Microsoft.Maui.Graphics as well.</para>
+            Implicitly casts Microsoft.Maui.Graphics.Platform.PlatformImage 
+            objects to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
+            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as 
+            parameters or return types, you now automatically support 
+            Microsoft.Maui.Graphics as well.</para>
             </summary>
-            <param name="Image">Microsoft.Maui.Graphics.Platform.PlatformImage will automatically be cast to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.</param>
+            <param name="image">Microsoft.Maui.Graphics.Platform.PlatformImage 
+            will automatically be cast to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.</param>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.op_Implicit(IronSoftware.Drawing.AnyBitmap)~Microsoft.Maui.Graphics.Platform.PlatformImage">
             <summary>
-            Implicitly casts to Microsoft.Maui.Graphics.Platform.PlatformImage objects from <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
-            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as parameters or return types, you now automatically support Microsoft.Maui.Graphics as well.</para>
+            Implicitly casts to Microsoft.Maui.Graphics.Platform.PlatformImage 
+            objects from <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
+            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as 
+            parameters or return types, you now automatically support 
+            Microsoft.Maui.Graphics as well.</para>
             </summary>
-            <param name="bitmap"><see cref="T:IronSoftware.Drawing.AnyBitmap"/> is implicitly cast to a Microsoft.Maui.Graphics.Platform.PlatformImage.</param>
+            <param name="bitmap"><see cref="T:IronSoftware.Drawing.AnyBitmap"/> is implicitly cast to 
+            a Microsoft.Maui.Graphics.Platform.PlatformImage.</param>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.op_Implicit(System.Drawing.Bitmap)~IronSoftware.Drawing.AnyBitmap">
             <summary>
-            Implicitly casts System.Drawing.Bitmap objects to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
-            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as parameters or return types, you now automatically support System.Drawing.Common as well.</para>
+            Implicitly casts System.Drawing.Bitmap objects to 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
+            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as 
+            parameters or return types, you now automatically support 
+            System.Drawing.Common as well.</para>
             </summary>
-            <param name="Image">System.Drawing.Bitmap will automatically be cast to <see cref="T:IronSoftware.Drawing.AnyBitmap"/> </param>
+            <param name="image">System.Drawing.Bitmap will automatically be cast to <see cref="T:IronSoftware.Drawing.AnyBitmap"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.op_Implicit(IronSoftware.Drawing.AnyBitmap)~System.Drawing.Bitmap">
             <summary>
-            Implicitly casts to System.Drawing.Bitmap objects from <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
-            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as parameters or return types, you now automatically support System.Drawing.Common as well.</para>
+            Implicitly casts to System.Drawing.Bitmap objects from 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
+            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as 
+            parameters or return types, you now automatically support 
+            System.Drawing.Common as well.</para>
             </summary>
-            <param name="bitmap"><see cref="T:IronSoftware.Drawing.AnyBitmap"/> is implicitly cast to a System.Drawing.Bitmap.</param>
+            <param name="bitmap"><see cref="T:IronSoftware.Drawing.AnyBitmap"/> is implicitly cast to
+            a System.Drawing.Bitmap.</param>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.op_Implicit(System.Drawing.Image)~IronSoftware.Drawing.AnyBitmap">
             <summary>
-            Implicitly casts System.Drawing.Image objects to <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
-            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as parameters or return types, you now automatically support System.Drawing.Common as well.</para>
+            Implicitly casts System.Drawing.Image objects to
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
+            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as 
+            parameters or return types, you now automatically support 
+            System.Drawing.Common as well.</para>
             </summary>
-            <param name="Image">System.Drawing.Image will automatically be cast to <see cref="T:IronSoftware.Drawing.AnyBitmap"/> </param>
+            <param name="image">System.Drawing.Image will automatically be cast
+            to <see cref="T:IronSoftware.Drawing.AnyBitmap"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.op_Implicit(IronSoftware.Drawing.AnyBitmap)~System.Drawing.Image">
             <summary>
-            Implicitly casts to System.Drawing.Image objects from <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
-            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as parameters or return types, you now automatically support System.Drawing.Common as well.</para>
+            Implicitly casts to System.Drawing.Image objects from 
+            <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
+            <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.AnyBitmap"/> as
+            parameters or return types, you now automatically support 
+            System.Drawing.Common as well.</para>
             </summary>
-            <param name="bitmap"><see cref="T:IronSoftware.Drawing.AnyBitmap"/> is implicitly cast to a System.Drawing.Image.</param>
+            <param name="bitmap"><see cref="T:IronSoftware.Drawing.AnyBitmap"/> is implicitly cast to 
+            a System.Drawing.Image.</param>
         </member>
         <member name="T:IronSoftware.Drawing.AnyBitmap.ImageFormat">
             <summary>
@@ -496,7 +760,8 @@
             <summary> The PNG image format.</summary>
         </member>
         <member name="F:IronSoftware.Drawing.AnyBitmap.ImageFormat.Wbmp">
-            <summary> The WBMP image format. Will default to BMP if not supported on the runtime platform.</summary>
+            <summary> The WBMP image format. Will default to BMP if not 
+            supported on the runtime platform.</summary>
         </member>
         <member name="F:IronSoftware.Drawing.AnyBitmap.ImageFormat.Webp">
             <summary> The new WebP image format.</summary>
@@ -513,7 +778,164 @@
         <member name="F:IronSoftware.Drawing.AnyBitmap.ImageFormat.Default">
             <summary> The existing raw image format.</summary>
         </member>
+        <member name="M:IronSoftware.Drawing.AnyBitmap.ParseRotateFlipType(IronSoftware.Drawing.AnyBitmap.RotateFlipType)">
+            <summary>
+            Converts the legacy <see cref="T:IronSoftware.Drawing.AnyBitmap.RotateFlipType"/> to <see cref="T:IronSoftware.Drawing.AnyBitmap.RotateMode"/> and <see cref="T:IronSoftware.Drawing.AnyBitmap.FlipMode"/>
+            </summary>
+        </member>
+        <member name="T:IronSoftware.Drawing.AnyBitmap.RotateMode">
+            <summary>
+            Provides enumeration over how the image should be rotated.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateMode.None">
+            <summary>
+            Do not rotate the image.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateMode.Rotate90">
+            <summary>
+            Rotate the image by 90 degrees clockwise.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateMode.Rotate180">
+            <summary>
+            Rotate the image by 180 degrees clockwise.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateMode.Rotate270">
+            <summary>
+            Rotate the image by 270 degrees clockwise.
+            </summary>
+        </member>
+        <member name="T:IronSoftware.Drawing.AnyBitmap.FlipMode">
+            <summary>
+            Provides enumeration over how a image should be flipped.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.FlipMode.None">
+            <summary>
+            Don't flip the image.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.FlipMode.Horizontal">
+            <summary>
+            Flip the image horizontally.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.FlipMode.Vertical">
+            <summary>
+            Flip the image vertically.
+            </summary>
+        </member>
+        <member name="T:IronSoftware.Drawing.AnyBitmap.RotateFlipType">
+            <summary>
+            Specifies how much an image is rotated and the axis used to flip 
+            the image. This follows the legacy System.Drawing.RotateFlipType 
+            notation.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateFlipType.RotateNoneFlipNone">
+            <summary>
+            Specifies no clockwise rotation and no flipping.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateFlipType.Rotate180FlipXY">
+            <summary>
+            Specifies a 180-degree clockwise rotation followed by a 
+            horizontal and vertical flip.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateFlipType.Rotate90FlipNone">
+            <summary>
+            Specifies a 90-degree clockwise rotation without flipping.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateFlipType.Rotate270FlipXY">
+            <summary>
+            Specifies a 270-degree clockwise rotation followed by a 
+            horizontal and vertical flip.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateFlipType.RotateNoneFlipXY">
+            <summary>
+            Specifies no clockwise rotation followed by a horizontal and 
+            vertical flip.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateFlipType.Rotate180FlipNone">
+            <summary>
+            Specifies a 180-degree clockwise rotation without flipping.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateFlipType.Rotate90FlipXY">
+            <summary>
+            Specifies a 90-degree clockwise rotation followed by a 
+            horizontal and vertical flip.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateFlipType.Rotate270FlipNone">
+            <summary>
+            Specifies a 270-degree clockwise rotation without flipping.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateFlipType.RotateNoneFlipX">
+            <summary>
+            Specifies no clockwise rotation followed by a horizontal flip.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateFlipType.Rotate180FlipY">
+            <summary>
+            Specifies a 180-degree clockwise rotation followed by a 
+            vertical flip.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateFlipType.Rotate90FlipX">
+            <summary>
+            Specifies a 90-degree clockwise rotation followed by a 
+            horizontal flip.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateFlipType.Rotate270FlipY">
+            <summary>
+            Specifies a 270-degree clockwise rotation followed by a 
+            vertical flip.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateFlipType.RotateNoneFlipY">
+            <summary>
+            Specifies no clockwise rotation followed by a vertical flip.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateFlipType.Rotate180FlipX">
+            <summary>
+            Specifies a 180-degree clockwise rotation followed by a 
+            horizontal flip.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateFlipType.Rotate90FlipY">
+            <summary>
+            Specifies a 90-degree clockwise rotation followed by a 
+            vertical flip.
+            </summary>
+        </member>
+        <member name="F:IronSoftware.Drawing.AnyBitmap.RotateFlipType.Rotate270FlipX">
+            <summary>
+            Specifies a 270-degree clockwise rotation followed by a 
+            horizontal flip.
+            </summary>
+        </member>
+        <member name="M:IronSoftware.Drawing.AnyBitmap.Finalize">
+            <summary>
+            AnyBitmap destructor
+            </summary>
+        </member>
         <member name="M:IronSoftware.Drawing.AnyBitmap.Dispose">
+            <summary>
+            Releases all resources used by this <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
+            </summary>
+        </member>
+        <member name="M:IronSoftware.Drawing.AnyBitmap.Dispose(System.Boolean)">
             <summary>
             Releases all resources used by this <see cref="T:IronSoftware.Drawing.AnyBitmap"/>.
             </summary>
@@ -552,12 +974,14 @@
         <member name="M:IronSoftware.Drawing.Color.#ctor(System.String)">
             <summary>
             Construct a new <see cref="T:IronSoftware.Drawing.Color"/>.
+            <br/><para><b>Further Documentation:</b><br/><a href="https://ironsoftware.com/open-source/csharp/drawing/examples/create-color/">Code Example</a></para>
             </summary>
             <param name="colorcode">The hexadecimal representation of the combined color components arranged in rgb, argb, rrggbb, or aarrggbb format to match web syntax.</param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
             Construct a new <see cref="T:IronSoftware.Drawing.Color"/>.
+            <br/><para><b>Further Documentation:</b><br/><a href="https://ironsoftware.com/open-source/csharp/drawing/examples/create-color/">Code Example</a></para>
             </summary>
             <param name="alpha">The alpha component. Valid values are 0 through 255.</param>
             <param name="red">The red component. Valid values are 0 through 255.</param>
@@ -567,6 +991,7 @@
         <member name="M:IronSoftware.Drawing.Color.#ctor(System.Int32,System.Int32,System.Int32)">
             <summary>
             Construct a new <see cref="T:IronSoftware.Drawing.Color"/>.
+            <br/><para><b>Further Documentation:</b><br/><a href="https://ironsoftware.com/open-source/csharp/drawing/examples/create-color/">Code Example</a></para>
             </summary>
             <param name="red">The red component. Valid values are 0 through 255.</param>
             <param name="green">The green component. Valid values are 0 through 255.</param>
@@ -1504,6 +1929,7 @@
         <member name="M:IronSoftware.Drawing.Color.ToArgb">
             <summary>
             Gets the 32-bit ARGB value of this <see cref="T:IronSoftware.Drawing.Color"/> structure.
+            <br/><para><b>Further Documentation:</b><br/><a href="https://ironsoftware.com/open-source/csharp/drawing/examples/convert-color-to-32-bit-argb-value/">Code Example</a></para>
             </summary>
             <returns>The 32-bit ARGB value of this <see cref="T:IronSoftware.Drawing.Color"/>.</returns>
         </member>
@@ -1512,168 +1938,168 @@
             Implicitly casts <see cref="T:System.Drawing.Color"/> objects to <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:System.Drawing.Color"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:System.Drawing.Color"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
+            <param name="color"><see cref="T:System.Drawing.Color"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(IronSoftware.Drawing.Color)~System.Drawing.Color">
             <summary>
             Implicitly casts to <see cref="T:System.Drawing.Color"/> objects from <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:System.Drawing.Color"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:System.Drawing.Color"/> </param>
+            <param name="color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:System.Drawing.Color"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(SkiaSharp.SKColor)~IronSoftware.Drawing.Color">
             <summary>
             Implicitly casts <see cref="T:SkiaSharp.SKColor"/> objects to <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SkiaSharp.SKColor"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:SkiaSharp.SKColor"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
+            <param name="color"><see cref="T:SkiaSharp.SKColor"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(IronSoftware.Drawing.Color)~SkiaSharp.SKColor">
             <summary>
             Implicitly casts to <see cref="T:SkiaSharp.SKColor"/> objects from <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SkiaSharp.SKColor"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SkiaSharp.SKColor"/> </param>
+            <param name="color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SkiaSharp.SKColor"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(SixLabors.ImageSharp.Color)~IronSoftware.Drawing.Color">
             <summary>
             Implicitly casts <see cref="T:SixLabors.ImageSharp.Color"/> objects to <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SixLabors.ImageSharp.Color"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:SixLabors.ImageSharp.Color"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
+            <param name="color"><see cref="T:SixLabors.ImageSharp.Color"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(IronSoftware.Drawing.Color)~SixLabors.ImageSharp.Color">
             <summary>
             Implicitly casts to <see cref="T:SixLabors.ImageSharp.Color"/> objects from <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SixLabors.ImageSharp.Color"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SixLabors.ImageSharp.Color"/> </param>
+            <param name="color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SixLabors.ImageSharp.Color"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(SixLabors.ImageSharp.PixelFormats.Rgba32)~IronSoftware.Drawing.Color">
             <summary>
             Implicitly casts <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgba32"/> objects to <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgba32"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:SixLabors.ImageSharp.PixelFormats.Rgba32"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
+            <param name="color"><see cref="T:SixLabors.ImageSharp.PixelFormats.Rgba32"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(IronSoftware.Drawing.Color)~SixLabors.ImageSharp.PixelFormats.Rgba32">
             <summary>
             Implicitly casts to <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgba32"/> objects from <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgba32"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgba32"/> </param>
+            <param name="color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgba32"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(SixLabors.ImageSharp.PixelFormats.Bgra32)~IronSoftware.Drawing.Color">
             <summary>
             Implicitly casts <see cref="T:SixLabors.ImageSharp.PixelFormats.Bgra32"/> objects to <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SixLabors.ImageSharp.PixelFormats.Bgra32"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:SixLabors.ImageSharp.PixelFormats.Bgra32"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
+            <param name="color"><see cref="T:SixLabors.ImageSharp.PixelFormats.Bgra32"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(IronSoftware.Drawing.Color)~SixLabors.ImageSharp.PixelFormats.Bgra32">
             <summary>
             Implicitly casts to <see cref="T:SixLabors.ImageSharp.PixelFormats.Bgra32"/> objects from <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SixLabors.ImageSharp.PixelFormats.Bgra32"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SixLabors.ImageSharp.PixelFormats.Bgra32"/> </param>
+            <param name="color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SixLabors.ImageSharp.PixelFormats.Bgra32"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(SixLabors.ImageSharp.PixelFormats.Rgb24)~IronSoftware.Drawing.Color">
             <summary>
             Implicitly casts <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgb24"/> objects to <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgb24"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:SixLabors.ImageSharp.PixelFormats.Rgb24"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
+            <param name="color"><see cref="T:SixLabors.ImageSharp.PixelFormats.Rgb24"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(IronSoftware.Drawing.Color)~SixLabors.ImageSharp.PixelFormats.Rgb24">
             <summary>
             Implicitly casts to <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgb24"/> objects from <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgb24"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgb24"/> </param>
+            <param name="color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgb24"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(SixLabors.ImageSharp.PixelFormats.Bgr24)~IronSoftware.Drawing.Color">
             <summary>
             Implicitly casts <see cref="T:SixLabors.ImageSharp.PixelFormats.Bgr24"/> objects to <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SixLabors.ImageSharp.PixelFormats.Bgr24"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:SixLabors.ImageSharp.PixelFormats.Bgr24"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
+            <param name="color"><see cref="T:SixLabors.ImageSharp.PixelFormats.Bgr24"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(IronSoftware.Drawing.Color)~SixLabors.ImageSharp.PixelFormats.Bgr24">
             <summary>
             Implicitly casts to <see cref="T:SixLabors.ImageSharp.PixelFormats.Bgr24"/> objects from <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SixLabors.ImageSharp.PixelFormats.Bgr24"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SixLabors.ImageSharp.PixelFormats.Bgr24"/> </param>
+            <param name="color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SixLabors.ImageSharp.PixelFormats.Bgr24"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(SixLabors.ImageSharp.PixelFormats.Rgb48)~IronSoftware.Drawing.Color">
             <summary>
             Implicitly casts <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgb48"/> objects to <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgb48"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:SixLabors.ImageSharp.PixelFormats.Rgb48"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
+            <param name="color"><see cref="T:SixLabors.ImageSharp.PixelFormats.Rgb48"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(IronSoftware.Drawing.Color)~SixLabors.ImageSharp.PixelFormats.Rgb48">
             <summary>
             Implicitly casts to <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgb48"/> objects from <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgb48"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgb48"/> </param>
+            <param name="color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgb48"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(SixLabors.ImageSharp.PixelFormats.Rgba64)~IronSoftware.Drawing.Color">
             <summary>
             Implicitly casts <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgba64"/> objects to <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgba64"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:SixLabors.ImageSharp.PixelFormats.Rgba64"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
+            <param name="color"><see cref="T:SixLabors.ImageSharp.PixelFormats.Rgba64"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(IronSoftware.Drawing.Color)~SixLabors.ImageSharp.PixelFormats.Rgba64">
             <summary>
             Implicitly casts to <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgba64"/> objects from <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgba64"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgba64"/> </param>
+            <param name="color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SixLabors.ImageSharp.PixelFormats.Rgba64"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(SixLabors.ImageSharp.PixelFormats.Abgr32)~IronSoftware.Drawing.Color">
             <summary>
             Implicitly casts <see cref="T:SixLabors.ImageSharp.PixelFormats.Abgr32"/> objects to <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SixLabors.ImageSharp.PixelFormats.Abgr32"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:SixLabors.ImageSharp.PixelFormats.Abgr32"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
+            <param name="color"><see cref="T:SixLabors.ImageSharp.PixelFormats.Abgr32"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(IronSoftware.Drawing.Color)~SixLabors.ImageSharp.PixelFormats.Abgr32">
             <summary>
             Implicitly casts to <see cref="T:SixLabors.ImageSharp.PixelFormats.Abgr32"/> objects from <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SixLabors.ImageSharp.PixelFormats.Abgr32"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SixLabors.ImageSharp.PixelFormats.Abgr32"/> </param>
+            <param name="color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SixLabors.ImageSharp.PixelFormats.Abgr32"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(SixLabors.ImageSharp.PixelFormats.Argb32)~IronSoftware.Drawing.Color">
             <summary>
             Implicitly casts <see cref="T:SixLabors.ImageSharp.PixelFormats.Argb32"/> objects to <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SixLabors.ImageSharp.PixelFormats.Argb32"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:SixLabors.ImageSharp.PixelFormats.Argb32"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
+            <param name="color"><see cref="T:SixLabors.ImageSharp.PixelFormats.Argb32"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(IronSoftware.Drawing.Color)~SixLabors.ImageSharp.PixelFormats.Argb32">
             <summary>
             Implicitly casts to <see cref="T:SixLabors.ImageSharp.PixelFormats.Argb32"/> objects from <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:SixLabors.ImageSharp.PixelFormats.Argb32"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SixLabors.ImageSharp.PixelFormats.Argb32"/> </param>
+            <param name="color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:SixLabors.ImageSharp.PixelFormats.Argb32"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(Microsoft.Maui.Graphics.Color)~IronSoftware.Drawing.Color">
             <summary>
             Implicitly casts <see cref="T:Microsoft.Maui.Graphics.Color"/> objects to <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:Microsoft.Maui.Graphics.Color"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:Microsoft.Maui.Graphics.Color"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
+            <param name="color"><see cref="T:Microsoft.Maui.Graphics.Color"/> will automatically be cast to <see cref="T:IronSoftware.Drawing.Color"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Implicit(IronSoftware.Drawing.Color)~Microsoft.Maui.Graphics.Color">
             <summary>
             Implicitly casts to <see cref="T:Microsoft.Maui.Graphics.Color"/> objects from <see cref="T:IronSoftware.Drawing.Color"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Color"/> as parameters or return types, you now automatically support <see cref="T:Microsoft.Maui.Graphics.Color"/> as well.</para>
             </summary>
-            <param name="Color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:Microsoft.Maui.Graphics.Color"/> </param>
+            <param name="color"><see cref="T:IronSoftware.Drawing.Color"/> is explicitly cast to a <see cref="T:Microsoft.Maui.Graphics.Color"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Color.op_Equality(IronSoftware.Drawing.Color,IronSoftware.Drawing.Color)">
             <summary>
@@ -1700,6 +2126,12 @@
         </member>
         <member name="M:IronSoftware.Drawing.Color.GetHashCode">
             <inheritdoc/>
+        </member>
+        <member name="M:IronSoftware.Drawing.Color.ToHtmlCssColorCode">
+            <summary>
+            Translates the specified Color structure to an HTML string color representation.
+            </summary>
+            <returns>A string containing the hex representation of the color in the format #RRGGBB.</returns>
         </member>
         <member name="T:IronSoftware.Drawing.CropRectangle">
             <summary>
@@ -1753,109 +2185,138 @@
         <member name="M:IronSoftware.Drawing.CropRectangle.ConvertTo(IronSoftware.Drawing.MeasurementUnits,System.Int32)">
             <summary>
             Convert this crop rectangle to the specified units of measurement using the specified DPI
+            <br/><para><b>Further Documentation:</b><br/><a href="https://ironsoftware.com/open-source/csharp/drawing/examples/convert-measurement-unit-of-croprectangle/">Code Example</a></para>
             </summary>
             <param name="units">Unit of measurement</param>
             <param name="dpi">DPI (Dots per inch) for conversion</param>
             <returns>A new crop rectangle which uses the desired units of measurement</returns>
             <exception cref="T:System.NotImplementedException">Conversion not implemented</exception>
         </member>
+        <member name="P:IronSoftware.Drawing.CropRectangle.Top">
+            <summary>
+            Gets the y-coordinate of the top edge of this <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
+            </summary>
+        </member>
+        <member name="P:IronSoftware.Drawing.CropRectangle.Right">
+            <summary>
+            Gets the x-coordinate of the right edge of this <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
+            </summary>
+        </member>
+        <member name="P:IronSoftware.Drawing.CropRectangle.Bottom">
+            <summary>
+            Gets the y-coordinate of the bottom edge of this <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
+            </summary>
+        </member>
+        <member name="P:IronSoftware.Drawing.CropRectangle.Left">
+            <summary>
+            Gets the x-coordinate of the left edge of this <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
+            </summary>
+        </member>
+        <member name="M:IronSoftware.Drawing.CropRectangle.Contains(System.Int32,System.Int32)">
+            <summary>
+            Determines if the specified point is contained within the rectangular region defined by
+            this <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
+            </summary>
+            <param name="x">The x-coordinate of the given point.</param>
+            <param name="y">The y-coordinate of the given point.</param>
+        </member>
         <member name="M:IronSoftware.Drawing.CropRectangle.op_Implicit(System.Drawing.Rectangle)~IronSoftware.Drawing.CropRectangle">
             <summary>
             Implicitly casts System.Drawing.Rectangle objects to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.CropRectangle"/> as parameters and return types, you now automatically support Rectangle as well.</para>
             </summary>
-            <param name="Rectangle">System.Drawing.Rectangle will automatically be cast to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.</param>
+            <param name="rectangle">System.Drawing.Rectangle will automatically be cast to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.</param>
         </member>
         <member name="M:IronSoftware.Drawing.CropRectangle.op_Implicit(IronSoftware.Drawing.CropRectangle)~System.Drawing.Rectangle">
             <summary>
             Implicitly casts to System.Drawing.Rectangle objects from <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.CropRectangle"/> as parameters and return types, you now automatically support Rectangle as well.</para>
             </summary>
-            <param name="CropRectangle"><see cref="T:IronSoftware.Drawing.CropRectangle"/> is explicitly cast to a System.Drawing.Rectangle.</param>
+            <param name="cropRectangle"><see cref="T:IronSoftware.Drawing.CropRectangle"/> is explicitly cast to a System.Drawing.Rectangle.</param>
         </member>
         <member name="M:IronSoftware.Drawing.CropRectangle.op_Implicit(SkiaSharp.SKRect)~IronSoftware.Drawing.CropRectangle">
             <summary>
             Implicitly casts SkiaSharp.SKRect objects to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.CropRectangle"/> as parameters and return types, you now automatically support SkiaSharp.SKRect as well.</para>
             </summary>
-            <param name="SKRect">SkiaSharp.SKRect will automatically be cast to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.</param>
+            <param name="sKRect">SkiaSharp.SKRect will automatically be cast to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.</param>
         </member>
         <member name="M:IronSoftware.Drawing.CropRectangle.op_Implicit(IronSoftware.Drawing.CropRectangle)~SkiaSharp.SKRect">
             <summary>
             Implicitly casts to SkiaSharp.SKRect objects from <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.CropRectangle"/> as parameters and return types, you now automatically support SkiaSharp.SKRect as well.</para>
             </summary>
-            <param name="CropRectangle"><see cref="T:IronSoftware.Drawing.CropRectangle"/> is explicitly cast to a SkiaSharp.SKRect.</param>
+            <param name="cropRectangle"><see cref="T:IronSoftware.Drawing.CropRectangle"/> is explicitly cast to a SkiaSharp.SKRect.</param>
         </member>
         <member name="M:IronSoftware.Drawing.CropRectangle.op_Implicit(SkiaSharp.SKRectI)~IronSoftware.Drawing.CropRectangle">
             <summary>
             Implicitly casts SkiaSharp.SKRectI objects to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.CropRectangle"/> as parameters and return types, you now automatically support SkiaSharp.SKRectI as well.</para>
             </summary>
-            <param name="SKRectI">SkiaSharp.SKRectI will automatically be cast to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.</param>
+            <param name="sKRectI">SkiaSharp.SKRectI will automatically be cast to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.</param>
         </member>
         <member name="M:IronSoftware.Drawing.CropRectangle.op_Implicit(IronSoftware.Drawing.CropRectangle)~SkiaSharp.SKRectI">
             <summary>
             Implicitly casts to SkiaSharp.SKRectI objects from <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.CropRectangle"/> as parameters and return types, you now automatically support SkiaSharp.SKRectI as well.</para>
             </summary>
-            <param name="CropRectangle"><see cref="T:IronSoftware.Drawing.CropRectangle"/> is explicitly cast to a SkiaSharp.SKRectI.</param>
+            <param name="cropRectangle"><see cref="T:IronSoftware.Drawing.CropRectangle"/> is explicitly cast to a SkiaSharp.SKRectI.</param>
         </member>
         <member name="M:IronSoftware.Drawing.CropRectangle.op_Implicit(SixLabors.ImageSharp.Rectangle)~IronSoftware.Drawing.CropRectangle">
             <summary>
             Implicitly casts SixLabors.ImageSharp.Rectangle objects to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.CropRectangle"/> as parameters and return types, you now automatically support SixLabors.ImageSharp.Rectangle as well.</para>
             </summary>
-            <param name="Rectangle">SixLabors.ImageSharp.Rectangle will automatically be cast to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.</param>
+            <param name="rectangle">SixLabors.ImageSharp.Rectangle will automatically be cast to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.</param>
         </member>
         <member name="M:IronSoftware.Drawing.CropRectangle.op_Implicit(IronSoftware.Drawing.CropRectangle)~SixLabors.ImageSharp.Rectangle">
             <summary>
             Implicitly casts to SixLabors.ImageSharp.Rectangle objects from <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.CropRectangle"/> as parameters and return types, you now automatically support SixLabors.ImageSharp.Rectangle as well.</para>
             </summary>
-            <param name="CropRectangle"><see cref="T:IronSoftware.Drawing.CropRectangle"/> is explicitly cast to a SixLabors.ImageSharp.Rectangle.</param>
+            <param name="cropRectangle"><see cref="T:IronSoftware.Drawing.CropRectangle"/> is explicitly cast to a SixLabors.ImageSharp.Rectangle.</param>
         </member>
         <member name="M:IronSoftware.Drawing.CropRectangle.op_Implicit(SixLabors.ImageSharp.RectangleF)~IronSoftware.Drawing.CropRectangle">
             <summary>
             Implicitly casts SixLabors.ImageSharp.RectangleF objects to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.CropRectangle"/> as parameters and return types, you now automatically support SixLabors.ImageSharp.RectangleF as well.</para>
             </summary>
-            <param name="Rectangle">SixLabors.ImageSharp.RectangleF will automatically be cast to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.</param>
+            <param name="rectangle">SixLabors.ImageSharp.RectangleF will automatically be cast to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.</param>
         </member>
         <member name="M:IronSoftware.Drawing.CropRectangle.op_Implicit(IronSoftware.Drawing.CropRectangle)~SixLabors.ImageSharp.RectangleF">
             <summary>
             Implicitly casts to SixLabors.ImageSharp.RectangleF objects from <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.CropRectangle"/> as parameters and return types, you now automatically support SixLabors.ImageSharp.RectangleF as well.</para>
             </summary>
-            <param name="CropRectangle"><see cref="T:IronSoftware.Drawing.CropRectangle"/> is explicitly cast to a SixLabors.ImageSharp.RectangleF.</param>
+            <param name="cropRectangle"><see cref="T:IronSoftware.Drawing.CropRectangle"/> is explicitly cast to a SixLabors.ImageSharp.RectangleF.</param>
         </member>
         <member name="M:IronSoftware.Drawing.CropRectangle.op_Implicit(Microsoft.Maui.Graphics.Rect)~IronSoftware.Drawing.CropRectangle">
             <summary>
             Implicitly casts Microsoft.Maui.Graphics.Rect objects to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.CropRectangle"/> as parameters and return types, you now automatically support Microsoft.Maui.Graphics.Rect as well.</para>
             </summary>
-            <param name="Rectangle">Microsoft.Maui.Graphics.Rect will automatically be cast to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.</param>
+            <param name="rectangle">Microsoft.Maui.Graphics.Rect will automatically be cast to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.</param>
         </member>
         <member name="M:IronSoftware.Drawing.CropRectangle.op_Implicit(IronSoftware.Drawing.CropRectangle)~Microsoft.Maui.Graphics.Rect">
             <summary>
             Implicitly casts to Microsoft.Maui.Graphics.Rect objects from <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.CropRectangle"/> as parameters and return types, you now automatically support Microsoft.Maui.Graphics.Rect as well.</para>
             </summary>
-            <param name="CropRectangle"><see cref="T:IronSoftware.Drawing.CropRectangle"/> is explicitly cast to a Microsoft.Maui.Graphics.Rect.</param>
+            <param name="cropRectangle"><see cref="T:IronSoftware.Drawing.CropRectangle"/> is explicitly cast to a Microsoft.Maui.Graphics.Rect.</param>
         </member>
         <member name="M:IronSoftware.Drawing.CropRectangle.op_Implicit(Microsoft.Maui.Graphics.RectF)~IronSoftware.Drawing.CropRectangle">
             <summary>
             Implicitly casts Microsoft.Maui.Graphics.RectF objects to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.CropRectangle"/> as parameters and return types, you now automatically support Microsoft.Maui.Graphics.RectF as well.</para>
             </summary>
-            <param name="Rectangle">Microsoft.Maui.Graphics.RectF will automatically be cast to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.</param>
+            <param name="rectangle">Microsoft.Maui.Graphics.RectF will automatically be cast to <see cref="T:IronSoftware.Drawing.CropRectangle"/>.</param>
         </member>
         <member name="M:IronSoftware.Drawing.CropRectangle.op_Implicit(IronSoftware.Drawing.CropRectangle)~Microsoft.Maui.Graphics.RectF">
             <summary>
             Implicitly casts to Microsoft.Maui.Graphics.RectF objects from <see cref="T:IronSoftware.Drawing.CropRectangle"/>.
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.CropRectangle"/> as parameters and return types, you now automatically support Microsoft.Maui.Graphics.RectF as well.</para>
             </summary>
-            <param name="CropRectangle"><see cref="T:IronSoftware.Drawing.CropRectangle"/> is explicitly cast to a Microsoft.Maui.Graphics.RectF.</param>
+            <param name="cropRectangle"><see cref="T:IronSoftware.Drawing.CropRectangle"/> is explicitly cast to a Microsoft.Maui.Graphics.RectF.</param>
         </member>
         <member name="T:IronSoftware.Drawing.MeasurementUnits">
             <summary>
@@ -1915,86 +2376,90 @@
         <member name="M:IronSoftware.Drawing.Font.#ctor(System.String)">
             <summary>
             Initializes a new Font that uses the specified existing FamilyName.
+            <br/><para><b>Further Documentation:</b><br/><a href="https://ironsoftware.com/open-source/csharp/drawing/examples/create-and-cast-font/">Code Example</a></para>
             </summary>
-            <param name="FamilyName">The FontFamily of the new Font.</param>
+            <param name="familyName">The FontFamily of the new Font.</param>
         </member>
         <member name="M:IronSoftware.Drawing.Font.#ctor(System.String,IronSoftware.Drawing.FontStyle)">
             <summary>
             Initializes a new Font that uses the specified existing FamilyName and FontStyle enumeration.
+            <br/><para><b>Further Documentation:</b><br/><a href="https://ironsoftware.com/open-source/csharp/drawing/examples/create-and-cast-font/">Code Example</a></para>
             </summary>
-            <param name="FamilyName">The FontFamily of the new Font.</param>
-            <param name="Style">The FontStyle to apply to the new Font. Multiple values of the FontStyle enumeration can be combined with the OR operator.</param>
+            <param name="familyName">The FontFamily of the new Font.</param>
+            <param name="style">The FontStyle to apply to the new Font. Multiple values of the FontStyle enumeration can be combined with the OR operator.</param>
         </member>
         <member name="M:IronSoftware.Drawing.Font.#ctor(System.String,IronSoftware.Drawing.FontStyle,System.Single)">
             <summary>
             Initializes a new Font that uses the specified existing FamilyName, FontStyle enumeration, FontWeight, Bold, Italic and Size.
+            <br/><para><b>Further Documentation:</b><br/><a href="https://ironsoftware.com/open-source/csharp/drawing/examples/create-and-cast-font/">Code Example</a></para>
             </summary>
-            <param name="FamilyName">The FontFamily of the new Font.</param>
-            <param name="Style">The FontStyle to apply to the new Font. Multiple values of the FontStyle enumeration can be combined with the OR operator.</param>
-            <param name="Size">The em-size of the new font in the units specified by the unit parameter.</param>
+            <param name="familyName">The FontFamily of the new Font.</param>
+            <param name="style">The FontStyle to apply to the new Font. Multiple values of the FontStyle enumeration can be combined with the OR operator.</param>
+            <param name="size">The em-size of the new font in the units specified by the unit parameter.</param>
         </member>
         <member name="M:IronSoftware.Drawing.Font.#ctor(System.String,System.Single)">
             <summary>
             Initializes a new Font that uses the specified existing FamilyName, FontWeight, Bold, Italic and Size.
+            <br/><para><b>Further Documentation:</b><br/><a href="https://ironsoftware.com/open-source/csharp/drawing/examples/create-and-cast-font/">Code Example</a></para>
             </summary>
-            <param name="FamilyName">The FontFamily of the new Font.</param>
-            <param name="Size">The em-size of the new font in the units specified by the unit parameter.</param>
+            <param name="familyName">The FontFamily of the new Font.</param>
+            <param name="size">The em-size of the new font in the units specified by the unit parameter.</param>
         </member>
         <member name="M:IronSoftware.Drawing.Font.op_Implicit(System.Drawing.Font)~IronSoftware.Drawing.Font">
             <summary>
             Implicitly casts System.Drawing.Font objects to <see cref="T:IronSoftware.Drawing.Font"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Font"/> as parameters or return types, you now automatically support Font as well.</para>
             </summary>
-            <param name="Font">System.Drawing.Font will automatically be cast to <see cref="T:IronSoftware.Drawing.Font"/> </param>
+            <param name="font">System.Drawing.Font will automatically be cast to <see cref="T:IronSoftware.Drawing.Font"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Font.op_Implicit(IronSoftware.Drawing.Font)~System.Drawing.Font">
             <summary>
             Implicitly casts to System.Drawing.Font objects from <see cref="T:IronSoftware.Drawing.Font"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Font"/> as parameters or return types, you now automatically support Font as well.</para>
             </summary>
-            <param name="Font"><see cref="T:IronSoftware.Drawing.Font"/> is explicitly cast to a System.Drawing.Font </param>
+            <param name="font"><see cref="T:IronSoftware.Drawing.Font"/> is explicitly cast to a System.Drawing.Font </param>
         </member>
         <member name="M:IronSoftware.Drawing.Font.op_Implicit(SixLabors.Fonts.Font)~IronSoftware.Drawing.Font">
             <summary>
             Implicitly casts SixLabors.Fonts.Font objects to <see cref="T:IronSoftware.Drawing.Font"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Font"/> as parameters or return types, you now automatically support Font as well.</para>
             </summary>
-            <param name="Font">SixLabors.Fonts.Font will automatically be cast to <see cref="T:IronSoftware.Drawing.Font"/> </param>
+            <param name="font">SixLabors.Fonts.Font will automatically be cast to <see cref="T:IronSoftware.Drawing.Font"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Font.op_Implicit(IronSoftware.Drawing.Font)~SixLabors.Fonts.Font">
             <summary>
             Implicitly casts to SixLabors.Fonts.Font objects from <see cref="T:IronSoftware.Drawing.Font"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Font"/> as parameters or return types, you now automatically support Font as well.</para>
             </summary>
-            <param name="Font"><see cref="T:IronSoftware.Drawing.Font"/> is explicitly cast to a SixLabors.Fonts.Font </param>
+            <param name="font"><see cref="T:IronSoftware.Drawing.Font"/> is explicitly cast to a SixLabors.Fonts.Font </param>
         </member>
         <member name="M:IronSoftware.Drawing.Font.op_Implicit(SkiaSharp.SKFont)~IronSoftware.Drawing.Font">
             <summary>
             Implicitly casts SkiaSharp.SKFont objects to <see cref="T:IronSoftware.Drawing.Font"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Font"/> as parameters or return types, you now automatically support Font as well.</para>
             </summary>
-            <param name="Font">SkiaSharp.SKFont will automatically be cast to <see cref="T:IronSoftware.Drawing.Font"/> </param>
+            <param name="font">SkiaSharp.SKFont will automatically be cast to <see cref="T:IronSoftware.Drawing.Font"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Font.op_Implicit(IronSoftware.Drawing.Font)~SkiaSharp.SKFont">
             <summary>
             Implicitly casts to System.Drawing.Font objects from <see cref="T:IronSoftware.Drawing.Font"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Font"/> as parameters or return types, you now automatically support Font as well.</para>
             </summary>
-            <param name="Font"><see cref="T:IronSoftware.Drawing.Font"/> is explicitly cast to a SkiaSharp.SKFont </param>
+            <param name="font"><see cref="T:IronSoftware.Drawing.Font"/> is explicitly cast to a SkiaSharp.SKFont </param>
         </member>
         <member name="M:IronSoftware.Drawing.Font.op_Implicit(Microsoft.Maui.Graphics.Font)~IronSoftware.Drawing.Font">
             <summary>
             Implicitly casts Microsoft.Maui.Graphics.Font objects to <see cref="T:IronSoftware.Drawing.Font"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Font"/> as parameters or return types, you now automatically support Font as well.</para>
             </summary>
-            <param name="Font">Microsoft.Maui.Graphics.Font will automatically be cast to <see cref="T:IronSoftware.Drawing.Font"/> </param>
+            <param name="font">Microsoft.Maui.Graphics.Font will automatically be cast to <see cref="T:IronSoftware.Drawing.Font"/> </param>
         </member>
         <member name="M:IronSoftware.Drawing.Font.op_Implicit(IronSoftware.Drawing.Font)~Microsoft.Maui.Graphics.Font">
             <summary>
             Implicitly casts to Microsoft.Maui.Graphics.Font objects from <see cref="T:IronSoftware.Drawing.Font"/>.  
             <para>When your .NET Class methods use <see cref="T:IronSoftware.Drawing.Font"/> as parameters or return types, you now automatically support Font as well.</para>
             </summary>
-            <param name="Font"><see cref="T:IronSoftware.Drawing.Font"/> is explicitly cast to a Microsoft.Maui.Graphics.Font </param>
+            <param name="font"><see cref="T:IronSoftware.Drawing.Font"/> is explicitly cast to a Microsoft.Maui.Graphics.Font </param>
         </member>
         <member name="T:IronSoftware.Drawing.FontStyle">
             <summary>
@@ -2025,6 +2490,177 @@
             <summary>
             Text with a line through the middle.
             </summary>
+        </member>
+        <member name="T:IronSoftware.Drawing.Point">
+            <summary>
+            Represents an ordered pair of double x- and y-coordinates that defines a point in a two-dimensional plane.
+            </summary>
+        </member>
+        <member name="P:IronSoftware.Drawing.Point.X">
+            <summary>
+            Gets or sets the x-coordinate of this <see cref="T:IronSoftware.Drawing.Point"/>.
+            </summary>
+        </member>
+        <member name="P:IronSoftware.Drawing.Point.Y">
+            <summary>
+            Gets or sets the y-coordinate of this <see cref="T:IronSoftware.Drawing.Point"/>.
+            </summary>
+        </member>
+        <member name="M:IronSoftware.Drawing.Point.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IronSoftware.Drawing.Point"/> struct with the specified coordinates.
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:IronSoftware.Drawing.Point.Offset(System.Double,System.Double)">
+            <summary>
+            Translates this <see cref="T:IronSoftware.Drawing.Point"/> by the specified amount.
+            </summary>
+            <param name="dx">The amount to offset the x-coordinate.</param>
+            <param name="dy">The amount to offset the y-coordinate.</param>
+        </member>
+        <member name="M:IronSoftware.Drawing.Point.op_Implicit(SixLabors.ImageSharp.Point)~IronSoftware.Drawing.Point">
+            <summary>
+            Implicitly casts SixLabors.ImageSharp.Point objects to Point
+            </summary>
+            <param name="point">System.Drawing.Point will automatically be cast to <see cref="T:IronSoftware.Drawing.Point"/> </param>
+        </member>
+        <member name="M:IronSoftware.Drawing.Point.op_Implicit(IronSoftware.Drawing.Point)~SixLabors.ImageSharp.Point">
+            <summary>
+            Implicitly casts Point objects to SixLabors.ImageSharp.Point
+            </summary>
+            <remarks>SixLabors.ImageSharp.Point only uses int instead of double for X and Y. Decimals will be removed.</remarks>
+            <param name="point">Point will automatically be cast to SixLabors.ImageSharp.Point</param>
+        </member>
+        <member name="M:IronSoftware.Drawing.Point.op_Implicit(System.Drawing.Point)~IronSoftware.Drawing.Point">
+            <summary>
+            Implicitly casts System.Drawing.Point objects to <see cref="T:IronSoftware.Drawing.Point"/>.
+            </summary>
+            <param name="point">System.Drawing.Point will automatically be cast to <see cref="T:IronSoftware.Drawing.Point"/> </param>
+        </member>
+        <member name="M:IronSoftware.Drawing.Point.op_Implicit(IronSoftware.Drawing.Point)~System.Drawing.Point">
+            <summary>
+            Implicitly casts Point objects to System.Drawing.Point
+            </summary>
+            <remarks>System.Drawing.Point only uses int instead of double for X and Y. Decimals will be removed.</remarks>
+            <param name="point">Point will automatically be cast to System.Drawing.Point</param>
+        </member>
+        <member name="M:IronSoftware.Drawing.Point.op_Implicit(Microsoft.Maui.Graphics.Point)~IronSoftware.Drawing.Point">
+            <summary>
+            Implicitly casts Microsoft.Maui.Graphics.Point objects to <see cref="T:IronSoftware.Drawing.Point"/>.
+            </summary>
+            <param name="point">Microsoft.Maui.Graphics.Point will automatically be cast to <see cref="T:IronSoftware.Drawing.Point"/> </param>
+        </member>
+        <member name="M:IronSoftware.Drawing.Point.op_Implicit(IronSoftware.Drawing.Point)~Microsoft.Maui.Graphics.Point">
+            <summary>
+            Implicitly casts Point objects to Microsoft.Maui.Graphics.Point
+            </summary>
+            <param name="point">Point will automatically be cast to Microsoft.Maui.Graphics.Point</param>
+        </member>
+        <member name="M:IronSoftware.Drawing.Point.op_Implicit(SkiaSharp.SKPointI)~IronSoftware.Drawing.Point">
+            <summary>
+            Implicitly casts SkiaSharp.SKPointI objects to <see cref="T:IronSoftware.Drawing.Point"/>.
+            </summary>
+            <param name="point">SkiaSharp.SKPointI will automatically be cast to <see cref="T:IronSoftware.Drawing.Point"/> </param>
+        </member>
+        <member name="M:IronSoftware.Drawing.Point.op_Implicit(IronSoftware.Drawing.Point)~SkiaSharp.SKPointI">
+            <summary>
+            Implicitly casts Point objects to SkiaSharp.SKPointI
+            </summary>
+            <remarks>SkiaSharp.SKPointI only uses int instead of double for X and Y. Decimals will be removed.</remarks>
+            <param name="point">Point will automatically be cast to SkiaSharp.SKPointI</param>
+        </member>
+        <member name="M:IronSoftware.Drawing.Point.Equals(System.Object)">
+            <summary>
+            Specifies whether this <see cref="T:IronSoftware.Drawing.Point"/> instance contains the same coordinates as another <see cref="T:IronSoftware.Drawing.Point"/>.
+            </summary>
+            <param name="obj">The point to test for equality.</param>
+            <returns>true if other has the same coordinates as this point instance.</returns>
+        </member>
+        <member name="M:IronSoftware.Drawing.Point.GetHashCode">
+            <summary>
+            Hashing integer based on image raw binary data.
+            </summary>
+            <returns>Int</returns>
+        </member>
+        <member name="T:IronSoftware.Drawing.PointF">
+            <summary>
+            Represents an ordered pair of integer x- and y-coordinates that defines a point in a two-dimensional plane.
+            </summary>
+        </member>
+        <member name="P:IronSoftware.Drawing.PointF.X">
+            <summary>
+            Gets or sets the x-coordinate of this <see cref="T:IronSoftware.Drawing.PointF"/>.
+            </summary>
+        </member>
+        <member name="P:IronSoftware.Drawing.PointF.Y">
+            <summary>
+            Gets or sets the y-coordinate of this <see cref="T:IronSoftware.Drawing.PointF"/>.
+            </summary>
+        </member>
+        <member name="M:IronSoftware.Drawing.PointF.#ctor(System.Single,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IronSoftware.Drawing.PointF"/> struct with the specified coordinates.
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:IronSoftware.Drawing.PointF.Offset(System.Single,System.Single)">
+            <summary>
+            Translates this <see cref="T:IronSoftware.Drawing.PointF"/> by the specified amount.
+            </summary>
+            <param name="dx">The amount to offset the x-coordinate.</param>
+            <param name="dy">The amount to offset the y-coordinate.</param>
+        </member>
+        <member name="M:IronSoftware.Drawing.PointF.op_Implicit(SixLabors.ImageSharp.PointF)~IronSoftware.Drawing.PointF">
+            <summary>
+            Implicitly casts SixLabors.ImageSharp.PointF objects to PointF
+            </summary>
+            <param name="point">SixLabors.ImageSharp.PointF will automatically be cast to PointF</param>
+        </member>
+        <member name="M:IronSoftware.Drawing.PointF.op_Implicit(IronSoftware.Drawing.PointF)~SixLabors.ImageSharp.PointF">
+            <summary>
+            Implicitly casts a PointF object to SixLabors.ImageSharp.PointF
+            </summary>
+            <param name="point">PointF will automatically be cast to SixLabors.ImageSharp.PointF</param>
+        </member>
+        <member name="M:IronSoftware.Drawing.PointF.op_Implicit(Microsoft.Maui.Graphics.PointF)~IronSoftware.Drawing.PointF">
+            <summary>
+            Implicitly casts Microsoft.Maui.Graphics.Point objects to PointF
+            </summary>
+            <param name="point">Microsoft.Maui.Graphics.Point will automatically be cast to PointF</param>
+        </member>
+        <member name="M:IronSoftware.Drawing.PointF.op_Implicit(IronSoftware.Drawing.PointF)~Microsoft.Maui.Graphics.PointF">
+            <summary>
+            Implicitly casts PointF objects to Microsoft.Maui.Graphics.Point
+            </summary>
+            <param name="point">PointF will automatically be cast to Microsoft.Maui.Graphics.Point</param>
+        </member>
+        <member name="M:IronSoftware.Drawing.PointF.op_Implicit(SkiaSharp.SKPoint)~IronSoftware.Drawing.PointF">
+            <summary>
+            Implicitly casts SkiaSharp.SKPoint objects to PointF
+            </summary>
+            <param name="point">SkiaSharp.SKPoint will automatically be cast to PointF</param>
+        </member>
+        <member name="M:IronSoftware.Drawing.PointF.op_Implicit(IronSoftware.Drawing.PointF)~SkiaSharp.SKPoint">
+            <summary>
+            Implicitly casts PointF objects to SkiaSharp.SKPoint
+            </summary>
+            <param name="point">PointF will automatically be cast to SkiaSharp.SKPoint</param>
+        </member>
+        <member name="M:IronSoftware.Drawing.PointF.Equals(System.Object)">
+            <summary>
+            Specifies whether this <see cref="T:IronSoftware.Drawing.PointF"/> instance contains the same coordinates as another <see cref="T:IronSoftware.Drawing.PointF"/>.
+            </summary>
+            <param name="obj">The point to test for equality.</param>
+            <returns>true if other has the same coordinates as this point instance.</returns>
+        </member>
+        <member name="M:IronSoftware.Drawing.PointF.GetHashCode">
+            <summary>
+            Hashing integer based on image raw binary data.
+            </summary>
+            <returns>Int</returns>
         </member>
     </members>
 </doc>

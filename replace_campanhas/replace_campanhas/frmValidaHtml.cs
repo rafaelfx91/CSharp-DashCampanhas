@@ -1,21 +1,21 @@
-﻿using HtmlAgilityPack;
-using IronXL;
-using SixLabors.ImageSharp.Drawing;
+﻿//using HtmlAgilityPack;
+//using IronXL;
+//using SixLabors.ImageSharp.Drawing;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+//using System.Collections.Generic;
+//using System.ComponentModel;
+//using System.Data;
+//using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Net;
-using System.Security.Claims;
-using System.Security.Policy;
-using System.Text;
+//using System.Linq;
+//using System.Net;
+//using System.Security.Claims;
+//using System.Security.Policy;
+//using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
+//using System.Xml;
 
 namespace replace_campanhas
 {
