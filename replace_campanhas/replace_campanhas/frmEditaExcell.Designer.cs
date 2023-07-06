@@ -40,12 +40,13 @@
             this.txtListaDeCampanhas = new System.Windows.Forms.TextBox();
             this.lblListaCampanhas = new System.Windows.Forms.Label();
             this.btnTeste = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnLimpar
             // 
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(116, 435);
+            this.btnLimpar.Location = new System.Drawing.Point(116, 504);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(98, 43);
             this.btnLimpar.TabIndex = 49;
@@ -56,7 +57,7 @@
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(220, 435);
+            this.btnSair.Location = new System.Drawing.Point(220, 504);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(98, 43);
             this.btnSair.TabIndex = 48;
@@ -67,7 +68,7 @@
             // btnGerar
             // 
             this.btnGerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerar.Location = new System.Drawing.Point(12, 435);
+            this.btnGerar.Location = new System.Drawing.Point(12, 504);
             this.btnGerar.Name = "btnGerar";
             this.btnGerar.Size = new System.Drawing.Size(98, 43);
             this.btnGerar.TabIndex = 47;
@@ -145,7 +146,7 @@
             this.txtListaDeCampanhas.Location = new System.Drawing.Point(12, 98);
             this.txtListaDeCampanhas.Multiline = true;
             this.txtListaDeCampanhas.Name = "txtListaDeCampanhas";
-            this.txtListaDeCampanhas.Size = new System.Drawing.Size(306, 331);
+            this.txtListaDeCampanhas.Size = new System.Drawing.Size(776, 191);
             this.txtListaDeCampanhas.TabIndex = 56;
             // 
             // lblListaCampanhas
@@ -161,7 +162,7 @@
             // btnTeste
             // 
             this.btnTeste.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTeste.Location = new System.Drawing.Point(690, 424);
+            this.btnTeste.Location = new System.Drawing.Point(690, 504);
             this.btnTeste.Name = "btnTeste";
             this.btnTeste.Size = new System.Drawing.Size(98, 43);
             this.btnTeste.TabIndex = 58;
@@ -169,11 +170,22 @@
             this.btnTeste.UseVisualStyleBackColor = true;
             this.btnTeste.Click += new System.EventHandler(this.btnTeste_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(15, 292);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 20);
+            this.label1.TabIndex = 59;
+            this.label1.Text = "Caminho do arquivo";
+            // 
             // frmEditaExcell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 559);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTeste);
             this.Controls.Add(this.lblListaCampanhas);
             this.Controls.Add(this.txtListaDeCampanhas);
@@ -207,5 +219,6 @@
         private System.Windows.Forms.TextBox txtListaDeCampanhas;
         private System.Windows.Forms.Label lblListaCampanhas;
         private System.Windows.Forms.Button btnTeste;
+        private System.Windows.Forms.Label label1;
     }
 }

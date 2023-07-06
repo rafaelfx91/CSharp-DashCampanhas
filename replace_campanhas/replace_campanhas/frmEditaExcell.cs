@@ -41,11 +41,7 @@ namespace replace_campanhas
         //O - INTERERVALODE EXECUÇÂO (VAZIO)*
         //P - TEMPO MAXIMO (VAZIO)*
         //Q - Observação ( Triger)
-        //
-        public void adcicionaLinha()
-        {
 
-        }
 
         public string tipoCampanha(string nomeCampanha)
         {
@@ -71,7 +67,7 @@ namespace replace_campanhas
 
             WorkBook workBook = WorkBook.Load(txtCaminhoArquivo.Text);
             WorkSheet workSheet = workBook.WorkSheets[1];
-            WorkSheet firstSheet = workBook.DefaultWorkSheet;
+            //WorkSheet firstSheet = workBook.DefaultWorkSheet;
 
             string[] colunaA = { "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11", "A12", "A13", "A14", "A15", "A16", "A7", "A18", "A19", "A20", "A21", "A22", "A23", "A24", "A25", "A26", "A27", "A28", "A29", "A30", "A31", "A32", "A33", "A34", "A35", "A36", "A37", "A38", "A39", "A40", "A41", "A4", "A43", "A44", "A45", "A46", "A47", "A48", "A49", "A50", "A51", "A52", "A53", "A54", "A55", "A56", "A57", "A58", "A59", "A60", "A61", "A62", "A63", "A64", "A65", "A66", "A67", "A68", "A69", "A70", "A71", "A72", "A73" };
             string[] colunaB = { "B4", "B5", "B6", "B7", "B8", "B9", "B10", "B11", "B12", "B13", "B14", "B15", "B16", "B7", "B18", "B19", "B20", "B21", "B22", "B23", "B24", "B25", "B26", "B27", "B28", "B29", "B30", "B31", "B32", "B33", "B34", "B35", "B36", "B37", "B38", "B39", "B40", "B41", "B4", "B43", "B44", "B45", "B46", "B47", "B48", "B49", "B50", "B51", "B52", "B53", "B54", "B55", "B56", "B57", "B58", "B59", "B60", "B61", "B62", "B63", "B64", "B65", "B66", "B67", "B68", "B69", "B70", "B71", "B72", "B73" };
@@ -104,47 +100,63 @@ namespace replace_campanhas
 
                 if (rdrAgendamento.Checked)
                 {
-
+                    workSheet[colunaA[i]].Value = partes[0];
+                    workSheet[colunaB[i]].Value = partes[1];
+                    workSheet[colunaC[i]].Value = "CAMPANHA";
+                    workSheet[colunaD[i]].Value = "";//Vazio
+                    workSheet[colunaE[i]].Value = "INCLUSÃO";
+                    workSheet[colunaF[i]].Value = "Inclusão no schedule";
+                    workSheet[colunaG[i]].Value = "Campanha comum";
+                    workSheet[colunaH[i]].Value = "";//Vazio
+                    workSheet[colunaI[i]].Value = tipoCampanha(partes[0]);//sms push 
+                    workSheet[colunaJ[i]].Value = "";//Segunda a sexta
+                    workSheet[colunaK[i]].Value = "";
+                    workSheet[colunaL[i]].Value = "";
+                    workSheet[colunaM[i]].Value = "";
+                    workSheet[colunaN[i]].Value = "";
+                    workSheet[colunaO[i]].Value = "";
+                    workSheet[colunaP[i]].Value = "";
+                    workSheet[colunaQ[i]].Value = "";
                 }
                 if (rdrCancelamento.Checked)
                 {
                     workSheet[colunaA[i]].Value = partes[0];
                     workSheet[colunaB[i]].Value = partes[1];
                     workSheet[colunaC[i]].Value = "CAMPANHA";
-                    workSheet[colunaD[i]].Value = "";
+                    workSheet[colunaD[i]].Value = "";//Vazio
                     workSheet[colunaE[i]].Value = "DELETAR";
                     workSheet[colunaF[i]].Value = "Exclusao do schedule";
                     workSheet[colunaG[i]].Value = "Campanha comum";
-                    workSheet[colunaH[i]].Value = "";
+                    workSheet[colunaH[i]].Value = "";//Vazio
                     workSheet[colunaI[i]].Value = tipoCampanha(partes[0]);//sms push 
-                    workSheet[colunaJ[i]].Value = "";
-                    workSheet[colunaK[i]].Value = "";
-                    workSheet[colunaL[i]].Value = "";
-                    workSheet[colunaM[i]].Value = "";
-                    workSheet[colunaN[i]].Value = "";
-                    workSheet[colunaO[i]].Value = "";
-                    workSheet[colunaP[i]].Value = "";
-                    workSheet[colunaQ[i]].Value = "";
+                    workSheet[colunaJ[i]].Value = "";//Vazio
+                    workSheet[colunaK[i]].Value = "";//Vazio
+                    workSheet[colunaL[i]].Value = "";//Vazio
+                    workSheet[colunaM[i]].Value = "";//Vazio
+                    workSheet[colunaN[i]].Value = "";//Vazio
+                    workSheet[colunaO[i]].Value = "";//Vazio
+                    workSheet[colunaP[i]].Value = "";//Vazio
+                    workSheet[colunaQ[i]].Value = "";//Vazio
                 }
                 if (rdrPausa.Checked)
                 {
                     workSheet[colunaA[i]].Value = partes[0];
                     workSheet[colunaB[i]].Value = partes[1];
                     workSheet[colunaC[i]].Value = "CAMPANHA";
-                    workSheet[colunaD[i]].Value = "";
+                    workSheet[colunaD[i]].Value = "";//Vazio
                     workSheet[colunaE[i]].Value = "PAUSA";
-                    workSheet[colunaF[i]].Value = "Exclusao do schedule";
+                    workSheet[colunaF[i]].Value = "Pausa no schedule";
                     workSheet[colunaG[i]].Value = "Campanha comum";
-                    workSheet[colunaH[i]].Value = "";
+                    workSheet[colunaH[i]].Value = "";//Vazio
                     workSheet[colunaI[i]].Value = tipoCampanha(partes[0]);//sms push 
-                    workSheet[colunaJ[i]].Value = "";
-                    workSheet[colunaK[i]].Value = "";
-                    workSheet[colunaL[i]].Value = "";
-                    workSheet[colunaM[i]].Value = "";
-                    workSheet[colunaN[i]].Value = "";
-                    workSheet[colunaO[i]].Value = "";
-                    workSheet[colunaP[i]].Value = "";
-                    workSheet[colunaQ[i]].Value = "";
+                    workSheet[colunaJ[i]].Value = "";//Vazio
+                    workSheet[colunaK[i]].Value = "";//Vazio
+                    workSheet[colunaL[i]].Value = "";//Vazio
+                    workSheet[colunaM[i]].Value = "";//Vazio
+                    workSheet[colunaN[i]].Value = "";//Vazio
+                    workSheet[colunaO[i]].Value = "";//Vazio
+                    workSheet[colunaP[i]].Value = "";//Vazio
+                    workSheet[colunaQ[i]].Value = "";//Vazio
                 }
             }
 
@@ -161,6 +173,7 @@ namespace replace_campanhas
                 MessageBox.Show("Salvo");
             }
 
+            workBook.Close();
 
         }
         private void btnLimpar_Click(object sender, EventArgs e)
