@@ -267,7 +267,7 @@
             // txtAmx
             // 
             this.txtAmx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmx.Location = new System.Drawing.Point(26, 75);
+            this.txtAmx.Location = new System.Drawing.Point(26, 70);
             this.txtAmx.Name = "txtAmx";
             this.txtAmx.ReadOnly = true;
             this.txtAmx.Size = new System.Drawing.Size(195, 22);
@@ -277,7 +277,7 @@
             // 
             this.rdrOSAMX.AutoSize = true;
             this.rdrOSAMX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdrOSAMX.Location = new System.Drawing.Point(6, 79);
+            this.rdrOSAMX.Location = new System.Drawing.Point(6, 74);
             this.rdrOSAMX.Name = "rdrOSAMX";
             this.rdrOSAMX.Size = new System.Drawing.Size(14, 13);
             this.rdrOSAMX.TabIndex = 50;
@@ -312,7 +312,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 427);
+            this.ClientSize = new System.Drawing.Size(800, 414);
             this.Controls.Add(this.gbObservacoesTriger);
             this.Controls.Add(this.gbHorario);
             this.Controls.Add(this.gbAgendamento);

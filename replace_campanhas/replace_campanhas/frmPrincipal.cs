@@ -25,7 +25,7 @@ namespace replace_campanhas
         private const string MutexName = "PlusoftDash";
         private Mutex mutex;
         private FuncoesDeveloper fd;
-        private const bool debugVisual = false;
+        private const bool debugVisual = true;
 
         [DllImport("user32.dll")]
         private static extern bool SetForegroundWindow(IntPtr hWnd);
@@ -54,10 +54,14 @@ namespace replace_campanhas
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            lblVersion.Text = "Versão: V2.23E Alfa";
-            
-            desabilitaForms();
+            //lblVersion.Text = "Versão: V2.23E Alfa";
+            if (debugVisual)
+                lblVersion.Text = "Versão: DEBUG";
+            else
+                lblVersion.Text = "Versão: V2.23E Alfa";
 
+
+            desabilitaForms();
             if (VerificaProgramaEmExecucao())
             {
                 //MessageBox.Show("Programa já está em execução.");

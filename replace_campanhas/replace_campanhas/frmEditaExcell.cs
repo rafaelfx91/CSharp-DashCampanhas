@@ -22,7 +22,6 @@ namespace replace_campanhas
             InitializeComponent();
         }
 
-
         //Estrutura do excell
         //A - nome do job
         //B - amx
@@ -41,7 +40,6 @@ namespace replace_campanhas
         //O - INTERERVALODE EXECUÇÂO (VAZIO)*
         //P - TEMPO MAXIMO (VAZIO)*
         //Q - Observação ( Triger)
-
 
         public string tipoCampanha(string nomeCampanha)
         {
@@ -129,8 +127,6 @@ namespace replace_campanhas
             string[] colunaP = { "P4", "P5", "P6", "P7", "P8", "P9", "P10", "P11", "P12", "P13", "P14", "P15", "P16", "P7", "P18", "P19", "P20", "P21", "P22", "P23", "P24", "P25", "P26", "P27", "P28", "P29", "P30", "P31", "P32", "P33", "P34", "P35", "P36", "P37", "P38", "P39", "P40", "P41", "P4", "P43", "P44", "P45", "P46", "P47", "P48", "P49", "P50", "P51", "P52", "P53", "P54", "P55", "P56", "P57", "P58", "P59", "P60", "P61", "P62", "P63", "P64", "P65", "P66", "P67", "P68", "P69", "P70", "P71", "P72", "P73" };
             string[] colunaQ = { "Q4", "Q5", "Q6", "Q7", "Q8", "Q9", "Q10", "Q11", "Q12", "Q13", "Q14", "Q15", "Q16", "Q7", "Q18", "Q19", "Q20", "Q21", "Q22", "Q23", "Q24", "Q25", "Q26", "Q27", "Q28", "Q29", "Q30", "Q31", "Q32", "Q33", "Q34", "Q35", "Q36", "Q37", "Q38", "Q39", "Q40", "Q41", "Q4", "Q43", "Q44", "Q45", "Q46", "Q47", "Q48", "Q49", "Q50", "Q51", "Q52", "Q53", "Q54", "Q55", "Q56", "Q57", "Q58", "Q59", "Q60", "Q61", "Q62", "Q63", "Q64", "Q65", "Q66", "Q67", "Q68", "Q69", "Q70", "Q71", "Q72", "Q73" };
 
-
-
             for (int i = 0; i < listaCampanhas.Count(); i++)
             {
                 string[] partes = listaCampanhas[i].Split(' ');
@@ -208,11 +204,12 @@ namespace replace_campanhas
             saveFileDialog.Title = "Salvar Arquivo";
             saveFileDialog.Filter = "Excel|*.xlsx|" +
                                 "Todos os arquivos|*.*";
+
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 caminhoSalvar = saveFileDialog.FileName;
                 workBook.SaveAs(caminhoSalvar);
-                MessageBox.Show("Salvo");
+                MessageBox.Show("Arquivo salvo","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Hand);
             }
 
             workBook.Close();
