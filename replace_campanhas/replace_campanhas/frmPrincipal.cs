@@ -25,7 +25,7 @@ namespace replace_campanhas
         private const string MutexName = "PlusoftDash";
         private Mutex mutex;
         private FuncoesDeveloper fd;
-        private const bool debugVisual = true;
+        private const bool debugVisual = false;
 
         [DllImport("user32.dll")]
         private static extern bool SetForegroundWindow(IntPtr hWnd);
@@ -49,7 +49,7 @@ namespace replace_campanhas
             {
                 fd = new FuncoesDeveloper(args);
             }
-            //MessageBox.Show(args[0]);
+
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -72,48 +72,58 @@ namespace replace_campanhas
                 mutex = new Mutex(true, MutexName);
         }
 
-        public void teste()
-        {
-            var nome = Environment.MachineName;
-            var nomeCompleto = Dns.GetHostEntry(nome).HostName;
-            MessageBox.Show(nome);
-            MessageBox.Show(nomeCompleto);
-        }
-
         public void desabilitaForms()
         {
             //if (fd.validaConfigsDev2())
             if (fd.validaConfigsDev3())
             {
                 agendamentoEmailJIRAToolStripMenuItem.Visible = true;
-                checklistToolStripMenuItem.Visible = true;
-                aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = true;
-                testarLinksToolStripMenuItem.Visible = true;
+                //checklistToolStripMenuItem.Visible = true;
+                //aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = true;
+                //testarLinksToolStripMenuItem.Visible = true;
                 //envioDeEmailToolStripMenuItem.Visible = true;
-                testeToolStripMenuItem.Visible = true;
+                //testeToolStripMenuItem.Visible = true;
                 emailDeDiagramaToolStripMenuItem.Visible = true;
                 encriptadorToolStripMenuItem.Visible = true;
                 envioDeEmailToolStripMenuItem.Visible = true;
-                geradorDeExcellStripMenuItem.Visible = true;
+                //geradorDeExcellStripMenuItem.Visible = true;
             }
             else
             {
                 agendamentoEmailJIRAToolStripMenuItem.Visible = false;
-                checklistToolStripMenuItem.Visible = false;
-                aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = false;
-                testarLinksToolStripMenuItem.Visible = false;
+                //checklistToolStripMenuItem.Visible = false;
+                //aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = false;
+                //testarLinksToolStripMenuItem.Visible = false;
                 //envioDeEmailToolStripMenuItem.Visible = false;
-                testeToolStripMenuItem.Visible = false;
+                //testeToolStripMenuItem.Visible = false;
                 emailDeDiagramaToolStripMenuItem.Visible = false;
                 encriptadorToolStripMenuItem.Visible = false;
-                envioDeEmailToolStripMenuItem.Visible = false;
-                geradorDeExcellStripMenuItem.Visible = false;
+                //envioDeEmailToolStripMenuItem.Visible = false;
+                //geradorDeExcellStripMenuItem.Visible = false;
             }
 
             if (fd.validaSenhaCrypt2())
                 encriptadorToolStripMenuItem.Visible = true;
             else
                 encriptadorToolStripMenuItem.Visible = false;
+
+            if (debugVisual)
+            {
+                geradorDeExcellStripMenuItem.Visible = true;
+                testarLinksToolStripMenuItem.Visible = true;
+                envioDeEmailToolStripMenuItem.Visible = true;
+                aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = true;
+                checklistToolStripMenuItem.Visible = true;
+            }
+            else
+            {
+                geradorDeExcellStripMenuItem.Visible = false;
+                testarLinksToolStripMenuItem.Visible = false;
+                envioDeEmailToolStripMenuItem.Visible = false; 
+                aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = false;
+                checklistToolStripMenuItem.Visible = false;
+
+            }
 
 
         }
