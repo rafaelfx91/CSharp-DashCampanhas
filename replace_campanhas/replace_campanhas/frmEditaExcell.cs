@@ -55,6 +55,35 @@ namespace replace_campanhas
             return "";
         }
 
+        public string diasDaSemana()
+        {
+            if (chkSegundaSexta.Checked)
+                return "Segunda a sexta";
+            if (chkSegundaSexta.Checked)
+                return "Segunda a sabado";
+
+            return "Segunda a sexta";
+        }
+
+        public string horarioExecucao()
+        {
+            if (chkDiasDeSemanaNove.Checked)
+                return "09:00 as 21:00";            
+            if (chkSabadosQuinza.Checked)
+                return "09:00 as 15:00";
+
+            return "09:00 as 21:00";
+        }
+
+        public void txtAmxRead()
+        {
+
+            if (rdrOSAMX.Checked)
+                txtAmx.ReadOnly = false;
+            else
+                txtAmx.ReadOnly = true;
+        }
+
 
         private void btnGerar_Click(object sender, EventArgs e)
         {
@@ -109,13 +138,13 @@ namespace replace_campanhas
                     workSheet[colunaG[i]].Value = "Campanha comum";
                     workSheet[colunaH[i]].Value = "";//Vazio
                     workSheet[colunaI[i]].Value = tipoCampanha(partes[0]);//sms push 
-                    workSheet[colunaJ[i]].Value = "";//Segunda a sexta
-                    workSheet[colunaK[i]].Value = "";
-                    workSheet[colunaL[i]].Value = "";
-                    workSheet[colunaM[i]].Value = "";
-                    workSheet[colunaN[i]].Value = "";
-                    workSheet[colunaO[i]].Value = "";
-                    workSheet[colunaP[i]].Value = "";
+                    workSheet[colunaJ[i]].Value = diasDaSemana();//Segunda a sexta
+                    workSheet[colunaK[i]].Value = diasDaSemana();
+                    workSheet[colunaL[i]].Value = "";//Vazio
+                    workSheet[colunaM[i]].Value = "*";
+                    workSheet[colunaN[i]].Value = horarioExecucao();
+                    workSheet[colunaO[i]].Value = "";//Vazio
+                    workSheet[colunaP[i]].Value = "";//Vazio
                     workSheet[colunaQ[i]].Value = "";
                 }
                 if (rdrCancelamento.Checked)
@@ -267,5 +296,8 @@ namespace replace_campanhas
             //    MessageBox.Show("Salvou");
 
         }
-    }
+
+
+
+    }//fim
 }
