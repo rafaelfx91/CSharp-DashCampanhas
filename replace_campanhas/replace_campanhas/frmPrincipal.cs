@@ -25,6 +25,7 @@ namespace replace_campanhas
         private const string MutexName = "PlusoftDash";
         private Mutex mutex;
         private FuncoesDeveloper fd;
+        private const bool debugVisual = false;
 
         [DllImport("user32.dll")]
         private static extern bool SetForegroundWindow(IntPtr hWnd);
@@ -39,9 +40,15 @@ namespace replace_campanhas
         {
             InitializeComponent();
             this.MinimumSize = new Size(870, 700);
-            string [] args2 = { "-devS", "-cryptS123" };//dev
-            fd = new FuncoesDeveloper(args2);//dev
-            //fd = new FuncoesDeveloper(args);
+            if (debugVisual)
+            {
+                string [] args2 = { "-devS", "-cryptS123" };//dev
+                fd = new FuncoesDeveloper(args2);//dev
+            }
+            else
+            {
+                fd = new FuncoesDeveloper(args);
+            }
             //MessageBox.Show(args[0]);
         }
 

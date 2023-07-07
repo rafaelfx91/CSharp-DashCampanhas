@@ -84,6 +84,19 @@ namespace replace_campanhas
                 txtAmx.ReadOnly = true;
         }
 
+        public string trigger()
+        {
+            //GATILHO: APÓS A ATUALIZAÇÃO DA TABELA TB_CLAROPAY_CORRENTISTAS
+            if (rdrTBClaropayCorrentista.Checked)
+                return "GATILHO: APÓS A ATUALIZAÇÃO DA TABELA TB_CLAROPAY_CORRENTISTAS";            
+            if (rdrTBPlataformaSas.Checked)
+                return "GATILHO: APÓS A ATUALIZAÇÃO DA TABELA TB_PLATAFORMA_SAS";            
+            if (rdrOSAMX.Checked)
+                return "GATILHO: APÓS A EXECUÇÃO DA OS "+txtAmx.Text;
+
+            return "";
+        }
+
 
         private void btnGerar_Click(object sender, EventArgs e)
         {
@@ -145,7 +158,7 @@ namespace replace_campanhas
                     workSheet[colunaN[i]].Value = horarioExecucao();
                     workSheet[colunaO[i]].Value = "";//Vazio
                     workSheet[colunaP[i]].Value = "";//Vazio
-                    workSheet[colunaQ[i]].Value = "";
+                    workSheet[colunaQ[i]].Value = trigger();
                 }
                 if (rdrCancelamento.Checked)
                 {
@@ -205,17 +218,24 @@ namespace replace_campanhas
             workBook.Close();
 
         }
+
         private void btnLimpar_Click(object sender, EventArgs e)
         {
+            txtCaminhoArquivo.Clear();
+            txtListaDeCampanhas.Clear();
+            txtAmx.Clear();
         }
+        
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        
         private void frmEditaExcell_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
         }
+        
         private void btnAbrir_Click(object sender, EventArgs e)
         {
             txtCaminhoArquivo.Text = "";
@@ -297,7 +317,10 @@ namespace replace_campanhas
 
         }
 
-
+        private void rdrOSAMX_CheckedChanged(object sender, EventArgs e)
+        {
+            txtAmxRead();
+        }
 
     }//fim
 }

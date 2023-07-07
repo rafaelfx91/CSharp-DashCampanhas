@@ -282,6 +282,7 @@
             this.rdrOSAMX.Size = new System.Drawing.Size(14, 13);
             this.rdrOSAMX.TabIndex = 50;
             this.rdrOSAMX.UseVisualStyleBackColor = true;
+            this.rdrOSAMX.CheckedChanged += new System.EventHandler(this.rdrOSAMX_CheckedChanged);
             // 
             // rdrTBPlataformaSas
             // 
