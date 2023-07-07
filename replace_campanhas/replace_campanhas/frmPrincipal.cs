@@ -74,39 +74,28 @@ namespace replace_campanhas
 
         public void desabilitaForms()
         {
-            //if (fd.validaConfigsDev2())
+            // parametro -devS habilitado
             if (fd.validaConfigsDev3())
             {
                 agendamentoEmailJIRAToolStripMenuItem.Visible = true;
-                //checklistToolStripMenuItem.Visible = true;
-                //aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = true;
-                //testarLinksToolStripMenuItem.Visible = true;
-                //envioDeEmailToolStripMenuItem.Visible = true;
-                //testeToolStripMenuItem.Visible = true;
                 emailDeDiagramaToolStripMenuItem.Visible = true;
                 encriptadorToolStripMenuItem.Visible = true;
                 envioDeEmailToolStripMenuItem.Visible = true;
-                //geradorDeExcellStripMenuItem.Visible = true;
             }
             else
             {
                 agendamentoEmailJIRAToolStripMenuItem.Visible = false;
-                //checklistToolStripMenuItem.Visible = false;
-                //aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = false;
-                //testarLinksToolStripMenuItem.Visible = false;
-                //envioDeEmailToolStripMenuItem.Visible = false;
-                //testeToolStripMenuItem.Visible = false;
                 emailDeDiagramaToolStripMenuItem.Visible = false;
                 encriptadorToolStripMenuItem.Visible = false;
-                //envioDeEmailToolStripMenuItem.Visible = false;
-                //geradorDeExcellStripMenuItem.Visible = false;
             }
 
+            //parametro -cryptS habilitado
             if (fd.validaSenhaCrypt2())
                 encriptadorToolStripMenuItem.Visible = true;
             else
                 encriptadorToolStripMenuItem.Visible = false;
 
+            //sem parametro apenas se rodar no visual studio
             if (debugVisual)
             {
                 geradorDeExcellStripMenuItem.Visible = true;
