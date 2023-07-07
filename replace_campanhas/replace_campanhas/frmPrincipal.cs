@@ -81,12 +81,14 @@ namespace replace_campanhas
                 emailDeDiagramaToolStripMenuItem.Visible = true;
                 encriptadorToolStripMenuItem.Visible = true;
                 envioDeEmailToolStripMenuItem.Visible = true;
+                gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
             }
             else
             {
                 agendamentoEmailJIRAToolStripMenuItem.Visible = false;
                 emailDeDiagramaToolStripMenuItem.Visible = false;
                 encriptadorToolStripMenuItem.Visible = false;
+                gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
             }
 
             //parametro -cryptS habilitado
@@ -422,8 +424,20 @@ namespace replace_campanhas
 
         }
 
-
-
-    }
+        private void gerarNomeNoSASV2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmNomeCampanhasV2")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmNomeCampanhasV2 novoFormFilho = new frmNomeCampanhasV2();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
+    }//fim
 }
 

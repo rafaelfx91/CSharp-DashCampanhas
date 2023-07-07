@@ -53,6 +53,7 @@
             this.envioDeEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gerarNomeNoSASV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,6 +86,7 @@
             // 
             this.sASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gerarNomeNoSASToolStripMenuItem,
+            this.gerarNomeNoSASV2ToolStripMenuItem,
             this.agendamentoCampanhasJIRAToolStripMenuItem,
             this.aGENDAMENTOCAMPANHASToolStripMenuItem,
             this.agendamentoEmailJIRAToolStripMenuItem,
@@ -259,6 +261,14 @@
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
+            // gerarNomeNoSASV2ToolStripMenuItem
+            // 
+            this.gerarNomeNoSASV2ToolStripMenuItem.Name = "gerarNomeNoSASV2ToolStripMenuItem";
+            this.gerarNomeNoSASV2ToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.gerarNomeNoSASV2ToolStripMenuItem.Text = "Gerar nome no SAS V2";
+            this.gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
+            this.gerarNomeNoSASV2ToolStripMenuItem.Click += new System.EventHandler(this.gerarNomeNoSASV2ToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,6 +318,7 @@
         private System.Windows.Forms.ToolStripMenuItem emailDeDiagramaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem encriptadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem geradorDeExcellStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gerarNomeNoSASV2ToolStripMenuItem;
     }
 }
 
