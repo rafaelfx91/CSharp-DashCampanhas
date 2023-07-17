@@ -103,3 +103,4 @@ C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_
 C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmEnvioDeEmail.resources
 C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmEditaExcell.resources
 C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmNomeCampanhasV2.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmRemoveEspacamento.resources

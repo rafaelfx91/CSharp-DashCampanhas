@@ -25,6 +25,7 @@ namespace replace_campanhas
         private const string MutexName = "PlusoftDash";
         private Mutex mutex;
         private FuncoesDeveloper fd;
+        //private const bool debugVisual = true;
         private const bool debugVisual = false;
 
         [DllImport("user32.dll")]
@@ -58,7 +59,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V2.23E Alfa";
+                lblVersion.Text = "Versão: V2.24T Alfa";
 
 
             desabilitaForms();
@@ -82,6 +83,7 @@ namespace replace_campanhas
                 encriptadorToolStripMenuItem.Visible = true;
                 envioDeEmailToolStripMenuItem.Visible = true;
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
+                textoEmUmaLinhaToolStripMenuItem.Visible = true;
             }
             else
             {
@@ -89,6 +91,7 @@ namespace replace_campanhas
                 emailDeDiagramaToolStripMenuItem.Visible = false;
                 encriptadorToolStripMenuItem.Visible = false;
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
+                textoEmUmaLinhaToolStripMenuItem.Visible = false;
             }
 
             //parametro -cryptS habilitado
@@ -102,6 +105,7 @@ namespace replace_campanhas
             {
                 geradorDeExcellStripMenuItem.Visible = true;
                 testarLinksToolStripMenuItem.Visible = true;
+                testeToolStripMenuItem.Visible = true;
                 envioDeEmailToolStripMenuItem.Visible = true;
                 aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = true;
                 checklistToolStripMenuItem.Visible = true;
@@ -113,6 +117,7 @@ namespace replace_campanhas
                 envioDeEmailToolStripMenuItem.Visible = false; 
                 aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = false;
                 checklistToolStripMenuItem.Visible = false;
+                testeToolStripMenuItem.Visible = false;
 
             }
 
@@ -391,14 +396,11 @@ namespace replace_campanhas
         {
             try
             {
-                //var caminho = "C:\\Users\\rafae\\OneDrive\\Área de Trabalho\\Claro\\Agendamento_claro\\teste.xlsx";
-                //WorkBook workBook = WorkBook.Load(caminho);
-                //WorkSheet workSheet = workBook.WorkSheets[1];
-                //WorkSheet firstSheet = workBook.DefaultWorkSheet;
-                //var cellValue = workSheet["A4"].StringValue;
-                //MessageBox.Show(cellValue);
-                //workSheet["A4"].Value = "TESTE";
-                //workBook.SaveAs("sample.xlsx");
+
+                //this.BackColor = Color.Black;
+                menuStrip1.BackColor = Color.Black;
+
+
 
             }
             catch (Exception ex)
@@ -438,6 +440,25 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
+
+        private void textoEmUmaLinhaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmRemoveEspacamento")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmRemoveEspacamento novoFormFilho = new frmRemoveEspacamento();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
+
+
+
+
     }//fim
 }
 

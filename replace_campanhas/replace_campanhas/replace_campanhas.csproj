@@ -301,6 +301,12 @@
     <Compile Include="frmNomeCampanhas.Designer.cs">
       <DependentUpon>frmNomeCampanhas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRemoveEspacamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRemoveEspacamento.Designer.cs">
+      <DependentUpon>frmRemoveEspacamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmValidaFrasePushV2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -374,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNomeCampanhas.resx">
       <DependentUpon>frmNomeCampanhas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRemoveEspacamento.resx">
+      <DependentUpon>frmRemoveEspacamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmValidaFrasePushV2.resx">
       <DependentUpon>frmValidaFrasePushV2.cs</DependentUpon>

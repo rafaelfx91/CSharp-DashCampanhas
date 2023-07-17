@@ -33,6 +33,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerarNomeNoSASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gerarNomeNoSASV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendamentoCampanhasJIRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aGENDAMENTOCAMPANHASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendamentoEmailJIRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +54,7 @@
             this.envioDeEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gerarNomeNoSASV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textoEmUmaLinhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,6 +104,14 @@
             this.gerarNomeNoSASToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
             this.gerarNomeNoSASToolStripMenuItem.Text = "Gerar nome no SAS";
             this.gerarNomeNoSASToolStripMenuItem.Click += new System.EventHandler(this.gerarNomeNoSASToolStripMenuItem_Click);
+            // 
+            // gerarNomeNoSASV2ToolStripMenuItem
+            // 
+            this.gerarNomeNoSASV2ToolStripMenuItem.Name = "gerarNomeNoSASV2ToolStripMenuItem";
+            this.gerarNomeNoSASV2ToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.gerarNomeNoSASV2ToolStripMenuItem.Text = "Gerar nome no SAS V2";
+            this.gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
+            this.gerarNomeNoSASV2ToolStripMenuItem.Click += new System.EventHandler(this.gerarNomeNoSASV2ToolStripMenuItem_Click);
             // 
             // agendamentoCampanhasJIRAToolStripMenuItem
             // 
@@ -218,7 +227,8 @@
             this.geradorDeSenhasToolStripMenuItem,
             this.encriptadorToolStripMenuItem,
             this.envioDeEmailToolStripMenuItem,
-            this.testeToolStripMenuItem});
+            this.testeToolStripMenuItem,
+            this.textoEmUmaLinhaToolStripMenuItem});
             this.fERRAMENTASToolStripMenuItem.Name = "fERRAMENTASToolStripMenuItem";
             this.fERRAMENTASToolStripMenuItem.Size = new System.Drawing.Size(221, 41);
             this.fERRAMENTASToolStripMenuItem.Text = "FERRAMENTAS";
@@ -261,18 +271,19 @@
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
-            // gerarNomeNoSASV2ToolStripMenuItem
+            // textoEmUmaLinhaToolStripMenuItem
             // 
-            this.gerarNomeNoSASV2ToolStripMenuItem.Name = "gerarNomeNoSASV2ToolStripMenuItem";
-            this.gerarNomeNoSASV2ToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
-            this.gerarNomeNoSASV2ToolStripMenuItem.Text = "Gerar nome no SAS V2";
-            this.gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
-            this.gerarNomeNoSASV2ToolStripMenuItem.Click += new System.EventHandler(this.gerarNomeNoSASV2ToolStripMenuItem_Click);
+            this.textoEmUmaLinhaToolStripMenuItem.Name = "textoEmUmaLinhaToolStripMenuItem";
+            this.textoEmUmaLinhaToolStripMenuItem.Size = new System.Drawing.Size(414, 42);
+            this.textoEmUmaLinhaToolStripMenuItem.Text = "Texto em uma linha";
+            this.textoEmUmaLinhaToolStripMenuItem.Visible = false;
+            this.textoEmUmaLinhaToolStripMenuItem.Click += new System.EventHandler(this.textoEmUmaLinhaToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::replace_campanhas.Properties.Resources.plusoft;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(854, 661);
@@ -319,6 +330,7 @@
         private System.Windows.Forms.ToolStripMenuItem encriptadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem geradorDeExcellStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerarNomeNoSASV2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem textoEmUmaLinhaToolStripMenuItem;
     }
 }
 
