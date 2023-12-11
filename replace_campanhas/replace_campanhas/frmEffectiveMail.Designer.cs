@@ -39,6 +39,8 @@
             // 
             // txtCaminhoArquivo
             // 
+            this.txtCaminhoArquivo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCaminhoArquivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCaminhoArquivo.Location = new System.Drawing.Point(12, 57);
             this.txtCaminhoArquivo.Name = "txtCaminhoArquivo";
@@ -50,7 +52,6 @@
             // 
             // btnAbrir
             // 
-            this.btnAbrir.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAbrir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbrir.Location = new System.Drawing.Point(12, 12);
             this.btnAbrir.Name = "btnAbrir";
@@ -62,7 +63,7 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLimpar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.Location = new System.Drawing.Point(441, 12);
             this.btnLimpar.Name = "btnLimpar";
@@ -74,7 +75,7 @@
             // 
             // btnSair
             // 
-            this.btnSair.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.Location = new System.Drawing.Point(568, 12);
             this.btnSair.Name = "btnSair";
@@ -97,7 +98,6 @@
             // 
             // cbTemas
             // 
-            this.cbTemas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbTemas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTemas.FormattingEnabled = true;
             this.cbTemas.Items.AddRange(new object[] {
@@ -110,7 +110,6 @@
             // 
             // lblTema
             // 
-            this.lblTema.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTema.AutoSize = true;
             this.lblTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblTema.Location = new System.Drawing.Point(134, 22);
