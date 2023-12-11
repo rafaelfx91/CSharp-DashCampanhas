@@ -20,6 +20,9 @@ namespace replace_campanhas
         private void frmEffectiveMail_Load(object sender, EventArgs e)
         {
             btnLimpar.Enabled = false;
+            wbPecaEmail.Navigate(txtCaminhoArquivo.Text);
+            wbPecaEmail.DocumentCompleted += WebBrowser1_DocumentCompleted;
+
         }
 
         private void btnAbrir_Click(object sender, EventArgs e)
