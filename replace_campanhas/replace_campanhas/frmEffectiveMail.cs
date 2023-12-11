@@ -31,11 +31,16 @@ namespace replace_campanhas
             btnLimpar.Enabled = false;
             btnLimpar.Visible= false;   
 
-            cbTemas.Text = "Tema 1 escuro";
+            cbTemas.Text = "1";
             //cbTemas.Enabled= false;
 
+            
+
             if (fd.validaConfigsDev3())
-                txtCaminhoArquivo.ReadOnly = false;   
+            {
+                txtCaminhoArquivo.ReadOnly = false;
+                txtCaminhoArquivo.Visible = true;
+            }
             
             wbPecaEmail.Navigate(txtCaminhoArquivo.Text);
             wbPecaEmail.DocumentCompleted += WebBrowser1_DocumentCompleted;

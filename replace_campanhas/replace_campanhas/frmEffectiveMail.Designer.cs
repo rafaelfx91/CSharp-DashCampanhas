@@ -34,22 +34,25 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.wbPecaEmail = new System.Windows.Forms.WebBrowser();
             this.cbTemas = new System.Windows.Forms.ComboBox();
+            this.lblTema = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtCaminhoArquivo
             // 
             this.txtCaminhoArquivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCaminhoArquivo.Location = new System.Drawing.Point(12, 4);
+            this.txtCaminhoArquivo.Location = new System.Drawing.Point(12, 57);
             this.txtCaminhoArquivo.Name = "txtCaminhoArquivo";
             this.txtCaminhoArquivo.ReadOnly = true;
             this.txtCaminhoArquivo.Size = new System.Drawing.Size(683, 26);
             this.txtCaminhoArquivo.TabIndex = 41;
             this.txtCaminhoArquivo.Text = "https://minhaclaro.dtmmkt.com.br/gerenciamento/login.aspx";
+            this.txtCaminhoArquivo.Visible = false;
             // 
             // btnAbrir
             // 
+            this.btnAbrir.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAbrir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbrir.Location = new System.Drawing.Point(12, 36);
+            this.btnAbrir.Location = new System.Drawing.Point(12, 12);
             this.btnAbrir.Name = "btnAbrir";
             this.btnAbrir.Size = new System.Drawing.Size(121, 43);
             this.btnAbrir.TabIndex = 40;
@@ -59,8 +62,9 @@
             // 
             // btnLimpar
             // 
+            this.btnLimpar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(139, 36);
+            this.btnLimpar.Location = new System.Drawing.Point(441, 12);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(121, 43);
             this.btnLimpar.TabIndex = 39;
@@ -70,8 +74,9 @@
             // 
             // btnSair
             // 
+            this.btnSair.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(574, 36);
+            this.btnSair.Location = new System.Drawing.Point(568, 12);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(121, 43);
             this.btnSair.TabIndex = 38;
@@ -84,29 +89,42 @@
             this.wbPecaEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.wbPecaEmail.Location = new System.Drawing.Point(12, 85);
+            this.wbPecaEmail.Location = new System.Drawing.Point(12, 89);
             this.wbPecaEmail.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbPecaEmail.Name = "wbPecaEmail";
-            this.wbPecaEmail.Size = new System.Drawing.Size(677, 535);
+            this.wbPecaEmail.Size = new System.Drawing.Size(677, 531);
             this.wbPecaEmail.TabIndex = 37;
             // 
             // cbTemas
             // 
-            this.cbTemas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.cbTemas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbTemas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTemas.FormattingEnabled = true;
             this.cbTemas.Items.AddRange(new object[] {
-            "Tema 1 escuro",
-            "Tema 2 original"});
-            this.cbTemas.Location = new System.Drawing.Point(447, 46);
+            "1",
+            "2"});
+            this.cbTemas.Location = new System.Drawing.Point(230, 19);
             this.cbTemas.Name = "cbTemas";
-            this.cbTemas.Size = new System.Drawing.Size(121, 28);
+            this.cbTemas.Size = new System.Drawing.Size(58, 32);
             this.cbTemas.TabIndex = 42;
+            // 
+            // lblTema
+            // 
+            this.lblTema.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTema.AutoSize = true;
+            this.lblTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblTema.Location = new System.Drawing.Point(134, 22);
+            this.lblTema.Name = "lblTema";
+            this.lblTema.Size = new System.Drawing.Size(96, 24);
+            this.lblTema.TabIndex = 43;
+            this.lblTema.Text = "Interface:";
             // 
             // frmEffectiveMail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 632);
+            this.Controls.Add(this.lblTema);
             this.Controls.Add(this.cbTemas);
             this.Controls.Add(this.txtCaminhoArquivo);
             this.Controls.Add(this.btnAbrir);
@@ -129,5 +147,6 @@
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.WebBrowser wbPecaEmail;
         private System.Windows.Forms.ComboBox cbTemas;
+        private System.Windows.Forms.Label lblTema;
     }
 }
