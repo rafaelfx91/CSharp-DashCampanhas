@@ -28,6 +28,10 @@ namespace replace_campanhas
         //private const bool debugVisual = true;
         private const bool debugVisual = false;
 
+        /*
+         replace_campanhas.exe -devS -crypt123 -emUUSUSARIO -emSSENHA
+         */
+
         [DllImport("user32.dll")]
         private static extern bool SetForegroundWindow(IntPtr hWnd);
 
@@ -43,7 +47,7 @@ namespace replace_campanhas
             this.MinimumSize = new Size(870, 700);
             if (debugVisual)
             {
-                string [] args2 = { "-devS", "-cryptS123" };//dev
+                string [] args2 = { "-devS", "-cryptS123", "-emUuserEM" ,"-emSsenhaEM" };//dev
                 fd = new FuncoesDeveloper(args2);//dev
             }
             else
@@ -59,7 +63,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V2.25EM Alfa";
+                lblVersion.Text = "Versão: V2.26EM Alfa";
 
 
             desabilitaForms();
@@ -471,7 +475,7 @@ namespace replace_campanhas
                     return;
                 }
             }
-            frmEffectiveMail novoFormFilho = new frmEffectiveMail();
+            frmEffectiveMail novoFormFilho = new frmEffectiveMail(fd);
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
 

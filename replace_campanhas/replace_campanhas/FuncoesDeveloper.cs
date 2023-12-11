@@ -14,6 +14,8 @@ namespace replace_campanhas
         private bool developer = false;
         private bool crypt = false;
         private string cryptSenha = "";
+        private string effectiveMailUser = "";
+        private string effectiveMailSenha = "";
 
         //-devS
         //-cryptS123
@@ -37,21 +39,26 @@ namespace replace_campanhas
 
                 if (args[i] == "-devS")
                     developer = true; 
+
                 if (args[i].Contains("-cryptS"))
                 {
                    cryptSenha = args[i].Replace("-cryptS","");
                    crypt = true;
                 }
 
-                    
+                if (args[i].Contains("-emU"))
+                    effectiveMailUser = args[i].Replace("-emU", ""); 
                 
-            }
+                if (args[i].Contains("-emS"))
+                    effectiveMailSenha = args[i].Replace("-emS", "");
 
 
 
 
-            
-        }
+
+            }//for (
+
+        }//verificaArgumentos
 
         public bool validaConfigsDev(string nomePC)
         {
@@ -105,6 +112,24 @@ namespace replace_campanhas
             //MessageBox.Show(nome);
             //MessageBox.Show(nomeCompleto);
         }
+
+        public string getEffectveEmailUsers(int tipo)
+        {
+            switch (tipo)
+            {
+                case 0:
+                    return effectiveMailUser;
+                    //break;
+                case 1:
+                    return effectiveMailSenha;
+                    //break;
+                default:
+                    return "";
+                    //break;
+            }
+
+        }//getEffectveEmailUsers
+
 
     }
 

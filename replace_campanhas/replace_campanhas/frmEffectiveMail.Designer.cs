@@ -33,6 +33,7 @@
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.wbPecaEmail = new System.Windows.Forms.WebBrowser();
+            this.cbTemas = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtCaminhoArquivo
@@ -52,19 +53,20 @@
             this.btnAbrir.Name = "btnAbrir";
             this.btnAbrir.Size = new System.Drawing.Size(121, 43);
             this.btnAbrir.TabIndex = 40;
-            this.btnAbrir.Text = "Abrir";
+            this.btnAbrir.Text = "Carregar";
             this.btnAbrir.UseVisualStyleBackColor = true;
             this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
             // btnLimpar
             // 
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(442, 36);
+            this.btnLimpar.Location = new System.Drawing.Point(139, 36);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(121, 43);
             this.btnLimpar.TabIndex = 39;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnSair
             // 
@@ -88,11 +90,24 @@
             this.wbPecaEmail.Size = new System.Drawing.Size(677, 535);
             this.wbPecaEmail.TabIndex = 37;
             // 
+            // cbTemas
+            // 
+            this.cbTemas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.cbTemas.FormattingEnabled = true;
+            this.cbTemas.Items.AddRange(new object[] {
+            "Tema 1 escuro",
+            "Tema 2 original"});
+            this.cbTemas.Location = new System.Drawing.Point(447, 46);
+            this.cbTemas.Name = "cbTemas";
+            this.cbTemas.Size = new System.Drawing.Size(121, 28);
+            this.cbTemas.TabIndex = 42;
+            // 
             // frmEffectiveMail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 632);
+            this.Controls.Add(this.cbTemas);
             this.Controls.Add(this.txtCaminhoArquivo);
             this.Controls.Add(this.btnAbrir);
             this.Controls.Add(this.btnLimpar);
@@ -113,5 +128,6 @@
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.WebBrowser wbPecaEmail;
+        private System.Windows.Forms.ComboBox cbTemas;
     }
 }
