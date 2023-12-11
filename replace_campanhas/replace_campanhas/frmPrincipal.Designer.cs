@@ -53,8 +53,9 @@
             this.encriptadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.envioDeEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textoEmUmaLinhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.effectiveMailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -201,7 +202,8 @@
             // 
             this.hTMLToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.validarHtmlToolStripMenuItem,
-            this.testarLinksToolStripMenuItem});
+            this.testarLinksToolStripMenuItem,
+            this.effectiveMailToolStripMenuItem});
             this.hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
             this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(106, 41);
             this.hTMLToolStripMenuItem.Text = "HTML";
@@ -264,13 +266,6 @@
             this.testeToolStripMenuItem.Visible = false;
             this.testeToolStripMenuItem.Click += new System.EventHandler(this.testeToolStripMenuItem_Click);
             // 
-            // sAIRToolStripMenuItem
-            // 
-            this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
-            this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(90, 41);
-            this.sAIRToolStripMenuItem.Text = "SAIR";
-            this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
-            // 
             // textoEmUmaLinhaToolStripMenuItem
             // 
             this.textoEmUmaLinhaToolStripMenuItem.Name = "textoEmUmaLinhaToolStripMenuItem";
@@ -278,6 +273,20 @@
             this.textoEmUmaLinhaToolStripMenuItem.Text = "Texto em uma linha";
             this.textoEmUmaLinhaToolStripMenuItem.Visible = false;
             this.textoEmUmaLinhaToolStripMenuItem.Click += new System.EventHandler(this.textoEmUmaLinhaToolStripMenuItem_Click);
+            // 
+            // sAIRToolStripMenuItem
+            // 
+            this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
+            this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(90, 41);
+            this.sAIRToolStripMenuItem.Text = "SAIR";
+            this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
+            // 
+            // effectiveMailToolStripMenuItem
+            // 
+            this.effectiveMailToolStripMenuItem.Name = "effectiveMailToolStripMenuItem";
+            this.effectiveMailToolStripMenuItem.Size = new System.Drawing.Size(299, 42);
+            this.effectiveMailToolStripMenuItem.Text = "Effective Mail";
+            this.effectiveMailToolStripMenuItem.Click += new System.EventHandler(this.effectiveMailToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -295,7 +304,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Campanhas";
+            this.Text = "                         ";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -331,6 +340,7 @@
         private System.Windows.Forms.ToolStripMenuItem geradorDeExcellStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerarNomeNoSASV2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem textoEmUmaLinhaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem effectiveMailToolStripMenuItem;
     }
 }
 

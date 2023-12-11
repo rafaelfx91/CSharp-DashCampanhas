@@ -40,12 +40,6 @@ namespace replace_campanhas
 
 
 
-
-
-
-
-
-
         private void btnGerar_Click(object sender, EventArgs e)
         {
             txtFraseSaida.Clear();

@@ -59,7 +59,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V2.24T Alfa";
+                lblVersion.Text = "Versão: V2.25EM Alfa";
 
 
             desabilitaForms();
@@ -164,12 +164,7 @@ namespace replace_campanhas
         //MENU NOME CAMPANHA
        
         
-        
-        
-        
-        
-        
-        
+
         private void gerarNomeNoSASToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
@@ -397,8 +392,17 @@ namespace replace_campanhas
             try
             {
 
-                //this.BackColor = Color.Black;
-                menuStrip1.BackColor = Color.Black;
+                foreach (Form form in this.MdiChildren)
+                {
+                    if (form.Name == "frmTeste")
+                    {
+                        form.Activate();
+                        return;
+                    }
+                }
+                frmTeste novoFormFilho = new frmTeste();
+                novoFormFilho.MdiParent = this;
+                novoFormFilho.Show();
 
 
 
@@ -456,9 +460,23 @@ namespace replace_campanhas
             novoFormFilho.Show();
         }
 
+        private void effectiveMailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmEffectiveMail")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmEffectiveMail novoFormFilho = new frmEffectiveMail();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
 
 
-
+        }
     }//fim
 }
 
