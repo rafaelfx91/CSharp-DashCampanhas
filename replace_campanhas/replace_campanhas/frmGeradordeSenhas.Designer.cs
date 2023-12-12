@@ -56,7 +56,7 @@
             this.txtSenha.Margin = new System.Windows.Forms.Padding(5);
             this.txtSenha.Multiline = true;
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(679, 158);
+            this.txtSenha.Size = new System.Drawing.Size(643, 158);
             this.txtSenha.TabIndex = 47;
             // 
             // label3
@@ -161,8 +161,9 @@
             this.txtCaracteresespeciais.Location = new System.Drawing.Point(335, 122);
             this.txtCaracteresespeciais.Margin = new System.Windows.Forms.Padding(5);
             this.txtCaracteresespeciais.Name = "txtCaracteresespeciais";
-            this.txtCaracteresespeciais.Size = new System.Drawing.Size(358, 26);
+            this.txtCaracteresespeciais.Size = new System.Drawing.Size(322, 26);
             this.txtCaracteresespeciais.TabIndex = 37;
+            this.txtCaracteresespeciais.Text = "!@#$%&";
             // 
             // chkLetrasmaiusculas
             // 
@@ -183,7 +184,7 @@
             this.txtLetrasmaiusculas.Margin = new System.Windows.Forms.Padding(5);
             this.txtLetrasmaiusculas.Name = "txtLetrasmaiusculas";
             this.txtLetrasmaiusculas.ReadOnly = true;
-            this.txtLetrasmaiusculas.Size = new System.Drawing.Size(358, 26);
+            this.txtLetrasmaiusculas.Size = new System.Drawing.Size(322, 26);
             this.txtLetrasmaiusculas.TabIndex = 35;
             this.txtLetrasmaiusculas.Text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             // 
@@ -270,7 +271,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 452);
+            this.ClientSize = new System.Drawing.Size(671, 452);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnGerar);

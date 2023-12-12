@@ -35,10 +35,8 @@
             this.gerarNomeNoSASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerarNomeNoSASV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendamentoCampanhasJIRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aGENDAMENTOCAMPANHASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendamentoEmailJIRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emailDeDiagramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checklistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.geradorDeExcellStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validarFraseSMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,22 +45,20 @@
             this.claroPayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hTMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validarHtmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.testarLinksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.effectiveMailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fERRAMENTASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.geradorDeSenhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.encriptadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.envioDeEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textoEmUmaLinhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.effectiveMailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblVersion
             // 
             this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(700, 0);
+            this.lblVersion.Location = new System.Drawing.Point(702, 9);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(45, 13);
             this.lblVersion.TabIndex = 11;
@@ -90,10 +86,8 @@
             this.gerarNomeNoSASToolStripMenuItem,
             this.gerarNomeNoSASV2ToolStripMenuItem,
             this.agendamentoCampanhasJIRAToolStripMenuItem,
-            this.aGENDAMENTOCAMPANHASToolStripMenuItem,
             this.agendamentoEmailJIRAToolStripMenuItem,
             this.emailDeDiagramaToolStripMenuItem,
-            this.checklistToolStripMenuItem,
             this.geradorDeExcellStripMenuItem});
             this.sASToolStripMenuItem.Name = "sASToolStripMenuItem";
             this.sASToolStripMenuItem.Size = new System.Drawing.Size(78, 41);
@@ -121,14 +115,6 @@
             this.agendamentoCampanhasJIRAToolStripMenuItem.Text = "Agendamento campanhas (JIRA)";
             this.agendamentoCampanhasJIRAToolStripMenuItem.Click += new System.EventHandler(this.agendamentoCampanhasJIRAToolStripMenuItem_Click);
             // 
-            // aGENDAMENTOCAMPANHASToolStripMenuItem
-            // 
-            this.aGENDAMENTOCAMPANHASToolStripMenuItem.Name = "aGENDAMENTOCAMPANHASToolStripMenuItem";
-            this.aGENDAMENTOCAMPANHASToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
-            this.aGENDAMENTOCAMPANHASToolStripMenuItem.Text = "Agendamento campanhas (OLD)";
-            this.aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = false;
-            this.aGENDAMENTOCAMPANHASToolStripMenuItem.Click += new System.EventHandler(this.aGENDAMENTOCAMPANHASToolStripMenuItem_Click);
-            // 
             // agendamentoEmailJIRAToolStripMenuItem
             // 
             this.agendamentoEmailJIRAToolStripMenuItem.Name = "agendamentoEmailJIRAToolStripMenuItem";
@@ -144,14 +130,6 @@
             this.emailDeDiagramaToolStripMenuItem.Text = "Envio de diagrama (CP)";
             this.emailDeDiagramaToolStripMenuItem.Visible = false;
             this.emailDeDiagramaToolStripMenuItem.Click += new System.EventHandler(this.emailDeDiagramaToolStripMenuItem_Click);
-            // 
-            // checklistToolStripMenuItem
-            // 
-            this.checklistToolStripMenuItem.Name = "checklistToolStripMenuItem";
-            this.checklistToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
-            this.checklistToolStripMenuItem.Text = "Checklist (CP)";
-            this.checklistToolStripMenuItem.Visible = false;
-            this.checklistToolStripMenuItem.Click += new System.EventHandler(this.checklistToolStripMenuItem_Click);
             // 
             // geradorDeExcellStripMenuItem
             // 
@@ -202,7 +180,6 @@
             // 
             this.hTMLToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.validarHtmlToolStripMenuItem,
-            this.testarLinksToolStripMenuItem,
             this.effectiveMailToolStripMenuItem});
             this.hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
             this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(106, 41);
@@ -211,24 +188,22 @@
             // validarHtmlToolStripMenuItem
             // 
             this.validarHtmlToolStripMenuItem.Name = "validarHtmlToolStripMenuItem";
-            this.validarHtmlToolStripMenuItem.Size = new System.Drawing.Size(299, 42);
+            this.validarHtmlToolStripMenuItem.Size = new System.Drawing.Size(269, 42);
             this.validarHtmlToolStripMenuItem.Text = "Validar html";
             this.validarHtmlToolStripMenuItem.Click += new System.EventHandler(this.validarHtmlToolStripMenuItem_Click);
             // 
-            // testarLinksToolStripMenuItem
+            // effectiveMailToolStripMenuItem
             // 
-            this.testarLinksToolStripMenuItem.Name = "testarLinksToolStripMenuItem";
-            this.testarLinksToolStripMenuItem.Size = new System.Drawing.Size(299, 42);
-            this.testarLinksToolStripMenuItem.Text = "Testar links (CP)";
-            this.testarLinksToolStripMenuItem.Visible = false;
-            this.testarLinksToolStripMenuItem.Click += new System.EventHandler(this.testarLinksToolStripMenuItem_Click);
+            this.effectiveMailToolStripMenuItem.Name = "effectiveMailToolStripMenuItem";
+            this.effectiveMailToolStripMenuItem.Size = new System.Drawing.Size(269, 42);
+            this.effectiveMailToolStripMenuItem.Text = "Effective Mail";
+            this.effectiveMailToolStripMenuItem.Click += new System.EventHandler(this.effectiveMailToolStripMenuItem_Click);
             // 
             // fERRAMENTASToolStripMenuItem
             // 
             this.fERRAMENTASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.geradorDeSenhasToolStripMenuItem,
             this.encriptadorToolStripMenuItem,
-            this.envioDeEmailToolStripMenuItem,
             this.testeToolStripMenuItem,
             this.textoEmUmaLinhaToolStripMenuItem});
             this.fERRAMENTASToolStripMenuItem.Name = "fERRAMENTASToolStripMenuItem";
@@ -238,30 +213,22 @@
             // geradorDeSenhasToolStripMenuItem
             // 
             this.geradorDeSenhasToolStripMenuItem.Name = "geradorDeSenhasToolStripMenuItem";
-            this.geradorDeSenhasToolStripMenuItem.Size = new System.Drawing.Size(414, 42);
+            this.geradorDeSenhasToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
             this.geradorDeSenhasToolStripMenuItem.Text = "Gerar senhas";
             this.geradorDeSenhasToolStripMenuItem.Click += new System.EventHandler(this.geradorDeSenhasToolStripMenuItem_Click);
             // 
             // encriptadorToolStripMenuItem
             // 
             this.encriptadorToolStripMenuItem.Name = "encriptadorToolStripMenuItem";
-            this.encriptadorToolStripMenuItem.Size = new System.Drawing.Size(414, 42);
+            this.encriptadorToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
             this.encriptadorToolStripMenuItem.Text = "Encriptador 256Bits";
             this.encriptadorToolStripMenuItem.Visible = false;
             this.encriptadorToolStripMenuItem.Click += new System.EventHandler(this.encriptadorToolStripMenuItem_Click);
             // 
-            // envioDeEmailToolStripMenuItem
-            // 
-            this.envioDeEmailToolStripMenuItem.Name = "envioDeEmailToolStripMenuItem";
-            this.envioDeEmailToolStripMenuItem.Size = new System.Drawing.Size(414, 42);
-            this.envioDeEmailToolStripMenuItem.Text = "Envio de email (CP)(DEV)";
-            this.envioDeEmailToolStripMenuItem.Visible = false;
-            this.envioDeEmailToolStripMenuItem.Click += new System.EventHandler(this.envioDeEmailToolStripMenuItem_Click);
-            // 
             // testeToolStripMenuItem
             // 
             this.testeToolStripMenuItem.Name = "testeToolStripMenuItem";
-            this.testeToolStripMenuItem.Size = new System.Drawing.Size(414, 42);
+            this.testeToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
             this.testeToolStripMenuItem.Text = "TESTE";
             this.testeToolStripMenuItem.Visible = false;
             this.testeToolStripMenuItem.Click += new System.EventHandler(this.testeToolStripMenuItem_Click);
@@ -269,7 +236,7 @@
             // textoEmUmaLinhaToolStripMenuItem
             // 
             this.textoEmUmaLinhaToolStripMenuItem.Name = "textoEmUmaLinhaToolStripMenuItem";
-            this.textoEmUmaLinhaToolStripMenuItem.Size = new System.Drawing.Size(414, 42);
+            this.textoEmUmaLinhaToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
             this.textoEmUmaLinhaToolStripMenuItem.Text = "Texto em uma linha";
             this.textoEmUmaLinhaToolStripMenuItem.Visible = false;
             this.textoEmUmaLinhaToolStripMenuItem.Click += new System.EventHandler(this.textoEmUmaLinhaToolStripMenuItem_Click);
@@ -280,13 +247,6 @@
             this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(90, 41);
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
-            // 
-            // effectiveMailToolStripMenuItem
-            // 
-            this.effectiveMailToolStripMenuItem.Name = "effectiveMailToolStripMenuItem";
-            this.effectiveMailToolStripMenuItem.Size = new System.Drawing.Size(299, 42);
-            this.effectiveMailToolStripMenuItem.Text = "Effective Mail";
-            this.effectiveMailToolStripMenuItem.Click += new System.EventHandler(this.effectiveMailToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -323,14 +283,10 @@
         private System.Windows.Forms.ToolStripMenuItem pUSHToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fERRAMENTASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sAIRToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aGENDAMENTOCAMPANHASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem geradorDeSenhasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem validarFrasePUSHToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem checklistToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hTMLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem validarHtmlToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem envioDeEmailToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem testarLinksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem claroPayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agendamentoCampanhasJIRAToolStripMenuItem;

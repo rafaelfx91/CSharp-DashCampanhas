@@ -12,14 +12,24 @@ namespace replace_campanhas
 {
     public partial class frmGeradordeSenhas : Form
     {
+        private FuncoesDeveloper fd;
+
         public frmGeradordeSenhas()
         {
             InitializeComponent();
         }
 
+        public frmGeradordeSenhas(FuncoesDeveloper fd)
+        {
+            InitializeComponent();
+            this.fd = fd;
+            
+        }
+
         private void frmGeradordeSenhas_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
+            habilitaTextbox();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -48,15 +58,23 @@ namespace replace_campanhas
             if (chkCaracteresespeciais.Checked)
                 variavelconstrucaodesenha += txtCaracteresespeciais.Text;
 
-            for (int quantiadesenhas = 0; quantiadesenhas < Int32.Parse(txtQuantiadeSenhasgeradas.Text); quantiadesenhas++)
+            try
             {
-                for (int aux = 0; aux < Int32.Parse(txtTamanhosenha.Text); aux++)
+                for (int quantiadesenhas = 0; quantiadesenhas < Int32.Parse(txtQuantiadeSenhasgeradas.Text); quantiadesenhas++)
                 {
-                    txtSenha.Text += variavelconstrucaodesenha[rnd.Next(variavelconstrucaodesenha.Length)];
+                    for (int aux = 0; aux < Int32.Parse(txtTamanhosenha.Text); aux++)
+                    {
+                        txtSenha.Text += variavelconstrucaodesenha[rnd.Next(variavelconstrucaodesenha.Length)];
+                    }
+                    txtSenha.Text += System.Environment.NewLine;
+
                 }
-                txtSenha.Text += System.Environment.NewLine;
+            }
+            catch (Exception ex)
+            {
 
             }
+
         }
 
         private void btnMenos_Click(object sender, EventArgs e)
@@ -80,5 +98,18 @@ namespace replace_campanhas
         {
             txtQuantiadeSenhasgeradas.Text = Convert.ToString(Convert.ToInt32(txtQuantiadeSenhasgeradas.Text) + 1);
         }
+    
+        public void habilitaTextbox()
+        {
+            if (fd.validaConfigsDev3())
+            {
+                txtTamanhosenha.ReadOnly = false;
+                txtQuantiadeSenhasgeradas.ReadOnly = false;   
+            }
+
+
+        }//habilitaTextbox
+
+
     }
 }

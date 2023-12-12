@@ -63,7 +63,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V2.26EM Alfa";
+                lblVersion.Text = "Versão: V2.27EM Alfa";
 
 
             desabilitaForms();
@@ -85,7 +85,7 @@ namespace replace_campanhas
                 agendamentoEmailJIRAToolStripMenuItem.Visible = true;
                 emailDeDiagramaToolStripMenuItem.Visible = true;
                 encriptadorToolStripMenuItem.Visible = true;
-                envioDeEmailToolStripMenuItem.Visible = true;
+                //envioDeEmailToolStripMenuItem.Visible = true;
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
                 textoEmUmaLinhaToolStripMenuItem.Visible = true;
             }
@@ -108,19 +108,19 @@ namespace replace_campanhas
             if (debugVisual)
             {
                 geradorDeExcellStripMenuItem.Visible = true;
-                testarLinksToolStripMenuItem.Visible = true;
+                //testarLinksToolStripMenuItem.Visible = true;
                 testeToolStripMenuItem.Visible = true;
-                envioDeEmailToolStripMenuItem.Visible = true;
-                aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = true;
-                checklistToolStripMenuItem.Visible = true;
+                //envioDeEmailToolStripMenuItem.Visible = true;
+                //aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = true;
+                //checklistToolStripMenuItem.Visible = true;
             }
             else
             {
                 geradorDeExcellStripMenuItem.Visible = false;
-                testarLinksToolStripMenuItem.Visible = false;
-                envioDeEmailToolStripMenuItem.Visible = false; 
-                aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = false;
-                checklistToolStripMenuItem.Visible = false;
+                //testarLinksToolStripMenuItem.Visible = false;
+                //envioDeEmailToolStripMenuItem.Visible = false; 
+                //aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = false;
+                //checklistToolStripMenuItem.Visible = false;
                 testeToolStripMenuItem.Visible = false;
 
             }
@@ -151,23 +151,10 @@ namespace replace_campanhas
             }
         }
 
-        //protected override void Dispose(bool disposing)
-        //{
-        //    if (disposing)
-        //    {
-        //        if (mutex != null)
-        //        {
-        //            mutex.ReleaseMutex();
-        //            mutex.Dispose();
-        //        }
-        //    }
-        //    base.Dispose(disposing);
-        //}
 
 
-        //MENU NOME CAMPANHA
-       
-        
+
+
 
         private void gerarNomeNoSASToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -182,11 +169,6 @@ namespace replace_campanhas
             frmNomeCampanhas novoFormFilho = new frmNomeCampanhas();
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
-        }
-
-        private void tbValidarCampanhas_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void validarFraseSMSToolStripMenuItem_Click(object sender, EventArgs e)
@@ -209,21 +191,6 @@ namespace replace_campanhas
             this.Close();
         }
 
-        private void aGENDAMENTOCAMPANHASToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form.Name == "frmAgendamentoCampanha")
-                {
-                    form.Activate();
-                    return;
-                }
-            }
-            frmAgendamentoCampanha novoFormFilho = new frmAgendamentoCampanha();
-            novoFormFilho.MdiParent = this;
-            novoFormFilho.Show();
-        }
-
         private void geradorDeSenhasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
@@ -234,7 +201,7 @@ namespace replace_campanhas
                     return;
                 }
             }
-            frmGeradordeSenhas novoFormFilho = new frmGeradordeSenhas();
+            frmGeradordeSenhas novoFormFilho = new frmGeradordeSenhas(fd);
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
@@ -267,36 +234,6 @@ namespace replace_campanhas
             frmValidaHtml novoFormFilho = new frmValidaHtml();
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
-        }
-
-        private void checklistToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form.Name == "frmCheckList")
-                {
-                    form.Activate();
-                    return;
-                }
-            }
-            frmCheckList novoFormFilho = new frmCheckList();
-            novoFormFilho.MdiParent = this;
-            //novoFormFilho.Show();
-        }
-
-        private void testarLinksToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           //foreach (Form form in this.MdiChildren)
-           //{
-           //    if (form.Name == "frmValidaLink")
-           //    {
-           //        form.Activate();
-           //        return;
-           //    }
-           //}
-           //frmValidaLink novoFormFilho = new frmValidaLink();
-           //novoFormFilho.MdiParent = this;
-           //novoFormFilho.Show();
         }
 
         private void claroPayToolStripMenuItem_Click(object sender, EventArgs e)
@@ -374,21 +311,6 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
 
-        }
-
-        private void envioDeEmailToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form.Name == "frmEnvioDeEmail")
-                {
-                    form.Activate();
-                    return;
-                }
-            }
-            frmEnvioDeEmail novoFormFilho = new frmEnvioDeEmail();
-            novoFormFilho.MdiParent = this;
-            novoFormFilho.Show();
         }
 
         private void testeToolStripMenuItem_Click(object sender, EventArgs e)//TESTE rapido e facil
