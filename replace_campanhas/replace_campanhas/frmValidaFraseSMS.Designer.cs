@@ -37,6 +37,7 @@
             this.lblFraseSaida = new System.Windows.Forms.Label();
             this.txtFraseSaida = new System.Windows.Forms.TextBox();
             this.btnCopiar = new System.Windows.Forms.Button();
+            this.lblCaracteresCampanha2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCaracteresCampanha
@@ -120,6 +121,7 @@
             this.txtFraseSaida.Name = "txtFraseSaida";
             this.txtFraseSaida.Size = new System.Drawing.Size(776, 100);
             this.txtFraseSaida.TabIndex = 21;
+            this.txtFraseSaida.TextChanged += new System.EventHandler(this.txtFraseSaida_TextChanged);
             // 
             // btnCopiar
             // 
@@ -132,11 +134,22 @@
             this.btnCopiar.UseVisualStyleBackColor = true;
             this.btnCopiar.Click += new System.EventHandler(this.btnCopiar_Click);
             // 
+            // lblCaracteresCampanha2
+            // 
+            this.lblCaracteresCampanha2.AutoSize = true;
+            this.lblCaracteresCampanha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCaracteresCampanha2.Location = new System.Drawing.Point(614, 140);
+            this.lblCaracteresCampanha2.Name = "lblCaracteresCampanha2";
+            this.lblCaracteresCampanha2.Size = new System.Drawing.Size(121, 25);
+            this.lblCaracteresCampanha2.TabIndex = 27;
+            this.lblCaracteresCampanha2.Text = "Caracters:";
+            // 
             // frmValidaFraseSMS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 328);
+            this.Controls.Add(this.lblCaracteresCampanha2);
             this.Controls.Add(this.btnCopiar);
             this.Controls.Add(this.lblCaracteresCampanha);
             this.Controls.Add(this.btnLimpar);
@@ -166,5 +179,6 @@
         private System.Windows.Forms.Label lblFraseSaida;
         private System.Windows.Forms.TextBox txtFraseSaida;
         private System.Windows.Forms.Button btnCopiar;
+        private System.Windows.Forms.Label lblCaracteresCampanha2;
     }
 }

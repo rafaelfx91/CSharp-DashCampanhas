@@ -23,7 +23,7 @@ namespace replace_campanhas
     public partial class frmPrincipal : Form
     {
         private const string MutexName = "PlusoftDash";
-        private Mutex mutex;
+        //private Mutex mutex;
         private FuncoesDeveloper fd;
         //private const bool debugVisual = true;
         private const bool debugVisual = false;
@@ -63,7 +63,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V2.27EM Alfa";
+                lblVersion.Text = "Versão: V2.28FSMS Alfa";
 
 
             desabilitaForms();
@@ -73,8 +73,8 @@ namespace replace_campanhas
                 TragaProgramaExistenteParaFrente();
                 Application.Exit();
             }
-            else
-                mutex = new Mutex(true, MutexName);
+            //else  //DE MERDA REVER
+              //  mutex = new Mutex(true, MutexName);
         }
 
         public void desabilitaForms()
@@ -88,6 +88,7 @@ namespace replace_campanhas
                 //envioDeEmailToolStripMenuItem.Visible = true;
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
                 textoEmUmaLinhaToolStripMenuItem.Visible = true;
+                selectsToolStripMenuItem.Visible= true;
             }
             else
             {
@@ -96,6 +97,7 @@ namespace replace_campanhas
                 encriptadorToolStripMenuItem.Visible = false;
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
                 textoEmUmaLinhaToolStripMenuItem.Visible = false;
+                selectsToolStripMenuItem.Visible = false;
             }
 
             //parametro -cryptS habilitado
@@ -403,6 +405,27 @@ namespace replace_campanhas
 
 
         }
+
+        private void selectsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmSelects")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmSelects novoFormFilho = new frmSelects(fd);
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+
+        }
+
+
+
+
     }//fim
 }
 

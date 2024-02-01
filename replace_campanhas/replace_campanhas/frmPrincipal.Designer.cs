@@ -52,6 +52,7 @@
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textoEmUmaLinhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.selectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -205,7 +206,8 @@
             this.geradorDeSenhasToolStripMenuItem,
             this.encriptadorToolStripMenuItem,
             this.testeToolStripMenuItem,
-            this.textoEmUmaLinhaToolStripMenuItem});
+            this.textoEmUmaLinhaToolStripMenuItem,
+            this.selectsToolStripMenuItem});
             this.fERRAMENTASToolStripMenuItem.Name = "fERRAMENTASToolStripMenuItem";
             this.fERRAMENTASToolStripMenuItem.Size = new System.Drawing.Size(221, 41);
             this.fERRAMENTASToolStripMenuItem.Text = "FERRAMENTAS";
@@ -247,6 +249,13 @@
             this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(90, 41);
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
+            // 
+            // selectsToolStripMenuItem
+            // 
+            this.selectsToolStripMenuItem.Name = "selectsToolStripMenuItem";
+            this.selectsToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
+            this.selectsToolStripMenuItem.Text = "Selects";
+            this.selectsToolStripMenuItem.Click += new System.EventHandler(this.selectsToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -297,6 +306,7 @@
         private System.Windows.Forms.ToolStripMenuItem gerarNomeNoSASV2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem textoEmUmaLinhaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem effectiveMailToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem selectsToolStripMenuItem;
     }
 }
 

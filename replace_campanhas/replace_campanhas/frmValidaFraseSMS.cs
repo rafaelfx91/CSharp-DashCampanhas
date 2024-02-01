@@ -28,20 +28,42 @@ namespace replace_campanhas
         // METODOS
         //
         //
-        public void qtdCaracteres()
+        public void qtdCaracteres(int labels)
         {
+            //textbox = 1 Txtto de entrada
+            //textbox = 2 Txtto de saida
 
-            int totalValue = 0;
-            foreach (char item in txtFraseEntrada.Text)
+            if (labels == 1)
             {
-                totalValue = totalValue + 1;
-            }
-            lblCaracteresCampanha.Text = "Caracters: " + totalValue;
+                int totalValue = 0;
+                foreach (char item in txtFraseEntrada.Text)
+                {
+                    totalValue = totalValue + 1;
+                }
+                lblCaracteresCampanha.Text = "Caracters: " + totalValue;
 
-            if (totalValue >= 161)
-                lblCaracteresCampanha.ForeColor = Color.Red;
-            if (totalValue < 161)
-                lblCaracteresCampanha.ForeColor = Color.Black;
+                if (totalValue >= 161)
+                    lblCaracteresCampanha.ForeColor = Color.Red;
+                if (totalValue < 161)
+                    lblCaracteresCampanha.ForeColor = Color.Black;
+            }
+            if(labels == 2)
+            {
+                int totalValue = 0;
+                foreach (char item in txtFraseEntrada.Text)
+                {
+                    totalValue = totalValue + 1;
+                }
+                lblCaracteresCampanha2.Text = "Caracters: " + totalValue;
+
+                if (totalValue >= 161)
+                    lblCaracteresCampanha2.ForeColor = Color.Red;
+                if (totalValue < 161)
+                    lblCaracteresCampanha2.ForeColor = Color.Black;
+            }
+
+
+
 
         }//public void qtdCaracteres()
 
@@ -88,12 +110,17 @@ namespace replace_campanhas
 
         private void txtFraseEntrada_TextChanged(object sender, EventArgs e)
         {
-            qtdCaracteres();
+            qtdCaracteres(1);
         }
 
         private void btnCopiar_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(txtFraseSaida.Text);
+        }
+
+        private void txtFraseSaida_TextChanged(object sender, EventArgs e)
+        {
+            qtdCaracteres(2);
         }
     }
 }
