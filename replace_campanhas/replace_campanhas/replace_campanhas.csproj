@@ -295,6 +295,12 @@
     <Compile Include="frmNomeCampanhasV2.Designer.cs">
       <DependentUpon>frmNomeCampanhasV2.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPorcentagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPorcentagem.Designer.cs">
+      <DependentUpon>frmPorcentagem.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -395,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNomeCampanhasV2.resx">
       <DependentUpon>frmNomeCampanhasV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPorcentagem.resx">
+      <DependentUpon>frmPorcentagem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>

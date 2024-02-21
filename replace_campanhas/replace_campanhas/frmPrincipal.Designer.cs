@@ -51,8 +51,9 @@
             this.encriptadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textoEmUmaLinhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.porcentagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -207,7 +208,8 @@
             this.encriptadorToolStripMenuItem,
             this.testeToolStripMenuItem,
             this.textoEmUmaLinhaToolStripMenuItem,
-            this.selectsToolStripMenuItem});
+            this.selectsToolStripMenuItem,
+            this.porcentagemToolStripMenuItem});
             this.fERRAMENTASToolStripMenuItem.Name = "fERRAMENTASToolStripMenuItem";
             this.fERRAMENTASToolStripMenuItem.Size = new System.Drawing.Size(221, 41);
             this.fERRAMENTASToolStripMenuItem.Text = "FERRAMENTAS";
@@ -243,6 +245,13 @@
             this.textoEmUmaLinhaToolStripMenuItem.Visible = false;
             this.textoEmUmaLinhaToolStripMenuItem.Click += new System.EventHandler(this.textoEmUmaLinhaToolStripMenuItem_Click);
             // 
+            // selectsToolStripMenuItem
+            // 
+            this.selectsToolStripMenuItem.Name = "selectsToolStripMenuItem";
+            this.selectsToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
+            this.selectsToolStripMenuItem.Text = "Selects";
+            this.selectsToolStripMenuItem.Click += new System.EventHandler(this.selectsToolStripMenuItem_Click);
+            // 
             // sAIRToolStripMenuItem
             // 
             this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
@@ -250,12 +259,12 @@
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
-            // selectsToolStripMenuItem
+            // porcentagemToolStripMenuItem
             // 
-            this.selectsToolStripMenuItem.Name = "selectsToolStripMenuItem";
-            this.selectsToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
-            this.selectsToolStripMenuItem.Text = "Selects";
-            this.selectsToolStripMenuItem.Click += new System.EventHandler(this.selectsToolStripMenuItem_Click);
+            this.porcentagemToolStripMenuItem.Name = "porcentagemToolStripMenuItem";
+            this.porcentagemToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
+            this.porcentagemToolStripMenuItem.Text = "Porcentagem";
+            this.porcentagemToolStripMenuItem.Click += new System.EventHandler(this.porcentagemToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -307,6 +316,7 @@
         private System.Windows.Forms.ToolStripMenuItem textoEmUmaLinhaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem effectiveMailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem selectsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem porcentagemToolStripMenuItem;
     }
 }
 

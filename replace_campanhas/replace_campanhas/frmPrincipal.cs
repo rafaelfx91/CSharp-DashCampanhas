@@ -89,6 +89,7 @@ namespace replace_campanhas
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
                 textoEmUmaLinhaToolStripMenuItem.Visible = true;
                 selectsToolStripMenuItem.Visible= true;
+                porcentagemToolStripMenuItem.Visible = true;
             }
             else
             {
@@ -98,6 +99,7 @@ namespace replace_campanhas
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
                 textoEmUmaLinhaToolStripMenuItem.Visible = false;
                 selectsToolStripMenuItem.Visible = false;
+                porcentagemToolStripMenuItem.Visible = false;
             }
 
             //parametro -cryptS habilitado
@@ -423,9 +425,22 @@ namespace replace_campanhas
 
         }
 
+        private void porcentagemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmPorcentagem")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmPorcentagem novoFormFilho = new frmPorcentagem();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
 
-
+        }
     }//fim
 }
 
