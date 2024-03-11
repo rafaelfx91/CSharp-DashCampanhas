@@ -73,7 +73,7 @@ namespace replace_campanhas
                 Application.Exit();
             }
             //else  //DE MERDA REVER
-              //  mutex = new Mutex(true, MutexName);
+            //mutex = new Mutex(true, MutexName);
         }
 
         public void desabilitaForms()
@@ -86,8 +86,8 @@ namespace replace_campanhas
                 encriptadorToolStripMenuItem.Visible = true;
                 //envioDeEmailToolStripMenuItem.Visible = true;
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
-                textoEmUmaLinhaToolStripMenuItem.Visible = true;
-                selectsToolStripMenuItem.Visible= true;
+                //textoEmUmaLinhaToolStripMenuItem.Visible = true;
+                //selectsToolStripMenuItem.Visible= true;
                 porcentagemToolStripMenuItem.Visible = true;
             }
             else
@@ -96,8 +96,8 @@ namespace replace_campanhas
                 emailDeDiagramaToolStripMenuItem.Visible = false;
                 encriptadorToolStripMenuItem.Visible = false;
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
-                textoEmUmaLinhaToolStripMenuItem.Visible = false;
-                selectsToolStripMenuItem.Visible = false;
+                //textoEmUmaLinhaToolStripMenuItem.Visible = false;
+                //selectsToolStripMenuItem.Visible = false;
                 porcentagemToolStripMenuItem.Visible = false;
             }
 

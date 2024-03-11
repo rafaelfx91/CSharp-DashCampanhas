@@ -50,8 +50,6 @@
             this.geradorDeSenhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.encriptadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textoEmUmaLinhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.selectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porcentagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -208,8 +206,6 @@
             this.geradorDeSenhasToolStripMenuItem,
             this.encriptadorToolStripMenuItem,
             this.testeToolStripMenuItem,
-            this.textoEmUmaLinhaToolStripMenuItem,
-            this.selectsToolStripMenuItem,
             this.porcentagemToolStripMenuItem});
             this.fERRAMENTASToolStripMenuItem.Name = "fERRAMENTASToolStripMenuItem";
             this.fERRAMENTASToolStripMenuItem.Size = new System.Drawing.Size(221, 41);
@@ -237,21 +233,6 @@
             this.testeToolStripMenuItem.Text = "TESTE";
             this.testeToolStripMenuItem.Visible = false;
             this.testeToolStripMenuItem.Click += new System.EventHandler(this.testeToolStripMenuItem_Click);
-            // 
-            // textoEmUmaLinhaToolStripMenuItem
-            // 
-            this.textoEmUmaLinhaToolStripMenuItem.Name = "textoEmUmaLinhaToolStripMenuItem";
-            this.textoEmUmaLinhaToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
-            this.textoEmUmaLinhaToolStripMenuItem.Text = "Texto em uma linha";
-            this.textoEmUmaLinhaToolStripMenuItem.Visible = false;
-            this.textoEmUmaLinhaToolStripMenuItem.Click += new System.EventHandler(this.textoEmUmaLinhaToolStripMenuItem_Click);
-            // 
-            // selectsToolStripMenuItem
-            // 
-            this.selectsToolStripMenuItem.Name = "selectsToolStripMenuItem";
-            this.selectsToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
-            this.selectsToolStripMenuItem.Text = "Selects";
-            this.selectsToolStripMenuItem.Click += new System.EventHandler(this.selectsToolStripMenuItem_Click);
             // 
             // porcentagemToolStripMenuItem
             // 
@@ -314,9 +295,7 @@
         private System.Windows.Forms.ToolStripMenuItem encriptadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem geradorDeExcellStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerarNomeNoSASV2ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem textoEmUmaLinhaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem effectiveMailToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem selectsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porcentagemToolStripMenuItem;
     }
 }
