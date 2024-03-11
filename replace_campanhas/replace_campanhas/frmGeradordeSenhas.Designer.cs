@@ -56,13 +56,13 @@
             this.txtSenha.Margin = new System.Windows.Forms.Padding(5);
             this.txtSenha.Multiline = true;
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(643, 158);
+            this.txtSenha.Size = new System.Drawing.Size(432, 111);
             this.txtSenha.TabIndex = 47;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(339, 164);
+            this.label3.Location = new System.Drawing.Point(249, 164);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(190, 20);
@@ -71,7 +71,7 @@
             // 
             // btnMenosQuantiadesenhasgeradas
             // 
-            this.btnMenosQuantiadesenhasgeradas.Location = new System.Drawing.Point(335, 189);
+            this.btnMenosQuantiadesenhasgeradas.Location = new System.Drawing.Point(245, 189);
             this.btnMenosQuantiadesenhasgeradas.Margin = new System.Windows.Forms.Padding(5);
             this.btnMenosQuantiadesenhasgeradas.Name = "btnMenosQuantiadesenhasgeradas";
             this.btnMenosQuantiadesenhasgeradas.Size = new System.Drawing.Size(37, 26);
@@ -82,7 +82,7 @@
             // 
             // btnmaisQuantiadesenhasgeradas
             // 
-            this.btnmaisQuantiadesenhasgeradas.Location = new System.Drawing.Point(499, 189);
+            this.btnmaisQuantiadesenhasgeradas.Location = new System.Drawing.Point(409, 189);
             this.btnmaisQuantiadesenhasgeradas.Margin = new System.Windows.Forms.Padding(5);
             this.btnmaisQuantiadesenhasgeradas.Name = "btnmaisQuantiadesenhasgeradas";
             this.btnmaisQuantiadesenhasgeradas.Size = new System.Drawing.Size(37, 26);
@@ -93,7 +93,7 @@
             // 
             // txtQuantiadeSenhasgeradas
             // 
-            this.txtQuantiadeSenhasgeradas.Location = new System.Drawing.Point(382, 189);
+            this.txtQuantiadeSenhasgeradas.Location = new System.Drawing.Point(292, 189);
             this.txtQuantiadeSenhasgeradas.Margin = new System.Windows.Forms.Padding(5);
             this.txtQuantiadeSenhasgeradas.Name = "txtQuantiadeSenhasgeradas";
             this.txtQuantiadeSenhasgeradas.ReadOnly = true;
@@ -148,7 +148,7 @@
             // chkCaracteresespeciais
             // 
             this.chkCaracteresespeciais.AutoSize = true;
-            this.chkCaracteresespeciais.Location = new System.Drawing.Point(343, 86);
+            this.chkCaracteresespeciais.Location = new System.Drawing.Point(253, 86);
             this.chkCaracteresespeciais.Margin = new System.Windows.Forms.Padding(5);
             this.chkCaracteresespeciais.Name = "chkCaracteresespeciais";
             this.chkCaracteresespeciais.Size = new System.Drawing.Size(196, 24);
@@ -158,10 +158,10 @@
             // 
             // txtCaracteresespeciais
             // 
-            this.txtCaracteresespeciais.Location = new System.Drawing.Point(335, 122);
+            this.txtCaracteresespeciais.Location = new System.Drawing.Point(245, 122);
             this.txtCaracteresespeciais.Margin = new System.Windows.Forms.Padding(5);
             this.txtCaracteresespeciais.Name = "txtCaracteresespeciais";
-            this.txtCaracteresespeciais.Size = new System.Drawing.Size(322, 26);
+            this.txtCaracteresespeciais.Size = new System.Drawing.Size(201, 26);
             this.txtCaracteresespeciais.TabIndex = 37;
             this.txtCaracteresespeciais.Text = "!@#$%&";
             // 
@@ -170,7 +170,7 @@
             this.chkLetrasmaiusculas.AutoSize = true;
             this.chkLetrasmaiusculas.Checked = true;
             this.chkLetrasmaiusculas.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkLetrasmaiusculas.Location = new System.Drawing.Point(343, 12);
+            this.chkLetrasmaiusculas.Location = new System.Drawing.Point(253, 12);
             this.chkLetrasmaiusculas.Margin = new System.Windows.Forms.Padding(5);
             this.chkLetrasmaiusculas.Name = "chkLetrasmaiusculas";
             this.chkLetrasmaiusculas.Size = new System.Drawing.Size(173, 24);
@@ -180,11 +180,11 @@
             // 
             // txtLetrasmaiusculas
             // 
-            this.txtLetrasmaiusculas.Location = new System.Drawing.Point(335, 46);
+            this.txtLetrasmaiusculas.Location = new System.Drawing.Point(245, 46);
             this.txtLetrasmaiusculas.Margin = new System.Windows.Forms.Padding(5);
             this.txtLetrasmaiusculas.Name = "txtLetrasmaiusculas";
             this.txtLetrasmaiusculas.ReadOnly = true;
-            this.txtLetrasmaiusculas.Size = new System.Drawing.Size(322, 26);
+            this.txtLetrasmaiusculas.Size = new System.Drawing.Size(201, 26);
             this.txtLetrasmaiusculas.TabIndex = 35;
             this.txtLetrasmaiusculas.Text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             // 
@@ -207,7 +207,7 @@
             this.txtLetrasminusculas.Margin = new System.Windows.Forms.Padding(5);
             this.txtLetrasminusculas.Name = "txtLetrasminusculas";
             this.txtLetrasminusculas.ReadOnly = true;
-            this.txtLetrasminusculas.Size = new System.Drawing.Size(286, 26);
+            this.txtLetrasminusculas.Size = new System.Drawing.Size(205, 26);
             this.txtLetrasminusculas.TabIndex = 33;
             this.txtLetrasminusculas.Text = "abcdefghijklmnopqrstuvwxyz";
             // 
@@ -230,14 +230,14 @@
             this.txtNumeros.Margin = new System.Windows.Forms.Padding(5);
             this.txtNumeros.Name = "txtNumeros";
             this.txtNumeros.ReadOnly = true;
-            this.txtNumeros.Size = new System.Drawing.Size(286, 26);
+            this.txtNumeros.Size = new System.Drawing.Size(205, 26);
             this.txtNumeros.TabIndex = 31;
             this.txtNumeros.Text = "1234567890";
             // 
             // btnLimpar
             // 
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(118, 391);
+            this.btnLimpar.Location = new System.Drawing.Point(118, 344);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(98, 43);
             this.btnLimpar.TabIndex = 50;
@@ -248,7 +248,7 @@
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(222, 391);
+            this.btnSair.Location = new System.Drawing.Point(222, 344);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(98, 43);
             this.btnSair.TabIndex = 49;
@@ -259,7 +259,7 @@
             // btnGerar
             // 
             this.btnGerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerar.Location = new System.Drawing.Point(14, 391);
+            this.btnGerar.Location = new System.Drawing.Point(14, 344);
             this.btnGerar.Name = "btnGerar";
             this.btnGerar.Size = new System.Drawing.Size(98, 43);
             this.btnGerar.TabIndex = 48;
@@ -271,7 +271,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 452);
+            this.ClientSize = new System.Drawing.Size(453, 394);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnGerar);

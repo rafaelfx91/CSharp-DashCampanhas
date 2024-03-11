@@ -65,7 +65,6 @@ namespace replace_campanhas
             else
                 lblVersion.Text = "Versão: V2.29A";
 
-
             desabilitaForms();
             if (VerificaProgramaEmExecucao())
             {
