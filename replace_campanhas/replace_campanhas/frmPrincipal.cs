@@ -63,7 +63,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V2.28FSMS Alfa";
+                lblVersion.Text = "Versão: V2.29A";
 
 
             desabilitaForms();
@@ -441,6 +441,20 @@ namespace replace_campanhas
             novoFormFilho.Show();
 
         }
+
+        private void lblVersion_Click(object sender, EventArgs e)
+        {
+            if (fd.validaConfigsDev3())
+            {
+                foreach (Form form in this.MdiChildren)
+                {
+                    form.Close();
+                }
+            }
+        }
+
+
+
     }//fim
 }
 

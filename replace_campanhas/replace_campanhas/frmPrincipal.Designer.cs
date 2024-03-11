@@ -52,8 +52,8 @@
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textoEmUmaLinhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porcentagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +65,7 @@
             this.lblVersion.Size = new System.Drawing.Size(45, 13);
             this.lblVersion.TabIndex = 11;
             this.lblVersion.Text = "Version:";
+            this.lblVersion.Click += new System.EventHandler(this.lblVersion_Click);
             // 
             // menuStrip1
             // 
@@ -252,19 +253,19 @@
             this.selectsToolStripMenuItem.Text = "Selects";
             this.selectsToolStripMenuItem.Click += new System.EventHandler(this.selectsToolStripMenuItem_Click);
             // 
-            // sAIRToolStripMenuItem
-            // 
-            this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
-            this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(90, 41);
-            this.sAIRToolStripMenuItem.Text = "SAIR";
-            this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
-            // 
             // porcentagemToolStripMenuItem
             // 
             this.porcentagemToolStripMenuItem.Name = "porcentagemToolStripMenuItem";
             this.porcentagemToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
             this.porcentagemToolStripMenuItem.Text = "Porcentagem";
             this.porcentagemToolStripMenuItem.Click += new System.EventHandler(this.porcentagemToolStripMenuItem_Click);
+            // 
+            // sAIRToolStripMenuItem
+            // 
+            this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
+            this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(90, 41);
+            this.sAIRToolStripMenuItem.Text = "SAIR";
+            this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
