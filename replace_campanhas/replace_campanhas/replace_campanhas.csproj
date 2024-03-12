@@ -289,6 +289,12 @@
     <Compile Include="frmGerarEmailJira.Designer.cs">
       <DependentUpon>frmGerarEmailJira.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHike.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHike.Designer.cs">
+      <DependentUpon>frmHike.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNomeCampanhasV2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -398,6 +404,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGerarEmailJira.resx">
       <DependentUpon>frmGerarEmailJira.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHike.resx">
+      <DependentUpon>frmHike.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNomeCampanhasV2.resx">
       <DependentUpon>frmNomeCampanhasV2.cs</DependentUpon>

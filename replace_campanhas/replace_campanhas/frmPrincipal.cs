@@ -63,7 +63,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V2.29A";
+                lblVersion.Text = "Versão: V2.30HA";
 
             desabilitaForms();
             if (VerificaProgramaEmExecucao())
@@ -89,6 +89,7 @@ namespace replace_campanhas
                 //textoEmUmaLinhaToolStripMenuItem.Visible = true;
                 //selectsToolStripMenuItem.Visible= true;
                 porcentagemToolStripMenuItem.Visible = true;
+                hIKEToolStripMenuItem.Visible = true;
             }
             else
             {
@@ -99,6 +100,7 @@ namespace replace_campanhas
                 //textoEmUmaLinhaToolStripMenuItem.Visible = false;
                 //selectsToolStripMenuItem.Visible = false;
                 porcentagemToolStripMenuItem.Visible = false;
+                hIKEToolStripMenuItem.Visible = false;
             }
 
             //parametro -cryptS habilitado
@@ -451,6 +453,22 @@ namespace replace_campanhas
                 }
             }
         }
+
+        private void hIKEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmHike")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmHike novoFormFilho = new frmHike();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
+
 
 
 

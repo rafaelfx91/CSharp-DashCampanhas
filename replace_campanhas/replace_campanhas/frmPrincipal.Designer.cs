@@ -52,6 +52,7 @@
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porcentagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hIKEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -206,7 +207,8 @@
             this.geradorDeSenhasToolStripMenuItem,
             this.encriptadorToolStripMenuItem,
             this.testeToolStripMenuItem,
-            this.porcentagemToolStripMenuItem});
+            this.porcentagemToolStripMenuItem,
+            this.hIKEToolStripMenuItem});
             this.fERRAMENTASToolStripMenuItem.Name = "fERRAMENTASToolStripMenuItem";
             this.fERRAMENTASToolStripMenuItem.Size = new System.Drawing.Size(221, 41);
             this.fERRAMENTASToolStripMenuItem.Text = "FERRAMENTAS";
@@ -247,6 +249,13 @@
             this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(90, 41);
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
+            // 
+            // hIKEToolStripMenuItem
+            // 
+            this.hIKEToolStripMenuItem.Name = "hIKEToolStripMenuItem";
+            this.hIKEToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
+            this.hIKEToolStripMenuItem.Text = "HIKE";
+            this.hIKEToolStripMenuItem.Click += new System.EventHandler(this.hIKEToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -297,6 +306,7 @@
         private System.Windows.Forms.ToolStripMenuItem gerarNomeNoSASV2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem effectiveMailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porcentagemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hIKEToolStripMenuItem;
     }
 }
 

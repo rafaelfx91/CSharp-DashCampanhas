@@ -34,8 +34,6 @@ namespace replace_campanhas
             cbTemas.Text = "1";
             //cbTemas.Enabled= false;
 
-            
-
             if (fd.validaConfigsDev3())
             {
                 txtCaminhoArquivo.ReadOnly = false;
