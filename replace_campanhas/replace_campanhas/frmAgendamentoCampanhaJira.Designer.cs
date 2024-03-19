@@ -45,6 +45,7 @@
             this.rdrAgendamento = new System.Windows.Forms.RadioButton();
             this.txtCopiar = new System.Windows.Forms.Button();
             this.chkDev = new System.Windows.Forms.CheckBox();
+            this.txtTituloEmail = new System.Windows.Forms.TextBox();
             this.gbBoasVindas.SuspendLayout();
             this.gbAgendamento.SuspendLayout();
             this.SuspendLayout();
@@ -233,12 +234,23 @@
             this.chkDev.Text = "dev";
             this.chkDev.UseVisualStyleBackColor = true;
             this.chkDev.Visible = false;
+            this.chkDev.CheckedChanged += new System.EventHandler(this.chkDev_CheckedChanged);
+            // 
+            // txtTituloEmail
+            // 
+            this.txtTituloEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTituloEmail.Location = new System.Drawing.Point(372, 12);
+            this.txtTituloEmail.Multiline = true;
+            this.txtTituloEmail.Name = "txtTituloEmail";
+            this.txtTituloEmail.Size = new System.Drawing.Size(208, 110);
+            this.txtTituloEmail.TabIndex = 55;
             // 
             // frmAgendamentoCampanhaJira
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 478);
+            this.ClientSize = new System.Drawing.Size(592, 476);
+            this.Controls.Add(this.txtTituloEmail);
             this.Controls.Add(this.chkDev);
             this.Controls.Add(this.txtCopiar);
             this.Controls.Add(this.gbAgendamento);
@@ -282,5 +294,6 @@
         private System.Windows.Forms.RadioButton rdrAgendamento;
         private System.Windows.Forms.Button txtCopiar;
         private System.Windows.Forms.CheckBox chkDev;
+        private System.Windows.Forms.TextBox txtTituloEmail;
     }
 }

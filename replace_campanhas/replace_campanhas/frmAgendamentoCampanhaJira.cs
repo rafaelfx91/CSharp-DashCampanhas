@@ -34,6 +34,7 @@ namespace replace_campanhas
             setBoasVindas();
             if (fd.validaConfigsDev3())
                 chkDev.Visible = true;
+            txtTituloEmail.Visible = false;
             
         }
 
@@ -101,7 +102,7 @@ namespace replace_campanhas
 
             var mensagemSaida = boasVindas+
                                 "\r\n\r\n" +
-                                "Solicito o "+ agendamento + " de agendamento da seguinte campanha"+
+                                "Solicito o "+ agendamento + " das seguinte campanha conforme o arquivo em anexo"+
                                 "\r\n" +
                                 "Campanhas: \r\n\n" +
                                 listAmx+
@@ -110,9 +111,11 @@ namespace replace_campanhas
                                 ;
 
             if (chkDev.Checked)
-                mensagemSaida = "----------------------------\r\n" +
-                                "AGENDAMENTO\r\n" +
-                                "----------------------------\r\n" +
+                mensagemSaida = txtTituloEmail.Text.Replace("/",": ") +
+                                "\r\n" +    
+                                "Prezados,\r\n" +
+                                "\r\n" +
+                                "Segue solicitação "+ agendamento + " do agendamento de chamados:\r\n\r\n" +
                                 mensagemSaida;
 
             txtSaida.Text = mensagemSaida;
@@ -132,7 +135,10 @@ namespace replace_campanhas
         {
             Clipboard.SetText(txtSaida.Text);
         }
-    
-    
+
+        private void chkDev_CheckedChanged(object sender, EventArgs e)
+        {
+            txtTituloEmail.Visible = true;
+        }
     }
 }

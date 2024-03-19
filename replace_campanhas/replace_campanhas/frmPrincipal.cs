@@ -81,8 +81,8 @@ namespace replace_campanhas
             // parametro -devS habilitado
             if (fd.validaConfigsDev3())
             {
-                agendamentoEmailJIRAToolStripMenuItem.Visible = true;
-                emailDeDiagramaToolStripMenuItem.Visible = true;
+                //agendamentoEmailJIRAToolStripMenuItem.Visible = true;
+                //emailDeDiagramaToolStripMenuItem.Visible = true;
                 encriptadorToolStripMenuItem.Visible = true;
                 //envioDeEmailToolStripMenuItem.Visible = true;
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
@@ -93,8 +93,8 @@ namespace replace_campanhas
             }
             else
             {
-                agendamentoEmailJIRAToolStripMenuItem.Visible = false;
-                emailDeDiagramaToolStripMenuItem.Visible = false;
+                //agendamentoEmailJIRAToolStripMenuItem.Visible = false;
+                //emailDeDiagramaToolStripMenuItem.Visible = false;
                 encriptadorToolStripMenuItem.Visible = false;
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
                 //textoEmUmaLinhaToolStripMenuItem.Visible = false;

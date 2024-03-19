@@ -35,8 +35,6 @@
             this.gerarNomeNoSASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerarNomeNoSASV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendamentoCampanhasJIRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agendamentoEmailJIRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.emailDeDiagramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.geradorDeExcellStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validarFraseSMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,8 +49,8 @@
             this.encriptadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porcentagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hIKEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,8 +86,6 @@
             this.gerarNomeNoSASToolStripMenuItem,
             this.gerarNomeNoSASV2ToolStripMenuItem,
             this.agendamentoCampanhasJIRAToolStripMenuItem,
-            this.agendamentoEmailJIRAToolStripMenuItem,
-            this.emailDeDiagramaToolStripMenuItem,
             this.geradorDeExcellStripMenuItem});
             this.sASToolStripMenuItem.Name = "sASToolStripMenuItem";
             this.sASToolStripMenuItem.Size = new System.Drawing.Size(78, 41);
@@ -116,22 +112,6 @@
             this.agendamentoCampanhasJIRAToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
             this.agendamentoCampanhasJIRAToolStripMenuItem.Text = "Agendamento campanhas (JIRA)";
             this.agendamentoCampanhasJIRAToolStripMenuItem.Click += new System.EventHandler(this.agendamentoCampanhasJIRAToolStripMenuItem_Click);
-            // 
-            // agendamentoEmailJIRAToolStripMenuItem
-            // 
-            this.agendamentoEmailJIRAToolStripMenuItem.Name = "agendamentoEmailJIRAToolStripMenuItem";
-            this.agendamentoEmailJIRAToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
-            this.agendamentoEmailJIRAToolStripMenuItem.Text = "Agendamento email (CP)(JIRA)";
-            this.agendamentoEmailJIRAToolStripMenuItem.Visible = false;
-            this.agendamentoEmailJIRAToolStripMenuItem.Click += new System.EventHandler(this.agendamentoEmailJIRAToolStripMenuItem_Click);
-            // 
-            // emailDeDiagramaToolStripMenuItem
-            // 
-            this.emailDeDiagramaToolStripMenuItem.Name = "emailDeDiagramaToolStripMenuItem";
-            this.emailDeDiagramaToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
-            this.emailDeDiagramaToolStripMenuItem.Text = "Envio de diagrama (CP)";
-            this.emailDeDiagramaToolStripMenuItem.Visible = false;
-            this.emailDeDiagramaToolStripMenuItem.Click += new System.EventHandler(this.emailDeDiagramaToolStripMenuItem_Click);
             // 
             // geradorDeExcellStripMenuItem
             // 
@@ -243,19 +223,19 @@
             this.porcentagemToolStripMenuItem.Text = "Porcentagem";
             this.porcentagemToolStripMenuItem.Click += new System.EventHandler(this.porcentagemToolStripMenuItem_Click);
             // 
-            // sAIRToolStripMenuItem
-            // 
-            this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
-            this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(90, 41);
-            this.sAIRToolStripMenuItem.Text = "SAIR";
-            this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
-            // 
             // hIKEToolStripMenuItem
             // 
             this.hIKEToolStripMenuItem.Name = "hIKEToolStripMenuItem";
             this.hIKEToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
             this.hIKEToolStripMenuItem.Text = "HIKE";
             this.hIKEToolStripMenuItem.Click += new System.EventHandler(this.hIKEToolStripMenuItem_Click);
+            // 
+            // sAIRToolStripMenuItem
+            // 
+            this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
+            this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(90, 41);
+            this.sAIRToolStripMenuItem.Text = "SAIR";
+            this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -299,8 +279,6 @@
         private System.Windows.Forms.ToolStripMenuItem claroPayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agendamentoCampanhasJIRAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agendamentoEmailJIRAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem emailDeDiagramaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem encriptadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem geradorDeExcellStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerarNomeNoSASV2ToolStripMenuItem;
