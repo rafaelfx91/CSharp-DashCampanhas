@@ -25,8 +25,8 @@ namespace replace_campanhas
         private const string MutexName = "PlusoftDash";
         //private Mutex mutex;
         private FuncoesDeveloper fd;
-        //private const bool debugVisual = true;
-        private const bool debugVisual = false;
+        private const bool debugVisual = true;
+        //private const bool debugVisual = false;
 
         /*
          replace_campanhas.exe -devS -crypt123 -emUUSUSARIO -emSSENHA
@@ -90,6 +90,7 @@ namespace replace_campanhas
                 //selectsToolStripMenuItem.Visible= true;
                 porcentagemToolStripMenuItem.Visible = true;
                 hIKEToolStripMenuItem.Visible = true;
+                oSsToolStripMenuItem.Visible=true;
             }
             else
             {
@@ -101,6 +102,7 @@ namespace replace_campanhas
                 //selectsToolStripMenuItem.Visible = false;
                 porcentagemToolStripMenuItem.Visible = false;
                 hIKEToolStripMenuItem.Visible = false;
+                oSsToolStripMenuItem.Visible = false;
             }
 
             //parametro -cryptS habilitado
@@ -468,6 +470,23 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
+
+        private void oSsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmOSs")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmOSs novoFormFilho = new frmOSs();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
+
+
 
 
 
