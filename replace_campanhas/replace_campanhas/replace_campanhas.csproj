@@ -382,6 +382,7 @@
     <Compile Include="FuncoesDeveloper.cs" />
     <Compile Include="FuncoesDiversas.cs" />
     <Compile Include="LimparString.cs" />
+    <Compile Include="LinhaData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAgendamentoCampanha.resx">
