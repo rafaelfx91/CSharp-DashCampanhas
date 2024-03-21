@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,8 +17,7 @@ namespace replace_campanhas
         {
             InitializeComponent();
         }
-
-  
+        
         private void frmOSs_Load(object sender, EventArgs e)
         {
             this.MaximizeBox= false;
@@ -30,19 +30,10 @@ namespace replace_campanhas
             lbFazer.SelectionMode = SelectionMode.One;
             lbHomologacao.SelectionMode = SelectionMode.One;
 
-        }
-
- 
-        public void gravarCamposTxt()
-        {
+            carregarListBox();
 
         }
-
-        public void carregarCamposTxt()
-        {
-
-        }
-
+        
         private void MoveItem(ListBox sourceListBox, ListBox destinationListBox)
         {
             // Obter o item selecionado na ListBox de origem
@@ -54,7 +45,7 @@ namespace replace_campanhas
             // Remover o item da ListBox de origem
             sourceListBox.Items.Remove(selectedItem);
         }
-
+        
         public void ordernarLista()
         {
             lbAgendamento.Sorted = true;
@@ -62,16 +53,62 @@ namespace replace_campanhas
             lbHomologacao.Sorted = true;
 
         }
+        
+        private void gravarArquivo(string nomeArquivo, ListBox listBox)
+        {
+            string diretorioExecutavel = Directory.GetCurrentDirectory();
+            string caminhoCompleto = Path.Combine(diretorioExecutavel, nomeArquivo);
 
-
+            using (StreamWriter sw = new StreamWriter(caminhoCompleto))
+            {
+                foreach (object item in listBox.Items)
+                {
+                    sw.WriteLine(item.ToString());
+                }
+            }
+        }
+        
+        private void carregarArquivo(string nomeArquivo, ListBox listBox)
+        {
+            // Verifica se o arquivo existe antes de tentar carregar
+            if (File.Exists(nomeArquivo))
+            {
+                using (StreamReader sr = new StreamReader(nomeArquivo))
+                {
+                    string linha;
+                    while ((linha = sr.ReadLine()) != null)
+                    {
+                        listBox.Items.Add(linha);
+                    }
+                }
+            }
+            else
+            {
+                // Trate o caso em que o arquivo não existe
+                // Por exemplo, você pode exibir uma mensagem de erro ou lidar com isso de outra maneira
+            }
+        }
+        
+        public void salvarListBox()
+        {
+            gravarArquivo("listboxFazer.txt",lbFazer);
+            gravarArquivo("listboxHomologacao.txt",lbHomologacao);
+            gravarArquivo("listboxAgendamento.txt",lbAgendamento);
+        }
+        
+        public void carregarListBox()
+        {
+            carregarArquivo("listboxFazer.txt", lbFazer);
+            carregarArquivo("listboxHomologacao.txt", lbHomologacao);
+            carregarArquivo("listboxAgendamento.txt", lbAgendamento);
+        }
 
 
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void btnAdicionaALista_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(txtNomeOs.Text))
@@ -82,30 +119,31 @@ namespace replace_campanhas
             }
             ordernarLista();
         }
-
+        
         private void lbFazer_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbHomologacao.ClearSelected();
             lbAgendamento.ClearSelected();
         }
-
+        
         private void lbHomologacao_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbFazer.ClearSelected();
             lbAgendamento.ClearSelected();
         }
-
+        
         private void lbAgendamento_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbFazer.ClearSelected();
             lbHomologacao.ClearSelected();
         }
-
+        
         private void btnSair_Click(object sender, EventArgs e)
         {
+            salvarListBox();
             this.Close();
         }
-
+        
         private void btnMoveDireita_Click(object sender, EventArgs e)
         {
             if (lbFazer.SelectedItem != null)
@@ -117,8 +155,9 @@ namespace replace_campanhas
                 MoveItem(lbHomologacao, lbAgendamento); // Move da listBox2 para listBox3
             }
             ordernarLista();
+            salvarListBox();
         }
-
+        
         private void btnMoveEsquerda_Click(object sender, EventArgs e)
         {
             if (lbAgendamento.SelectedItem != null)
@@ -130,6 +169,26 @@ namespace replace_campanhas
                 MoveItem(lbHomologacao, lbFazer); // Move da listBox2 para listBox1
             }
             ordernarLista();
+            salvarListBox();
         }
-    }
+        
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            if (lbFazer.SelectedItem != null)
+                lbFazer.Items.Remove(lbFazer.SelectedItem);
+
+            if (lbHomologacao.SelectedItem != null)
+                lbHomologacao.Items.Remove(lbHomologacao.SelectedItem);
+
+            if (lbAgendamento.SelectedItem != null)
+                lbAgendamento.Items.Remove(lbAgendamento.SelectedItem);
+
+            ordernarLista();
+            salvarListBox();
+        }
+
+
+
+
+    }//fim
 }

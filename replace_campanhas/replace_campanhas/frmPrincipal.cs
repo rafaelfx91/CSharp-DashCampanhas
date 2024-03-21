@@ -25,8 +25,8 @@ namespace replace_campanhas
         private const string MutexName = "PlusoftDash";
         //private Mutex mutex;
         private FuncoesDeveloper fd;
-        private const bool debugVisual = true;
-        //private const bool debugVisual = false;
+        //private const bool debugVisual = true;
+        private const bool debugVisual = false;
 
         /*
          replace_campanhas.exe -devS -crypt123 -emUUSUSARIO -emSSENHA
@@ -63,7 +63,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V2.30HA";
+                lblVersion.Text = "Versão: V2.31OS";
 
             desabilitaForms();
             if (VerificaProgramaEmExecucao())
