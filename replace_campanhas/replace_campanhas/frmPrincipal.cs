@@ -63,7 +63,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V2.31OS";
+                lblVersion.Text = "Versão: V2.32RP";
 
             desabilitaForms();
             if (VerificaProgramaEmExecucao())
@@ -486,8 +486,20 @@ namespace replace_campanhas
             novoFormFilho.Show();
         }
 
-
-
+        private void repicksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmRepicks")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmRepicks novoFormFilho = new frmRepicks();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
 
 
 

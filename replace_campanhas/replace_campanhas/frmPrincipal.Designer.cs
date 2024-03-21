@@ -50,8 +50,9 @@
             this.testeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porcentagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hIKEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oSsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.repicksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -190,7 +191,8 @@
             this.testeToolStripMenuItem,
             this.porcentagemToolStripMenuItem,
             this.hIKEToolStripMenuItem,
-            this.oSsToolStripMenuItem});
+            this.oSsToolStripMenuItem,
+            this.repicksToolStripMenuItem});
             this.fERRAMENTASToolStripMenuItem.Name = "fERRAMENTASToolStripMenuItem";
             this.fERRAMENTASToolStripMenuItem.Size = new System.Drawing.Size(221, 41);
             this.fERRAMENTASToolStripMenuItem.Text = "FERRAMENTAS";
@@ -232,6 +234,13 @@
             this.hIKEToolStripMenuItem.Text = "HIKE";
             this.hIKEToolStripMenuItem.Click += new System.EventHandler(this.hIKEToolStripMenuItem_Click);
             // 
+            // oSsToolStripMenuItem
+            // 
+            this.oSsToolStripMenuItem.Name = "oSsToolStripMenuItem";
+            this.oSsToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
+            this.oSsToolStripMenuItem.Text = "OSs";
+            this.oSsToolStripMenuItem.Click += new System.EventHandler(this.oSsToolStripMenuItem_Click);
+            // 
             // sAIRToolStripMenuItem
             // 
             this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
@@ -239,12 +248,12 @@
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
-            // oSsToolStripMenuItem
+            // repicksToolStripMenuItem
             // 
-            this.oSsToolStripMenuItem.Name = "oSsToolStripMenuItem";
-            this.oSsToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
-            this.oSsToolStripMenuItem.Text = "OSs";
-            this.oSsToolStripMenuItem.Click += new System.EventHandler(this.oSsToolStripMenuItem_Click);
+            this.repicksToolStripMenuItem.Name = "repicksToolStripMenuItem";
+            this.repicksToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
+            this.repicksToolStripMenuItem.Text = "Repicks";
+            this.repicksToolStripMenuItem.Click += new System.EventHandler(this.repicksToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -295,6 +304,7 @@
         private System.Windows.Forms.ToolStripMenuItem porcentagemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hIKEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oSsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem repicksToolStripMenuItem;
     }
 }
 

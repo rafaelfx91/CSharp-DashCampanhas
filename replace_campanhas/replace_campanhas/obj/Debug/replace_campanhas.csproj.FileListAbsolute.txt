@@ -110,3 +110,4 @@ C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_
 C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmPorcentagem.resources
 C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmHike.resources
 C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmOSs.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmRepicks.resources

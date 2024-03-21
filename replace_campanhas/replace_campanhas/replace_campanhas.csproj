@@ -331,6 +331,12 @@
     <Compile Include="frmRemoveEspacamento.Designer.cs">
       <DependentUpon>frmRemoveEspacamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRepicks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRepicks.Designer.cs">
+      <DependentUpon>frmRepicks.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSelects.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -431,6 +437,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRemoveEspacamento.resx">
       <DependentUpon>frmRemoveEspacamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRepicks.resx">
+      <DependentUpon>frmRepicks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSelects.resx">
       <DependentUpon>frmSelects.cs</DependentUpon>

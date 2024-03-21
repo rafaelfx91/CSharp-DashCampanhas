@@ -19,6 +19,8 @@ namespace replace_campanhas
 
             var saidaRetorno = String.Empty;
 
+            string stringSemPipe = FraseEntrada.Replace("|", "");
+
             string comAcentos = "ÄÅÁÂÀÃäáâàãÉÊËÈéêëèÍÎÏÌíîïìÖÓÔÒÕöóôòõÜÚÛüúûùÇçº¹²³.";
             string semAcentos = "AAAAAAaaaaaEEEEeeeeIIIIiiiiOOOOOoooooUUUuuuuCc     ";
 
