@@ -44,6 +44,8 @@
             this.hTMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validarHtmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.effectiveMailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rCSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RCS1validacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fERRAMENTASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.geradorDeSenhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.encriptadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,8 +53,10 @@
             this.porcentagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hIKEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oSsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.repicksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RCS2validacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RCS3validacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +78,7 @@
             this.sMSToolStripMenuItem,
             this.pUSHToolStripMenuItem,
             this.hTMLToolStripMenuItem,
+            this.rCSToolStripMenuItem,
             this.fERRAMENTASToolStripMenuItem,
             this.sAIRToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -183,6 +188,23 @@
             this.effectiveMailToolStripMenuItem.Text = "Effective Mail";
             this.effectiveMailToolStripMenuItem.Click += new System.EventHandler(this.effectiveMailToolStripMenuItem_Click);
             // 
+            // rCSToolStripMenuItem
+            // 
+            this.rCSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RCS1validacaoToolStripMenuItem,
+            this.RCS2validacaoToolStripMenuItem,
+            this.RCS3validacaoToolStripMenuItem});
+            this.rCSToolStripMenuItem.Name = "rCSToolStripMenuItem";
+            this.rCSToolStripMenuItem.Size = new System.Drawing.Size(79, 41);
+            this.rCSToolStripMenuItem.Text = "RCS";
+            // 
+            // RCS1validacaoToolStripMenuItem
+            // 
+            this.RCS1validacaoToolStripMenuItem.Name = "RCS1validacaoToolStripMenuItem";
+            this.RCS1validacaoToolStripMenuItem.Size = new System.Drawing.Size(308, 42);
+            this.RCS1validacaoToolStripMenuItem.Text = "Validacao Item 1";
+            this.RCS1validacaoToolStripMenuItem.Click += new System.EventHandler(this.RCS1validacaoToolStripMenuItem_Click);
+            // 
             // fERRAMENTASToolStripMenuItem
             // 
             this.fERRAMENTASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -194,8 +216,8 @@
             this.oSsToolStripMenuItem,
             this.repicksToolStripMenuItem});
             this.fERRAMENTASToolStripMenuItem.Name = "fERRAMENTASToolStripMenuItem";
-            this.fERRAMENTASToolStripMenuItem.Size = new System.Drawing.Size(221, 41);
-            this.fERRAMENTASToolStripMenuItem.Text = "FERRAMENTAS";
+            this.fERRAMENTASToolStripMenuItem.Size = new System.Drawing.Size(138, 41);
+            this.fERRAMENTASToolStripMenuItem.Text = "OUTROS";
             // 
             // geradorDeSenhasToolStripMenuItem
             // 
@@ -241,6 +263,13 @@
             this.oSsToolStripMenuItem.Text = "OSs";
             this.oSsToolStripMenuItem.Click += new System.EventHandler(this.oSsToolStripMenuItem_Click);
             // 
+            // repicksToolStripMenuItem
+            // 
+            this.repicksToolStripMenuItem.Name = "repicksToolStripMenuItem";
+            this.repicksToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
+            this.repicksToolStripMenuItem.Text = "Repicks";
+            this.repicksToolStripMenuItem.Click += new System.EventHandler(this.repicksToolStripMenuItem_Click);
+            // 
             // sAIRToolStripMenuItem
             // 
             this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
@@ -248,12 +277,17 @@
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
-            // repicksToolStripMenuItem
+            // RCS2validacaoToolStripMenuItem
             // 
-            this.repicksToolStripMenuItem.Name = "repicksToolStripMenuItem";
-            this.repicksToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
-            this.repicksToolStripMenuItem.Text = "Repicks";
-            this.repicksToolStripMenuItem.Click += new System.EventHandler(this.repicksToolStripMenuItem_Click);
+            this.RCS2validacaoToolStripMenuItem.Name = "RCS2validacaoToolStripMenuItem";
+            this.RCS2validacaoToolStripMenuItem.Size = new System.Drawing.Size(308, 42);
+            this.RCS2validacaoToolStripMenuItem.Text = "Validacao Item 2";
+            // 
+            // RCS3validacaoToolStripMenuItem
+            // 
+            this.RCS3validacaoToolStripMenuItem.Name = "RCS3validacaoToolStripMenuItem";
+            this.RCS3validacaoToolStripMenuItem.Size = new System.Drawing.Size(308, 42);
+            this.RCS3validacaoToolStripMenuItem.Text = "Validacao Item 3";
             // 
             // frmPrincipal
             // 
@@ -305,6 +339,10 @@
         private System.Windows.Forms.ToolStripMenuItem hIKEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oSsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem repicksToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rCSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RCS1validacaoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RCS2validacaoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RCS3validacaoToolStripMenuItem;
     }
 }
 

@@ -501,8 +501,20 @@ namespace replace_campanhas
             novoFormFilho.Show();
         }
 
-
-
+        private void RCS1validacaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmRCS")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmRCS novoFormFilho = new frmRCS();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
     }//fim
 }
 
