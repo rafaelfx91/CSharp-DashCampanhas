@@ -63,7 +63,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V2.32RP";
+                lblVersion.Text = "Versão: V2.33RCS";
 
             desabilitaForms();
             if (VerificaProgramaEmExecucao())
@@ -505,13 +505,43 @@ namespace replace_campanhas
         {
             foreach (Form form in this.MdiChildren)
             {
-                if (form.Name == "frmRCS")
+                if (form.Name == "frmRCS1")
                 {
                     form.Activate();
                     return;
                 }
             }
-            frmRCS novoFormFilho = new frmRCS();
+            frmRCS1 novoFormFilho = new frmRCS1();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
+
+        private void RCS2validacaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmRCS2")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmRCS2 novoFormFilho = new frmRCS2();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
+
+        private void RCS3validacaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmRCS3")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmRCS3 novoFormFilho = new frmRCS3();
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }

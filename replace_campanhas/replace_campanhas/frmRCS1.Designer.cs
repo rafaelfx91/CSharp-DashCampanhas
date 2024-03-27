@@ -1,6 +1,6 @@
 ﻿namespace replace_campanhas
 {
-    partial class frmRCS
+    partial class frmRCS1
     {
         /// <summary>
         /// Required designer variable.
@@ -33,22 +33,24 @@
             this.btnGerar = new System.Windows.Forms.Button();
             this.txtFraseEntrada = new System.Windows.Forms.TextBox();
             this.lblFraseEntrada = new System.Windows.Forms.Label();
+            this.lblLimite = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnLimpar
             // 
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(116, 529);
+            this.btnLimpar.Location = new System.Drawing.Point(116, 133);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(98, 43);
             this.btnLimpar.TabIndex = 33;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(220, 529);
+            this.btnSair.Location = new System.Drawing.Point(220, 133);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(98, 43);
             this.btnSair.TabIndex = 32;
@@ -59,43 +61,56 @@
             // btnGerar
             // 
             this.btnGerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerar.Location = new System.Drawing.Point(12, 529);
+            this.btnGerar.Location = new System.Drawing.Point(12, 133);
             this.btnGerar.Name = "btnGerar";
             this.btnGerar.Size = new System.Drawing.Size(98, 43);
             this.btnGerar.TabIndex = 31;
             this.btnGerar.Text = "Validar";
             this.btnGerar.UseVisualStyleBackColor = true;
+            this.btnGerar.Click += new System.EventHandler(this.btnGerar_Click);
             // 
             // txtFraseEntrada
             // 
             this.txtFraseEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFraseEntrada.Location = new System.Drawing.Point(12, 389);
+            this.txtFraseEntrada.Location = new System.Drawing.Point(12, 37);
             this.txtFraseEntrada.Multiline = true;
             this.txtFraseEntrada.Name = "txtFraseEntrada";
             this.txtFraseEntrada.Size = new System.Drawing.Size(776, 90);
             this.txtFraseEntrada.TabIndex = 28;
+            this.txtFraseEntrada.TextChanged += new System.EventHandler(this.txtFraseEntrada_TextChanged);
             // 
             // lblFraseEntrada
             // 
             this.lblFraseEntrada.AutoSize = true;
             this.lblFraseEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFraseEntrada.Location = new System.Drawing.Point(15, 361);
+            this.lblFraseEntrada.Location = new System.Drawing.Point(12, 9);
             this.lblFraseEntrada.Name = "lblFraseEntrada";
-            this.lblFraseEntrada.Size = new System.Drawing.Size(159, 25);
+            this.lblFraseEntrada.Size = new System.Drawing.Size(72, 25);
             this.lblFraseEntrada.TabIndex = 27;
-            this.lblFraseEntrada.Text = "Frase entrada";
+            this.lblFraseEntrada.Text = "Frase";
             // 
-            // frmRCS
+            // lblLimite
+            // 
+            this.lblLimite.AutoSize = true;
+            this.lblLimite.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLimite.Location = new System.Drawing.Point(435, 9);
+            this.lblLimite.Name = "lblLimite";
+            this.lblLimite.Size = new System.Drawing.Size(245, 25);
+            this.lblLimite.TabIndex = 34;
+            this.lblLimite.Text = "Frase limite 250 Char:";
+            // 
+            // frmRCS1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 584);
+            this.ClientSize = new System.Drawing.Size(800, 186);
+            this.Controls.Add(this.lblLimite);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnGerar);
             this.Controls.Add(this.txtFraseEntrada);
             this.Controls.Add(this.lblFraseEntrada);
-            this.Name = "frmRCS";
+            this.Name = "frmRCS1";
             this.Text = "frmRCS";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -108,5 +123,6 @@
         private System.Windows.Forms.Button btnGerar;
         private System.Windows.Forms.TextBox txtFraseEntrada;
         private System.Windows.Forms.Label lblFraseEntrada;
+        private System.Windows.Forms.Label lblLimite;
     }
 }

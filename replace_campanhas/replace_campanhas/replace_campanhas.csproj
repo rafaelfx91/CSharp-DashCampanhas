@@ -325,11 +325,23 @@
     <Compile Include="frmNomeCampanhas.Designer.cs">
       <DependentUpon>frmNomeCampanhas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRCS.cs">
+    <Compile Include="frmRCS1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRCS.Designer.cs">
-      <DependentUpon>frmRCS.cs</DependentUpon>
+    <Compile Include="frmRCS1.Designer.cs">
+      <DependentUpon>frmRCS1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRCS2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRCS2.Designer.cs">
+      <DependentUpon>frmRCS2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRCS3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRCS3.Designer.cs">
+      <DependentUpon>frmRCS3.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRemoveEspacamento.cs">
       <SubType>Form</SubType>
@@ -442,8 +454,14 @@
     <EmbeddedResource Include="frmNomeCampanhas.resx">
       <DependentUpon>frmNomeCampanhas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRCS.resx">
-      <DependentUpon>frmRCS.cs</DependentUpon>
+    <EmbeddedResource Include="frmRCS1.resx">
+      <DependentUpon>frmRCS1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRCS2.resx">
+      <DependentUpon>frmRCS2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRCS3.resx">
+      <DependentUpon>frmRCS3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRemoveEspacamento.resx">
       <DependentUpon>frmRemoveEspacamento.cs</DependentUpon>
