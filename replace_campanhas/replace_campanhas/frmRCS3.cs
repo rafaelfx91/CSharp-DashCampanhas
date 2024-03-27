@@ -87,7 +87,14 @@ namespace replace_campanhas
 
         }
 
-
-
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtFrase.Clear();
+            txtLinkImg.Clear();
+            txtTitulo.Clear();
+            txtLinkBotao.Clear();
+            wbLinkImg.Navigate("");
+            wbLinkBotao.Navigate("");
+        }
     }//fim
 }
