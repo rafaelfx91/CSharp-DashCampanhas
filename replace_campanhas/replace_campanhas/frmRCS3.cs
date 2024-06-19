@@ -78,9 +78,9 @@ namespace replace_campanhas
             FuncoesDiversas df = new FuncoesDiversas(); 
             LimparString ls = new LimparString();
 
-            txtTitulo.Text = ls.fraseLimpa2_simples(txtTitulo.Text);
+            txtTitulo.Text = ls.fraseLimpa3_simples(txtTitulo.Text);
 
-            txtFrase.Text = ls.fraseLimpa2_simples(txtFrase.Text);
+            txtFrase.Text = ls.fraseLimpa3_simples(txtFrase.Text);
 
             wbLinkImg.Navigate(txtLinkImg.Text);
             var link = txtLinkBotao.Text;
