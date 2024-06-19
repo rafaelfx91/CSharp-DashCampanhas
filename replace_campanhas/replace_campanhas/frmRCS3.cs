@@ -34,12 +34,12 @@ namespace replace_campanhas
                 {
                     totalValue = totalValue + 1;
                 }
-                txtTitulo.Text = "Frase limite " + limite.ToString() + " Char: " + totalValue;
+                lblTituloL.Text = "Frase limite " + limite.ToString() + " Char: " + totalValue;
 
                 if (totalValue >= limite)
-                    txtTitulo.ForeColor = Color.Red;
+                    lblTituloL.ForeColor = Color.Red;
                 if (totalValue < limite)
-                    txtTitulo.ForeColor = Color.Black;
+                    lblTituloL.ForeColor = Color.Black;
             }
             if (label == 2) //frase
             {
@@ -47,12 +47,12 @@ namespace replace_campanhas
                 {
                     totalValue = totalValue + 1;
                 }
-                txtFrase.Text = "Frase limite " + limite.ToString() + " Char: " + totalValue;
+                lblFraseL.Text = "Frase limite " + limite.ToString() + " Char: " + totalValue;
 
                 if (totalValue >= limite)
-                    txtFrase.ForeColor = Color.Red;
+                    lblFraseL.ForeColor = Color.Red;
                 if (totalValue < limite)
-                    txtFrase.ForeColor = Color.Black;
+                    lblFraseL.ForeColor = Color.Black;
             }
 
         }//public void qtdCaracteres()
@@ -75,15 +75,30 @@ namespace replace_campanhas
         private void btnGerar_Click(object sender, EventArgs e)
         {
 
+            FuncoesDiversas df = new FuncoesDiversas(); 
             LimparString ls = new LimparString();
 
-            var titulo = ls.RemoverCaracteresEspeciais2(txtTitulo.Text);
-            txtTitulo.Text = titulo;
-            var frase = ls.RemoverCaracteresEspeciais2(txtFrase.Text);
-            txtFrase.Text = frase;
+            txtTitulo.Text = ls.fraseLimpa2_simples(txtTitulo.Text);
+
+            txtFrase.Text = ls.fraseLimpa2_simples(txtFrase.Text);
 
             wbLinkImg.Navigate(txtLinkImg.Text);
-            wbLinkBotao.Navigate(txtLinkBotao.Text);
+            var link = txtLinkBotao.Text;
+            if (df.ValidarLink(link))
+            {
+                lblLinkBotao.ForeColor = Color.Green;
+                lblLinkBotao.Text = "Link Ok";
+            }
+            else
+            {
+                lblLinkBotao.ForeColor = Color.Red;
+                if (String.IsNullOrEmpty(link))
+                lblLinkBotao.Text = "Link não preenchido";
+                else
+                lblLinkBotao.Text = "Link com erro";
+            }
+           
+
 
         }
 
@@ -94,7 +109,10 @@ namespace replace_campanhas
             txtTitulo.Clear();
             txtLinkBotao.Clear();
             wbLinkImg.Navigate("");
-            wbLinkBotao.Navigate("");
+            lblLinkBotao.Text = "Link Botao";
+            lblLinkBotao.ForeColor = Color.Black;
         }
+
+
     }//fim
 }

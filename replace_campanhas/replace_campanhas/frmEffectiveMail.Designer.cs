@@ -45,7 +45,7 @@
             this.txtCaminhoArquivo.Location = new System.Drawing.Point(12, 57);
             this.txtCaminhoArquivo.Name = "txtCaminhoArquivo";
             this.txtCaminhoArquivo.ReadOnly = true;
-            this.txtCaminhoArquivo.Size = new System.Drawing.Size(683, 26);
+            this.txtCaminhoArquivo.Size = new System.Drawing.Size(678, 26);
             this.txtCaminhoArquivo.TabIndex = 41;
             this.txtCaminhoArquivo.Text = "https://minhaclaro.dtmmkt.com.br/gerenciamento/login.aspx";
             this.txtCaminhoArquivo.Visible = false;
@@ -65,7 +65,7 @@
             // 
             this.btnLimpar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(441, 12);
+            this.btnLimpar.Location = new System.Drawing.Point(436, 12);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(121, 43);
             this.btnLimpar.TabIndex = 39;
@@ -78,7 +78,7 @@
             // 
             this.btnSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(568, 12);
+            this.btnSair.Location = new System.Drawing.Point(563, 12);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(121, 43);
             this.btnSair.TabIndex = 38;
@@ -94,7 +94,7 @@
             this.wbPecaEmail.Location = new System.Drawing.Point(12, 89);
             this.wbPecaEmail.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbPecaEmail.Name = "wbPecaEmail";
-            this.wbPecaEmail.Size = new System.Drawing.Size(677, 531);
+            this.wbPecaEmail.Size = new System.Drawing.Size(672, 462);
             this.wbPecaEmail.TabIndex = 37;
             // 
             // cbTemas
@@ -123,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(701, 632);
+            this.ClientSize = new System.Drawing.Size(696, 563);
             this.Controls.Add(this.lblTema);
             this.Controls.Add(this.cbTemas);
             this.Controls.Add(this.txtCaminhoArquivo);

@@ -63,7 +63,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V2.33RCS";
+                lblVersion.Text = "Versão: V2.36RCSB";
 
             desabilitaForms();
             if (VerificaProgramaEmExecucao())
@@ -91,6 +91,8 @@ namespace replace_campanhas
                 porcentagemToolStripMenuItem.Visible = true;
                 hIKEToolStripMenuItem.Visible = true;
                 oSsToolStripMenuItem.Visible=true;
+                RCS2validacaoToolStripMenuItem.Visible=true;
+                RCS1validacaoToolStripMenuItem.Visible=true;
             }
             else
             {
@@ -103,6 +105,8 @@ namespace replace_campanhas
                 porcentagemToolStripMenuItem.Visible = false;
                 hIKEToolStripMenuItem.Visible = false;
                 oSsToolStripMenuItem.Visible = false;
+                RCS2validacaoToolStripMenuItem.Visible = false;
+                RCS1validacaoToolStripMenuItem.Visible = false;
             }
 
             //parametro -cryptS habilitado

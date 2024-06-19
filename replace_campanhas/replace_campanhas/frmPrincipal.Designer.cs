@@ -216,7 +216,7 @@
             // 
             this.RCS3validacaoToolStripMenuItem.Name = "RCS3validacaoToolStripMenuItem";
             this.RCS3validacaoToolStripMenuItem.Size = new System.Drawing.Size(271, 42);
-            this.RCS3validacaoToolStripMenuItem.Text = "CARROSSEL";
+            this.RCS3validacaoToolStripMenuItem.Text = "Validacao";
             this.RCS3validacaoToolStripMenuItem.Click += new System.EventHandler(this.RCS3validacaoToolStripMenuItem_Click);
             // 
             // fERRAMENTASToolStripMenuItem

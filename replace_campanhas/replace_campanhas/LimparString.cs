@@ -88,7 +88,6 @@ namespace replace_campanhas
             return frase;
 
         }//public string caracteresLimpos(string FraseEntrada)
-
         public int verificaChars(string nome)
         {
             string comAcentos = "ÄÅÁÂÀÃäáâàãÉÊËÈéêëèÍÎÏÌíîïìÖÓÔÒÕöóôòõÜÚÛüúûùÇçº¹²³";
@@ -111,7 +110,6 @@ namespace replace_campanhas
             return 0;
 
         }//public void verificaChars(string nome)
-
         public string SubstituirEmote(string input)
         {
             Regex regex = new Regex(@"U\+(\w+)");
@@ -122,7 +120,6 @@ namespace replace_campanhas
             return resultado;
 
         }//static string SubstituirEmote(string input)
-
         public string SubstituirEmoteMostrar(string input)
         {
             Regex regex = new Regex(@"U\+(\w+)");
@@ -138,7 +135,6 @@ namespace replace_campanhas
 
             return resultado;
         }
-
         public string RemoverCaracteresEspeciais(string texto)
         {
             // Utiliza expressão regular para substituir caracteres especiais por uma string vazia
@@ -156,6 +152,21 @@ namespace replace_campanhas
 
             return Regex.Replace(texto, "[^a-zA-Z0-9 :+=/{}%.*,!?$@#-]+", "");
         }
+        public string fraseLimpa2_simples(string texto)
+        {
+            texto = texto.Replace("|", "");
+            var saida = Regex.Replace(texto, @"[^0-9a-zA-ZáéíóúÁÉÍÓÚâêîôÂÊÎÔãõÃÕàèìòùÀÈÌÒÙäëïöüÄËÏÖÜçÇ\._]", " ");
+
+            return saida;
+        }
+        public string fraseLimpa3_simples(string texto)
+        {
+            texto = texto.Replace("|", "");
+            var saida = Regex.Replace(texto, @"[^0-9a-zA-ZêôÊÔãõÃÕçÇ\._]", " ");
+
+            return saida;
+        }
+
 
 
     }//public class LimparStrin

@@ -34,12 +34,12 @@ namespace replace_campanhas
                 {
                     totalValue = totalValue + 1;
                 }
-                txtTitulo.Text = "Frase limite " + limite.ToString() + " Char: " + totalValue;
+                lblTituloL.Text = "Frase limite " + limite.ToString() + " Char: " + totalValue;
 
                 if (totalValue >= limite)
-                    txtTitulo.ForeColor = Color.Red;
+                    lblTituloL.ForeColor = Color.Red;
                 if (totalValue < limite)
-                    txtTitulo.ForeColor = Color.Black;
+                    lblTituloL.ForeColor = Color.Black;
             }
             if (label == 2) //frase
             {
@@ -47,12 +47,12 @@ namespace replace_campanhas
                 {
                     totalValue = totalValue + 1;
                 }
-                txtFrase.Text = "Frase limite " + limite.ToString() + " Char: " + totalValue;
+                lblFraseL.Text = "Frase limite " + limite.ToString() + " Char: " + totalValue;
 
                 if (totalValue >= limite)
-                    txtFrase.ForeColor = Color.Red;
+                    lblFraseL.ForeColor = Color.Red;
                 if (totalValue < limite)
-                    txtFrase.ForeColor = Color.Black;
+                    lblFraseL.ForeColor = Color.Black;
             }
 
 
@@ -92,6 +92,9 @@ namespace replace_campanhas
             wbLinkImg.Navigate("");
         }
 
-
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

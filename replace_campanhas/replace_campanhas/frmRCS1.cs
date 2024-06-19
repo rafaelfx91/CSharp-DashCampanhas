@@ -5,8 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.LinkLabel;
 
 namespace replace_campanhas
 {
@@ -43,17 +45,31 @@ namespace replace_campanhas
 
         private void btnGerar_Click(object sender, EventArgs e)
         {
-            LimparString ls = new LimparString();
+            FuncoesDiversas fd = new FuncoesDiversas();
+            var link = txtLink.Text;
+            //lblLink.Text = fd.ValidarLink2(link);
+            if (fd.ValidarLink(link))
+            {
+                lblLink.ForeColor = Color.Green;
+                lblLink.Text = "Link Ok";
+            }
+            else
+            {
+                lblLink.ForeColor = Color.Red;
+                lblLink.Text = "Link com erro";
+            }
 
-            var frase = ls.RemoverCaracteresEspeciais2(txtFraseEntrada.Text);
 
-            txtFraseEntrada.Text = frase;
 
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             txtFraseEntrada.Clear();
+            txtLink.Clear();
+            lblLink.Text = "Link";
+            lblLink.ForeColor = Color.Black;
+
         }
 
         private void txtFraseEntrada_TextChanged(object sender, EventArgs e)
