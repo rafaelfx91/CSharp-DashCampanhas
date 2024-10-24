@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmrcs3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|solutionrelative:replace_campanhas\\frmrcs3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|c:\\users\\camaleao\\documents\\github\\plusoftdash\\replace_campanhas\\replace_campanhas\\frmagendamentocampanhajira.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|solutionrelative:replace_campanhas\\frmagendamentocampanhajira.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|c:\\users\\camaleao\\documents\\github\\plusoftdash\\replace_campanhas\\replace_campanhas\\frmagendamentocampanhajira.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|solutionrelative:replace_campanhas\\frmagendamentocampanhajira.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|c:\\users\\camaleao\\documents\\github\\plusoftdash\\replace_campanhas\\replace_campanhas\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,14 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|solutionrelative:replace_campanhas\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmrcs3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|solutionrelative:replace_campanhas\\frmrcs3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\limparstring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|solutionrelative:replace_campanhas\\limparstring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "frmPrincipal.cs [Design]",
               "DocumentMoniker": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmPrincipal.cs",
               "RelativeDocumentMoniker": "replace_campanhas\\frmPrincipal.cs",
@@ -47,13 +43,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "frmPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmPrincipal.cs",
               "RelativeDocumentMoniker": "replace_campanhas\\frmPrincipal.cs",
               "ToolTip": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmPrincipal.cs",
               "RelativeToolTip": "replace_campanhas\\frmPrincipal.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAA5wEEAAAA0AAAA",
+              "ViewState": "AQIAAG0AAAAAAAAAAAAcwEEAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-26T19:35:31.317Z",
               "IsPinned": true,
@@ -61,39 +57,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LimparString.cs",
-              "DocumentMoniker": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\LimparString.cs",
-              "RelativeDocumentMoniker": "replace_campanhas\\LimparString.cs",
-              "ToolTip": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\LimparString.cs",
-              "RelativeToolTip": "replace_campanhas\\LimparString.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwEAAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T18:15:07.151Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmRCS3.cs",
-              "DocumentMoniker": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmRCS3.cs",
-              "RelativeDocumentMoniker": "replace_campanhas\\frmRCS3.cs",
-              "ToolTip": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmRCS3.cs",
-              "RelativeToolTip": "replace_campanhas\\frmRCS3.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAIwEsAAAAJAAAA",
+              "Title": "frmAgendamentoCampanhaJira.cs",
+              "DocumentMoniker": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmAgendamentoCampanhaJira.cs",
+              "RelativeDocumentMoniker": "replace_campanhas\\frmAgendamentoCampanhaJira.cs",
+              "ToolTip": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmAgendamentoCampanhaJira.cs",
+              "RelativeToolTip": "replace_campanhas\\frmAgendamentoCampanhaJira.cs",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAwwHAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T18:13:29.326Z",
+              "WhenOpened": "2024-10-24T20:30:49.804Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmRCS3.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmRCS3.cs",
-              "RelativeDocumentMoniker": "replace_campanhas\\frmRCS3.cs",
-              "ToolTip": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmRCS3.cs [Design]",
-              "RelativeToolTip": "replace_campanhas\\frmRCS3.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "frmAgendamentoCampanhaJira.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmAgendamentoCampanhaJira.cs",
+              "RelativeDocumentMoniker": "replace_campanhas\\frmAgendamentoCampanhaJira.cs",
+              "ToolTip": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmAgendamentoCampanhaJira.cs [Design]",
+              "RelativeToolTip": "replace_campanhas\\frmAgendamentoCampanhaJira.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T18:12:43.941Z",
+              "WhenOpened": "2024-10-24T20:30:04.516Z",
               "EditorCaption": " [Design]"
             }
           ]

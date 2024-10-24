@@ -37,7 +37,7 @@
             this.lblamx = new System.Windows.Forms.Label();
             this.txtAmx = new System.Windows.Forms.TextBox();
             this.txtSaida = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAgendamento = new System.Windows.Forms.Label();
             this.gbBoasVindas = new System.Windows.Forms.GroupBox();
             this.gbAgendamento = new System.Windows.Forms.GroupBox();
             this.rdrPausa = new System.Windows.Forms.RadioButton();
@@ -46,6 +46,10 @@
             this.txtCopiar = new System.Windows.Forms.Button();
             this.chkDev = new System.Windows.Forms.CheckBox();
             this.txtTituloEmail = new System.Windows.Forms.TextBox();
+            this.lblAssuntoEmail = new System.Windows.Forms.Label();
+            this.txtCorpoEmail = new System.Windows.Forms.TextBox();
+            this.lblCorpoEmail = new System.Windows.Forms.Label();
+            this.rdrAlteracao = new System.Windows.Forms.RadioButton();
             this.gbBoasVindas.SuspendLayout();
             this.gbAgendamento.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +57,7 @@
             // btnLimpar
             // 
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(220, 425);
+            this.btnLimpar.Location = new System.Drawing.Point(219, 475);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(98, 43);
             this.btnLimpar.TabIndex = 30;
@@ -64,7 +68,7 @@
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(324, 425);
+            this.btnSair.Location = new System.Drawing.Point(323, 475);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(98, 43);
             this.btnSair.TabIndex = 29;
@@ -75,7 +79,7 @@
             // btnGerar
             // 
             this.btnGerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerar.Location = new System.Drawing.Point(12, 425);
+            this.btnGerar.Location = new System.Drawing.Point(11, 475);
             this.btnGerar.Name = "btnGerar";
             this.btnGerar.Size = new System.Drawing.Size(98, 43);
             this.btnGerar.TabIndex = 28;
@@ -122,7 +126,7 @@
             // 
             this.lblamx.AutoSize = true;
             this.lblamx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblamx.Location = new System.Drawing.Point(45, 133);
+            this.lblamx.Location = new System.Drawing.Point(12, 158);
             this.lblamx.Name = "lblamx";
             this.lblamx.Size = new System.Drawing.Size(147, 20);
             this.lblamx.TabIndex = 34;
@@ -131,30 +135,30 @@
             // txtAmx
             // 
             this.txtAmx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmx.Location = new System.Drawing.Point(12, 156);
+            this.txtAmx.Location = new System.Drawing.Point(12, 182);
             this.txtAmx.Multiline = true;
             this.txtAmx.Name = "txtAmx";
-            this.txtAmx.Size = new System.Drawing.Size(180, 263);
+            this.txtAmx.Size = new System.Drawing.Size(521, 86);
             this.txtAmx.TabIndex = 35;
             // 
             // txtSaida
             // 
             this.txtSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSaida.Location = new System.Drawing.Point(198, 156);
+            this.txtSaida.Location = new System.Drawing.Point(12, 296);
             this.txtSaida.Multiline = true;
             this.txtSaida.Name = "txtSaida";
-            this.txtSaida.Size = new System.Drawing.Size(382, 263);
+            this.txtSaida.Size = new System.Drawing.Size(521, 84);
             this.txtSaida.TabIndex = 37;
             // 
-            // label1
+            // lblAgendamento
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(267, 133);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 20);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Mensagem saida";
+            this.lblAgendamento.AutoSize = true;
+            this.lblAgendamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgendamento.Location = new System.Drawing.Point(12, 273);
+            this.lblAgendamento.Name = "lblAgendamento";
+            this.lblAgendamento.Size = new System.Drawing.Size(144, 20);
+            this.lblAgendamento.TabIndex = 38;
+            this.lblAgendamento.Text = "Mensagem saida";
             // 
             // gbBoasVindas
             // 
@@ -163,18 +167,19 @@
             this.gbBoasVindas.Controls.Add(this.rdrBoanoite);
             this.gbBoasVindas.Location = new System.Drawing.Point(12, 12);
             this.gbBoasVindas.Name = "gbBoasVindas";
-            this.gbBoasVindas.Size = new System.Drawing.Size(180, 110);
+            this.gbBoasVindas.Size = new System.Drawing.Size(180, 143);
             this.gbBoasVindas.TabIndex = 39;
             this.gbBoasVindas.TabStop = false;
             // 
             // gbAgendamento
             // 
+            this.gbAgendamento.Controls.Add(this.rdrAlteracao);
             this.gbAgendamento.Controls.Add(this.rdrPausa);
             this.gbAgendamento.Controls.Add(this.rdrCancelamento);
             this.gbAgendamento.Controls.Add(this.rdrAgendamento);
             this.gbAgendamento.Location = new System.Drawing.Point(198, 12);
             this.gbAgendamento.Name = "gbAgendamento";
-            this.gbAgendamento.Size = new System.Drawing.Size(168, 110);
+            this.gbAgendamento.Size = new System.Drawing.Size(168, 143);
             this.gbAgendamento.TabIndex = 40;
             this.gbAgendamento.TabStop = false;
             // 
@@ -216,7 +221,7 @@
             // txtCopiar
             // 
             this.txtCopiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCopiar.Location = new System.Drawing.Point(116, 425);
+            this.txtCopiar.Location = new System.Drawing.Point(115, 475);
             this.txtCopiar.Name = "txtCopiar";
             this.txtCopiar.Size = new System.Drawing.Size(98, 43);
             this.txtCopiar.TabIndex = 41;
@@ -227,7 +232,7 @@
             // chkDev
             // 
             this.chkDev.AutoSize = true;
-            this.chkDev.Location = new System.Drawing.Point(536, 442);
+            this.chkDev.Location = new System.Drawing.Point(488, 501);
             this.chkDev.Name = "chkDev";
             this.chkDev.Size = new System.Drawing.Size(44, 17);
             this.chkDev.TabIndex = 54;
@@ -239,23 +244,66 @@
             // txtTituloEmail
             // 
             this.txtTituloEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTituloEmail.Location = new System.Drawing.Point(372, 12);
+            this.txtTituloEmail.Location = new System.Drawing.Point(372, 35);
             this.txtTituloEmail.Multiline = true;
             this.txtTituloEmail.Name = "txtTituloEmail";
-            this.txtTituloEmail.Size = new System.Drawing.Size(208, 110);
+            this.txtTituloEmail.Size = new System.Drawing.Size(161, 120);
             this.txtTituloEmail.TabIndex = 55;
+            // 
+            // lblAssuntoEmail
+            // 
+            this.lblAssuntoEmail.AutoSize = true;
+            this.lblAssuntoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAssuntoEmail.Location = new System.Drawing.Point(372, 12);
+            this.lblAssuntoEmail.Name = "lblAssuntoEmail";
+            this.lblAssuntoEmail.Size = new System.Drawing.Size(124, 20);
+            this.lblAssuntoEmail.TabIndex = 57;
+            this.lblAssuntoEmail.Text = "Assunto Email";
+            // 
+            // txtCorpoEmail
+            // 
+            this.txtCorpoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorpoEmail.Location = new System.Drawing.Point(11, 407);
+            this.txtCorpoEmail.Multiline = true;
+            this.txtCorpoEmail.Name = "txtCorpoEmail";
+            this.txtCorpoEmail.Size = new System.Drawing.Size(521, 62);
+            this.txtCorpoEmail.TabIndex = 56;
+            // 
+            // lblCorpoEmail
+            // 
+            this.lblCorpoEmail.AutoSize = true;
+            this.lblCorpoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorpoEmail.Location = new System.Drawing.Point(11, 384);
+            this.lblCorpoEmail.Name = "lblCorpoEmail";
+            this.lblCorpoEmail.Size = new System.Drawing.Size(106, 20);
+            this.lblCorpoEmail.TabIndex = 58;
+            this.lblCorpoEmail.Text = "Corpo Email";
+            // 
+            // rdrAlteracao
+            // 
+            this.rdrAlteracao.AutoSize = true;
+            this.rdrAlteracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdrAlteracao.Location = new System.Drawing.Point(15, 109);
+            this.rdrAlteracao.Name = "rdrAlteracao";
+            this.rdrAlteracao.Size = new System.Drawing.Size(104, 24);
+            this.rdrAlteracao.TabIndex = 37;
+            this.rdrAlteracao.Text = "Alteracao";
+            this.rdrAlteracao.UseVisualStyleBackColor = true;
             // 
             // frmAgendamentoCampanhaJira
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 476);
+            this.ClientSize = new System.Drawing.Size(544, 539);
+            this.Controls.Add(this.lblCorpoEmail);
+            this.Controls.Add(this.lblAssuntoEmail);
+            this.Controls.Add(this.txtCorpoEmail);
             this.Controls.Add(this.txtTituloEmail);
             this.Controls.Add(this.chkDev);
             this.Controls.Add(this.txtCopiar);
             this.Controls.Add(this.gbAgendamento);
             this.Controls.Add(this.gbBoasVindas);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblAgendamento);
             this.Controls.Add(this.txtSaida);
             this.Controls.Add(this.txtAmx);
             this.Controls.Add(this.lblamx);
@@ -286,7 +334,7 @@
         private System.Windows.Forms.Label lblamx;
         private System.Windows.Forms.TextBox txtAmx;
         private System.Windows.Forms.TextBox txtSaida;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAgendamento;
         private System.Windows.Forms.GroupBox gbBoasVindas;
         private System.Windows.Forms.GroupBox gbAgendamento;
         private System.Windows.Forms.RadioButton rdrPausa;
@@ -295,5 +343,9 @@
         private System.Windows.Forms.Button txtCopiar;
         private System.Windows.Forms.CheckBox chkDev;
         private System.Windows.Forms.TextBox txtTituloEmail;
+        private System.Windows.Forms.Label lblAssuntoEmail;
+        private System.Windows.Forms.TextBox txtCorpoEmail;
+        private System.Windows.Forms.Label lblCorpoEmail;
+        private System.Windows.Forms.RadioButton rdrAlteracao;
     }
 }

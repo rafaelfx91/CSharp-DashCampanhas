@@ -35,6 +35,7 @@ namespace replace_campanhas
             if (fd.validaConfigsDev3())
                 chkDev.Visible = true;
             txtTituloEmail.Visible = false;
+            lblAssuntoEmail.Visible = false;
             
         }
 
@@ -48,20 +49,9 @@ namespace replace_campanhas
                 rdrBoatarde.Checked = true;
             if (bv == 2)
                 rdrBoanoite.Checked = true;
-            //try
-            //{
-            //    var horas = int.Parse(hora);
-            //    if ( (horas >= 00) && (horas < 12) )
-            //        rdrBomdia.Checked = true;
-            //    if ((horas >= 12) && (horas < 19))
-            //        rdrBoatarde.Checked = true;
-            //    if ((horas >= 19) && (horas < 00))
-            //        rdrBoanoite.Checked = true;
-            //}
-            //catch(Exception ex) { 
-            //    rdrBoanoite.Checked= true;
-            //}
+
         }
+
 
 
 
@@ -76,7 +66,10 @@ namespace replace_campanhas
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             txtAmx.Clear();
-            txtSaida.Clear();   
+            txtSaida.Clear();
+            txtTituloEmail.Clear();
+            txtCorpoEmail.Clear();
+            setBoasVindas();
         }
         private void btnGerar_Click(object sender, EventArgs e)
         {
@@ -97,39 +90,22 @@ namespace replace_campanhas
                 agendamento = "cancelamento";
             if (rdrPausa.Checked)
                 agendamento = "pausa";
+            if (rdrAlteracao.Checked)
+                agendamento = "alteracao";
 
             var listAmx = txtAmx.Text;
+                 
+            txtSaida.Text = boasVindas + "\r\n" +
+                            "Solicito o " + agendamento + " das campanhas:\r\n" +
+                            listAmx + "\r\n" +
+                            "Conforme o aruqivo em anexo, Obrigado";
 
-            var mensagemSaida = boasVindas+
-                                "\r\n\r\n" +
-                                "Solicito o "+ agendamento + " das seguinte campanha conforme o arquivo em anexo"+
-                                "\r\n" +
-                                "Campanhas: \r\n\n" +
-                                listAmx+
-                                "\r\n\r\n" +
-                                "Obrigado."
-                                ;
-
+            txtCorpoEmail.Text = "Prezados,\r\n" +
+                                 "Segue solicitação de " + agendamento + " das campanhas";
+            
             if (chkDev.Checked)
-                mensagemSaida = txtTituloEmail.Text.Replace("/",": ") +
-                                "\r\n" +    
-                                "Prezados,\r\n" +
-                                "\r\n" +
-                                "Segue solicitação "+ agendamento + " do agendamento de chamados:\r\n\r\n" +
-                                mensagemSaida;
-
-            txtSaida.Text = mensagemSaida;
-
-            /*
-            Boa tarde - Varaiavel
-            Solicito o cancelamento de agendamento da seguinte campanha
-
-            Campanha:
-            52263 - Incremento TLV --Lista
-            AMX132002 -- lista
-
-            Obrigado   
-             */
+                txtTituloEmail.Text = txtTituloEmail.Text.Replace("/", ": ");
+      
         }
         private void txtCopiar_Click(object sender, EventArgs e)
         {
@@ -139,6 +115,7 @@ namespace replace_campanhas
         private void chkDev_CheckedChanged(object sender, EventArgs e)
         {
             txtTituloEmail.Visible = true;
+            lblAssuntoEmail.Visible = true;
         }
     }
 }
