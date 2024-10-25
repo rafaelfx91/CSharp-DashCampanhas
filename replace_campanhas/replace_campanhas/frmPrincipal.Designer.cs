@@ -36,6 +36,7 @@
             this.gerarNomeNoSASV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendamentoCampanhasJIRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.geradorDeExcellStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agendamentoCampanhasV2EmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validarFraseSMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pUSHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -93,7 +94,8 @@
             this.gerarNomeNoSASToolStripMenuItem,
             this.gerarNomeNoSASV2ToolStripMenuItem,
             this.agendamentoCampanhasJIRAToolStripMenuItem,
-            this.geradorDeExcellStripMenuItem});
+            this.geradorDeExcellStripMenuItem,
+            this.agendamentoCampanhasV2EmailToolStripMenuItem});
             this.sASToolStripMenuItem.Name = "sASToolStripMenuItem";
             this.sASToolStripMenuItem.Size = new System.Drawing.Size(78, 41);
             this.sASToolStripMenuItem.Text = "SAS";
@@ -101,14 +103,14 @@
             // gerarNomeNoSASToolStripMenuItem
             // 
             this.gerarNomeNoSASToolStripMenuItem.Name = "gerarNomeNoSASToolStripMenuItem";
-            this.gerarNomeNoSASToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.gerarNomeNoSASToolStripMenuItem.Size = new System.Drawing.Size(546, 42);
             this.gerarNomeNoSASToolStripMenuItem.Text = "Gerar nome no SAS";
             this.gerarNomeNoSASToolStripMenuItem.Click += new System.EventHandler(this.gerarNomeNoSASToolStripMenuItem_Click);
             // 
             // gerarNomeNoSASV2ToolStripMenuItem
             // 
             this.gerarNomeNoSASV2ToolStripMenuItem.Name = "gerarNomeNoSASV2ToolStripMenuItem";
-            this.gerarNomeNoSASV2ToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.gerarNomeNoSASV2ToolStripMenuItem.Size = new System.Drawing.Size(546, 42);
             this.gerarNomeNoSASV2ToolStripMenuItem.Text = "Gerar nome no SAS V2";
             this.gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
             this.gerarNomeNoSASV2ToolStripMenuItem.Click += new System.EventHandler(this.gerarNomeNoSASV2ToolStripMenuItem_Click);
@@ -116,16 +118,23 @@
             // agendamentoCampanhasJIRAToolStripMenuItem
             // 
             this.agendamentoCampanhasJIRAToolStripMenuItem.Name = "agendamentoCampanhasJIRAToolStripMenuItem";
-            this.agendamentoCampanhasJIRAToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.agendamentoCampanhasJIRAToolStripMenuItem.Size = new System.Drawing.Size(546, 42);
             this.agendamentoCampanhasJIRAToolStripMenuItem.Text = "Agendamento campanhas (JIRA)";
             this.agendamentoCampanhasJIRAToolStripMenuItem.Click += new System.EventHandler(this.agendamentoCampanhasJIRAToolStripMenuItem_Click);
             // 
             // geradorDeExcellStripMenuItem
             // 
             this.geradorDeExcellStripMenuItem.Name = "geradorDeExcellStripMenuItem";
-            this.geradorDeExcellStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.geradorDeExcellStripMenuItem.Size = new System.Drawing.Size(546, 42);
             this.geradorDeExcellStripMenuItem.Text = "Gerador de excell (CP)";
             this.geradorDeExcellStripMenuItem.Click += new System.EventHandler(this.geradorDeExcellStripMenuItem_Click);
+            // 
+            // agendamentoCampanhasV2EmailToolStripMenuItem
+            // 
+            this.agendamentoCampanhasV2EmailToolStripMenuItem.Name = "agendamentoCampanhasV2EmailToolStripMenuItem";
+            this.agendamentoCampanhasV2EmailToolStripMenuItem.Size = new System.Drawing.Size(546, 42);
+            this.agendamentoCampanhasV2EmailToolStripMenuItem.Text = "Agendamento campanhas V2 Email";
+            this.agendamentoCampanhasV2EmailToolStripMenuItem.Click += new System.EventHandler(this.agendamentoCampanhasV2EmailToolStripMenuItem_Click);
             // 
             // sMSToolStripMenuItem
             // 
@@ -345,6 +354,7 @@
         private System.Windows.Forms.ToolStripMenuItem RCS1validacaoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RCS2validacaoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RCS3validacaoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agendamentoCampanhasV2EmailToolStripMenuItem;
     }
 }
 

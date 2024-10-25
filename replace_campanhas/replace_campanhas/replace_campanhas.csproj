@@ -223,6 +223,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="crypto.cs" />
+    <Compile Include="frmAgendamentoCamapanhaV2Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgendamentoCamapanhaV2Email.Designer.cs">
+      <DependentUpon>frmAgendamentoCamapanhaV2Email.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAgendamentoCampanha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -403,6 +409,9 @@
     <Compile Include="LinhaData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAgendamentoCamapanhaV2Email.resx">
+      <DependentUpon>frmAgendamentoCamapanhaV2Email.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAgendamentoCampanha.resx">
       <DependentUpon>frmAgendamentoCampanha.cs</DependentUpon>
     </EmbeddedResource>

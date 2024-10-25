@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|c:\\users\\camaleao\\documents\\github\\plusoftdash\\replace_campanhas\\replace_campanhas\\frmagendamentocampanhajira.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|solutionrelative:replace_campanhas\\frmagendamentocampanhajira.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|c:\\users\\camaleao\\documents\\github\\plusoftdash\\replace_campanhas\\replace_campanhas\\frmagendamentocamapanhav2email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|solutionrelative:replace_campanhas\\frmagendamentocamapanhav2email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|c:\\users\\camaleao\\documents\\github\\plusoftdash\\replace_campanhas\\replace_campanhas\\frmagendamentocampanhajira.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|solutionrelative:replace_campanhas\\frmagendamentocampanhajira.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|c:\\users\\camaleao\\documents\\github\\plusoftdash\\replace_campanhas\\replace_campanhas\\frmagendamentocamapanhav2email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|solutionrelative:replace_campanhas\\frmagendamentocamapanhav2email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|c:\\users\\camaleao\\documents\\github\\plusoftdash\\replace_campanhas\\replace_campanhas\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|solutionrelative:replace_campanhas\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -49,7 +49,7 @@
               "RelativeDocumentMoniker": "replace_campanhas\\frmPrincipal.cs",
               "ToolTip": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmPrincipal.cs",
               "RelativeToolTip": "replace_campanhas\\frmPrincipal.cs",
-              "ViewState": "AQIAAG0AAAAAAAAAAAAcwEEAAAAxAAAA",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAuwEEAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-26T19:35:31.317Z",
               "IsPinned": true,
@@ -57,27 +57,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmAgendamentoCampanhaJira.cs",
-              "DocumentMoniker": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmAgendamentoCampanhaJira.cs",
-              "RelativeDocumentMoniker": "replace_campanhas\\frmAgendamentoCampanhaJira.cs",
-              "ToolTip": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmAgendamentoCampanhaJira.cs",
-              "RelativeToolTip": "replace_campanhas\\frmAgendamentoCampanhaJira.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAwwHAAAAAJAAAA",
+              "DocumentIndex": 1,
+              "Title": "frmAgendamentoCamapanhaV2Email.cs",
+              "DocumentMoniker": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmAgendamentoCamapanhaV2Email.cs",
+              "RelativeDocumentMoniker": "replace_campanhas\\frmAgendamentoCamapanhaV2Email.cs",
+              "ToolTip": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmAgendamentoCamapanhaV2Email.cs",
+              "RelativeToolTip": "replace_campanhas\\frmAgendamentoCamapanhaV2Email.cs",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAmwHcAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T20:30:49.804Z",
+              "WhenOpened": "2024-10-25T12:12:42.398Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmAgendamentoCampanhaJira.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmAgendamentoCampanhaJira.cs",
-              "RelativeDocumentMoniker": "replace_campanhas\\frmAgendamentoCampanhaJira.cs",
-              "ToolTip": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmAgendamentoCampanhaJira.cs [Design]",
-              "RelativeToolTip": "replace_campanhas\\frmAgendamentoCampanhaJira.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "frmAgendamentoCamapanhaV2Email.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmAgendamentoCamapanhaV2Email.cs",
+              "RelativeDocumentMoniker": "replace_campanhas\\frmAgendamentoCamapanhaV2Email.cs",
+              "ToolTip": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmAgendamentoCamapanhaV2Email.cs [Design]",
+              "RelativeToolTip": "replace_campanhas\\frmAgendamentoCamapanhaV2Email.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T20:30:04.516Z",
+              "WhenOpened": "2024-10-25T12:10:59.954Z",
               "EditorCaption": " [Design]"
             }
           ]

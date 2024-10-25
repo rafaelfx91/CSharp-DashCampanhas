@@ -63,7 +63,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V2.37J";
+                lblVersion.Text = "Versão: V2.38EM";
 
             desabilitaForms();
             if (VerificaProgramaEmExecucao())
@@ -93,6 +93,7 @@ namespace replace_campanhas
                 oSsToolStripMenuItem.Visible=true;
                 RCS2validacaoToolStripMenuItem.Visible=true;
                 RCS1validacaoToolStripMenuItem.Visible=true;
+                agendamentoCampanhasV2EmailToolStripMenuItem.Visible = true;
             }
             else
             {
@@ -107,6 +108,7 @@ namespace replace_campanhas
                 oSsToolStripMenuItem.Visible = false;
                 RCS2validacaoToolStripMenuItem.Visible = false;
                 RCS1validacaoToolStripMenuItem.Visible = false;
+                agendamentoCampanhasV2EmailToolStripMenuItem.Visible = false;
             }
 
             //parametro -cryptS habilitado
@@ -549,6 +551,24 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
+
+        private void agendamentoCampanhasV2EmailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmAgendamentoCamapanhaV2Email")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmAgendamentoCamapanhaV2Email novoFormFilho = new frmAgendamentoCamapanhaV2Email(fd);
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
+
+
+
     }//fim
 }
 
