@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using BitMiracle.LibTiff.Classic;
 
 namespace replace_campanhas
 {
@@ -33,6 +34,8 @@ namespace replace_campanhas
                 chkDev.Visible = true;
             //txtTituloEmail.Visible = false;
             //lblAssuntoEmail.Visible = false;
+            //tbEnvioEmail.
+            tbControl.TabPages.RemoveAt(1);
         }
 
 
@@ -47,10 +50,24 @@ namespace replace_campanhas
                 rdrBoatarde.Checked = true;
             if (bv == 2)
                 rdrBoanoite.Checked = true;
-
         }
 
+        //INSERT INTO nome_da_tabela(coluna1, coluna2, coluna3)
+        //VALUES(valor1, valor2, valor3);
 
+        //INSERT INTO tab_fabrica(OS, amx, coluna3)
+        //VALUES(valor1, valor2, valor3);
+
+        public void gerarInsert()
+        {
+            var nomeTabela = "tab_fabrica";
+
+
+
+
+
+
+        }
 
 
 
@@ -148,5 +165,28 @@ namespace replace_campanhas
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private void tbControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void btnGeraInsert_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

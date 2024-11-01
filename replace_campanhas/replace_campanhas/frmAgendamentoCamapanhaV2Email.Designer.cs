@@ -49,21 +49,25 @@
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnGerar = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tbControl = new System.Windows.Forms.TabControl();
             this.tbAgendamento = new System.Windows.Forms.TabPage();
             this.tbEnvioEmail = new System.Windows.Forms.TabPage();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.btnEnviarEmail = new System.Windows.Forms.Button();
-            this.lblDestinatario = new System.Windows.Forms.Label();
-            this.txtDestinatario = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
+            this.lblDestinatario = new System.Windows.Forms.Label();
+            this.txtDestinatario = new System.Windows.Forms.TextBox();
+            this.btnEnviarEmail = new System.Windows.Forms.Button();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.tbInsert = new System.Windows.Forms.TabPage();
+            this.txtInsertFinal = new System.Windows.Forms.TextBox();
+            this.btnGeraInsert = new System.Windows.Forms.Button();
             this.gbAgendamento.SuspendLayout();
             this.gbBoasVindas.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tbControl.SuspendLayout();
             this.tbAgendamento.SuspendLayout();
             this.tbEnvioEmail.SuspendLayout();
+            this.tbInsert.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCorpoEmail
@@ -291,15 +295,17 @@
             this.btnGerar.UseVisualStyleBackColor = true;
             this.btnGerar.Click += new System.EventHandler(this.btnGerar_Click_1);
             // 
-            // tabControl1
+            // tbControl
             // 
-            this.tabControl1.Controls.Add(this.tbAgendamento);
-            this.tabControl1.Controls.Add(this.tbEnvioEmail);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(556, 551);
-            this.tabControl1.TabIndex = 74;
+            this.tbControl.Controls.Add(this.tbAgendamento);
+            this.tbControl.Controls.Add(this.tbEnvioEmail);
+            this.tbControl.Controls.Add(this.tbInsert);
+            this.tbControl.Location = new System.Drawing.Point(12, 12);
+            this.tbControl.Name = "tbControl";
+            this.tbControl.SelectedIndex = 0;
+            this.tbControl.Size = new System.Drawing.Size(556, 551);
+            this.tbControl.TabIndex = 74;
+            this.tbControl.SelectedIndexChanged += new System.EventHandler(this.tbControl_SelectedIndexChanged);
             // 
             // tbAgendamento
             // 
@@ -342,34 +348,23 @@
             this.tbEnvioEmail.Text = "Envio de email";
             this.tbEnvioEmail.UseVisualStyleBackColor = true;
             // 
-            // txtEmail
+            // lblSenha
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(119, 12);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(423, 22);
-            this.txtEmail.TabIndex = 71;
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.Location = new System.Drawing.Point(47, 40);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(61, 20);
+            this.lblSenha.TabIndex = 78;
+            this.lblSenha.Text = "Senha";
             // 
-            // lblEmail
+            // txtSenha
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(55, 12);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(53, 20);
-            this.lblEmail.TabIndex = 73;
-            this.lblEmail.Text = "Email";
-            // 
-            // btnEnviarEmail
-            // 
-            this.btnEnviarEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviarEmail.Location = new System.Drawing.Point(10, 476);
-            this.btnEnviarEmail.Name = "btnEnviarEmail";
-            this.btnEnviarEmail.Size = new System.Drawing.Size(98, 43);
-            this.btnEnviarEmail.TabIndex = 74;
-            this.btnEnviarEmail.Text = "Enviar";
-            this.btnEnviarEmail.UseVisualStyleBackColor = true;
-            this.btnEnviarEmail.Click += new System.EventHandler(this.btnEnviarEmail_Click);
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(119, 40);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(423, 22);
+            this.txtSenha.TabIndex = 77;
             // 
             // lblDestinatario
             // 
@@ -389,30 +384,73 @@
             this.txtDestinatario.Size = new System.Drawing.Size(423, 22);
             this.txtDestinatario.TabIndex = 75;
             // 
-            // lblSenha
+            // btnEnviarEmail
             // 
-            this.lblSenha.AutoSize = true;
-            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.Location = new System.Drawing.Point(47, 40);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(61, 20);
-            this.lblSenha.TabIndex = 78;
-            this.lblSenha.Text = "Senha";
+            this.btnEnviarEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarEmail.Location = new System.Drawing.Point(10, 476);
+            this.btnEnviarEmail.Name = "btnEnviarEmail";
+            this.btnEnviarEmail.Size = new System.Drawing.Size(98, 43);
+            this.btnEnviarEmail.TabIndex = 74;
+            this.btnEnviarEmail.Text = "Enviar";
+            this.btnEnviarEmail.UseVisualStyleBackColor = true;
+            this.btnEnviarEmail.Click += new System.EventHandler(this.btnEnviarEmail_Click);
             // 
-            // txtSenha
+            // lblEmail
             // 
-            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(119, 40);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(423, 22);
-            this.txtSenha.TabIndex = 77;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(55, 12);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(53, 20);
+            this.lblEmail.TabIndex = 73;
+            this.lblEmail.Text = "Email";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(119, 12);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(423, 22);
+            this.txtEmail.TabIndex = 71;
+            // 
+            // tbInsert
+            // 
+            this.tbInsert.Controls.Add(this.btnGeraInsert);
+            this.tbInsert.Controls.Add(this.txtInsertFinal);
+            this.tbInsert.Location = new System.Drawing.Point(4, 22);
+            this.tbInsert.Name = "tbInsert";
+            this.tbInsert.Padding = new System.Windows.Forms.Padding(3);
+            this.tbInsert.Size = new System.Drawing.Size(548, 525);
+            this.tbInsert.TabIndex = 2;
+            this.tbInsert.Text = "Insert";
+            this.tbInsert.UseVisualStyleBackColor = true;
+            // 
+            // txtInsertFinal
+            // 
+            this.txtInsertFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInsertFinal.Location = new System.Drawing.Point(6, 277);
+            this.txtInsertFinal.Multiline = true;
+            this.txtInsertFinal.Name = "txtInsertFinal";
+            this.txtInsertFinal.Size = new System.Drawing.Size(536, 193);
+            this.txtInsertFinal.TabIndex = 74;
+            // 
+            // btnGeraInsert
+            // 
+            this.btnGeraInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGeraInsert.Location = new System.Drawing.Point(6, 476);
+            this.btnGeraInsert.Name = "btnGeraInsert";
+            this.btnGeraInsert.Size = new System.Drawing.Size(98, 43);
+            this.btnGeraInsert.TabIndex = 75;
+            this.btnGeraInsert.Text = "Gerar";
+            this.btnGeraInsert.UseVisualStyleBackColor = true;
+            this.btnGeraInsert.Click += new System.EventHandler(this.btnGeraInsert_Click);
             // 
             // frmAgendamentoCamapanhaV2Email
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(579, 574);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tbControl);
             this.Name = "frmAgendamentoCamapanhaV2Email";
             this.Text = "frmAgendamentoCamapanhaV2Email";
             this.Load += new System.EventHandler(this.frmAgendamentoCamapanhaV2Email_Load);
@@ -420,11 +458,13 @@
             this.gbAgendamento.PerformLayout();
             this.gbBoasVindas.ResumeLayout(false);
             this.gbBoasVindas.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.tbControl.ResumeLayout(false);
             this.tbAgendamento.ResumeLayout(false);
             this.tbAgendamento.PerformLayout();
             this.tbEnvioEmail.ResumeLayout(false);
             this.tbEnvioEmail.PerformLayout();
+            this.tbInsert.ResumeLayout(false);
+            this.tbInsert.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -452,7 +492,7 @@
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnGerar;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tbControl;
         private System.Windows.Forms.TabPage tbAgendamento;
         private System.Windows.Forms.TabPage tbEnvioEmail;
         private System.Windows.Forms.Label lblEmail;
@@ -462,5 +502,8 @@
         private System.Windows.Forms.TextBox txtDestinatario;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.TabPage tbInsert;
+        private System.Windows.Forms.TextBox txtInsertFinal;
+        private System.Windows.Forms.Button btnGeraInsert;
     }
 }

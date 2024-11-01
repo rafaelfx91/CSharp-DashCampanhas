@@ -134,6 +134,7 @@
             this.agendamentoCampanhasV2EmailToolStripMenuItem.Name = "agendamentoCampanhasV2EmailToolStripMenuItem";
             this.agendamentoCampanhasV2EmailToolStripMenuItem.Size = new System.Drawing.Size(546, 42);
             this.agendamentoCampanhasV2EmailToolStripMenuItem.Text = "Agendamento campanhas V2 Email";
+            this.agendamentoCampanhasV2EmailToolStripMenuItem.Visible = false;
             this.agendamentoCampanhasV2EmailToolStripMenuItem.Click += new System.EventHandler(this.agendamentoCampanhasV2EmailToolStripMenuItem_Click);
             // 
             // sMSToolStripMenuItem

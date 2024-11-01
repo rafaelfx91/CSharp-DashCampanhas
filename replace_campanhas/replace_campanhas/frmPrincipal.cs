@@ -63,7 +63,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V2.38EM";
+                lblVersion.Text = "Versão: V2.39FE";
 
             desabilitaForms();
             if (VerificaProgramaEmExecucao())
@@ -74,6 +74,10 @@ namespace replace_campanhas
             }
             //else  //DE MERDA REVER
             //mutex = new Mutex(true, MutexName);
+
+            agendamentoCampanhasV2EmailToolStripMenuItem.Visible = true;
+
+
         }
 
         public void desabilitaForms()

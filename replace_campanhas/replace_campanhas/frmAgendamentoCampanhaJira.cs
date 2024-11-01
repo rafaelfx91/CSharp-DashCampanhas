@@ -87,7 +87,7 @@ namespace replace_campanhas
             if (rdrAgendamento.Checked)
                 agendamento = "agendamento";
             if (rdrCancelamento.Checked)
-                agendamento = "cancelamento";
+                agendamento = "exclusao";
             if (rdrPausa.Checked)
                 agendamento = "pausa";
             if (rdrAlteracao.Checked)

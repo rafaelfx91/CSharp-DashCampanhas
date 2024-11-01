@@ -40,16 +40,15 @@
             this.lblAgendamento = new System.Windows.Forms.Label();
             this.gbBoasVindas = new System.Windows.Forms.GroupBox();
             this.gbAgendamento = new System.Windows.Forms.GroupBox();
+            this.rdrAlteracao = new System.Windows.Forms.RadioButton();
             this.rdrPausa = new System.Windows.Forms.RadioButton();
             this.rdrCancelamento = new System.Windows.Forms.RadioButton();
             this.rdrAgendamento = new System.Windows.Forms.RadioButton();
-            this.txtCopiar = new System.Windows.Forms.Button();
             this.chkDev = new System.Windows.Forms.CheckBox();
             this.txtTituloEmail = new System.Windows.Forms.TextBox();
             this.lblAssuntoEmail = new System.Windows.Forms.Label();
             this.txtCorpoEmail = new System.Windows.Forms.TextBox();
             this.lblCorpoEmail = new System.Windows.Forms.Label();
-            this.rdrAlteracao = new System.Windows.Forms.RadioButton();
             this.gbBoasVindas.SuspendLayout();
             this.gbAgendamento.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +56,7 @@
             // btnLimpar
             // 
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(219, 475);
+            this.btnLimpar.Location = new System.Drawing.Point(115, 475);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(98, 43);
             this.btnLimpar.TabIndex = 30;
@@ -68,7 +67,7 @@
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(323, 475);
+            this.btnSair.Location = new System.Drawing.Point(219, 475);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(98, 43);
             this.btnSair.TabIndex = 29;
@@ -140,6 +139,7 @@
             this.txtAmx.Name = "txtAmx";
             this.txtAmx.Size = new System.Drawing.Size(521, 86);
             this.txtAmx.TabIndex = 35;
+            this.txtAmx.TextChanged += new System.EventHandler(this.btnGerar_Click);
             // 
             // txtSaida
             // 
@@ -183,6 +183,17 @@
             this.gbAgendamento.TabIndex = 40;
             this.gbAgendamento.TabStop = false;
             // 
+            // rdrAlteracao
+            // 
+            this.rdrAlteracao.AutoSize = true;
+            this.rdrAlteracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdrAlteracao.Location = new System.Drawing.Point(15, 109);
+            this.rdrAlteracao.Name = "rdrAlteracao";
+            this.rdrAlteracao.Size = new System.Drawing.Size(104, 24);
+            this.rdrAlteracao.TabIndex = 37;
+            this.rdrAlteracao.Text = "Alteracao";
+            this.rdrAlteracao.UseVisualStyleBackColor = true;
+            // 
             // rdrPausa
             // 
             this.rdrPausa.AutoSize = true;
@@ -200,9 +211,9 @@
             this.rdrCancelamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdrCancelamento.Location = new System.Drawing.Point(16, 49);
             this.rdrCancelamento.Name = "rdrCancelamento";
-            this.rdrCancelamento.Size = new System.Drawing.Size(146, 24);
+            this.rdrCancelamento.Size = new System.Drawing.Size(99, 24);
             this.rdrCancelamento.TabIndex = 35;
-            this.rdrCancelamento.Text = "Camcelamento";
+            this.rdrCancelamento.Text = "Exclusao";
             this.rdrCancelamento.UseVisualStyleBackColor = true;
             // 
             // rdrAgendamento
@@ -217,17 +228,6 @@
             this.rdrAgendamento.TabStop = true;
             this.rdrAgendamento.Text = "Agendamento";
             this.rdrAgendamento.UseVisualStyleBackColor = true;
-            // 
-            // txtCopiar
-            // 
-            this.txtCopiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCopiar.Location = new System.Drawing.Point(115, 475);
-            this.txtCopiar.Name = "txtCopiar";
-            this.txtCopiar.Size = new System.Drawing.Size(98, 43);
-            this.txtCopiar.TabIndex = 41;
-            this.txtCopiar.Text = "Copiar";
-            this.txtCopiar.UseVisualStyleBackColor = true;
-            this.txtCopiar.Click += new System.EventHandler(this.txtCopiar_Click);
             // 
             // chkDev
             // 
@@ -279,17 +279,6 @@
             this.lblCorpoEmail.TabIndex = 58;
             this.lblCorpoEmail.Text = "Corpo Email";
             // 
-            // rdrAlteracao
-            // 
-            this.rdrAlteracao.AutoSize = true;
-            this.rdrAlteracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdrAlteracao.Location = new System.Drawing.Point(15, 109);
-            this.rdrAlteracao.Name = "rdrAlteracao";
-            this.rdrAlteracao.Size = new System.Drawing.Size(104, 24);
-            this.rdrAlteracao.TabIndex = 37;
-            this.rdrAlteracao.Text = "Alteracao";
-            this.rdrAlteracao.UseVisualStyleBackColor = true;
-            // 
             // frmAgendamentoCampanhaJira
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,7 +289,6 @@
             this.Controls.Add(this.txtCorpoEmail);
             this.Controls.Add(this.txtTituloEmail);
             this.Controls.Add(this.chkDev);
-            this.Controls.Add(this.txtCopiar);
             this.Controls.Add(this.gbAgendamento);
             this.Controls.Add(this.gbBoasVindas);
             this.Controls.Add(this.lblAgendamento);
@@ -340,7 +328,6 @@
         private System.Windows.Forms.RadioButton rdrPausa;
         private System.Windows.Forms.RadioButton rdrCancelamento;
         private System.Windows.Forms.RadioButton rdrAgendamento;
-        private System.Windows.Forms.Button txtCopiar;
         private System.Windows.Forms.CheckBox chkDev;
         private System.Windows.Forms.TextBox txtTituloEmail;
         private System.Windows.Forms.Label lblAssuntoEmail;
