@@ -58,6 +58,7 @@
             this.oSsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.repicksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stringUpLowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -238,7 +239,8 @@
             this.porcentagemToolStripMenuItem,
             this.hIKEToolStripMenuItem,
             this.oSsToolStripMenuItem,
-            this.repicksToolStripMenuItem});
+            this.repicksToolStripMenuItem,
+            this.stringUpLowerToolStripMenuItem});
             this.fERRAMENTASToolStripMenuItem.Name = "fERRAMENTASToolStripMenuItem";
             this.fERRAMENTASToolStripMenuItem.Size = new System.Drawing.Size(138, 41);
             this.fERRAMENTASToolStripMenuItem.Text = "OUTROS";
@@ -301,6 +303,13 @@
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
+            // stringUpLowerToolStripMenuItem
+            // 
+            this.stringUpLowerToolStripMenuItem.Name = "stringUpLowerToolStripMenuItem";
+            this.stringUpLowerToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
+            this.stringUpLowerToolStripMenuItem.Text = "String Up-Lower";
+            this.stringUpLowerToolStripMenuItem.Click += new System.EventHandler(this.stringUpLowerToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,6 +365,7 @@
         private System.Windows.Forms.ToolStripMenuItem RCS2validacaoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RCS3validacaoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agendamentoCampanhasV2EmailToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stringUpLowerToolStripMenuItem;
     }
 }
 

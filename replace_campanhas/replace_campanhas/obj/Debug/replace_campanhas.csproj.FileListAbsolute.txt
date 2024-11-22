@@ -186,3 +186,4 @@ C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanh
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmRCS2.resources
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmRCS3.resources
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmAgendamentoCamapanhaV2Email.resources
+C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmUpLow.resources

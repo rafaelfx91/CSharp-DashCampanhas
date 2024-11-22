@@ -63,7 +63,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V2.39FE";
+                lblVersion.Text = "Versão: V2.40";
 
             desabilitaForms();
             if (VerificaProgramaEmExecucao())
@@ -98,6 +98,7 @@ namespace replace_campanhas
                 RCS2validacaoToolStripMenuItem.Visible=true;
                 RCS1validacaoToolStripMenuItem.Visible=true;
                 agendamentoCampanhasV2EmailToolStripMenuItem.Visible = true;
+                stringUpLowerToolStripMenuItem.Visible = true;
             }
             else
             {
@@ -113,6 +114,7 @@ namespace replace_campanhas
                 RCS2validacaoToolStripMenuItem.Visible = false;
                 RCS1validacaoToolStripMenuItem.Visible = false;
                 agendamentoCampanhasV2EmailToolStripMenuItem.Visible = false;
+                stringUpLowerToolStripMenuItem.Visible = false;
             }
 
             //parametro -cryptS habilitado
@@ -571,8 +573,20 @@ namespace replace_campanhas
             novoFormFilho.Show();
         }
 
-
-
+        private void stringUpLowerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmUpLow")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmUpLow novoFormFilho = new frmUpLow();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
     }//fim
 }
 

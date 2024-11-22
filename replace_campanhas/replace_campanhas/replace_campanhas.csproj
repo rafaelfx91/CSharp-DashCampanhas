@@ -373,6 +373,12 @@
     <Compile Include="frmTeste.Designer.cs">
       <DependentUpon>frmTeste.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUpLow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpLow.Designer.cs">
+      <DependentUpon>frmUpLow.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmValidaFrasePushV2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -483,6 +489,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTeste.resx">
       <DependentUpon>frmTeste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpLow.resx">
+      <DependentUpon>frmUpLow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmValidaFrasePushV2.resx">
       <DependentUpon>frmValidaFrasePushV2.cs</DependentUpon>
