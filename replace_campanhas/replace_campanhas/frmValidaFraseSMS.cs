@@ -14,6 +14,8 @@ namespace replace_campanhas
 {
     public partial class frmValidaFraseSMS : Form
     {
+        LimparString ls = new LimparString();
+
         public frmValidaFraseSMS()
         {
             InitializeComponent();
@@ -67,6 +69,38 @@ namespace replace_campanhas
 
         }//public void qtdCaracteres()
 
+
+        private void HighlightCharacter(Color highlightColor)
+        {
+            //var chars = ls.caracteresEspeciais;
+            //
+            //// Salva a posição atual do cursor
+            //int currentPosition = txtFraseEntrada.SelectionStart;
+            //
+            //// Procura pelo caractere na string
+            //int startIndex = 0;
+            //while ((startIndex = txtFraseEntrada.Text.IndexOf(chars, startIndex)) != -1)
+            //{
+            //    // Seleciona o caractere encontrado
+            //    txtFraseEntrada.Select(startIndex, chars.Length);
+            //
+            //    // Aplica a cor ao texto selecionado
+            //    //txtFraseEntrada.SelectionColor = highlightColor;
+            //
+            //    // Move para o próximo caractere
+            //    startIndex += chars.Length;
+            //}
+            //
+            //// Restaura a posição original do cursor
+            //txtFraseEntrada.SelectionStart = currentPosition;
+            //txtFraseEntrada.SelectionLength = 0;
+            ////txtFraseEntrada.SelectionColor = txtFraseEntrada.ForeColor;
+        }
+
+
+
+
+
         //
         //
         // BOTOES
@@ -86,9 +120,8 @@ namespace replace_campanhas
 
         private void btnGerar_Click(object sender, EventArgs e)
         {
-           LimparString ls = new LimparString();
-            
-           txtFraseSaida.ForeColor = Color.Black;
+            //LimparString ls = new LimparString();
+            txtFraseSaida.ForeColor = Color.Black;
            
            var frase = ls.RemoverCaracteresEspeciais2(txtFraseEntrada.Text);
            
@@ -111,6 +144,7 @@ namespace replace_campanhas
         private void txtFraseEntrada_TextChanged(object sender, EventArgs e)
         {
             qtdCaracteres(1);
+            //HighlightCharacter(Color.Red);
         }
 
         private void btnCopiar_Click(object sender, EventArgs e)

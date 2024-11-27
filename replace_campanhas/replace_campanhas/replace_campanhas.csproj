@@ -391,6 +391,12 @@
     <Compile Include="frmValidaFraseSMS.Designer.cs">
       <DependentUpon>frmValidaFraseSMS.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmValidaFraseSMSV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValidaFraseSMSV2.Designer.cs">
+      <DependentUpon>frmValidaFraseSMSV2.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmValidaHtml.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -498,6 +504,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmValidaFraseSMS.resx">
       <DependentUpon>frmValidaFraseSMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmValidaFraseSMSV2.resx">
+      <DependentUpon>frmValidaFraseSMSV2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmValidaHtml.resx">
       <DependentUpon>frmValidaHtml.cs</DependentUpon>

@@ -57,8 +57,9 @@
             this.hIKEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oSsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.repicksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stringUpLowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.validaFraseV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,7 +142,8 @@
             // sMSToolStripMenuItem
             // 
             this.sMSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.validarFraseSMSToolStripMenuItem});
+            this.validarFraseSMSToolStripMenuItem,
+            this.validaFraseV2ToolStripMenuItem});
             this.sMSToolStripMenuItem.Name = "sMSToolStripMenuItem";
             this.sMSToolStripMenuItem.Size = new System.Drawing.Size(85, 41);
             this.sMSToolStripMenuItem.Text = "SMS";
@@ -149,7 +151,7 @@
             // validarFraseSMSToolStripMenuItem
             // 
             this.validarFraseSMSToolStripMenuItem.Name = "validarFraseSMSToolStripMenuItem";
-            this.validarFraseSMSToolStripMenuItem.Size = new System.Drawing.Size(254, 42);
+            this.validarFraseSMSToolStripMenuItem.Size = new System.Drawing.Size(288, 42);
             this.validarFraseSMSToolStripMenuItem.Text = "Validar frase";
             this.validarFraseSMSToolStripMenuItem.Click += new System.EventHandler(this.validarFraseSMSToolStripMenuItem_Click);
             // 
@@ -296,6 +298,13 @@
             this.repicksToolStripMenuItem.Text = "Repicks";
             this.repicksToolStripMenuItem.Click += new System.EventHandler(this.repicksToolStripMenuItem_Click);
             // 
+            // stringUpLowerToolStripMenuItem
+            // 
+            this.stringUpLowerToolStripMenuItem.Name = "stringUpLowerToolStripMenuItem";
+            this.stringUpLowerToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
+            this.stringUpLowerToolStripMenuItem.Text = "String Up-Lower";
+            this.stringUpLowerToolStripMenuItem.Click += new System.EventHandler(this.stringUpLowerToolStripMenuItem_Click);
+            // 
             // sAIRToolStripMenuItem
             // 
             this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
@@ -303,12 +312,12 @@
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
-            // stringUpLowerToolStripMenuItem
+            // validaFraseV2ToolStripMenuItem
             // 
-            this.stringUpLowerToolStripMenuItem.Name = "stringUpLowerToolStripMenuItem";
-            this.stringUpLowerToolStripMenuItem.Size = new System.Drawing.Size(347, 42);
-            this.stringUpLowerToolStripMenuItem.Text = "String Up-Lower";
-            this.stringUpLowerToolStripMenuItem.Click += new System.EventHandler(this.stringUpLowerToolStripMenuItem_Click);
+            this.validaFraseV2ToolStripMenuItem.Name = "validaFraseV2ToolStripMenuItem";
+            this.validaFraseV2ToolStripMenuItem.Size = new System.Drawing.Size(288, 42);
+            this.validaFraseV2ToolStripMenuItem.Text = "Valida Frase V2";
+            this.validaFraseV2ToolStripMenuItem.Click += new System.EventHandler(this.validaFraseV2ToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -366,6 +375,7 @@
         private System.Windows.Forms.ToolStripMenuItem RCS3validacaoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agendamentoCampanhasV2EmailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stringUpLowerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem validaFraseV2ToolStripMenuItem;
     }
 }
 

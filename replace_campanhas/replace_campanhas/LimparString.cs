@@ -10,6 +10,8 @@ namespace replace_campanhas
 {
     public class LimparString
     {
+        public readonly string caracteresEspeciais = "ÄÅÁÂÀÃäáâàãÉÊËÈéêëèÍÎÏÌíîïìÖÓÔÒÕöóôòõÜÚÛüúûùÇçº¹²³¨&_";
+        public readonly string caracteresNormais = "AAAAAAaaaaaEEEEeeeeIIIIiiiiOOOOOoooooUUUuuuuCc!@#$%*+=-/";
 
         public string fraseLimpa(string FraseEntrada)
         {
@@ -61,7 +63,6 @@ namespace replace_campanhas
             return saidaRetorno;
 
         }// public string fraseLimpa(string FraseEntrada)
-
         public string caracteresLimpos(string FraseEntrada)
         {
             var substituiEspaco = new string[] { "     ", "    ", "   ", "  ", " " };

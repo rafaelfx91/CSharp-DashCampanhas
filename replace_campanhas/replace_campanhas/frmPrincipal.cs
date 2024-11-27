@@ -63,7 +63,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V2.40";
+                lblVersion.Text = "Versão: V2.41CSMSV2";
 
             desabilitaForms();
             if (VerificaProgramaEmExecucao())
@@ -201,6 +201,21 @@ namespace replace_campanhas
                 }
             }
             frmValidaFraseSMS novoFormFilho = new frmValidaFraseSMS();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
+
+        private void validaFraseV2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmValidaFraseSMSV2")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmValidaFraseSMSV2 novoFormFilho = new frmValidaFraseSMSV2();
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
@@ -587,6 +602,8 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
+
+
     }//fim
 }
 
