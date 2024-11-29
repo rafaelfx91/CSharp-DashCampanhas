@@ -74,6 +74,7 @@ namespace replace_campanhas
         private void btnGerar_Click(object sender, EventArgs e)
         {
             var boasVindas = String.Empty;
+            var msg = "Conforme o arquivo em anexo, Obrigado";
 
             if (rdrBomdia.Checked)
                 boasVindas = "Bom dia!";
@@ -87,18 +88,23 @@ namespace replace_campanhas
             if (rdrAgendamento.Checked)
                 agendamento = "agendamento";
             if (rdrCancelamento.Checked)
+            {
                 agendamento = "exclusao";
+                msg = "Obrigado";
+            }
             if (rdrPausa.Checked)
                 agendamento = "pausa";
             if (rdrAlteracao.Checked)
                 agendamento = "alteracao";
 
             var listAmx = txtAmx.Text;
-                 
+
+                
+
             txtSaida.Text = boasVindas + "\r\n" +
                             "Solicito o " + agendamento + " das campanhas:\r\n" +
                             listAmx + "\r\n" +
-                            "Conforme o aruqivo em anexo, Obrigado";
+                            msg;
 
             txtCorpoEmail.Text = "Prezados,\r\n" +
                                  "Segue solicitação de " + agendamento + " das campanhas";

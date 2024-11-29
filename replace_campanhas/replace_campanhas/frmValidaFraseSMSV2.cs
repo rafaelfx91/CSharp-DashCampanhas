@@ -52,7 +52,6 @@ namespace replace_campanhas
 
         }//public void qtdCaracteres()
 
-
         private void HighlightCharacter(Color highlightColor)
         {
             var chars = ls.caracteresEspeciais;
@@ -161,8 +160,12 @@ namespace replace_campanhas
 
 
 
-
-
+            
+        /// BOTOES
+        /// BOTOES
+        /// BOTOES
+        /// BOTOES
+        /// BOTOES
 
         private void btnGerar_Click(object sender, EventArgs e)
         {

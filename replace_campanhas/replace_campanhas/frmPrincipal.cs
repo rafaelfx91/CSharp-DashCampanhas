@@ -72,11 +72,8 @@ namespace replace_campanhas
                 TragaProgramaExistenteParaFrente();
                 Application.Exit();
             }
-            //else  //DE MERDA REVER
+            //else  //DEU MERDA REVER um dia
             //mutex = new Mutex(true, MutexName);
-
-            agendamentoCampanhasV2EmailToolStripMenuItem.Visible = true;
-
 
         }
 
@@ -85,35 +82,22 @@ namespace replace_campanhas
             // parametro -devS habilitado
             if (fd.validaConfigsDev3())
             {
-                //agendamentoEmailJIRAToolStripMenuItem.Visible = true;
-                //emailDeDiagramaToolStripMenuItem.Visible = true;
                 encriptadorToolStripMenuItem.Visible = true;
-                //envioDeEmailToolStripMenuItem.Visible = true;
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
-                //textoEmUmaLinhaToolStripMenuItem.Visible = true;
-                //selectsToolStripMenuItem.Visible= true;
                 porcentagemToolStripMenuItem.Visible = true;
-                hIKEToolStripMenuItem.Visible = true;
                 oSsToolStripMenuItem.Visible=true;
                 RCS2validacaoToolStripMenuItem.Visible=true;
                 RCS1validacaoToolStripMenuItem.Visible=true;
-                agendamentoCampanhasV2EmailToolStripMenuItem.Visible = true;
                 stringUpLowerToolStripMenuItem.Visible = true;
             }
             else
             {
-                //agendamentoEmailJIRAToolStripMenuItem.Visible = false;
-                //emailDeDiagramaToolStripMenuItem.Visible = false;
                 encriptadorToolStripMenuItem.Visible = false;
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
-                //textoEmUmaLinhaToolStripMenuItem.Visible = false;
-                //selectsToolStripMenuItem.Visible = false;
                 porcentagemToolStripMenuItem.Visible = false;
-                hIKEToolStripMenuItem.Visible = false;
                 oSsToolStripMenuItem.Visible = false;
                 RCS2validacaoToolStripMenuItem.Visible = false;
                 RCS1validacaoToolStripMenuItem.Visible = false;
-                agendamentoCampanhasV2EmailToolStripMenuItem.Visible = false;
                 stringUpLowerToolStripMenuItem.Visible = false;
             }
 
@@ -127,21 +111,18 @@ namespace replace_campanhas
             if (debugVisual)
             {
                 geradorDeExcellStripMenuItem.Visible = true;
-                //testarLinksToolStripMenuItem.Visible = true;
                 testeToolStripMenuItem.Visible = true;
-                //envioDeEmailToolStripMenuItem.Visible = true;
-                //aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = true;
-                //checklistToolStripMenuItem.Visible = true;
+                effectiveMailToolStripMenuItem.Visible = true;
+                agendamentoCampanhasV2EmailToolStripMenuItem.Visible = true;
+                hIKEToolStripMenuItem.Visible = true;
             }
             else
             {
                 geradorDeExcellStripMenuItem.Visible = false;
-                //testarLinksToolStripMenuItem.Visible = false;
-                //envioDeEmailToolStripMenuItem.Visible = false; 
-                //aGENDAMENTOCAMPANHASToolStripMenuItem.Visible = false;
-                //checklistToolStripMenuItem.Visible = false;
                 testeToolStripMenuItem.Visible = false;
-
+                effectiveMailToolStripMenuItem.Visible = false;
+                agendamentoCampanhasV2EmailToolStripMenuItem.Visible = false;
+                hIKEToolStripMenuItem.Visible = false;
             }
 
 
@@ -174,7 +155,11 @@ namespace replace_campanhas
 
 
 
-
+        //
+        //
+        //BOTOES
+        //
+        //
         private void gerarNomeNoSASToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)

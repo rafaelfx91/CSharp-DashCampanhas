@@ -123,6 +123,7 @@
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnGerar);
             this.Controls.Add(this.lblFraseEntrada);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmValidaFraseSMSV2";
             this.Text = "frmValidaFraseSMSV2";
             this.Load += new System.EventHandler(this.frmValidaFraseSMSV2_Load);
