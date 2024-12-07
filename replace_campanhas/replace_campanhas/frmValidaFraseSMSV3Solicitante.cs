@@ -22,9 +22,10 @@ namespace replace_campanhas
         {
             this.MaximizeBox = false;
             lblCaracteresCampanha.ForeColor = Color.Green;
+            habilitaSMS(false);
+            rtxtSms.ReadOnly = true;
+
         }
-
-
         public void qtdCaracteres()
         {
             int totalValue = 0;
@@ -40,8 +41,6 @@ namespace replace_campanhas
                 lblCaracteresCampanha.ForeColor = Color.Green;
 
         }//public void qtdCaracteres()
-
-
         private void HighlightCharactersv2(RichTextBox richTextBox, Color highlightColor)
         {
             var charactersToHighlight = ls.caracteresEspeciais;
@@ -72,8 +71,22 @@ namespace replace_campanhas
                 }
             }
         }
-
-
+        public void habilitaSMS(bool ativa)
+        {
+            if (ativa)
+            {
+                pbAvatar.Visible = true;
+                rtxtSms.Visible = true;
+                pbSmS.Visible = true;
+            }
+            else
+            {
+                pbAvatar.Visible = false;
+                rtxtSms.Visible = false;
+                pbSmS.Visible = false;
+                rtxtSms.Text = "";
+            }
+        }
 
 
 
@@ -98,6 +111,16 @@ namespace replace_campanhas
             else
             {
                 rtxtFraseEntrada.Text = frase;
+                if (frase.Length != 0)
+                {
+                    rtxtSms.Text = frase;
+                    habilitaSMS(true);
+                }
+                else
+                {
+                    habilitaSMS(false);
+                }
+                    
             }
         }
 
@@ -109,6 +132,7 @@ namespace replace_campanhas
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             rtxtFraseEntrada.Clear();
+            habilitaSMS(false);
         }
 
         private void btnSair_Click(object sender, EventArgs e)

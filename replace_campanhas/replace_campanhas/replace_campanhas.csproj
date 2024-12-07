@@ -569,6 +569,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="plusoft2.ico" />
+    <None Include="Resources\sms_dash4.png" />
+    <None Include="Resources\sms_dash3.png" />
+    <None Include="Resources\sms_dash2.png" />
+    <None Include="Resources\ClaroLogo2.png" />
+    <None Include="Resources\enviar-correio.png" />
+    <None Include="Resources\apagador.png" />
+    <None Include="Resources\1348448.png" />
+    <None Include="Resources\interface_sms3.png" />
+    <None Include="Resources\interface_sms2.png" />
+    <None Include="Resources\ClaroLogo.png" />
+    <None Include="Resources\sms_dash.png" />
+    <None Include="Resources\interface_sms.png" />
     <None Include="Resources\off.png" />
     <None Include="Resources\desligar.png" />
     <None Include="Resources\on.png" />
