@@ -74,31 +74,33 @@ namespace replace_campanhas
                 TragaProgramaExistenteParaFrente();
                 Application.Exit();
             }
-
+           
         }
 
         public void desabilitaForms()
         {
 
-            geradorDeExcellStripMenuItem.Visible = false;
-            testeToolStripMenuItem.Visible = false;            
-            agendamentoCampanhasV2EmailToolStripMenuItem.Visible = false;
-            hIKEToolStripMenuItem.Visible = false;
-            encriptadorToolStripMenuItem.Visible = false;
+            //SAS Menu
             gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
-            porcentagemToolStripMenuItem.Visible = false;
-            oSsToolStripMenuItem.Visible = false;
-            RCS2validacaoToolStripMenuItem.Visible = false;
-            RCS1validacaoToolStripMenuItem.Visible = false;
-            stringUpLowerToolStripMenuItem.Visible = false;
-            fERRAMENTASToolStripMenuItem.Visible = false;
             sASToolStripMenuItem.Visible = false;
-            repicksToolStripMenuItem.Visible = false;
-            validarFraseSMSToolStripMenuItem.Visible = false;
+            //SMS Menu            
             validaFraseV2ToolStripMenuItem.Visible = false;
+            //Push menu 
             validarFrasePUSHToolStripMenuItem.Visible = false;
             claroPayToolStripMenuItem.Visible = false;
-
+            //Html Menu
+            //RCS Menu
+            RCS2validacaoToolStripMenuItem.Visible = false;
+            RCS1validacaoToolStripMenuItem.Visible = false;
+            //Outros menu
+            hIKEToolStripMenuItem.Visible = false;
+            testeToolStripMenuItem.Visible = false;
+            encriptadorToolStripMenuItem.Visible = false;
+            porcentagemToolStripMenuItem.Visible = false;
+            oSsToolStripMenuItem.Visible = false;
+            stringUpLowerToolStripMenuItem.Visible = false;
+            fERRAMENTASToolStripMenuItem.Visible = false;
+            repicksToolStripMenuItem.Visible = false;
 
 
 
@@ -123,7 +125,6 @@ namespace replace_campanhas
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
 
                 //SMS Menu
-                validarFraseSMSToolStripMenuItem.Visible= true;
                 validaFraseV2ToolStripMenuItem.Visible= true;
 
                 //Push Menu
@@ -142,12 +143,11 @@ namespace replace_campanhas
                 fERRAMENTASToolStripMenuItem.Visible = true;
 
                 //SMS Menu
-                validarFraseSMSToolStripMenuItem.Visible = true;
                 validaFraseV2ToolStripMenuItem.Visible = true;
 
                 //Push Menu
-                validarFrasePUSHToolStripMenuItem.Visible = true;
-                claroPayToolStripMenuItem.Visible = true;
+                //validarFrasePUSHToolStripMenuItem.Visible = true;
+                //claroPayToolStripMenuItem.Visible = true;
 
             }
 
@@ -165,9 +165,7 @@ namespace replace_campanhas
             //sem parametro apenas se rodar no visual studio
             if (debugVisual)
             {
-                geradorDeExcellStripMenuItem.Visible = true;
                 testeToolStripMenuItem.Visible = true;
-                agendamentoCampanhasV2EmailToolStripMenuItem.Visible = true;
                 hIKEToolStripMenuItem.Visible = true;
             }
 

@@ -31,24 +31,17 @@ namespace replace_campanhas
         //
         public void qtdCaracteres()
         {
-            //textbox = 1 Txtto de entrada
-            //textbox = 2 Txtto de saida
-
             int totalValue = 0;
             foreach (char item in rtxtFraseEntrada.Text)
             {
                 totalValue = totalValue + 1;
             }
-            lblCaracteresCampanha.Text = "Caracters: " + totalValue;
+            lblCaracteresCampanha.Text = "Caracters: " + totalValue + " /160";
 
             if (totalValue >= 161)
                 lblCaracteresCampanha.ForeColor = Color.Red;
             if (totalValue < 161)
                 lblCaracteresCampanha.ForeColor = Color.Green;
- 
-
-
-
 
         }//public void qtdCaracteres()
 

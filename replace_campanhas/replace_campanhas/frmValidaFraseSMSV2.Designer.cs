@@ -52,7 +52,7 @@
             // 
             this.lblCaracteresCampanha.AutoSize = true;
             this.lblCaracteresCampanha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCaracteresCampanha.Location = new System.Drawing.Point(614, 6);
+            this.lblCaracteresCampanha.Location = new System.Drawing.Point(554, 4);
             this.lblCaracteresCampanha.Name = "lblCaracteresCampanha";
             this.lblCaracteresCampanha.Size = new System.Drawing.Size(121, 25);
             this.lblCaracteresCampanha.TabIndex = 35;

@@ -569,6 +569,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="plusoft2.ico" />
+    <None Include="Resources\off.png" />
+    <None Include="Resources\desligar.png" />
+    <None Include="Resources\on.png" />
+    <None Include="Resources\configuracoes.png" />
+    <None Include="Resources\RCS.png" />
+    <None Include="Resources\e-mail.png" />
+    <None Include="Resources\sms.png" />
+    <None Include="Resources\notificacao-push.png" />
     <None Include="Resources\ProjetoPush3.png" />
     <None Include="Resources\ProjetoPush4.png" />
     <None Include="Resources\ProjetoPush2.png" />

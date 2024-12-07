@@ -35,10 +35,7 @@
             this.gerarNomeNoSASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerarNomeNoSASV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendamentoCampanhasJIRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.geradorDeExcellStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agendamentoCampanhasV2EmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.validarFraseSMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validaFraseV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validaSMSSolicitanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pUSHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +64,7 @@
             // lblVersion
             // 
             this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(702, 9);
+            this.lblVersion.Location = new System.Drawing.Point(694, 639);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(43, 13);
             this.lblVersion.TabIndex = 11;
@@ -97,9 +94,7 @@
             this.sASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gerarNomeNoSASToolStripMenuItem,
             this.gerarNomeNoSASV2ToolStripMenuItem,
-            this.agendamentoCampanhasJIRAToolStripMenuItem,
-            this.geradorDeExcellStripMenuItem,
-            this.agendamentoCampanhasV2EmailToolStripMenuItem});
+            this.agendamentoCampanhasJIRAToolStripMenuItem});
             this.sASToolStripMenuItem.Name = "sASToolStripMenuItem";
             this.sASToolStripMenuItem.Size = new System.Drawing.Size(78, 41);
             this.sASToolStripMenuItem.Text = "SAS";
@@ -107,14 +102,14 @@
             // gerarNomeNoSASToolStripMenuItem
             // 
             this.gerarNomeNoSASToolStripMenuItem.Name = "gerarNomeNoSASToolStripMenuItem";
-            this.gerarNomeNoSASToolStripMenuItem.Size = new System.Drawing.Size(586, 42);
+            this.gerarNomeNoSASToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
             this.gerarNomeNoSASToolStripMenuItem.Text = "Gerar nome campanha";
             this.gerarNomeNoSASToolStripMenuItem.Click += new System.EventHandler(this.gerarNomeNoSASToolStripMenuItem_Click);
             // 
             // gerarNomeNoSASV2ToolStripMenuItem
             // 
             this.gerarNomeNoSASV2ToolStripMenuItem.Name = "gerarNomeNoSASV2ToolStripMenuItem";
-            this.gerarNomeNoSASV2ToolStripMenuItem.Size = new System.Drawing.Size(586, 42);
+            this.gerarNomeNoSASV2ToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
             this.gerarNomeNoSASV2ToolStripMenuItem.Text = "Gerar nome campanhaV2";
             this.gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
             this.gerarNomeNoSASV2ToolStripMenuItem.Click += new System.EventHandler(this.gerarNomeNoSASV2ToolStripMenuItem_Click);
@@ -122,41 +117,19 @@
             // agendamentoCampanhasJIRAToolStripMenuItem
             // 
             this.agendamentoCampanhasJIRAToolStripMenuItem.Name = "agendamentoCampanhasJIRAToolStripMenuItem";
-            this.agendamentoCampanhasJIRAToolStripMenuItem.Size = new System.Drawing.Size(586, 42);
+            this.agendamentoCampanhasJIRAToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
             this.agendamentoCampanhasJIRAToolStripMenuItem.Text = "Agendamento campanhas (JIRA)";
             this.agendamentoCampanhasJIRAToolStripMenuItem.Click += new System.EventHandler(this.agendamentoCampanhasJIRAToolStripMenuItem_Click);
-            // 
-            // geradorDeExcellStripMenuItem
-            // 
-            this.geradorDeExcellStripMenuItem.Name = "geradorDeExcellStripMenuItem";
-            this.geradorDeExcellStripMenuItem.Size = new System.Drawing.Size(586, 42);
-            this.geradorDeExcellStripMenuItem.Text = "Gerador de excell (CP) VS";
-            this.geradorDeExcellStripMenuItem.Click += new System.EventHandler(this.geradorDeExcellStripMenuItem_Click);
-            // 
-            // agendamentoCampanhasV2EmailToolStripMenuItem
-            // 
-            this.agendamentoCampanhasV2EmailToolStripMenuItem.Name = "agendamentoCampanhasV2EmailToolStripMenuItem";
-            this.agendamentoCampanhasV2EmailToolStripMenuItem.Size = new System.Drawing.Size(586, 42);
-            this.agendamentoCampanhasV2EmailToolStripMenuItem.Text = "Agendamento campanhas V2 Email VS";
-            this.agendamentoCampanhasV2EmailToolStripMenuItem.Visible = false;
-            this.agendamentoCampanhasV2EmailToolStripMenuItem.Click += new System.EventHandler(this.agendamentoCampanhasV2EmailToolStripMenuItem_Click);
             // 
             // sMSToolStripMenuItem
             // 
             this.sMSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.validarFraseSMSToolStripMenuItem,
             this.validaFraseV2ToolStripMenuItem,
             this.validaSMSSolicitanteToolStripMenuItem});
+            this.sMSToolStripMenuItem.Image = global::replace_campanhas.Properties.Resources.sms;
             this.sMSToolStripMenuItem.Name = "sMSToolStripMenuItem";
-            this.sMSToolStripMenuItem.Size = new System.Drawing.Size(85, 41);
+            this.sMSToolStripMenuItem.Size = new System.Drawing.Size(101, 41);
             this.sMSToolStripMenuItem.Text = "SMS";
-            // 
-            // validarFraseSMSToolStripMenuItem
-            // 
-            this.validarFraseSMSToolStripMenuItem.Name = "validarFraseSMSToolStripMenuItem";
-            this.validarFraseSMSToolStripMenuItem.Size = new System.Drawing.Size(379, 42);
-            this.validarFraseSMSToolStripMenuItem.Text = "Fabrica valida SMS V1";
-            this.validarFraseSMSToolStripMenuItem.Click += new System.EventHandler(this.validarFraseSMSToolStripMenuItem_Click);
             // 
             // validaFraseV2ToolStripMenuItem
             // 
@@ -178,8 +151,9 @@
             this.validarFrasePUSHToolStripMenuItem,
             this.claroPayToolStripMenuItem,
             this.validarPUSHToolStripMenuItem});
+            this.pUSHToolStripMenuItem.Image = global::replace_campanhas.Properties.Resources.notificacao_push;
             this.pUSHToolStripMenuItem.Name = "pUSHToolStripMenuItem";
-            this.pUSHToolStripMenuItem.Size = new System.Drawing.Size(102, 41);
+            this.pUSHToolStripMenuItem.Size = new System.Drawing.Size(118, 41);
             this.pUSHToolStripMenuItem.Text = "PUSH";
             // 
             // validarFrasePUSHToolStripMenuItem
@@ -207,8 +181,9 @@
             // 
             this.hTMLToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.validarHtmlToolStripMenuItem});
+            this.hTMLToolStripMenuItem.Image = global::replace_campanhas.Properties.Resources.e_mail;
             this.hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
-            this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(106, 41);
+            this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(122, 41);
             this.hTMLToolStripMenuItem.Text = "HTML";
             // 
             // validarHtmlToolStripMenuItem
@@ -224,8 +199,9 @@
             this.RCS1validacaoToolStripMenuItem,
             this.RCS2validacaoToolStripMenuItem,
             this.RCS3validacaoToolStripMenuItem});
+            this.rCSToolStripMenuItem.Image = global::replace_campanhas.Properties.Resources.RCS;
             this.rCSToolStripMenuItem.Name = "rCSToolStripMenuItem";
-            this.rCSToolStripMenuItem.Size = new System.Drawing.Size(79, 41);
+            this.rCSToolStripMenuItem.Size = new System.Drawing.Size(95, 41);
             this.rCSToolStripMenuItem.Text = "RCS";
             // 
             // RCS1validacaoToolStripMenuItem
@@ -260,8 +236,9 @@
             this.oSsToolStripMenuItem,
             this.repicksToolStripMenuItem,
             this.stringUpLowerToolStripMenuItem});
+            this.fERRAMENTASToolStripMenuItem.Image = global::replace_campanhas.Properties.Resources.configuracoes;
             this.fERRAMENTASToolStripMenuItem.Name = "fERRAMENTASToolStripMenuItem";
-            this.fERRAMENTASToolStripMenuItem.Size = new System.Drawing.Size(138, 41);
+            this.fERRAMENTASToolStripMenuItem.Size = new System.Drawing.Size(154, 41);
             this.fERRAMENTASToolStripMenuItem.Text = "OUTROS";
             // 
             // geradorDeSenhasToolStripMenuItem
@@ -324,8 +301,9 @@
             // 
             // sAIRToolStripMenuItem
             // 
+            this.sAIRToolStripMenuItem.Image = global::replace_campanhas.Properties.Resources.desligar;
             this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
-            this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(90, 41);
+            this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(106, 41);
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
@@ -360,7 +338,6 @@
         private System.Windows.Forms.ToolStripMenuItem sASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerarNomeNoSASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sMSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem validarFraseSMSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pUSHToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fERRAMENTASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sAIRToolStripMenuItem;
@@ -372,7 +349,6 @@
         private System.Windows.Forms.ToolStripMenuItem testeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agendamentoCampanhasJIRAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem encriptadorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem geradorDeExcellStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerarNomeNoSASV2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porcentagemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hIKEToolStripMenuItem;
@@ -382,7 +358,6 @@
         private System.Windows.Forms.ToolStripMenuItem RCS1validacaoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RCS2validacaoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RCS3validacaoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agendamentoCampanhasV2EmailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stringUpLowerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem validaFraseV2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem validaSMSSolicitanteToolStripMenuItem;
