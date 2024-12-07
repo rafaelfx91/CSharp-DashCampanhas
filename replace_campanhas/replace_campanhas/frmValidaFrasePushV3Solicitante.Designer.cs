@@ -33,7 +33,6 @@
             this.lblCaracterTitulo = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.btnGerar = new System.Windows.Forms.Button();
             this.txtTituloEntrada = new System.Windows.Forms.TextBox();
             this.txtMsgEntrada = new System.Windows.Forms.TextBox();
             this.rdClaroPay = new System.Windows.Forms.RadioButton();
@@ -48,9 +47,9 @@
             // btnMostrarEmote
             // 
             this.btnMostrarEmote.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarEmote.Location = new System.Drawing.Point(116, 335);
+            this.btnMostrarEmote.Location = new System.Drawing.Point(12, 335);
             this.btnMostrarEmote.Name = "btnMostrarEmote";
-            this.btnMostrarEmote.Size = new System.Drawing.Size(174, 43);
+            this.btnMostrarEmote.Size = new System.Drawing.Size(208, 43);
             this.btnMostrarEmote.TabIndex = 74;
             this.btnMostrarEmote.Text = "Mostrar emote";
             this.btnMostrarEmote.UseVisualStyleBackColor = true;
@@ -81,7 +80,7 @@
             // btnLimpar
             // 
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(296, 335);
+            this.btnLimpar.Location = new System.Drawing.Point(226, 335);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(98, 43);
             this.btnLimpar.TabIndex = 65;
@@ -92,24 +91,13 @@
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(400, 335);
+            this.btnSair.Location = new System.Drawing.Point(330, 335);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(68, 43);
             this.btnSair.TabIndex = 64;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // btnGerar
-            // 
-            this.btnGerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerar.Location = new System.Drawing.Point(12, 335);
-            this.btnGerar.Name = "btnGerar";
-            this.btnGerar.Size = new System.Drawing.Size(98, 43);
-            this.btnGerar.TabIndex = 63;
-            this.btnGerar.Text = "Gerar";
-            this.btnGerar.UseVisualStyleBackColor = true;
-            this.btnGerar.Click += new System.EventHandler(this.btnGerar_Click);
             // 
             // txtTituloEntrada
             // 
@@ -204,7 +192,6 @@
             this.Controls.Add(this.lblCaracterTitulo);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.btnGerar);
             this.Controls.Add(this.txtTituloEntrada);
             this.Controls.Add(this.txtMsgEntrada);
             this.Controls.Add(this.pictureBox1);
@@ -227,7 +214,6 @@
         private System.Windows.Forms.Label lblCaracterTitulo;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Button btnGerar;
         private System.Windows.Forms.TextBox txtTituloEntrada;
         private System.Windows.Forms.TextBox txtMsgEntrada;
         private System.Windows.Forms.RadioButton rdClaroPay;

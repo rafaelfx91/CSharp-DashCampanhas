@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SixLabors.Fonts.Unicode;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace replace_campanhas
 {
     public partial class frmValidaFrasePushV3Solicitante : Form
     {
+        public bool mostrarEmote = false;
         public frmValidaFrasePushV3Solicitante()
         {
             InitializeComponent();
@@ -61,9 +63,9 @@ namespace replace_campanhas
             lblCaracterMsg.Text = "Caracters na mensagem: " + totalValue + " / 200";
 
             if (totalValue >= 201)
-                lblCaracterTitulo.ForeColor = Color.Red;
+                lblCaracterMsg.ForeColor = Color.Red;
             if (totalValue < 201)
-                lblCaracterTitulo.ForeColor = Color.Green;
+                lblCaracterMsg.ForeColor = Color.Green;
 
         }
 
@@ -97,13 +99,38 @@ namespace replace_campanhas
 
         private void btnMostrarEmote_Click(object sender, EventArgs e)
         {
+            LimparString ls = new LimparString();
+            string btnMostrar = "Mostrar emote";
+            string btnEsconder = "Esconder emote";
+            string btnGerar = btnMostrarEmote.Text;
+
+
+            switch (btnGerar)
+            {
+                case "Mostrar emote":
+                    txtTituloEntrada.Text = ls.CodigoParaEmote(txtTituloEntrada.Text);
+                    txtMsgEntrada.Text = ls.CodigoParaEmote(txtMsgEntrada.Text);
+                    btnMostrarEmote.Text = btnEsconder;
+                    break;
+                case "Esconder emote":
+                    txtTituloEntrada.Text = ls.EmoteParaCodigo2(txtTituloEntrada.Text);
+                    txtMsgEntrada.Text = ls.EmoteParaCodigo2(txtMsgEntrada.Text);
+                    btnMostrarEmote.Text = btnMostrar;
+                    break;
+                default:
+                    break;
+            }
+
+            
+
+
+
+
+
 
         }
 
-        private void btnGerar_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
