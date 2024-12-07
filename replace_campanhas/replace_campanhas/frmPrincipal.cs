@@ -89,9 +89,11 @@ namespace replace_campanhas
             validarFrasePUSHToolStripMenuItem.Visible = false;
             claroPayToolStripMenuItem.Visible = false;
             //Html Menu
+            validarHtmlToolStripMenuItem.Visible = false;
             //RCS Menu
             RCS2validacaoToolStripMenuItem.Visible = false;
             RCS1validacaoToolStripMenuItem.Visible = false;
+            RCS3validacaoToolStripMenuItem.Visible = false;
             //Outros menu
             hIKEToolStripMenuItem.Visible = false;
             testeToolStripMenuItem.Visible = false;
@@ -107,10 +109,24 @@ namespace replace_campanhas
             // parametro -devS habilitado
             if (fd.validaConfigsDev3())
             {
+                //SAS menu
+                sASToolStripMenuItem.Visible = true;
+                gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
 
+                //SMS Menu
+                validaFraseV2ToolStripMenuItem.Visible = true;
+                
+                //Push Menu
+                validarFrasePUSHToolStripMenuItem.Visible = true;
+                claroPayToolStripMenuItem.Visible = true;
+                
+                //html menu
+                validarHtmlToolStripMenuItem.Visible = true;
+                
                 //RCS MENU
                 RCS2validacaoToolStripMenuItem.Visible = true;
                 RCS1validacaoToolStripMenuItem.Visible = true;
+                RCS3validacaoToolStripMenuItem.Visible = true;
 
                 //OpcoesMENU
                 fERRAMENTASToolStripMenuItem.Visible = true;
@@ -120,17 +136,11 @@ namespace replace_campanhas
                 oSsToolStripMenuItem.Visible = true;
                 repicksToolStripMenuItem.Visible = true;
 
-                //SAS menu
-                sASToolStripMenuItem.Visible = true;
-                gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
+                
 
-                //SMS Menu
-                validaFraseV2ToolStripMenuItem.Visible= true;
+                
 
-                //Push Menu
-                validarFrasePUSHToolStripMenuItem.Visible = true;
-                claroPayToolStripMenuItem.Visible = true;
-
+                
             }
 
             if (fd.returnFabrifa())
@@ -139,15 +149,12 @@ namespace replace_campanhas
                 sASToolStripMenuItem.Visible = true;
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
 
-                //OpcoesMENU
-                fERRAMENTASToolStripMenuItem.Visible = true;
-
                 //SMS Menu
                 validaFraseV2ToolStripMenuItem.Visible = true;
 
-                //Push Menu
-                //validarFrasePUSHToolStripMenuItem.Visible = true;
-                //claroPayToolStripMenuItem.Visible = true;
+                //OpcoesMENU
+                fERRAMENTASToolStripMenuItem.Visible = true;
+
 
             }
 
@@ -441,7 +448,20 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
-
+        private void validarRCSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmRCS4Solicitante")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmRCS4Solicitante novoFormFilho = new frmRCS4Solicitante();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
 
         //OUTROS MENU
         private void geradorDeSenhasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -594,15 +614,6 @@ namespace replace_campanhas
         {
 
         }
-
-
-
-
-
-
-
-
-
 
 
     }//fim

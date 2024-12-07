@@ -121,14 +121,17 @@
   <data name="olho" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\olho.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sairBotao" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1348448.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sms_dash4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sms_dash4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minhaClaroResidencial" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minhaClaroResidencial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rcsDash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rcsDash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ProjetoPush4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ProjetoPush4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e_mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e-mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sms_dash3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sms_dash3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,23 +139,20 @@
   <data name="enviar_correio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\enviar-correio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ClaroLogo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ClaroLogo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ProjetoPush3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ProjetoPush3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sms_dash2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sms_dash2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="plusoft2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plusoft2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="plusoft" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plusoft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ClaroLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ClaroLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sms_dash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sms_dash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,8 +166,14 @@
   <data name="ClaroCP" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ClaroCP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sairBotao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1348448.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="interface_sms3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\interface_sms3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rcsDash2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rcsDash2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,17 +187,23 @@
   <data name="configuracoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\configuracoes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="emailDash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\emailDash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rcsMensagem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rcsMensagem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="unnamed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\unnamed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="teste1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\teste1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sms_dash4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sms_dash4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="minhaClaroMovel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minhaClaroMovel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="desligar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\desligar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ClaroPayFundo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ClaroPayFundo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,16 +214,16 @@
   <data name="notificacao_push" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\notificacao-push.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minhaClaroResidencial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minhaClaroResidencial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="desligar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\desligar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ClaroLogo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ClaroLogo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="e_mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\e-mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="plusoft2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plusoft2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="emailDash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\emailDash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rcsMensagem2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rcsMensagem2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

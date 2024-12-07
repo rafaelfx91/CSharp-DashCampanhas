@@ -59,13 +59,13 @@
             this.repicksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stringUpLowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.validarRCSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblVersion
             // 
-            this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVersion.AutoSize = true;
             this.lblVersion.Location = new System.Drawing.Point(847, 9);
@@ -195,7 +195,7 @@
             // 
             this.validarHtmlToolStripMenuItem.Name = "validarHtmlToolStripMenuItem";
             this.validarHtmlToolStripMenuItem.Size = new System.Drawing.Size(329, 42);
-            this.validarHtmlToolStripMenuItem.Text = "Validar html";
+            this.validarHtmlToolStripMenuItem.Text = "Validar html Dev";
             this.validarHtmlToolStripMenuItem.Click += new System.EventHandler(this.validarHtmlToolStripMenuItem_Click);
             // 
             // validaHtmlEmailToolStripMenuItem
@@ -210,7 +210,8 @@
             this.rCSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.RCS1validacaoToolStripMenuItem,
             this.RCS2validacaoToolStripMenuItem,
-            this.RCS3validacaoToolStripMenuItem});
+            this.RCS3validacaoToolStripMenuItem,
+            this.validarRCSToolStripMenuItem});
             this.rCSToolStripMenuItem.Image = global::replace_campanhas.Properties.Resources.RCS;
             this.rCSToolStripMenuItem.Name = "rCSToolStripMenuItem";
             this.rCSToolStripMenuItem.Size = new System.Drawing.Size(95, 41);
@@ -234,7 +235,7 @@
             // 
             this.RCS3validacaoToolStripMenuItem.Name = "RCS3validacaoToolStripMenuItem";
             this.RCS3validacaoToolStripMenuItem.Size = new System.Drawing.Size(328, 42);
-            this.RCS3validacaoToolStripMenuItem.Text = "Validacao";
+            this.RCS3validacaoToolStripMenuItem.Text = "Validacao Dev";
             this.RCS3validacaoToolStripMenuItem.Click += new System.EventHandler(this.RCS3validacaoToolStripMenuItem_Click);
             // 
             // fERRAMENTASToolStripMenuItem
@@ -319,6 +320,13 @@
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
+            // validarRCSToolStripMenuItem
+            // 
+            this.validarRCSToolStripMenuItem.Name = "validarRCSToolStripMenuItem";
+            this.validarRCSToolStripMenuItem.Size = new System.Drawing.Size(328, 42);
+            this.validarRCSToolStripMenuItem.Text = "Validar RCS";
+            this.validarRCSToolStripMenuItem.Click += new System.EventHandler(this.validarRCSToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,7 +364,6 @@
         private System.Windows.Forms.ToolStripMenuItem geradorDeSenhasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem validarFrasePUSHToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hTMLToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem validarHtmlToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem claroPayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agendamentoCampanhasJIRAToolStripMenuItem;
@@ -375,6 +382,8 @@
         private System.Windows.Forms.ToolStripMenuItem validaSMSSolicitanteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem validarPUSHToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem validaHtmlEmailToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem validarHtmlToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem validarRCSToolStripMenuItem;
     }
 }
 

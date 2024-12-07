@@ -351,6 +351,18 @@
     <Compile Include="frmRCS3.Designer.cs">
       <DependentUpon>frmRCS3.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRCS4Solicitante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRCS4Solicitante.Designer.cs">
+      <DependentUpon>frmRCS4Solicitante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRCS4SolicitanteVisualizacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRCS4SolicitanteVisualizacao.Designer.cs">
+      <DependentUpon>frmRCS4SolicitanteVisualizacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRemoveEspacamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -510,6 +522,12 @@
     <EmbeddedResource Include="frmRCS3.resx">
       <DependentUpon>frmRCS3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRCS4Solicitante.resx">
+      <DependentUpon>frmRCS4Solicitante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRCS4SolicitanteVisualizacao.resx">
+      <DependentUpon>frmRCS4SolicitanteVisualizacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRemoveEspacamento.resx">
       <DependentUpon>frmRemoveEspacamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -587,6 +605,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="plusoft2.ico" />
+    <None Include="Resources\rcsMensagem2.png" />
+    <None Include="Resources\rcsDash2.png" />
+    <None Include="Resources\rcsMensagem.png" />
+    <None Include="Resources\rcsDash.png" />
     <None Include="Resources\emailDash.png" />
     <None Include="Resources\sms_dash4.png" />
     <None Include="Resources\sms_dash3.png" />
