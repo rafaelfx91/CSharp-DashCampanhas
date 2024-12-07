@@ -63,9 +63,9 @@ namespace replace_campanhas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ClaroPay {
+        internal static System.Drawing.Bitmap ClaroCP {
             get {
-                object obj = ResourceManager.GetObject("ClaroPay", resourceCulture);
+                object obj = ResourceManager.GetObject("ClaroCP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace replace_campanhas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ProjetoPush {
+        internal static System.Drawing.Bitmap ProjetoPush3 {
             get {
-                object obj = ResourceManager.GetObject("ProjetoPush", resourceCulture);
+                object obj = ResourceManager.GetObject("ProjetoPush3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace replace_campanhas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ProjetoPush2 {
+        internal static System.Drawing.Bitmap ProjetoPush4 {
             get {
-                object obj = ResourceManager.GetObject("ProjetoPush2", resourceCulture);
+                object obj = ResourceManager.GetObject("ProjetoPush4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

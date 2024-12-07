@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseWinFormsOutOfProcDesigner>False</UseWinFormsOutOfProcDesigner>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,6 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseWinFormsOutOfProcDesigner>False</UseWinFormsOutOfProcDesigner>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>plusoft2.ico</ApplicationIcon>
@@ -385,6 +387,12 @@
     <Compile Include="frmValidaFrasePushV2.Designer.cs">
       <DependentUpon>frmValidaFrasePushV2.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmValidaFrasePushV3Solicitante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValidaFrasePushV3Solicitante.Designer.cs">
+      <DependentUpon>frmValidaFrasePushV3Solicitante.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmValidaFraseSMS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -508,6 +516,9 @@
     <EmbeddedResource Include="frmValidaFrasePushV2.resx">
       <DependentUpon>frmValidaFrasePushV2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmValidaFrasePushV3Solicitante.resx">
+      <DependentUpon>frmValidaFrasePushV3Solicitante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmValidaFraseSMS.resx">
       <DependentUpon>frmValidaFraseSMS.cs</DependentUpon>
     </EmbeddedResource>
@@ -558,6 +569,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="plusoft2.ico" />
+    <None Include="Resources\ProjetoPush3.png" />
+    <None Include="Resources\ProjetoPush4.png" />
+    <None Include="Resources\ProjetoPush2.png" />
+    <None Include="Resources\ClaroCP.png" />
+    <None Include="Resources\minhaClaroMovel.png" />
+    <None Include="Resources\minhaClaroResidencial.png" />
     <None Include="Resources\ProjetoPush.png" />
     <None Include="Resources\unnamed.png" />
     <None Include="Resources\ClaroPayFundo.png" />

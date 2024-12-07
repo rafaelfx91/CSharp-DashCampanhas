@@ -68,10 +68,10 @@ C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanh
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmValidaHtml.resources
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmValidaLink.resources
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmValidarFrasePush.resources
-C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmValidarFrasePushV2Solicitante.resources
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.Properties.Resources.resources
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.csproj.GenerateResource.cache
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.csproj.CoreCompileInputs.cache
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_.14DAEA2D.Up2Date
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.exe
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.pdb
+C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmValidaFrasePushV3Solicitante.resources

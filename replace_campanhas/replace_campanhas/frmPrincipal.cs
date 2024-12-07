@@ -81,8 +81,7 @@ namespace replace_campanhas
         {
 
             geradorDeExcellStripMenuItem.Visible = false;
-            testeToolStripMenuItem.Visible = false;
-            
+            testeToolStripMenuItem.Visible = false;            
             agendamentoCampanhasV2EmailToolStripMenuItem.Visible = false;
             hIKEToolStripMenuItem.Visible = false;
             encriptadorToolStripMenuItem.Visible = false;
@@ -360,15 +359,15 @@ namespace replace_campanhas
         {
             foreach (Form form in this.MdiChildren)
             {
-                if (form.Name == "frmValidarFrasePushV2Solicitante")
+                if (form.Name == "frmValidaFrasePushV3Solicitante")
                 {
                     form.Activate();
                     return;
                 }
             }
-            //frmValidarFrasePushV2Solicitante novoFormFilho = new frmValidarFrasePushV2Solicitante();
-            //novoFormFilho.MdiParent = this;
-            //novoFormFilho.Show();
+            frmValidaFrasePushV3Solicitante novoFormFilho = new frmValidaFrasePushV3Solicitante();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
         }
 
         //HTML MENU
@@ -583,6 +582,16 @@ namespace replace_campanhas
         {
 
         }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     }//fim
 }
 
