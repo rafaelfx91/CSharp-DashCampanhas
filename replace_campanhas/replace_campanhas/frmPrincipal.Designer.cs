@@ -44,6 +44,7 @@
             this.validarPUSHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hTMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validarHtmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.validaHtmlEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rCSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RCS1validacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RCS2validacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,8 +64,11 @@
             // 
             // lblVersion
             // 
+            this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(694, 639);
+            this.lblVersion.Location = new System.Drawing.Point(847, 9);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(43, 13);
             this.lblVersion.TabIndex = 11;
@@ -84,7 +88,7 @@
             this.sAIRToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(854, 45);
+            this.menuStrip1.Size = new System.Drawing.Size(945, 45);
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "mnPrincipal";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -180,7 +184,8 @@
             // hTMLToolStripMenuItem
             // 
             this.hTMLToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.validarHtmlToolStripMenuItem});
+            this.validarHtmlToolStripMenuItem,
+            this.validaHtmlEmailToolStripMenuItem});
             this.hTMLToolStripMenuItem.Image = global::replace_campanhas.Properties.Resources.e_mail;
             this.hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
             this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(122, 41);
@@ -189,9 +194,16 @@
             // validarHtmlToolStripMenuItem
             // 
             this.validarHtmlToolStripMenuItem.Name = "validarHtmlToolStripMenuItem";
-            this.validarHtmlToolStripMenuItem.Size = new System.Drawing.Size(251, 42);
+            this.validarHtmlToolStripMenuItem.Size = new System.Drawing.Size(329, 42);
             this.validarHtmlToolStripMenuItem.Text = "Validar html";
             this.validarHtmlToolStripMenuItem.Click += new System.EventHandler(this.validarHtmlToolStripMenuItem_Click);
+            // 
+            // validaHtmlEmailToolStripMenuItem
+            // 
+            this.validaHtmlEmailToolStripMenuItem.Name = "validaHtmlEmailToolStripMenuItem";
+            this.validaHtmlEmailToolStripMenuItem.Size = new System.Drawing.Size(329, 42);
+            this.validaHtmlEmailToolStripMenuItem.Text = "Valida html e-mail";
+            this.validaHtmlEmailToolStripMenuItem.Click += new System.EventHandler(this.validaHtmlEmailToolStripMenuItem_Click);
             // 
             // rCSToolStripMenuItem
             // 
@@ -314,7 +326,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::replace_campanhas.Properties.Resources.plusoft;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(854, 661);
+            this.ClientSize = new System.Drawing.Size(945, 661);
             this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
@@ -362,6 +374,7 @@
         private System.Windows.Forms.ToolStripMenuItem validaFraseV2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem validaSMSSolicitanteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem validarPUSHToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem validaHtmlEmailToolStripMenuItem;
     }
 }
 

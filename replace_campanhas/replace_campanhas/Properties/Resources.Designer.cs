@@ -143,6 +143,16 @@ namespace replace_campanhas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap emailDash {
+            get {
+                object obj = ResourceManager.GetObject("emailDash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap enviar_correio {
             get {
                 object obj = ResourceManager.GetObject("enviar_correio", resourceCulture);

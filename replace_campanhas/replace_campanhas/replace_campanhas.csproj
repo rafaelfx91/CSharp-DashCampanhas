@@ -417,6 +417,18 @@
     <Compile Include="frmValidaHtml.Designer.cs">
       <DependentUpon>frmValidaHtml.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmValidaHtmlV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValidaHtmlV2.Designer.cs">
+      <DependentUpon>frmValidaHtmlV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmValidaHtmlV2ListaCoringas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValidaHtmlV2ListaCoringas.Designer.cs">
+      <DependentUpon>frmValidaHtmlV2ListaCoringas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmValidaLink.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -531,6 +543,12 @@
     <EmbeddedResource Include="frmValidaHtml.resx">
       <DependentUpon>frmValidaHtml.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmValidaHtmlV2.resx">
+      <DependentUpon>frmValidaHtmlV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmValidaHtmlV2ListaCoringas.resx">
+      <DependentUpon>frmValidaHtmlV2ListaCoringas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmValidaLink.resx">
       <DependentUpon>frmValidaLink.cs</DependentUpon>
     </EmbeddedResource>
@@ -569,6 +587,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="plusoft2.ico" />
+    <None Include="Resources\emailDash.png" />
     <None Include="Resources\sms_dash4.png" />
     <None Include="Resources\sms_dash3.png" />
     <None Include="Resources\sms_dash2.png" />

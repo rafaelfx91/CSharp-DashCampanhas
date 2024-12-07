@@ -75,3 +75,5 @@ C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanh
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.exe
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.pdb
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmValidaFrasePushV3Solicitante.resources
+C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmValidaHtmlV2.resources
+C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmValidaHtmlV2ListaCoringas.resources

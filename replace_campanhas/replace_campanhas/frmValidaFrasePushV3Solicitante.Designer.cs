@@ -196,6 +196,7 @@
             this.Controls.Add(this.txtTituloEntrada);
             this.Controls.Add(this.txtMsgEntrada);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmValidaFrasePushV3Solicitante";
             this.Text = "Push";
             this.Load += new System.EventHandler(this.frmValidaFrasePushV3Solicitante_Load);

@@ -48,6 +48,7 @@
             this.wbPecaEmail.Name = "wbPecaEmail";
             this.wbPecaEmail.Size = new System.Drawing.Size(805, 396);
             this.wbPecaEmail.TabIndex = 0;
+            this.wbPecaEmail.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.wbPecaEmail_DocumentCompleted);
             // 
             // btnLimpar
             // 
@@ -89,6 +90,7 @@
             this.txtCaminhoArquivo.Name = "txtCaminhoArquivo";
             this.txtCaminhoArquivo.Size = new System.Drawing.Size(678, 26);
             this.txtCaminhoArquivo.TabIndex = 28;
+            this.txtCaminhoArquivo.TextChanged += new System.EventHandler(this.txtCaminhoArquivo_TextChanged);
             // 
             // txtCoringas
             // 
@@ -98,6 +100,7 @@
             this.txtCoringas.Name = "txtCoringas";
             this.txtCoringas.Size = new System.Drawing.Size(678, 70);
             this.txtCoringas.TabIndex = 29;
+            this.txtCoringas.TextChanged += new System.EventHandler(this.txtCoringas_TextChanged);
             // 
             // lblCaminhoArquivo
             // 
@@ -108,6 +111,7 @@
             this.lblCaminhoArquivo.Size = new System.Drawing.Size(189, 25);
             this.lblCaminhoArquivo.TabIndex = 30;
             this.lblCaminhoArquivo.Text = "Caminho arquivo";
+            this.lblCaminhoArquivo.Click += new System.EventHandler(this.lblCaminhoArquivo_Click);
             // 
             // lblCoringas
             // 
@@ -118,6 +122,7 @@
             this.lblCoringas.Size = new System.Drawing.Size(106, 25);
             this.lblCoringas.TabIndex = 31;
             this.lblCoringas.Text = "Coringas";
+            this.lblCoringas.Click += new System.EventHandler(this.lblCoringas_Click);
             // 
             // frmValidaHtml
             // 

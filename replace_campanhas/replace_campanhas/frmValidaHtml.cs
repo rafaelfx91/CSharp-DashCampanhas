@@ -182,6 +182,29 @@ namespace replace_campanhas
 
         }
 
+        private void wbPecaEmail_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
 
+        }
+
+        private void txtCoringas_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCaminhoArquivo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCaminhoArquivo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCoringas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

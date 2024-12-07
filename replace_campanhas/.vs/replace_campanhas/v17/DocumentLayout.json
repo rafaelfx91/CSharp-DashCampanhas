@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|c:\\users\\camaleao\\documents\\github\\plusoftdash\\replace_campanhas\\replace_campanhas\\frmvalidafrasesmsv3solicitante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|solutionrelative:replace_campanhas\\frmvalidafrasesmsv3solicitante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|c:\\users\\camaleao\\documents\\github\\plusoftdash\\replace_campanhas\\replace_campanhas\\frmvalidafrasesmsv3solicitante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|solutionrelative:replace_campanhas\\frmvalidafrasesmsv3solicitante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|c:\\users\\camaleao\\documents\\github\\plusoftdash\\replace_campanhas\\replace_campanhas\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|solutionrelative:replace_campanhas\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|solutionrelative:replace_campanhas\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{926D7431-2FEF-4B6A-8685-BFBA349CD26A}|replace_campanhas\\replace_campanhas.csproj|solutionrelative:replace_campanhas\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +18,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "frmPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmPrincipal.cs",
               "RelativeDocumentMoniker": "replace_campanhas\\frmPrincipal.cs",
               "ToolTip": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmPrincipal.cs",
               "RelativeToolTip": "replace_campanhas\\frmPrincipal.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAkwD4AAAAMAAAA",
+              "ViewState": "AQIAAD0BAAAAAAAAAAAmwIsBAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-07T00:39:23.442Z",
               "IsPinned": true,
@@ -44,7 +36,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "frmPrincipal.cs [Design]",
               "DocumentMoniker": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmPrincipal.cs",
               "RelativeDocumentMoniker": "replace_campanhas\\frmPrincipal.cs",
@@ -53,31 +45,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-07T00:33:41.559Z",
               "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmValidaFraseSMSV3Solicitante.cs",
-              "DocumentMoniker": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmValidaFraseSMSV3Solicitante.cs",
-              "RelativeDocumentMoniker": "replace_campanhas\\frmValidaFraseSMSV3Solicitante.cs",
-              "ToolTip": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmValidaFraseSMSV3Solicitante.cs",
-              "RelativeToolTip": "replace_campanhas\\frmValidaFraseSMSV3Solicitante.cs",
-              "ViewState": "AQIAAF0AAAAAAAAAAAAcwHEAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T18:17:03.411Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmValidaFraseSMSV3Solicitante.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmValidaFraseSMSV3Solicitante.cs",
-              "RelativeDocumentMoniker": "replace_campanhas\\frmValidaFraseSMSV3Solicitante.cs",
-              "ToolTip": "C:\\Users\\camaleao\\Documents\\GitHub\\PlusoftDash\\replace_campanhas\\replace_campanhas\\frmValidaFraseSMSV3Solicitante.cs [Design]",
-              "RelativeToolTip": "replace_campanhas\\frmValidaFraseSMSV3Solicitante.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T17:52:43.036Z",
               "EditorCaption": " [Design]"
             }
           ]

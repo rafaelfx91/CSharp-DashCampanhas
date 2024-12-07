@@ -383,6 +383,20 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
+        private void validaHtmlEmailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmValidaHtmlV2")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmValidaHtmlV2 novoFormFilho = new frmValidaHtmlV2();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
 
         //RCS MENU
         private void RCS1validacaoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -580,16 +594,17 @@ namespace replace_campanhas
         {
 
         }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     }//fim
 }
 
