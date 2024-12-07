@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Runtime.Remoting.Messaging;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,9 +14,11 @@ namespace replace_campanhas
     {
         private bool developer = false;
         private bool crypt = false;
+        private bool fabrica = false;
         private string cryptSenha = "";
         private string effectiveMailUser = "";
         private string effectiveMailSenha = "";
+
 
         //-devS
         //-cryptS123
@@ -28,6 +31,12 @@ namespace replace_campanhas
         public FuncoesDeveloper(string[] args)
         {
             verificaArgumentos(args);
+        }
+
+
+        public bool returnFabrifa()
+        {
+            return fabrica;
         }
 
         public void verificaArgumentos(string[] args)
@@ -52,7 +61,8 @@ namespace replace_campanhas
                 if (args[i].Contains("-emS"))
                     effectiveMailSenha = args[i].Replace("-emS", "");
 
-
+                if (args[i].Contains("-Fab"))
+                    fabrica = true;
 
 
 

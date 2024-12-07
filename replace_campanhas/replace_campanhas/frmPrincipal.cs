@@ -47,13 +47,14 @@ namespace replace_campanhas
             this.MinimumSize = new Size(870, 700);
             if (debugVisual)
             {
-                string [] args2 = { "-devS", "-cryptS123", "-emUuserEM" ,"-emSsenhaEM" };//dev
+                string [] args2 = { "-devS", "-cryptS123", "-emUuserEM" ,"-emSsenhaEM","-Fab" };//dev
                 fd = new FuncoesDeveloper(args2);//dev
             }
             else
             {
                 fd = new FuncoesDeveloper(args);
             }
+
 
         }
 
@@ -63,67 +64,114 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V2.41CSMSV2";
+                lblVersion.Text = "Versão: V2.42SOL";
 
             desabilitaForms();
+
             if (VerificaProgramaEmExecucao())
             {
                 //MessageBox.Show("Programa já está em execução.");
                 TragaProgramaExistenteParaFrente();
                 Application.Exit();
             }
-            //else  //DEU MERDA REVER um dia
-            //mutex = new Mutex(true, MutexName);
 
         }
 
         public void desabilitaForms()
         {
+
+            geradorDeExcellStripMenuItem.Visible = false;
+            testeToolStripMenuItem.Visible = false;
+            
+            agendamentoCampanhasV2EmailToolStripMenuItem.Visible = false;
+            hIKEToolStripMenuItem.Visible = false;
+            encriptadorToolStripMenuItem.Visible = false;
+            gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
+            porcentagemToolStripMenuItem.Visible = false;
+            oSsToolStripMenuItem.Visible = false;
+            RCS2validacaoToolStripMenuItem.Visible = false;
+            RCS1validacaoToolStripMenuItem.Visible = false;
+            stringUpLowerToolStripMenuItem.Visible = false;
+            fERRAMENTASToolStripMenuItem.Visible = false;
+            sASToolStripMenuItem.Visible = false;
+            repicksToolStripMenuItem.Visible = false;
+            validarFraseSMSToolStripMenuItem.Visible = false;
+            validaFraseV2ToolStripMenuItem.Visible = false;
+            validarFrasePUSHToolStripMenuItem.Visible = false;
+            claroPayToolStripMenuItem.Visible = false;
+
+
+
+
             // parametro -devS habilitado
             if (fd.validaConfigsDev3())
             {
-                encriptadorToolStripMenuItem.Visible = true;
-                gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
-                porcentagemToolStripMenuItem.Visible = true;
-                oSsToolStripMenuItem.Visible=true;
-                RCS2validacaoToolStripMenuItem.Visible=true;
-                RCS1validacaoToolStripMenuItem.Visible=true;
+
+                //RCS MENU
+                RCS2validacaoToolStripMenuItem.Visible = true;
+                RCS1validacaoToolStripMenuItem.Visible = true;
+
+                //OpcoesMENU
+                fERRAMENTASToolStripMenuItem.Visible = true;
                 stringUpLowerToolStripMenuItem.Visible = true;
+                encriptadorToolStripMenuItem.Visible = true;
+                porcentagemToolStripMenuItem.Visible = true;
+                oSsToolStripMenuItem.Visible = true;
+                repicksToolStripMenuItem.Visible = true;
+
+                //SAS menu
+                sASToolStripMenuItem.Visible = true;
+                gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
+
+                //SMS Menu
+                validarFraseSMSToolStripMenuItem.Visible= true;
+                validaFraseV2ToolStripMenuItem.Visible= true;
+
+                //Push Menu
+                validarFrasePUSHToolStripMenuItem.Visible = true;
+                claroPayToolStripMenuItem.Visible = true;
+
+            }
+
+            if (fd.returnFabrifa())
+            {
+                //Sas Menu
+                sASToolStripMenuItem.Visible = true;
+                gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
+
+                //OpcoesMENU
+                fERRAMENTASToolStripMenuItem.Visible = true;
+
+                //SMS Menu
+                validarFraseSMSToolStripMenuItem.Visible = true;
+                validaFraseV2ToolStripMenuItem.Visible = true;
+
+                //Push Menu
+                validarFrasePUSHToolStripMenuItem.Visible = true;
+                claroPayToolStripMenuItem.Visible = true;
+
+            }
+
+
+                //parametro -cryptS habilitado
+            if (fd.validaSenhaCrypt2())
+            {
+                encriptadorToolStripMenuItem.Visible = true;
             }
             else
             {
                 encriptadorToolStripMenuItem.Visible = false;
-                gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
-                porcentagemToolStripMenuItem.Visible = false;
-                oSsToolStripMenuItem.Visible = false;
-                RCS2validacaoToolStripMenuItem.Visible = false;
-                RCS1validacaoToolStripMenuItem.Visible = false;
-                stringUpLowerToolStripMenuItem.Visible = false;
             }
-
-            //parametro -cryptS habilitado
-            if (fd.validaSenhaCrypt2())
-                encriptadorToolStripMenuItem.Visible = true;
-            else
-                encriptadorToolStripMenuItem.Visible = false;
 
             //sem parametro apenas se rodar no visual studio
             if (debugVisual)
             {
                 geradorDeExcellStripMenuItem.Visible = true;
                 testeToolStripMenuItem.Visible = true;
-                effectiveMailToolStripMenuItem.Visible = true;
                 agendamentoCampanhasV2EmailToolStripMenuItem.Visible = true;
                 hIKEToolStripMenuItem.Visible = true;
             }
-            else
-            {
-                geradorDeExcellStripMenuItem.Visible = false;
-                testeToolStripMenuItem.Visible = false;
-                effectiveMailToolStripMenuItem.Visible = false;
-                agendamentoCampanhasV2EmailToolStripMenuItem.Visible = false;
-                hIKEToolStripMenuItem.Visible = false;
-            }
+
 
 
         }
@@ -160,6 +208,8 @@ namespace replace_campanhas
         //BOTOES
         //
         //
+
+        //SAS MENU
         private void gerarNomeNoSASToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
@@ -174,7 +224,65 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
+        private void gerarNomeNoSASV2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmNomeCampanhasV2")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmNomeCampanhasV2 novoFormFilho = new frmNomeCampanhasV2();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
+        private void agendamentoCampanhasJIRAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmAgendamentoCampanhaJira")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmAgendamentoCampanhaJira novoFormFilho = new frmAgendamentoCampanhaJira(fd);
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
+        private void geradorDeExcellStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmEditaExcell")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmEditaExcell novoFormFilho = new frmEditaExcell();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
+        private void agendamentoCampanhasV2EmailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmAgendamentoCamapanhaV2Email")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmAgendamentoCamapanhaV2Email novoFormFilho = new frmAgendamentoCamapanhaV2Email(fd);
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
 
+
+        //SMS MENU
         private void validarFraseSMSToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
@@ -189,7 +297,6 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
-
         private void validaFraseV2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
@@ -204,27 +311,23 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
-
-        private void sAIRToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void geradorDeSenhasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void validaSMSSolicitanteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
             {
-                if (form.Name == "frmGeradordeSenhas")
+                if (form.Name == "frmValidaFraseSMSV3Solicitante")
                 {
                     form.Activate();
                     return;
                 }
             }
-            frmGeradordeSenhas novoFormFilho = new frmGeradordeSenhas(fd);
+            frmValidaFraseSMSV3Solicitante novoFormFilho = new frmValidaFraseSMSV3Solicitante();
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
 
+
+        //PUSH MENU
         private void validarFrasePUSHToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
@@ -239,7 +342,36 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
+        private void claroPayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmValidaFrasePushV2")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmValidaFrasePushV2 novoFormFilho = new frmValidaFrasePushV2();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
+        private void validarPUSHToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmValidarFrasePushV2Solicitante")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            //frmValidarFrasePushV2Solicitante novoFormFilho = new frmValidarFrasePushV2Solicitante();
+            //novoFormFilho.MdiParent = this;
+            //novoFormFilho.Show();
+        }
 
+        //HTML MENU
         private void validarHtmlToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
@@ -255,66 +387,66 @@ namespace replace_campanhas
             novoFormFilho.Show();
         }
 
-        private void claroPayToolStripMenuItem_Click(object sender, EventArgs e)
+        //RCS MENU
+        private void RCS1validacaoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
             {
-                if (form.Name == "frmValidaFrasePushV2")
+                if (form.Name == "frmRCS1")
                 {
                     form.Activate();
                     return;
                 }
             }
-            frmValidaFrasePushV2 novoFormFilho = new frmValidaFrasePushV2();
+            frmRCS1 novoFormFilho = new frmRCS1();
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
-
-        private void agendamentoCampanhasJIRAToolStripMenuItem_Click(object sender, EventArgs e)
+        private void RCS2validacaoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
             {
-                if (form.Name == "frmAgendamentoCampanhaJira")
+                if (form.Name == "frmRCS2")
                 {
                     form.Activate();
                     return;
                 }
             }
-            frmAgendamentoCampanhaJira novoFormFilho = new frmAgendamentoCampanhaJira(fd);
+            frmRCS2 novoFormFilho = new frmRCS2();
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
-
-        private void agendamentoEmailJIRAToolStripMenuItem_Click(object sender, EventArgs e)
+        private void RCS3validacaoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
             {
-                if (form.Name == "frmGerarEmailJira")
+                if (form.Name == "frmRCS3")
                 {
                     form.Activate();
                     return;
                 }
             }
-            frmGerarEmailJira novoFormFilho = new frmGerarEmailJira(fd);
+            frmRCS3 novoFormFilho = new frmRCS3();
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
 
-        private void emailDeDiagramaToolStripMenuItem_Click(object sender, EventArgs e)
+
+        //OUTROS MENU
+        private void geradorDeSenhasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
             {
-                if (form.Name == "frmGerarEmailDiagrama")
+                if (form.Name == "frmGeradordeSenhas")
                 {
                     form.Activate();
                     return;
                 }
             }
-            frmGerarEmailDiagrama novoFormFilho = new frmGerarEmailDiagrama();
+            frmGeradordeSenhas novoFormFilho = new frmGeradordeSenhas(fd);
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
-
         private void encriptadorToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -331,7 +463,6 @@ namespace replace_campanhas
             novoFormFilho.Show();
 
         }
-
         private void testeToolStripMenuItem_Click(object sender, EventArgs e)//TESTE rapido e facil
         {
             try
@@ -354,92 +485,10 @@ namespace replace_campanhas
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERRO"+ex.Message);
+                MessageBox.Show("ERRO" + ex.Message);
             }
 
         }
-
-        private void geradorDeExcellStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form.Name == "frmEditaExcell")
-                {
-                    form.Activate();
-                    return;
-                }
-            }
-            frmEditaExcell novoFormFilho = new frmEditaExcell();
-            novoFormFilho.MdiParent = this;
-            novoFormFilho.Show();
-
-        }
-
-        private void gerarNomeNoSASV2ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form.Name == "frmNomeCampanhasV2")
-                {
-                    form.Activate();
-                    return;
-                }
-            }
-            frmNomeCampanhasV2 novoFormFilho = new frmNomeCampanhasV2();
-            novoFormFilho.MdiParent = this;
-            novoFormFilho.Show();
-        }
-
-        private void textoEmUmaLinhaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form.Name == "frmRemoveEspacamento")
-                {
-                    form.Activate();
-                    return;
-                }
-            }
-            frmRemoveEspacamento novoFormFilho = new frmRemoveEspacamento();
-            novoFormFilho.MdiParent = this;
-            novoFormFilho.Show();
-        }
-
-        private void effectiveMailToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form.Name == "frmEffectiveMail")
-                {
-                    form.Activate();
-                    return;
-                }
-            }
-            frmEffectiveMail novoFormFilho = new frmEffectiveMail(fd);
-            novoFormFilho.MdiParent = this;
-            novoFormFilho.Show();
-
-
-        }
-
-        private void selectsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form.Name == "frmSelects")
-                {
-                    form.Activate();
-                    return;
-                }
-            }
-            frmSelects novoFormFilho = new frmSelects(fd);
-            novoFormFilho.MdiParent = this;
-            novoFormFilho.Show();
-
-        }
-
         private void porcentagemToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -454,20 +503,7 @@ namespace replace_campanhas
             frmPorcentagem novoFormFilho = new frmPorcentagem();
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
-
         }
-
-        private void lblVersion_Click(object sender, EventArgs e)
-        {
-            if (fd.validaConfigsDev3())
-            {
-                foreach (Form form in this.MdiChildren)
-                {
-                    form.Close();
-                }
-            }
-        }
-
         private void hIKEToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
@@ -482,7 +518,6 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
-
         private void oSsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
@@ -497,7 +532,6 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
-
         private void repicksToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
@@ -512,67 +546,6 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
-
-        private void RCS1validacaoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form.Name == "frmRCS1")
-                {
-                    form.Activate();
-                    return;
-                }
-            }
-            frmRCS1 novoFormFilho = new frmRCS1();
-            novoFormFilho.MdiParent = this;
-            novoFormFilho.Show();
-        }
-
-        private void RCS2validacaoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form.Name == "frmRCS2")
-                {
-                    form.Activate();
-                    return;
-                }
-            }
-            frmRCS2 novoFormFilho = new frmRCS2();
-            novoFormFilho.MdiParent = this;
-            novoFormFilho.Show();
-        }
-
-        private void RCS3validacaoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form.Name == "frmRCS3")
-                {
-                    form.Activate();
-                    return;
-                }
-            }
-            frmRCS3 novoFormFilho = new frmRCS3();
-            novoFormFilho.MdiParent = this;
-            novoFormFilho.Show();
-        }
-
-        private void agendamentoCampanhasV2EmailToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form.Name == "frmAgendamentoCamapanhaV2Email")
-                {
-                    form.Activate();
-                    return;
-                }
-            }
-            frmAgendamentoCamapanhaV2Email novoFormFilho = new frmAgendamentoCamapanhaV2Email(fd);
-            novoFormFilho.MdiParent = this;
-            novoFormFilho.Show();
-        }
-
         private void stringUpLowerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)
@@ -588,7 +561,28 @@ namespace replace_campanhas
             novoFormFilho.Show();
         }
 
+        //SAIR MENU
+        private void sAIRToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        //VERSAO MENU
+        private void lblVersion_Click(object sender, EventArgs e)
+        {
+            if (fd.validaConfigsDev3())
+            {
+                foreach (Form form in this.MdiChildren)
+                {
+                    form.Close();
+                }
+            }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }//fim
 }
 

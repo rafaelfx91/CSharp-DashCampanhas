@@ -83,6 +83,26 @@ namespace replace_campanhas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minhaClaroMovel {
+            get {
+                object obj = ResourceManager.GetObject("minhaClaroMovel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minhaClaroResidencial {
+            get {
+                object obj = ResourceManager.GetObject("minhaClaroResidencial", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap olho {
             get {
                 object obj = ResourceManager.GetObject("olho", resourceCulture);
@@ -106,6 +126,26 @@ namespace replace_campanhas.Properties {
         internal static System.Drawing.Bitmap plusoft2 {
             get {
                 object obj = ResourceManager.GetObject("plusoft2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProjetoPush {
+            get {
+                object obj = ResourceManager.GetObject("ProjetoPush", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProjetoPush2 {
+            get {
+                object obj = ResourceManager.GetObject("ProjetoPush2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
