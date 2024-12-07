@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -122,8 +123,31 @@ namespace replace_campanhas
                 label.ForeColor = Color.Green; // Dentro do limite
 
         }
+        public void ConverterParaFormato(System.Windows.Forms.TextBox textBox)
+        {
+            // Pega o texto atual do TextBox
+            string input = textBox.Text;
 
+            // Expressão regular para identificar padrões como U+00A ou {U+00a}, mas não {000}
+            string pattern = @"(?:U\+|{)([0-9A-Fa-f]{3,})(?:}|$)";  // Identifica U+000 ou {000}
 
+            // Substitui o padrão encontrado pelo formato desejado, mas verifica se já está no formato correto
+            string result = Regex.Replace(input, pattern, m =>
+            {
+                // Verifica se o código já está no formato {000}
+                if (m.Value.StartsWith("{") && m.Value.EndsWith("}"))
+                {
+                    // Se já estiver no formato {000}, não faz nada
+                    return m.Value;
+                }
+                // Pega o valor hexadecimal e transforma para maiúsculo
+                string hexValue = m.Groups[1].Value.ToUpper();
+                return $"{{{hexValue}}}";  // Substitui por {HEX}
+            });
+
+            // Atualiza o conteúdo do TextBox com o texto modificado
+            textBox.Text = result;
+        }
 
 
 
@@ -143,12 +167,13 @@ namespace replace_campanhas
         private void txtTituloEntrada_TextChanged(object sender, EventArgs e)
         {
             contarCaracter(txtTituloEntrada, lblCaracterTitulo, "Caracter no titulo", 50);
+            
         }
         private void txtMsgEntrada_TextChanged(object sender, EventArgs e)
         {
             //tamanhoMensagem();
             contarCaracter(txtMsgEntrada,lblCaracterMsg,"Caracter na mensagem",200);
-
+            
 
         }
         private void btnMostrarEmote_Click(object sender, EventArgs e)
@@ -216,6 +241,9 @@ namespace replace_campanhas
                 txtMsgEntrada.BorderStyle = BorderStyle.Fixed3D;
                 lblCaracterMsg.Visible = true;
                 lblCaracterTitulo.Visible = true;
+                btnVisualizar.Text = "Visualizar";
+                ConverterParaFormato(txtMsgEntrada);
+                ConverterParaFormato(txtTituloEntrada);
             }
             else
             {
@@ -223,6 +251,9 @@ namespace replace_campanhas
                 txtMsgEntrada.BorderStyle = BorderStyle.None;
                 lblCaracterMsg.Visible = false;
                 lblCaracterTitulo.Visible = false;
+                btnVisualizar.Text = "Voltar";
+                ConverterParaFormato(txtMsgEntrada);
+                ConverterParaFormato(txtTituloEntrada);
             }
 
 
