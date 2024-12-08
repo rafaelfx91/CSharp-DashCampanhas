@@ -46,7 +46,7 @@
             // txtLinkBotao
             // 
             this.txtLinkBotao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLinkBotao.Location = new System.Drawing.Point(11, 345);
+            this.txtLinkBotao.Location = new System.Drawing.Point(11, 403);
             this.txtLinkBotao.Name = "txtLinkBotao";
             this.txtLinkBotao.Size = new System.Drawing.Size(460, 31);
             this.txtLinkBotao.TabIndex = 75;
@@ -55,7 +55,7 @@
             // 
             this.lblLinkBotao.AutoSize = true;
             this.lblLinkBotao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLinkBotao.Location = new System.Drawing.Point(7, 317);
+            this.lblLinkBotao.Location = new System.Drawing.Point(7, 375);
             this.lblLinkBotao.Name = "lblLinkBotao";
             this.lblLinkBotao.Size = new System.Drawing.Size(122, 25);
             this.lblLinkBotao.TabIndex = 74;
@@ -64,7 +64,7 @@
             // txtLinkImg
             // 
             this.txtLinkImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLinkImg.Location = new System.Drawing.Point(11, 409);
+            this.txtLinkImg.Location = new System.Drawing.Point(12, 279);
             this.txtLinkImg.Name = "txtLinkImg";
             this.txtLinkImg.Size = new System.Drawing.Size(460, 31);
             this.txtLinkImg.TabIndex = 73;
@@ -73,7 +73,7 @@
             // 
             this.lblLinkImg.AutoSize = true;
             this.lblLinkImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLinkImg.Location = new System.Drawing.Point(6, 381);
+            this.lblLinkImg.Location = new System.Drawing.Point(12, 251);
             this.lblLinkImg.Name = "lblLinkImg";
             this.lblLinkImg.Size = new System.Drawing.Size(172, 25);
             this.lblLinkImg.TabIndex = 71;
@@ -112,7 +112,7 @@
             // btnLimpar
             // 
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(272, 446);
+            this.btnLimpar.Location = new System.Drawing.Point(270, 440);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(98, 43);
             this.btnLimpar.TabIndex = 66;
@@ -123,7 +123,7 @@
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(376, 446);
+            this.btnSair.Location = new System.Drawing.Point(374, 440);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(98, 43);
             this.btnSair.TabIndex = 65;
@@ -134,7 +134,7 @@
             // btnGerar
             // 
             this.btnGerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerar.Location = new System.Drawing.Point(11, 446);
+            this.btnGerar.Location = new System.Drawing.Point(11, 440);
             this.btnGerar.Name = "btnGerar";
             this.btnGerar.Size = new System.Drawing.Size(141, 43);
             this.btnGerar.TabIndex = 64;
@@ -155,7 +155,7 @@
             // txtNomeBotao
             // 
             this.txtNomeBotao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeBotao.Location = new System.Drawing.Point(12, 283);
+            this.txtNomeBotao.Location = new System.Drawing.Point(12, 341);
             this.txtNomeBotao.Name = "txtNomeBotao";
             this.txtNomeBotao.Size = new System.Drawing.Size(460, 31);
             this.txtNomeBotao.TabIndex = 77;
@@ -165,7 +165,7 @@
             // 
             this.lblNomeBotao.AutoSize = true;
             this.lblNomeBotao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeBotao.Location = new System.Drawing.Point(7, 255);
+            this.lblNomeBotao.Location = new System.Drawing.Point(7, 313);
             this.lblNomeBotao.Name = "lblNomeBotao";
             this.lblNomeBotao.Size = new System.Drawing.Size(252, 25);
             this.lblNomeBotao.TabIndex = 76;
@@ -175,7 +175,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 495);
+            this.ClientSize = new System.Drawing.Size(479, 494);
             this.Controls.Add(this.txtNomeBotao);
             this.Controls.Add(this.lblNomeBotao);
             this.Controls.Add(this.txtLinkBotao);

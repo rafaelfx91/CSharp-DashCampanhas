@@ -78,3 +78,4 @@ C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanh
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmValidaHtmlV2.resources
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmValidaHtmlV2ListaCoringas.resources
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmRCS4Solicitante.resources
+C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmRCS4SolicitanteVisualizacao.resources

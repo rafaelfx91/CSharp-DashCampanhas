@@ -98,13 +98,24 @@ namespace replace_campanhas
 
         private void btnGerar_Click(object sender, EventArgs e)
         {
-            string titulo, msg, linkImg, linkBtn, nomeBtn;
+            string titulo = "";
+            string msg = "";
+            string linkImg = "";
+            string linkBtn = "";
+            string nomeBtn = "";
 
-            if()
+            if (!String.IsNullOrEmpty(txtTitulo.Text))
+                titulo = txtTitulo.Text;
+            if (!String.IsNullOrEmpty(txtFrase.Text))
+                msg = txtFrase.Text;
+            if (!String.IsNullOrEmpty(txtLinkImg.Text))
+                linkImg = txtLinkImg.Text;
+            if (!String.IsNullOrEmpty(txtLinkBotao.Text))
+                linkBtn = txtLinkBotao.Text;
+            if (!String.IsNullOrEmpty(txtNomeBotao.Text))
+                nomeBtn = txtNomeBotao.Text;
 
-
-
-            frmRCS4SolicitanteVisualizacao celular = new frmRCS4SolicitanteVisualizacao();
+            frmRCS4SolicitanteVisualizacao celular = new frmRCS4SolicitanteVisualizacao(titulo,msg,linkImg,nomeBtn,linkBtn );
             celular.ShowDialog();
         }
 
