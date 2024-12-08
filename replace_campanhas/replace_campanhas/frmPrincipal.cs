@@ -64,7 +64,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V2.42SOL";
+                lblVersion.Text = "Versão: V3.0";
 
             desabilitaForms();
 
@@ -136,7 +136,7 @@ namespace replace_campanhas
                 oSsToolStripMenuItem.Visible = true;
                 repicksToolStripMenuItem.Visible = true;
 
-                
+                lblVersion.Text += " -DEV";
 
                 
 
@@ -155,6 +155,7 @@ namespace replace_campanhas
                 //OpcoesMENU
                 fERRAMENTASToolStripMenuItem.Visible = true;
 
+                lblVersion.Text += " -FAB";
 
             }
 

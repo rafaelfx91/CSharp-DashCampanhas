@@ -45,10 +45,11 @@ namespace replace_campanhas
             txtTitulo.ReadOnly = true;
             btnLink.Visible = false;
             
+            
 
             preencheDados();
 
-            btnLink.Click += txtLink_Click;
+            
 
         }
 
@@ -58,11 +59,13 @@ namespace replace_campanhas
             {
                 txtTitulo.Visible = true;
                 txtTitulo.Text = titulo;
+                pbMensagem.Visible = true;
             }
             if (msg != "")
             {
                 txtMsg.Visible = true;
                 txtMsg.Text = msg;
+                pbMensagem.Visible = true;
             }
             if (linkImg != "")
             {
@@ -71,8 +74,7 @@ namespace replace_campanhas
             }
             if (linkBtn != "")
             {
-                //btnLink.Visible = true;
-                //btnLink.Text = nomeBtn;
+                btnLink.Click += txtLink_Click;
             }
             if (nomeBtn != "")
             {

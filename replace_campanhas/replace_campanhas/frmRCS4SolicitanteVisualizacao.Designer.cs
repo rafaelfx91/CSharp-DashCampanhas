@@ -34,6 +34,7 @@
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.txtMsg = new System.Windows.Forms.TextBox();
             this.btnLink = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbMensagem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCelular)).BeginInit();
             this.SuspendLayout();
@@ -99,15 +100,26 @@
             this.btnLink.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.btnLink.Location = new System.Drawing.Point(34, 729);
             this.btnLink.Name = "btnLink";
-            this.btnLink.Size = new System.Drawing.Size(433, 40);
+            this.btnLink.Size = new System.Drawing.Size(352, 40);
             this.btnLink.TabIndex = 5;
             this.btnLink.UseVisualStyleBackColor = false;
+            // 
+            // btnSair
+            // 
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnSair.Location = new System.Drawing.Point(392, 728);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 42);
+            this.btnSair.TabIndex = 6;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
             // 
             // frmRCS4SolicitanteVisualizacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 828);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnLink);
             this.Controls.Add(this.txtMsg);
             this.Controls.Add(this.txtTitulo);
@@ -134,5 +146,6 @@
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.TextBox txtMsg;
         private System.Windows.Forms.Button btnLink;
+        private System.Windows.Forms.Button btnSair;
     }
 }

@@ -49,6 +49,7 @@
             this.RCS1validacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RCS2validacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RCS3validacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.validarRCSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fERRAMENTASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.geradorDeSenhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.encriptadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,16 +60,14 @@
             this.repicksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stringUpLowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.validarRCSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblVersion
             // 
-            this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(847, 9);
+            this.lblVersion.Location = new System.Drawing.Point(809, 9);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(43, 13);
             this.lblVersion.TabIndex = 11;
@@ -238,6 +237,13 @@
             this.RCS3validacaoToolStripMenuItem.Text = "Validacao Dev";
             this.RCS3validacaoToolStripMenuItem.Click += new System.EventHandler(this.RCS3validacaoToolStripMenuItem_Click);
             // 
+            // validarRCSToolStripMenuItem
+            // 
+            this.validarRCSToolStripMenuItem.Name = "validarRCSToolStripMenuItem";
+            this.validarRCSToolStripMenuItem.Size = new System.Drawing.Size(328, 42);
+            this.validarRCSToolStripMenuItem.Text = "Validar RCS";
+            this.validarRCSToolStripMenuItem.Click += new System.EventHandler(this.validarRCSToolStripMenuItem_Click);
+            // 
             // fERRAMENTASToolStripMenuItem
             // 
             this.fERRAMENTASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -319,13 +325,6 @@
             this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(106, 41);
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
-            // 
-            // validarRCSToolStripMenuItem
-            // 
-            this.validarRCSToolStripMenuItem.Name = "validarRCSToolStripMenuItem";
-            this.validarRCSToolStripMenuItem.Size = new System.Drawing.Size(328, 42);
-            this.validarRCSToolStripMenuItem.Text = "Validar RCS";
-            this.validarRCSToolStripMenuItem.Click += new System.EventHandler(this.validarRCSToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 

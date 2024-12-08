@@ -75,7 +75,21 @@ namespace replace_campanhas
 
         }
 
+        public static string GarantirHttps(string link)
+        {
+            // Remove espaços em branco ao redor
+            link = link.Trim();
 
+            // Verifica se o link começa com "http://" ou "https://"
+            if (!link.StartsWith("http://", StringComparison.OrdinalIgnoreCase) &&
+                !link.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
+            {
+                // Adiciona "https://" ao link
+                link = "https://" + link;
+            }
+
+            return link;
+        }
 
 
 
@@ -109,14 +123,29 @@ namespace replace_campanhas
             if (!String.IsNullOrEmpty(txtFrase.Text))
                 msg = txtFrase.Text;
             if (!String.IsNullOrEmpty(txtLinkImg.Text))
+            {
                 linkImg = txtLinkImg.Text;
-            if (!String.IsNullOrEmpty(txtLinkBotao.Text))
-                linkBtn = txtLinkBotao.Text;
+                GarantirHttps(linkImg);
+            }
             if (!String.IsNullOrEmpty(txtNomeBotao.Text))
                 nomeBtn = txtNomeBotao.Text;
+            if (!String.IsNullOrEmpty(txtLinkBotao.Text)) 
+            { 
+                linkBtn = txtLinkBotao.Text;
+                GarantirHttps(linkBtn);
+            }
+            
 
-            frmRCS4SolicitanteVisualizacao celular = new frmRCS4SolicitanteVisualizacao(titulo,msg,linkImg,nomeBtn,linkBtn );
-            celular.ShowDialog();
+
+
+
+            if (msg != "")
+            {
+                frmRCS4SolicitanteVisualizacao celular = new frmRCS4SolicitanteVisualizacao(titulo, msg, linkImg, nomeBtn, linkBtn);
+                celular.ShowDialog();
+            }
+
+
         }
 
         private void txtFrase_TextChanged(object sender, EventArgs e)
