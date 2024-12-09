@@ -52,26 +52,7 @@ namespace replace_campanhas
 
         }
 
-
-
-
-
-
-
-
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            txtAmx.Clear();
-            txtSaida.Clear();
-            txtTituloEmail.Clear();
-            txtCorpoEmail.Clear();
-            setBoasVindas();
-        }
-        private void btnGerar_Click(object sender, EventArgs e)
+        public void gerarSoliciitacao()
         {
             var boasVindas = String.Empty;
             var msg = "Conforme o arquivo em anexo, Obrigado";
@@ -99,7 +80,7 @@ namespace replace_campanhas
 
             var listAmx = txtAmx.Text;
 
-                
+
 
             txtSaida.Text = boasVindas + "\r\n" +
                             "Solicito o " + agendamento + " das campanhas:\r\n" +
@@ -108,10 +89,34 @@ namespace replace_campanhas
 
             txtCorpoEmail.Text = "Prezados,\r\n" +
                                  "Segue solicitação de " + agendamento + " das campanhas";
-            
+
             if (chkDev.Checked)
                 txtTituloEmail.Text = txtTituloEmail.Text.Replace("/", ": ");
-      
+        }
+
+
+
+
+
+
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtAmx.Clear();
+            txtSaida.Clear();
+            txtTituloEmail.Clear();
+            txtCorpoEmail.Clear();
+            setBoasVindas();
+        }
+        private void btnGerar_Click(object sender, EventArgs e)
+        {
+            gerarSoliciitacao();
+
+
         }
         private void txtCopiar_Click(object sender, EventArgs e)
         {
@@ -122,6 +127,11 @@ namespace replace_campanhas
         {
             txtTituloEmail.Visible = true;
             lblAssuntoEmail.Visible = true;
+        }
+
+        private void rdrAgendamento_CheckedChanged(object sender, EventArgs e)
+        {
+            gerarSoliciitacao();
         }
     }
 }

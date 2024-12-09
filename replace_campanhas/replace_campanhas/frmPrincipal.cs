@@ -64,7 +64,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V3.0";
+                lblVersion.Text = "Versão: V3.1F";
 
             desabilitaForms();
 

@@ -12,6 +12,7 @@ namespace replace_campanhas
 {
     public partial class frmRCS4Solicitante : Form
     {
+        LimparString ls = new LimparString();
         public frmRCS4Solicitante()
         {
             InitializeComponent();
@@ -118,6 +119,9 @@ namespace replace_campanhas
             string linkBtn = "";
             string nomeBtn = "";
 
+            txtFrase.Text = ls.fraseLimpa3_simples(txtFrase.Text);
+            txtTitulo.Text = ls.fraseLimpa3_simples(txtTitulo.Text);
+
             if (!String.IsNullOrEmpty(txtTitulo.Text))
                 titulo = txtTitulo.Text;
             if (!String.IsNullOrEmpty(txtFrase.Text))
@@ -134,10 +138,6 @@ namespace replace_campanhas
                 linkBtn = txtLinkBotao.Text;
                 GarantirHttps(linkBtn);
             }
-            
-
-
-
 
             if (msg != "")
             {

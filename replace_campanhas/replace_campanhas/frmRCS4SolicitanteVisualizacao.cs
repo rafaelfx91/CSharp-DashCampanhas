@@ -108,6 +108,11 @@ namespace replace_campanhas
                 MessageBox.Show("O link fornecido não é válido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

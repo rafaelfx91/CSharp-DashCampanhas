@@ -193,6 +193,7 @@
             this.rdrAlteracao.TabIndex = 37;
             this.rdrAlteracao.Text = "Alteracao";
             this.rdrAlteracao.UseVisualStyleBackColor = true;
+            this.rdrAlteracao.CheckedChanged += new System.EventHandler(this.rdrAgendamento_CheckedChanged);
             // 
             // rdrPausa
             // 
@@ -204,6 +205,7 @@
             this.rdrPausa.TabIndex = 36;
             this.rdrPausa.Text = "Pausa";
             this.rdrPausa.UseVisualStyleBackColor = true;
+            this.rdrPausa.CheckedChanged += new System.EventHandler(this.rdrAgendamento_CheckedChanged);
             // 
             // rdrCancelamento
             // 
@@ -215,6 +217,7 @@
             this.rdrCancelamento.TabIndex = 35;
             this.rdrCancelamento.Text = "Exclusao";
             this.rdrCancelamento.UseVisualStyleBackColor = true;
+            this.rdrCancelamento.CheckedChanged += new System.EventHandler(this.rdrAgendamento_CheckedChanged);
             // 
             // rdrAgendamento
             // 
@@ -228,6 +231,7 @@
             this.rdrAgendamento.TabStop = true;
             this.rdrAgendamento.Text = "Agendamento";
             this.rdrAgendamento.UseVisualStyleBackColor = true;
+            this.rdrAgendamento.CheckedChanged += new System.EventHandler(this.rdrAgendamento_CheckedChanged);
             // 
             // chkDev
             // 
