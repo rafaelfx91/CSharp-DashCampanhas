@@ -50,6 +50,7 @@
             this.txtLinkBotao.Name = "txtLinkBotao";
             this.txtLinkBotao.Size = new System.Drawing.Size(460, 31);
             this.txtLinkBotao.TabIndex = 75;
+            this.txtLinkBotao.TextChanged += new System.EventHandler(this.txtLinkBotao_TextChanged);
             // 
             // lblLinkBotao
             // 
@@ -68,6 +69,7 @@
             this.txtLinkImg.Name = "txtLinkImg";
             this.txtLinkImg.Size = new System.Drawing.Size(460, 31);
             this.txtLinkImg.TabIndex = 73;
+            this.txtLinkImg.TextChanged += new System.EventHandler(this.txtLinkImg_TextChanged);
             // 
             // lblLinkImg
             // 
@@ -191,7 +193,7 @@
             this.Controls.Add(this.txtTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmRCS4Solicitante";
-            this.Text = "frmRCS4Solicitante";
+            this.Text = "Valida RCS";
             this.Load += new System.EventHandler(this.frmRCS4Solicitante_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

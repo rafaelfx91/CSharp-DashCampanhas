@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,8 @@ namespace replace_campanhas
     public partial class frmRCS4Solicitante : Form
     {
         LimparString ls = new LimparString();
+        bool visualizacao = true;
+
         public frmRCS4Solicitante()
         {
             InitializeComponent();
@@ -92,7 +95,21 @@ namespace replace_campanhas
             return link;
         }
 
+        public bool validaLinkEspaco(System.Windows.Forms.TextBox textBox, System.Windows.Forms.Label label)
+        {
+            if (textBox.Text.Contains(" "))
+            {
+                this.visualizacao = false;
+                label.ForeColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                this.visualizacao = true;
+                label.ForeColor = System.Drawing.Color.Green;
 
+            }
+            return true;
+        }
 
 
 
@@ -139,11 +156,24 @@ namespace replace_campanhas
                 GarantirHttps(linkBtn);
             }
 
-            if (msg != "")
+            if (visualizacao)
             {
-                frmRCS4SolicitanteVisualizacao celular = new frmRCS4SolicitanteVisualizacao(titulo, msg, linkImg, nomeBtn, linkBtn);
-                celular.ShowDialog();
+                if (msg != "")
+                {
+                    frmRCS4SolicitanteVisualizacao celular = new frmRCS4SolicitanteVisualizacao(titulo, msg, linkImg, nomeBtn, linkBtn);
+                    celular.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Sem Mensagem para visualizar o RCS","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                }
             }
+            else
+            {
+                MessageBox.Show("Reveja os campos invalidos","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+
+  
 
 
         }
@@ -161,6 +191,17 @@ namespace replace_campanhas
         private void txtNomeBotao_TextChanged(object sender, EventArgs e)
         {
             contarCaracter(txtNomeBotao, lblNomeBotao, "Frase do botao", 15);
+        }
+
+        private void txtLinkImg_TextChanged(object sender, EventArgs e)
+        {
+            validaLinkEspaco(txtLinkImg, lblLinkImg);
+        }
+        private void txtLinkBotao_TextChanged(object sender, EventArgs e)
+        {
+            if (visualizacao)
+                validaLinkEspaco(txtLinkBotao,lblLinkBotao);
+
         }
     }
 }
