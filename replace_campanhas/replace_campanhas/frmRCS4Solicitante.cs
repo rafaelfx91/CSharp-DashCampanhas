@@ -14,7 +14,7 @@ namespace replace_campanhas
     public partial class frmRCS4Solicitante : Form
     {
         LimparString ls = new LimparString();
-        bool visualizacao = true;
+        bool vizuImg, vizuBotao = true;
 
         public frmRCS4Solicitante()
         {
@@ -95,20 +95,27 @@ namespace replace_campanhas
             return link;
         }
 
-        public bool validaLinkEspaco(System.Windows.Forms.TextBox textBox, System.Windows.Forms.Label label)
+        public void validaLinkEspaco(System.Windows.Forms.TextBox textBox, System.Windows.Forms.Label label, int img_botao)
         {
             if (textBox.Text.Contains(" "))
             {
-                this.visualizacao = false;
+                if (img_botao == 1)
+                    vizuImg = false;
+                if (img_botao == 2)
+                    vizuBotao = false;
+
                 label.ForeColor = System.Drawing.Color.Red;
             }
             else
             {
-                this.visualizacao = true;
+                if (img_botao == 1)
+                    vizuImg = true;
+                if (img_botao == 2)
+                    vizuBotao = true;
                 label.ForeColor = System.Drawing.Color.Green;
 
             }
-            return true;
+            //return true;
         }
 
 
@@ -156,22 +163,35 @@ namespace replace_campanhas
                 GarantirHttps(linkBtn);
             }
 
-            if (visualizacao)
+
+            if (vizuImg)
             {
-                if (msg != "")
+                if (vizuBotao)
                 {
-                    frmRCS4SolicitanteVisualizacao celular = new frmRCS4SolicitanteVisualizacao(titulo, msg, linkImg, nomeBtn, linkBtn);
-                    celular.ShowDialog();
+                    if (msg != "")
+                    {
+                        frmRCS4SolicitanteVisualizacao celular = new frmRCS4SolicitanteVisualizacao(titulo, msg, linkImg, nomeBtn, linkBtn);
+                        celular.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sem Mensagem para visualizar o RCS", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Sem Mensagem para visualizar o RCS","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Reveja o link do botao", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-            }
-            else
+            }else
             {
-                MessageBox.Show("Reveja os campos invalidos","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("Reveja o link da img", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+                
+
+
+
+            //    MessageBox.Show("Reveja os campos invalidos","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+
 
   
 
@@ -195,12 +215,12 @@ namespace replace_campanhas
 
         private void txtLinkImg_TextChanged(object sender, EventArgs e)
         {
-            validaLinkEspaco(txtLinkImg, lblLinkImg);
+            validaLinkEspaco(txtLinkImg, lblLinkImg,1);
         }
         private void txtLinkBotao_TextChanged(object sender, EventArgs e)
         {
-            if (visualizacao)
-                validaLinkEspaco(txtLinkBotao,lblLinkBotao);
+            validaLinkEspaco(txtLinkBotao,lblLinkBotao,2);
+            
 
         }
     }
