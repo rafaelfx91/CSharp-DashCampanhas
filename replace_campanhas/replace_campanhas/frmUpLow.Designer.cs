@@ -71,6 +71,7 @@
             // 
             // txtSaida
             // 
+            this.txtSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.txtSaida.Location = new System.Drawing.Point(14, 43);
             this.txtSaida.Margin = new System.Windows.Forms.Padding(5);
             this.txtSaida.Multiline = true;

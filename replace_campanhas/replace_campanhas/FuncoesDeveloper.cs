@@ -18,6 +18,8 @@ namespace replace_campanhas
         private string cryptSenha = "";
         private string effectiveMailUser = "";
         private string effectiveMailSenha = "";
+        private string caminhon2 = "";
+
 
 
         //-devS
@@ -63,6 +65,12 @@ namespace replace_campanhas
 
                 if (args[i].Contains("-Fab"))
                     fabrica = true;
+
+                if (args[i].Contains("-n2"))
+                {
+                    var aux = args[i].Replace("-n2:", "");
+                    caminhon2 = aux;
+                }
 
 
 
@@ -121,6 +129,11 @@ namespace replace_campanhas
             //var nomeCompleto = Dns.GetHostEntry(nome).HostName;
             //MessageBox.Show(nome);
             //MessageBox.Show(nomeCompleto);
+        }
+
+        public string getCaminhoN2()
+        {
+            return caminhon2;
         }
 
         public string getEffectveEmailUsers(int tipo)

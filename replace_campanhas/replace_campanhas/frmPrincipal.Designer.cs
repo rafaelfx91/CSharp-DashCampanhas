@@ -60,6 +60,7 @@
             this.repicksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stringUpLowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chamadosN2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,7 +98,8 @@
             this.sASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gerarNomeNoSASToolStripMenuItem,
             this.gerarNomeNoSASV2ToolStripMenuItem,
-            this.agendamentoCampanhasJIRAToolStripMenuItem});
+            this.agendamentoCampanhasJIRAToolStripMenuItem,
+            this.chamadosN2ToolStripMenuItem});
             this.sASToolStripMenuItem.Name = "sASToolStripMenuItem";
             this.sASToolStripMenuItem.Size = new System.Drawing.Size(78, 41);
             this.sASToolStripMenuItem.Text = "SAS";
@@ -326,6 +328,13 @@
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
+            // chamadosN2ToolStripMenuItem
+            // 
+            this.chamadosN2ToolStripMenuItem.Name = "chamadosN2ToolStripMenuItem";
+            this.chamadosN2ToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.chamadosN2ToolStripMenuItem.Text = "Chamados N2";
+            this.chamadosN2ToolStripMenuItem.Click += new System.EventHandler(this.chamadosN2ToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,6 +392,7 @@
         private System.Windows.Forms.ToolStripMenuItem validaHtmlEmailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem validarHtmlToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem validarRCSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chamadosN2ToolStripMenuItem;
     }
 }
 

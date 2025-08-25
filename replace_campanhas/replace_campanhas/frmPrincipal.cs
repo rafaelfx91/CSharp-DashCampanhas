@@ -47,7 +47,7 @@ namespace replace_campanhas
             this.MinimumSize = new Size(870, 700);
             if (debugVisual)
             {
-                string [] args2 = { "-devS", "-cryptS123", "-emUuserEM" ,"-emSsenhaEM","-Fab" };//dev
+                string [] args2 = { "-devS", "-cryptS123", "-emUuserEM" ,"-emSsenhaEM","-Fab","-n2" };//dev
                 fd = new FuncoesDeveloper(args2);//dev
             }
             else
@@ -64,7 +64,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V3.3F";
+                lblVersion.Text = "Versão: V3.4FN3UL";
 
             desabilitaForms();
 
@@ -100,8 +100,8 @@ namespace replace_campanhas
             encriptadorToolStripMenuItem.Visible = false;
             porcentagemToolStripMenuItem.Visible = false;
             oSsToolStripMenuItem.Visible = false;
-            stringUpLowerToolStripMenuItem.Visible = false;
-            fERRAMENTASToolStripMenuItem.Visible = false;
+            //stringUpLowerToolStripMenuItem.Visible = false;
+            //fERRAMENTASToolStripMenuItem.Visible = false;
             repicksToolStripMenuItem.Visible = false;
 
 
@@ -130,7 +130,7 @@ namespace replace_campanhas
 
                 //OpcoesMENU
                 fERRAMENTASToolStripMenuItem.Visible = true;
-                stringUpLowerToolStripMenuItem.Visible = true;
+                //stringUpLowerToolStripMenuItem.Visible = true;
                 encriptadorToolStripMenuItem.Visible = true;
                 porcentagemToolStripMenuItem.Visible = true;
                 oSsToolStripMenuItem.Visible = true;
@@ -286,6 +286,20 @@ namespace replace_campanhas
             novoFormFilho.Show();
         }
 
+        private void chamadosN2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmAgendamentos")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmAgendamentos novoFormFilho = new frmAgendamentos(fd);
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
 
         //SMS MENU
         private void validarFraseSMSToolStripMenuItem_Click(object sender, EventArgs e)
