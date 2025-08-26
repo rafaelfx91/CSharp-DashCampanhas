@@ -64,7 +64,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V3.4FN3UL";
+                lblVersion.Text = "Versão: V3.4FN3TGHT";
 
             desabilitaForms();
 
@@ -420,6 +420,21 @@ namespace replace_campanhas
             novoFormFilho.Show();
         }
 
+        private void trocaFraseologiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmFraseologiaHtml")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmFraseologiaHtml novoFormFilho = new frmFraseologiaHtml();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
+
         //RCS MENU
         private void RCS1validacaoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -630,7 +645,7 @@ namespace replace_campanhas
 
         }
 
-
+ 
     }//fim
 }
 

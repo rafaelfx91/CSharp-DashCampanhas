@@ -35,6 +35,7 @@
             this.gerarNomeNoSASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerarNomeNoSASV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendamentoCampanhasJIRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chamadosN2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validaFraseV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validaSMSSolicitanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,7 +61,7 @@
             this.repicksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stringUpLowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chamadosN2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trocaFraseologiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,6 +127,13 @@
             this.agendamentoCampanhasJIRAToolStripMenuItem.Text = "Agendamento campanhas (JIRA)";
             this.agendamentoCampanhasJIRAToolStripMenuItem.Click += new System.EventHandler(this.agendamentoCampanhasJIRAToolStripMenuItem_Click);
             // 
+            // chamadosN2ToolStripMenuItem
+            // 
+            this.chamadosN2ToolStripMenuItem.Name = "chamadosN2ToolStripMenuItem";
+            this.chamadosN2ToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.chamadosN2ToolStripMenuItem.Text = "Chamados N2";
+            this.chamadosN2ToolStripMenuItem.Click += new System.EventHandler(this.chamadosN2ToolStripMenuItem_Click);
+            // 
             // sMSToolStripMenuItem
             // 
             this.sMSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -186,7 +194,8 @@
             // 
             this.hTMLToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.validarHtmlToolStripMenuItem,
-            this.validaHtmlEmailToolStripMenuItem});
+            this.validaHtmlEmailToolStripMenuItem,
+            this.trocaFraseologiaToolStripMenuItem});
             this.hTMLToolStripMenuItem.Image = global::replace_campanhas.Properties.Resources.e_mail;
             this.hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
             this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(122, 41);
@@ -328,12 +337,12 @@
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
-            // chamadosN2ToolStripMenuItem
+            // trocaFraseologiaToolStripMenuItem
             // 
-            this.chamadosN2ToolStripMenuItem.Name = "chamadosN2ToolStripMenuItem";
-            this.chamadosN2ToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
-            this.chamadosN2ToolStripMenuItem.Text = "Chamados N2";
-            this.chamadosN2ToolStripMenuItem.Click += new System.EventHandler(this.chamadosN2ToolStripMenuItem_Click);
+            this.trocaFraseologiaToolStripMenuItem.Name = "trocaFraseologiaToolStripMenuItem";
+            this.trocaFraseologiaToolStripMenuItem.Size = new System.Drawing.Size(329, 42);
+            this.trocaFraseologiaToolStripMenuItem.Text = "Troca fraseologia";
+            this.trocaFraseologiaToolStripMenuItem.Click += new System.EventHandler(this.trocaFraseologiaToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -393,6 +402,7 @@
         private System.Windows.Forms.ToolStripMenuItem validarHtmlToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem validarRCSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chamadosN2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trocaFraseologiaToolStripMenuItem;
     }
 }
 

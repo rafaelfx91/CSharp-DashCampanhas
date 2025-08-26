@@ -285,6 +285,12 @@
     <Compile Include="frmEnvioDeEmail.Designer.cs">
       <DependentUpon>frmEnvioDeEmail.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFraseologiaHtml.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFraseologiaHtml.Designer.cs">
+      <DependentUpon>frmFraseologiaHtml.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGeradordeSenhas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -494,6 +500,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEnvioDeEmail.resx">
       <DependentUpon>frmEnvioDeEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFraseologiaHtml.resx">
+      <DependentUpon>frmFraseologiaHtml.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGeradordeSenhas.resx">
       <DependentUpon>frmGeradordeSenhas.cs</DependentUpon>
