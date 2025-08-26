@@ -281,6 +281,7 @@ namespace replace_campanhas
 
             return false;
         }
+       //Essa daqui corrigido
         public static string FormatUpperCaseWordsV7(string text, string tagPattern)
         {
             if (string.IsNullOrEmpty(text))

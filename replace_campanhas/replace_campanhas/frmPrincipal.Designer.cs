@@ -35,7 +35,6 @@
             this.gerarNomeNoSASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerarNomeNoSASV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendamentoCampanhasJIRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chamadosN2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validaFraseV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validaSMSSolicitanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +45,7 @@
             this.hTMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validarHtmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validaHtmlEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trocaFraseologiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rCSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RCS1validacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RCS2validacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +61,7 @@
             this.repicksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stringUpLowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trocaFraseologiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chamadoRedmineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,7 +100,7 @@
             this.gerarNomeNoSASToolStripMenuItem,
             this.gerarNomeNoSASV2ToolStripMenuItem,
             this.agendamentoCampanhasJIRAToolStripMenuItem,
-            this.chamadosN2ToolStripMenuItem});
+            this.chamadoRedmineToolStripMenuItem});
             this.sASToolStripMenuItem.Name = "sASToolStripMenuItem";
             this.sASToolStripMenuItem.Size = new System.Drawing.Size(78, 41);
             this.sASToolStripMenuItem.Text = "SAS";
@@ -126,13 +126,6 @@
             this.agendamentoCampanhasJIRAToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
             this.agendamentoCampanhasJIRAToolStripMenuItem.Text = "Agendamento campanhas (JIRA)";
             this.agendamentoCampanhasJIRAToolStripMenuItem.Click += new System.EventHandler(this.agendamentoCampanhasJIRAToolStripMenuItem_Click);
-            // 
-            // chamadosN2ToolStripMenuItem
-            // 
-            this.chamadosN2ToolStripMenuItem.Name = "chamadosN2ToolStripMenuItem";
-            this.chamadosN2ToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
-            this.chamadosN2ToolStripMenuItem.Text = "Chamados N2";
-            this.chamadosN2ToolStripMenuItem.Click += new System.EventHandler(this.chamadosN2ToolStripMenuItem_Click);
             // 
             // sMSToolStripMenuItem
             // 
@@ -214,6 +207,13 @@
             this.validaHtmlEmailToolStripMenuItem.Size = new System.Drawing.Size(329, 42);
             this.validaHtmlEmailToolStripMenuItem.Text = "Valida html e-mail";
             this.validaHtmlEmailToolStripMenuItem.Click += new System.EventHandler(this.validaHtmlEmailToolStripMenuItem_Click);
+            // 
+            // trocaFraseologiaToolStripMenuItem
+            // 
+            this.trocaFraseologiaToolStripMenuItem.Name = "trocaFraseologiaToolStripMenuItem";
+            this.trocaFraseologiaToolStripMenuItem.Size = new System.Drawing.Size(329, 42);
+            this.trocaFraseologiaToolStripMenuItem.Text = "Troca fraseologia";
+            this.trocaFraseologiaToolStripMenuItem.Click += new System.EventHandler(this.trocaFraseologiaToolStripMenuItem_Click);
             // 
             // rCSToolStripMenuItem
             // 
@@ -337,12 +337,12 @@
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
-            // trocaFraseologiaToolStripMenuItem
+            // chamadoRedmineToolStripMenuItem
             // 
-            this.trocaFraseologiaToolStripMenuItem.Name = "trocaFraseologiaToolStripMenuItem";
-            this.trocaFraseologiaToolStripMenuItem.Size = new System.Drawing.Size(329, 42);
-            this.trocaFraseologiaToolStripMenuItem.Text = "Troca fraseologia";
-            this.trocaFraseologiaToolStripMenuItem.Click += new System.EventHandler(this.trocaFraseologiaToolStripMenuItem_Click);
+            this.chamadoRedmineToolStripMenuItem.Name = "chamadoRedmineToolStripMenuItem";
+            this.chamadoRedmineToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.chamadoRedmineToolStripMenuItem.Text = "Chamado redmine";
+            this.chamadoRedmineToolStripMenuItem.Click += new System.EventHandler(this.chamadoRedmineToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -401,8 +401,8 @@
         private System.Windows.Forms.ToolStripMenuItem validaHtmlEmailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem validarHtmlToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem validarRCSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem chamadosN2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trocaFraseologiaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chamadoRedmineToolStripMenuItem;
     }
 }
 

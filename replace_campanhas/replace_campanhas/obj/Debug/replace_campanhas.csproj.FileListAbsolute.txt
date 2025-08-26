@@ -162,3 +162,4 @@ C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replac
 C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.exe
 C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.pdb
 C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmFraseologiaHtml.resources
+C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmChamadosRedmine.resources

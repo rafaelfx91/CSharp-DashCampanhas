@@ -25,8 +25,8 @@ namespace replace_campanhas
         private const string MutexName = "PlusoftDash";
         //private Mutex mutex;
         private FuncoesDeveloper fd;
-        //private const bool debugVisual = true;
-        private const bool debugVisual = false;
+        private const bool debugVisual = true;
+        //private const bool debugVisual = false;
 
         /*
          replace_campanhas.exe -devS -crypt123 -emUUSUSARIO -emSSENHA
@@ -64,7 +64,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versão: DEBUG";
             else
-                lblVersion.Text = "Versão: V3.4FN3TGHT";
+                lblVersion.Text = "Versão: V3.5FN";
 
             desabilitaForms();
 
@@ -83,6 +83,7 @@ namespace replace_campanhas
             //SAS Menu
             gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
             sASToolStripMenuItem.Visible = false;
+            chamadoRedmineToolStripMenuItem.Visible = false;
             //SMS Menu            
             validaFraseV2ToolStripMenuItem.Visible = false;
             //Push menu 
@@ -148,6 +149,7 @@ namespace replace_campanhas
                 //Sas Menu
                 sASToolStripMenuItem.Visible = true;
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
+                chamadoRedmineToolStripMenuItem.Visible = true;
 
                 //SMS Menu
                 validaFraseV2ToolStripMenuItem.Visible = true;
@@ -285,20 +287,19 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
-
         private void chamadosN2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (Form form in this.MdiChildren)
-            {
-                if (form.Name == "frmAgendamentos")
-                {
-                    form.Activate();
-                    return;
-                }
-            }
-            frmAgendamentos novoFormFilho = new frmAgendamentos(fd);
-            novoFormFilho.MdiParent = this;
-            novoFormFilho.Show();
+            //foreach (Form form in this.MdiChildren)
+            //{
+            //    if (form.Name == "frmAgendamentos")
+            //    {
+            //        form.Activate();
+            //        return;
+            //    }
+            //}
+            //frmAgendamentos novoFormFilho = new frmAgendamentos(fd);
+            //novoFormFilho.MdiParent = this;
+            //novoFormFilho.Show();
         }
 
         //SMS MENU
@@ -344,7 +345,20 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
-
+        private void chamadoRedmineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmChamadosRedmine")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmChamadosRedmine novoFormFilho = new frmChamadosRedmine();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
 
         //PUSH MENU
         private void validarFrasePUSHToolStripMenuItem_Click(object sender, EventArgs e)
@@ -639,13 +653,12 @@ namespace replace_campanhas
                 }
             }
         }
-
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
 
- 
+
     }//fim
 }
 
