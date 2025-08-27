@@ -5,8 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using System.Reflection.Emit;
+using SixLabors.ImageSharp;
 
 namespace replace_campanhas
 {
@@ -29,8 +33,8 @@ namespace replace_campanhas
 
             txtTabelaT1.ReadOnly = true;
             txtCampoT1.ReadOnly = true;
-            txtTabelaT2.ReadOnly = true;
-            txtCampoT2.ReadOnly = true;
+            txtTabelaT2.ReadOnly = false;
+            txtCampoT2.ReadOnly = false;
 
             cbT1.SelectedIndex = 0;
             cbT2.SelectedIndex = 0;
@@ -77,6 +81,13 @@ namespace replace_campanhas
                 cbT2.Visible = true;
                 lblPara.Visible = true;
                 lblObs.Visible = true;
+                lblCampoT1.Visible = true;
+                lblT1Dot.Visible = true;
+                txtCampoT1.Visible = true;
+
+
+
+
             }
             if (rdNovaColuna.Checked)
             {
@@ -104,64 +115,176 @@ namespace replace_campanhas
                 cbT2.Visible = false;
                 lblPara.Visible = false;
                 lblObs.Visible = false; 
-
+                lblCampoT1.Visible = false;
+                lblT1Dot.Visible = false;
+                txtCampoT1.Visible = false;
+                
+                
             }
 
 
         }
 
-
-
-
-
-        /* MODELO DE CHAMADOS
-        Solicito mapeamento de uma nova tabela.
-        *Tabela Pai:*
-        <pre>
-        AMX.TB_PME_SAS T1
-        </pre>
-        *Tabela Filho:*
-        <pre>
-        AMX.DB_CLUSTERIZACAO_MOVEL_PME T2
-        </pre>
-        *PK:*
-        <pre>
-        T1.NUM_CNPJ = T2.NU_CNPJ
-        </pre>
-        *Obs:*
-        _T1 sem duplicidade
-        T2 sem duplicidade
-        1 PRA 1
-        (X) Nova
-        _
-        *Colunas:*
-        <pre>
-        FLAG_ATINGIU_POTENCIAL_MOVEL NUMBER
-        FLAG_INSATISFEITO            NUMBER
-        </pre>
-        *Assunto/Visao:*
-        <pre>
-        () Contrato
-        () Domicilio
-        () E-mail
-        () Pessoa
-        () PME_Pessoa
-        () PME_Pessoa_Telefone
-        () PME_Domicilio
-        (x) Telefone
-        </pre>
-        *Motivo da necessidade:*
-        */
-
-        //BOTOES
-        private void btnCarregar_Click(object sender, EventArgs e)
+       
+        public void ProcessarTextoComIntervalo(TextBox textBox)
         {
+            if (textBox == null || string.IsNullOrEmpty(textBox.Text))
+                return;
+
+            // Converte todo o texto para uppercase
+            string textoUpper = textBox.Text.ToUpper();
+
+            // Usa Regex para encontrar "DATE" como palavra inteira (case insensitive já que convertemos para upper)
+            string textoProcessado = Regex.Replace(textoUpper, @"\bDATE\b", "DATE INTERVALO");
+
+            // Atualiza o TextBox
+            txtColunas.Text = textoProcessado;
+        }
+
+
+
+
+
+    /* MODELO DE CHAMADOS
+    Solicito mapeamento de uma nova tabela.
+    *Tabela Pai:*
+    <pre>
+    AMX.TB_PME_SAS T1
+    </pre>
+    *Tabela Filho:*
+    <pre>
+    AMX.DB_CLUSTERIZACAO_MOVEL_PME T2
+    </pre>
+    *PK:*
+    <pre>
+    T1.NUM_CNPJ = T2.NU_CNPJ
+    </pre>
+    *Obs:*
+    _T1 sem duplicidade
+    T2 sem duplicidade
+    1 PRA 1
+    (X) Nova
+    _
+    *Colunas:*
+    <pre>
+    FLAG_ATINGIU_POTENCIAL_MOVEL NUMBER
+    FLAG_INSATISFEITO            NUMBER
+    </pre>
+    *Assunto/Visao:*
+    <pre>
+    () Contrato
+    () Domicilio
+    () E-mail
+    () Pessoa
+    () PME_Pessoa
+    () PME_Pessoa_Telefone
+    () PME_Domicilio
+    (x) Telefone
+    </pre>
+    *Motivo da necessidade:*
+    */
+
+    //BOTOES
+    private void btnCarregar_Click(object sender, EventArgs e)
+        {
+            txtSaidaChamado.Text = string.Empty;
+
+            if (rdNovaTabela.Checked)
+            {
+                var t1 = "";
+                var t2 = "";
+
+                if (chkT1.Checked)
+                    t1 = chkT1.Text;
+                else
+                    t1 = chkT1.Text;
+                if (chkT2.Checked)
+                    t2 = chkT2.Text;
+                else
+                    t2 = chkT2.Text;
+
+
+                var para = "";
+
+                para = cbT1.SelectedItem.ToString() + " PARA " + cbT2.SelectedItem.ToString();
+
+                var visao = "";
+                if (rdTelefone.Checked)
+                    visao = "(X) Telefone";
+
+
+                StringBuilder textoFinal = new StringBuilder();
+
+                textoFinal.AppendLine("Solicito mapeamento de uma nova tabela.");
+                textoFinal.AppendLine("*Tabela Pai:*");
+                textoFinal.AppendLine("<pre>");
+                textoFinal.AppendLine(txtTabelaT1.Text + " T1");
+                textoFinal.AppendLine("</pre>");
+                textoFinal.AppendLine("*Tabela Filho:*");
+                textoFinal.AppendLine("<pre>");
+                textoFinal.AppendLine(txtTabelaT2.Text + " T2");
+                textoFinal.AppendLine("</pre>");
+                textoFinal.AppendLine("*PK:*");
+                textoFinal.AppendLine("<pre>");
+                textoFinal.AppendLine("T1." + txtCampoT1.Text + " = T2." + txtCampoT2.Text);
+                textoFinal.AppendLine("</pre>");
+                textoFinal.AppendLine("*Obs:*");
+                textoFinal.AppendLine(t1);
+                textoFinal.AppendLine(t2);
+                textoFinal.AppendLine(para);
+                textoFinal.AppendLine("(X) Nova _");
+                textoFinal.AppendLine("*Colunas:*");
+                textoFinal.AppendLine("<pre>");
+                textoFinal.AppendLine(txtColunas.Text);
+                textoFinal.AppendLine("</pre>");
+                textoFinal.AppendLine("*Assunto/Visao:*");
+                textoFinal.AppendLine("<pre>");
+                textoFinal.AppendLine(visao);
+                textoFinal.AppendLine("</pre>");
+                textoFinal.AppendLine("*Motivo da necessidade:*");
+                textoFinal.AppendLine(txtMotivo.Text);
+
+                txtSaidaChamado.Text = textoFinal.ToString();
+            }
+
+
+            if (rdNovaColuna.Checked)
+            {
+
+                var visao = "";
+                if (rdTelefone.Checked)
+                    visao = "(X) Telefone";
+
+                StringBuilder textoFinal = new StringBuilder();
+
+                textoFinal.AppendLine("Solicito mapeamento de uma nova coluna.");
+                textoFinal.AppendLine("*Tabela Pai:*");
+                textoFinal.AppendLine("<pre>");
+                textoFinal.AppendLine(txtTabelaT1.Text + " T1");
+                textoFinal.AppendLine("</pre>");
+                textoFinal.AppendLine("*Colunas:*");
+                textoFinal.AppendLine("<pre>");
+                textoFinal.AppendLine(txtColunas.Text);
+                textoFinal.AppendLine("</pre>");
+                textoFinal.AppendLine("*Assunto/Visao:*");
+                textoFinal.AppendLine("<pre>");
+                textoFinal.AppendLine(visao);
+                textoFinal.AppendLine("</pre>");
+                textoFinal.AppendLine("*Motivo da necessidade:*");
+                textoFinal.AppendLine(txtMotivo.Text);
+
+                txtSaidaChamado.Text = textoFinal.ToString();
+            }
+
+
+
+
 
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-
+            txtSaidaChamado.Clear();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -190,6 +313,16 @@ namespace replace_campanhas
                 chkT2.Text = "T2 com duplicidade";
             else
                 chkT2.Text = "T2 sem duplicidade";
+        }
+
+        private void validaColuns(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void btnValidaColunas_Click(object sender, EventArgs e)
+        {
+            ProcessarTextoComIntervalo(txtColunas);
         }
     }
 }

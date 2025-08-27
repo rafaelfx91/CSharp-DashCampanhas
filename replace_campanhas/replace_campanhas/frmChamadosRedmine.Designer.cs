@@ -33,6 +33,8 @@
             this.btnCarregar = new System.Windows.Forms.Button();
             this.tabCampos = new System.Windows.Forms.TabControl();
             this.tbVisao = new System.Windows.Forms.TabPage();
+            this.lblMotivo = new System.Windows.Forms.Label();
+            this.txtMotivo = new System.Windows.Forms.TextBox();
             this.rdPMEDomicilio = new System.Windows.Forms.RadioButton();
             this.rdPMEPessoaTelefone = new System.Windows.Forms.RadioButton();
             this.rdPMEPessoa = new System.Windows.Forms.RadioButton();
@@ -63,12 +65,16 @@
             this.rdNovaColuna = new System.Windows.Forms.RadioButton();
             this.rdNovaTabela = new System.Windows.Forms.RadioButton();
             this.tbColunas = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.lblMotivo = new System.Windows.Forms.Label();
-            this.txtMotivo = new System.Windows.Forms.TextBox();
+            this.btnValidaColunas = new System.Windows.Forms.Button();
+            this.lblColunas = new System.Windows.Forms.Label();
+            this.txtColunas = new System.Windows.Forms.TextBox();
+            this.tbSaida = new System.Windows.Forms.TabPage();
+            this.txtSaidaChamado = new System.Windows.Forms.TextBox();
             this.tabCampos.SuspendLayout();
             this.tbVisao.SuspendLayout();
             this.tabTipo.SuspendLayout();
+            this.tbColunas.SuspendLayout();
+            this.tbSaida.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnLimpar
@@ -96,7 +102,7 @@
             // btnCarregar
             // 
             this.btnCarregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCarregar.Location = new System.Drawing.Point(12, 462);
+            this.btnCarregar.Location = new System.Drawing.Point(19, 462);
             this.btnCarregar.Name = "btnCarregar";
             this.btnCarregar.Size = new System.Drawing.Size(98, 43);
             this.btnCarregar.TabIndex = 34;
@@ -109,7 +115,7 @@
             this.tabCampos.Controls.Add(this.tbVisao);
             this.tabCampos.Controls.Add(this.tabTipo);
             this.tabCampos.Controls.Add(this.tbColunas);
-            this.tabCampos.Controls.Add(this.tabPage3);
+            this.tabCampos.Controls.Add(this.tbSaida);
             this.tabCampos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.tabCampos.Location = new System.Drawing.Point(12, 12);
             this.tabCampos.Name = "tabCampos";
@@ -136,6 +142,23 @@
             this.tbVisao.TabIndex = 0;
             this.tbVisao.Text = "Visao";
             this.tbVisao.UseVisualStyleBackColor = true;
+            // 
+            // lblMotivo
+            // 
+            this.lblMotivo.AutoSize = true;
+            this.lblMotivo.Location = new System.Drawing.Point(6, 179);
+            this.lblMotivo.Name = "lblMotivo";
+            this.lblMotivo.Size = new System.Drawing.Size(262, 25);
+            this.lblMotivo.TabIndex = 19;
+            this.lblMotivo.Text = "Motivo da nescecidade:";
+            // 
+            // txtMotivo
+            // 
+            this.txtMotivo.Location = new System.Drawing.Point(3, 207);
+            this.txtMotivo.Multiline = true;
+            this.txtMotivo.Name = "txtMotivo";
+            this.txtMotivo.Size = new System.Drawing.Size(600, 193);
+            this.txtMotivo.TabIndex = 18;
             // 
             // rdPMEDomicilio
             // 
@@ -252,7 +275,7 @@
             this.tabTipo.Padding = new System.Windows.Forms.Padding(3);
             this.tabTipo.Size = new System.Drawing.Size(612, 406);
             this.tabTipo.TabIndex = 1;
-            this.tabTipo.Text = "Tipo";
+            this.tabTipo.Text = "Join";
             this.tabTipo.UseVisualStyleBackColor = true;
             // 
             // lblPara
@@ -445,6 +468,9 @@
             // 
             // tbColunas
             // 
+            this.tbColunas.Controls.Add(this.btnValidaColunas);
+            this.tbColunas.Controls.Add(this.lblColunas);
+            this.tbColunas.Controls.Add(this.txtColunas);
             this.tbColunas.Location = new System.Drawing.Point(4, 34);
             this.tbColunas.Name = "tbColunas";
             this.tbColunas.Padding = new System.Windows.Forms.Padding(3);
@@ -453,32 +479,52 @@
             this.tbColunas.Text = "Colunas";
             this.tbColunas.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // btnValidaColunas
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 34);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(612, 406);
-            this.tabPage3.TabIndex = 3;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.btnValidaColunas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnValidaColunas.Location = new System.Drawing.Point(6, 351);
+            this.btnValidaColunas.Name = "btnValidaColunas";
+            this.btnValidaColunas.Size = new System.Drawing.Size(98, 43);
+            this.btnValidaColunas.TabIndex = 38;
+            this.btnValidaColunas.Text = "Valida";
+            this.btnValidaColunas.UseVisualStyleBackColor = true;
+            this.btnValidaColunas.Click += new System.EventHandler(this.btnValidaColunas_Click);
             // 
-            // lblMotivo
+            // lblColunas
             // 
-            this.lblMotivo.AutoSize = true;
-            this.lblMotivo.Location = new System.Drawing.Point(6, 179);
-            this.lblMotivo.Name = "lblMotivo";
-            this.lblMotivo.Size = new System.Drawing.Size(262, 25);
-            this.lblMotivo.TabIndex = 19;
-            this.lblMotivo.Text = "Motivo da nescecidade:";
+            this.lblColunas.AutoSize = true;
+            this.lblColunas.Location = new System.Drawing.Point(1, 3);
+            this.lblColunas.Name = "lblColunas";
+            this.lblColunas.Size = new System.Drawing.Size(105, 25);
+            this.lblColunas.TabIndex = 23;
+            this.lblColunas.Text = "Colunas:";
             // 
-            // txtMotivo
+            // txtColunas
             // 
-            this.txtMotivo.Location = new System.Drawing.Point(3, 207);
-            this.txtMotivo.Multiline = true;
-            this.txtMotivo.Name = "txtMotivo";
-            this.txtMotivo.Size = new System.Drawing.Size(600, 193);
-            this.txtMotivo.TabIndex = 18;
+            this.txtColunas.Location = new System.Drawing.Point(3, 31);
+            this.txtColunas.Multiline = true;
+            this.txtColunas.Name = "txtColunas";
+            this.txtColunas.Size = new System.Drawing.Size(600, 314);
+            this.txtColunas.TabIndex = 0;
+            // 
+            // tbSaida
+            // 
+            this.tbSaida.Controls.Add(this.txtSaidaChamado);
+            this.tbSaida.Location = new System.Drawing.Point(4, 34);
+            this.tbSaida.Name = "tbSaida";
+            this.tbSaida.Padding = new System.Windows.Forms.Padding(3);
+            this.tbSaida.Size = new System.Drawing.Size(612, 406);
+            this.tbSaida.TabIndex = 3;
+            this.tbSaida.Text = "Saida";
+            this.tbSaida.UseVisualStyleBackColor = true;
+            // 
+            // txtSaidaChamado
+            // 
+            this.txtSaidaChamado.Location = new System.Drawing.Point(6, 6);
+            this.txtSaidaChamado.Multiline = true;
+            this.txtSaidaChamado.Name = "txtSaidaChamado";
+            this.txtSaidaChamado.Size = new System.Drawing.Size(600, 394);
+            this.txtSaidaChamado.TabIndex = 0;
             // 
             // frmChamadosRedmine
             // 
@@ -497,6 +543,10 @@
             this.tbVisao.PerformLayout();
             this.tabTipo.ResumeLayout(false);
             this.tabTipo.PerformLayout();
+            this.tbColunas.ResumeLayout(false);
+            this.tbColunas.PerformLayout();
+            this.tbSaida.ResumeLayout(false);
+            this.tbSaida.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -518,7 +568,7 @@
         private System.Windows.Forms.RadioButton rdEmail;
         private System.Windows.Forms.RadioButton rdDomicilio;
         private System.Windows.Forms.TabPage tbColunas;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tbSaida;
         private System.Windows.Forms.RadioButton rdNovaColuna;
         private System.Windows.Forms.RadioButton rdNovaTabela;
         private System.Windows.Forms.Label lblT2;
@@ -541,5 +591,9 @@
         private System.Windows.Forms.ComboBox cbT1;
         private System.Windows.Forms.Label lblMotivo;
         private System.Windows.Forms.TextBox txtMotivo;
+        private System.Windows.Forms.Label lblColunas;
+        private System.Windows.Forms.TextBox txtColunas;
+        private System.Windows.Forms.Button btnValidaColunas;
+        private System.Windows.Forms.TextBox txtSaidaChamado;
     }
 }
