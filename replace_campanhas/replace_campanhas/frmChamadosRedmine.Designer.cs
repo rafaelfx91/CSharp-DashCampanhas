@@ -275,7 +275,7 @@
             // btnLigaDesliga
             // 
             this.btnLigaDesliga.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLigaDesliga.Location = new System.Drawing.Point(8, 41);
+            this.btnLigaDesliga.Location = new System.Drawing.Point(154, 9);
             this.btnLigaDesliga.Name = "btnLigaDesliga";
             this.btnLigaDesliga.Size = new System.Drawing.Size(94, 26);
             this.btnLigaDesliga.TabIndex = 28;
@@ -350,7 +350,7 @@
             // lblT1Dot
             // 
             this.lblT1Dot.AutoSize = true;
-            this.lblT1Dot.Location = new System.Drawing.Point(95, 133);
+            this.lblT1Dot.Location = new System.Drawing.Point(95, 84);
             this.lblT1Dot.Name = "lblT1Dot";
             this.lblT1Dot.Size = new System.Drawing.Size(46, 25);
             this.lblT1Dot.TabIndex = 21;
@@ -359,7 +359,7 @@
             // lblCampoT1
             // 
             this.lblCampoT1.AutoSize = true;
-            this.lblCampoT1.Location = new System.Drawing.Point(3, 133);
+            this.lblCampoT1.Location = new System.Drawing.Point(3, 84);
             this.lblCampoT1.Name = "lblCampoT1";
             this.lblCampoT1.Size = new System.Drawing.Size(99, 25);
             this.lblCampoT1.TabIndex = 20;
@@ -367,7 +367,7 @@
             // 
             // txtCampoT1
             // 
-            this.txtCampoT1.Location = new System.Drawing.Point(145, 130);
+            this.txtCampoT1.Location = new System.Drawing.Point(145, 81);
             this.txtCampoT1.Name = "txtCampoT1";
             this.txtCampoT1.Size = new System.Drawing.Size(416, 31);
             this.txtCampoT1.TabIndex = 19;
@@ -375,7 +375,7 @@
             // lblT1
             // 
             this.lblT1.AutoSize = true;
-            this.lblT1.Location = new System.Drawing.Point(567, 93);
+            this.lblT1.Location = new System.Drawing.Point(567, 41);
             this.lblT1.Name = "lblT1";
             this.lblT1.Size = new System.Drawing.Size(39, 25);
             this.lblT1.TabIndex = 18;
@@ -384,7 +384,7 @@
             // lblTabelaT1
             // 
             this.lblTabelaT1.AutoSize = true;
-            this.lblTabelaT1.Location = new System.Drawing.Point(3, 90);
+            this.lblTabelaT1.Location = new System.Drawing.Point(3, 41);
             this.lblTabelaT1.Name = "lblTabelaT1";
             this.lblTabelaT1.Size = new System.Drawing.Size(91, 25);
             this.lblTabelaT1.TabIndex = 17;
@@ -392,7 +392,7 @@
             // 
             // txtTabelaT1
             // 
-            this.txtTabelaT1.Location = new System.Drawing.Point(100, 90);
+            this.txtTabelaT1.Location = new System.Drawing.Point(100, 41);
             this.txtTabelaT1.Name = "txtTabelaT1";
             this.txtTabelaT1.Size = new System.Drawing.Size(461, 31);
             this.txtTabelaT1.TabIndex = 16;
@@ -450,7 +450,7 @@
             // rdNovaColuna
             // 
             this.rdNovaColuna.AutoSize = true;
-            this.rdNovaColuna.Location = new System.Drawing.Point(165, 6);
+            this.rdNovaColuna.Location = new System.Drawing.Point(254, 6);
             this.rdNovaColuna.Name = "rdNovaColuna";
             this.rdNovaColuna.Size = new System.Drawing.Size(161, 29);
             this.rdNovaColuna.TabIndex = 9;

@@ -49,14 +49,18 @@ namespace replace_campanhas
             rdPMEPessoaTelefone.Visible = false;
             rdPMEPessoa.Visible = false;
 
-            btnLigaDesliga.Text = "Desabilitado";
-            btnLigaDesliga.BackColor = System.Drawing.Color.Red;
+            btnDesabilitaCampos();
 
 
         }
 
         //FUNCOES
-
+        public void btnDesabilitaCampos()
+        {
+            btnLigaDesliga.Text = "Desabilitado";
+            btnLigaDesliga.BackColor = System.Drawing.Color.Red;
+            interruptor = false;
+        }
         public void populaVisaoparaTipo()
         {
             if (rdTelefone.Checked)
@@ -136,7 +140,6 @@ namespace replace_campanhas
 
         }
 
-       
         public void ProcessarTextoComIntervalo(TextBox textBox)
         {
             if (textBox == null || string.IsNullOrEmpty(textBox.Text))
@@ -214,7 +217,6 @@ namespace replace_campanhas
                 else
                     t2 = chkT2.Text;
 
-
                 var para = "";
 
                 para = cbT1.SelectedItem.ToString() + " PARA " + cbT2.SelectedItem.ToString();
@@ -222,7 +224,6 @@ namespace replace_campanhas
                 var visao = "";
                 if (rdTelefone.Checked)
                     visao = "(X) Telefone";
-
 
                 StringBuilder textoFinal = new StringBuilder();
 
@@ -257,7 +258,6 @@ namespace replace_campanhas
 
                 txtSaidaChamado.Text = textoFinal.ToString();
             }
-
 
             if (rdNovaColuna.Checked)
             {
@@ -296,6 +296,10 @@ namespace replace_campanhas
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             txtSaidaChamado.Clear();
+            txtCampoT2.Clear();
+            txtTabelaT2.Clear();
+            txtMotivo.Clear();
+            txtColunas.Clear();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -305,6 +309,7 @@ namespace replace_campanhas
 
         private void PopulaCampos(object sender, EventArgs e)
         {
+            btnDesabilitaCampos();
             populaVisaoparaTipo();
             validaTabTipo();
 
@@ -354,5 +359,7 @@ namespace replace_campanhas
             }
 
         }
+
+
     }
 }
