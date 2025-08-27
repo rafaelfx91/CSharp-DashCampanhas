@@ -44,6 +44,12 @@
             this.rdContrato = new System.Windows.Forms.RadioButton();
             this.rdTelefone = new System.Windows.Forms.RadioButton();
             this.tabTipo = new System.Windows.Forms.TabPage();
+            this.lblT2Dot2 = new System.Windows.Forms.Label();
+            this.lblCampo2T2 = new System.Windows.Forms.Label();
+            this.txtCampo2T2 = new System.Windows.Forms.TextBox();
+            this.lblT1Dot2 = new System.Windows.Forms.Label();
+            this.lblCampo2T1 = new System.Windows.Forms.Label();
+            this.txtCampo2T1 = new System.Windows.Forms.TextBox();
             this.btnLigaDesliga = new System.Windows.Forms.Button();
             this.lblPara = new System.Windows.Forms.Label();
             this.cbT2 = new System.Windows.Forms.ComboBox();
@@ -71,6 +77,8 @@
             this.txtColunas = new System.Windows.Forms.TextBox();
             this.tbSaida = new System.Windows.Forms.TabPage();
             this.txtSaidaChamado = new System.Windows.Forms.TextBox();
+            this.lblEditCampos = new System.Windows.Forms.Label();
+            this.btnCopiar = new System.Windows.Forms.Button();
             this.tabCampos.SuspendLayout();
             this.tbVisao.SuspendLayout();
             this.tabTipo.SuspendLayout();
@@ -81,7 +89,7 @@
             // btnLimpar
             // 
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(422, 458);
+            this.btnLimpar.Location = new System.Drawing.Point(401, 400);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(98, 43);
             this.btnLimpar.TabIndex = 36;
@@ -92,7 +100,7 @@
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(526, 458);
+            this.btnSair.Location = new System.Drawing.Point(505, 400);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(98, 43);
             this.btnSair.TabIndex = 35;
@@ -103,7 +111,7 @@
             // btnCarregar
             // 
             this.btnCarregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCarregar.Location = new System.Drawing.Point(6, 357);
+            this.btnCarregar.Location = new System.Drawing.Point(6, 400);
             this.btnCarregar.Name = "btnCarregar";
             this.btnCarregar.Size = new System.Drawing.Size(98, 43);
             this.btnCarregar.TabIndex = 34;
@@ -121,7 +129,7 @@
             this.tabCampos.Location = new System.Drawing.Point(12, 12);
             this.tabCampos.Name = "tabCampos";
             this.tabCampos.SelectedIndex = 0;
-            this.tabCampos.Size = new System.Drawing.Size(620, 444);
+            this.tabCampos.Size = new System.Drawing.Size(620, 487);
             this.tabCampos.TabIndex = 37;
             // 
             // tbVisao
@@ -139,7 +147,7 @@
             this.tbVisao.Location = new System.Drawing.Point(4, 34);
             this.tbVisao.Name = "tbVisao";
             this.tbVisao.Padding = new System.Windows.Forms.Padding(3);
-            this.tbVisao.Size = new System.Drawing.Size(612, 406);
+            this.tbVisao.Size = new System.Drawing.Size(612, 449);
             this.tbVisao.TabIndex = 0;
             this.tbVisao.Text = "Visao";
             this.tbVisao.UseVisualStyleBackColor = true;
@@ -230,6 +238,7 @@
             this.rdContrato.TabIndex = 1;
             this.rdContrato.Text = "Contrato";
             this.rdContrato.UseVisualStyleBackColor = true;
+            this.rdContrato.CheckedChanged += new System.EventHandler(this.PopulaCampos);
             // 
             // rdTelefone
             // 
@@ -240,9 +249,17 @@
             this.rdTelefone.TabIndex = 0;
             this.rdTelefone.Text = "Telefone";
             this.rdTelefone.UseVisualStyleBackColor = true;
+            this.rdTelefone.CheckedChanged += new System.EventHandler(this.PopulaCampos);
             // 
             // tabTipo
             // 
+            this.tabTipo.Controls.Add(this.lblEditCampos);
+            this.tabTipo.Controls.Add(this.lblT2Dot2);
+            this.tabTipo.Controls.Add(this.lblCampo2T2);
+            this.tabTipo.Controls.Add(this.txtCampo2T2);
+            this.tabTipo.Controls.Add(this.lblT1Dot2);
+            this.tabTipo.Controls.Add(this.lblCampo2T1);
+            this.tabTipo.Controls.Add(this.txtCampo2T1);
             this.tabTipo.Controls.Add(this.btnLigaDesliga);
             this.tabTipo.Controls.Add(this.lblPara);
             this.tabTipo.Controls.Add(this.cbT2);
@@ -267,26 +284,76 @@
             this.tabTipo.Location = new System.Drawing.Point(4, 34);
             this.tabTipo.Name = "tabTipo";
             this.tabTipo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTipo.Size = new System.Drawing.Size(612, 406);
+            this.tabTipo.Size = new System.Drawing.Size(612, 449);
             this.tabTipo.TabIndex = 1;
             this.tabTipo.Text = "Join";
             this.tabTipo.UseVisualStyleBackColor = true;
             // 
+            // lblT2Dot2
+            // 
+            this.lblT2Dot2.AutoSize = true;
+            this.lblT2Dot2.Location = new System.Drawing.Point(113, 260);
+            this.lblT2Dot2.Name = "lblT2Dot2";
+            this.lblT2Dot2.Size = new System.Drawing.Size(46, 25);
+            this.lblT2Dot2.TabIndex = 34;
+            this.lblT2Dot2.Text = "T2.";
+            // 
+            // lblCampo2T2
+            // 
+            this.lblCampo2T2.AutoSize = true;
+            this.lblCampo2T2.Location = new System.Drawing.Point(3, 260);
+            this.lblCampo2T2.Name = "lblCampo2T2";
+            this.lblCampo2T2.Size = new System.Drawing.Size(119, 25);
+            this.lblCampo2T2.TabIndex = 33;
+            this.lblCampo2T2.Text = "Campo 2: ";
+            // 
+            // txtCampo2T2
+            // 
+            this.txtCampo2T2.Location = new System.Drawing.Point(166, 257);
+            this.txtCampo2T2.Name = "txtCampo2T2";
+            this.txtCampo2T2.Size = new System.Drawing.Size(395, 31);
+            this.txtCampo2T2.TabIndex = 32;
+            // 
+            // lblT1Dot2
+            // 
+            this.lblT1Dot2.AutoSize = true;
+            this.lblT1Dot2.Location = new System.Drawing.Point(113, 121);
+            this.lblT1Dot2.Name = "lblT1Dot2";
+            this.lblT1Dot2.Size = new System.Drawing.Size(46, 25);
+            this.lblT1Dot2.TabIndex = 31;
+            this.lblT1Dot2.Text = "T1.";
+            // 
+            // lblCampo2T1
+            // 
+            this.lblCampo2T1.AutoSize = true;
+            this.lblCampo2T1.Location = new System.Drawing.Point(3, 121);
+            this.lblCampo2T1.Name = "lblCampo2T1";
+            this.lblCampo2T1.Size = new System.Drawing.Size(119, 25);
+            this.lblCampo2T1.TabIndex = 30;
+            this.lblCampo2T1.Text = "Campo 2: ";
+            // 
+            // txtCampo2T1
+            // 
+            this.txtCampo2T1.Location = new System.Drawing.Point(166, 118);
+            this.txtCampo2T1.Name = "txtCampo2T1";
+            this.txtCampo2T1.Size = new System.Drawing.Size(395, 31);
+            this.txtCampo2T1.TabIndex = 29;
+            // 
             // btnLigaDesliga
             // 
             this.btnLigaDesliga.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLigaDesliga.Location = new System.Drawing.Point(154, 9);
+            this.btnLigaDesliga.Location = new System.Drawing.Point(319, 10);
             this.btnLigaDesliga.Name = "btnLigaDesliga";
-            this.btnLigaDesliga.Size = new System.Drawing.Size(94, 26);
+            this.btnLigaDesliga.Size = new System.Drawing.Size(46, 26);
             this.btnLigaDesliga.TabIndex = 28;
-            this.btnLigaDesliga.Text = "Desabilitado";
+            this.btnLigaDesliga.Text = "Off";
             this.btnLigaDesliga.UseVisualStyleBackColor = true;
             this.btnLigaDesliga.Click += new System.EventHandler(this.btnLigaDesliga_Click);
             // 
             // lblPara
             // 
             this.lblPara.AutoSize = true;
-            this.lblPara.Location = new System.Drawing.Point(87, 371);
+            this.lblPara.Location = new System.Drawing.Point(87, 414);
             this.lblPara.Name = "lblPara";
             this.lblPara.Size = new System.Drawing.Size(61, 25);
             this.lblPara.TabIndex = 27;
@@ -299,7 +366,7 @@
             this.cbT2.Items.AddRange(new object[] {
             "1",
             "N"});
-            this.cbT2.Location = new System.Drawing.Point(154, 368);
+            this.cbT2.Location = new System.Drawing.Point(154, 411);
             this.cbT2.Name = "cbT2";
             this.cbT2.Size = new System.Drawing.Size(73, 33);
             this.cbT2.TabIndex = 26;
@@ -311,7 +378,7 @@
             this.cbT1.Items.AddRange(new object[] {
             "1",
             "N"});
-            this.cbT1.Location = new System.Drawing.Point(8, 368);
+            this.cbT1.Location = new System.Drawing.Point(8, 411);
             this.cbT1.Name = "cbT1";
             this.cbT1.Size = new System.Drawing.Size(73, 33);
             this.cbT1.TabIndex = 25;
@@ -319,7 +386,7 @@
             // chkT2
             // 
             this.chkT2.AutoSize = true;
-            this.chkT2.Location = new System.Drawing.Point(8, 333);
+            this.chkT2.Location = new System.Drawing.Point(8, 376);
             this.chkT2.Name = "chkT2";
             this.chkT2.Size = new System.Drawing.Size(239, 29);
             this.chkT2.TabIndex = 24;
@@ -330,7 +397,7 @@
             // chkT1
             // 
             this.chkT1.AutoSize = true;
-            this.chkT1.Location = new System.Drawing.Point(8, 298);
+            this.chkT1.Location = new System.Drawing.Point(8, 341);
             this.chkT1.Name = "chkT1";
             this.chkT1.Size = new System.Drawing.Size(239, 29);
             this.chkT1.TabIndex = 23;
@@ -341,7 +408,7 @@
             // lblObs
             // 
             this.lblObs.AutoSize = true;
-            this.lblObs.Location = new System.Drawing.Point(3, 270);
+            this.lblObs.Location = new System.Drawing.Point(3, 313);
             this.lblObs.Name = "lblObs";
             this.lblObs.Size = new System.Drawing.Size(145, 25);
             this.lblObs.TabIndex = 22;
@@ -350,7 +417,7 @@
             // lblT1Dot
             // 
             this.lblT1Dot.AutoSize = true;
-            this.lblT1Dot.Location = new System.Drawing.Point(95, 84);
+            this.lblT1Dot.Location = new System.Drawing.Point(113, 84);
             this.lblT1Dot.Name = "lblT1Dot";
             this.lblT1Dot.Size = new System.Drawing.Size(46, 25);
             this.lblT1Dot.TabIndex = 21;
@@ -361,15 +428,15 @@
             this.lblCampoT1.AutoSize = true;
             this.lblCampoT1.Location = new System.Drawing.Point(3, 84);
             this.lblCampoT1.Name = "lblCampoT1";
-            this.lblCampoT1.Size = new System.Drawing.Size(99, 25);
+            this.lblCampoT1.Size = new System.Drawing.Size(119, 25);
             this.lblCampoT1.TabIndex = 20;
-            this.lblCampoT1.Text = "Campo: ";
+            this.lblCampoT1.Text = "Campo 1: ";
             // 
             // txtCampoT1
             // 
-            this.txtCampoT1.Location = new System.Drawing.Point(145, 81);
+            this.txtCampoT1.Location = new System.Drawing.Point(166, 81);
             this.txtCampoT1.Name = "txtCampoT1";
-            this.txtCampoT1.Size = new System.Drawing.Size(416, 31);
+            this.txtCampoT1.Size = new System.Drawing.Size(395, 31);
             this.txtCampoT1.TabIndex = 19;
             // 
             // lblT1
@@ -400,7 +467,7 @@
             // lblT2Dot
             // 
             this.lblT2Dot.AutoSize = true;
-            this.lblT2Dot.Location = new System.Drawing.Point(95, 223);
+            this.lblT2Dot.Location = new System.Drawing.Point(113, 223);
             this.lblT2Dot.Name = "lblT2Dot";
             this.lblT2Dot.Size = new System.Drawing.Size(46, 25);
             this.lblT2Dot.TabIndex = 15;
@@ -411,15 +478,15 @@
             this.lblCampoT2.AutoSize = true;
             this.lblCampoT2.Location = new System.Drawing.Point(3, 223);
             this.lblCampoT2.Name = "lblCampoT2";
-            this.lblCampoT2.Size = new System.Drawing.Size(99, 25);
+            this.lblCampoT2.Size = new System.Drawing.Size(119, 25);
             this.lblCampoT2.TabIndex = 14;
-            this.lblCampoT2.Text = "Campo: ";
+            this.lblCampoT2.Text = "Campo 1: ";
             // 
             // txtCampoT2
             // 
-            this.txtCampoT2.Location = new System.Drawing.Point(145, 220);
+            this.txtCampoT2.Location = new System.Drawing.Point(166, 220);
             this.txtCampoT2.Name = "txtCampoT2";
-            this.txtCampoT2.Size = new System.Drawing.Size(416, 31);
+            this.txtCampoT2.Size = new System.Drawing.Size(395, 31);
             this.txtCampoT2.TabIndex = 13;
             // 
             // lblT2
@@ -450,7 +517,7 @@
             // rdNovaColuna
             // 
             this.rdNovaColuna.AutoSize = true;
-            this.rdNovaColuna.Location = new System.Drawing.Point(254, 6);
+            this.rdNovaColuna.Location = new System.Drawing.Point(400, 9);
             this.rdNovaColuna.Name = "rdNovaColuna";
             this.rdNovaColuna.Size = new System.Drawing.Size(161, 29);
             this.rdNovaColuna.TabIndex = 9;
@@ -479,7 +546,7 @@
             this.tbColunas.Location = new System.Drawing.Point(4, 34);
             this.tbColunas.Name = "tbColunas";
             this.tbColunas.Padding = new System.Windows.Forms.Padding(3);
-            this.tbColunas.Size = new System.Drawing.Size(612, 406);
+            this.tbColunas.Size = new System.Drawing.Size(612, 449);
             this.tbColunas.TabIndex = 2;
             this.tbColunas.Text = "Colunas";
             this.tbColunas.UseVisualStyleBackColor = true;
@@ -487,7 +554,7 @@
             // btnValidaColunas
             // 
             this.btnValidaColunas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnValidaColunas.Location = new System.Drawing.Point(6, 351);
+            this.btnValidaColunas.Location = new System.Drawing.Point(6, 400);
             this.btnValidaColunas.Name = "btnValidaColunas";
             this.btnValidaColunas.Size = new System.Drawing.Size(98, 43);
             this.btnValidaColunas.TabIndex = 38;
@@ -509,17 +576,20 @@
             this.txtColunas.Location = new System.Drawing.Point(3, 31);
             this.txtColunas.Multiline = true;
             this.txtColunas.Name = "txtColunas";
-            this.txtColunas.Size = new System.Drawing.Size(600, 314);
+            this.txtColunas.Size = new System.Drawing.Size(600, 363);
             this.txtColunas.TabIndex = 0;
             // 
             // tbSaida
             // 
+            this.tbSaida.Controls.Add(this.btnCopiar);
             this.tbSaida.Controls.Add(this.txtSaidaChamado);
+            this.tbSaida.Controls.Add(this.btnSair);
+            this.tbSaida.Controls.Add(this.btnLimpar);
             this.tbSaida.Controls.Add(this.btnCarregar);
             this.tbSaida.Location = new System.Drawing.Point(4, 34);
             this.tbSaida.Name = "tbSaida";
             this.tbSaida.Padding = new System.Windows.Forms.Padding(3);
-            this.tbSaida.Size = new System.Drawing.Size(612, 406);
+            this.tbSaida.Size = new System.Drawing.Size(612, 449);
             this.tbSaida.TabIndex = 3;
             this.tbSaida.Text = "Saida";
             this.tbSaida.UseVisualStyleBackColor = true;
@@ -529,17 +599,35 @@
             this.txtSaidaChamado.Location = new System.Drawing.Point(3, 6);
             this.txtSaidaChamado.Multiline = true;
             this.txtSaidaChamado.Name = "txtSaidaChamado";
-            this.txtSaidaChamado.Size = new System.Drawing.Size(600, 345);
+            this.txtSaidaChamado.Size = new System.Drawing.Size(600, 388);
             this.txtSaidaChamado.TabIndex = 0;
+            // 
+            // lblEditCampos
+            // 
+            this.lblEditCampos.AutoSize = true;
+            this.lblEditCampos.Location = new System.Drawing.Point(165, 9);
+            this.lblEditCampos.Name = "lblEditCampos";
+            this.lblEditCampos.Size = new System.Drawing.Size(148, 25);
+            this.lblEditCampos.TabIndex = 35;
+            this.lblEditCampos.Text = "Edit campos:";
+            // 
+            // btnCopiar
+            // 
+            this.btnCopiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCopiar.Location = new System.Drawing.Point(297, 400);
+            this.btnCopiar.Name = "btnCopiar";
+            this.btnCopiar.Size = new System.Drawing.Size(98, 43);
+            this.btnCopiar.TabIndex = 37;
+            this.btnCopiar.Text = "Copiar";
+            this.btnCopiar.UseVisualStyleBackColor = true;
+            this.btnCopiar.Click += new System.EventHandler(this.btnCopiar_Click);
             // 
             // frmChamadosRedmine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 513);
+            this.ClientSize = new System.Drawing.Size(636, 511);
             this.Controls.Add(this.tabCampos);
-            this.Controls.Add(this.btnLimpar);
-            this.Controls.Add(this.btnSair);
             this.Name = "frmChamadosRedmine";
             this.Text = "frmChamadosRedmine";
             this.Load += new System.EventHandler(this.frmChamadosRedmine_Load);
@@ -601,5 +689,13 @@
         private System.Windows.Forms.Button btnValidaColunas;
         private System.Windows.Forms.TextBox txtSaidaChamado;
         private System.Windows.Forms.Button btnLigaDesliga;
+        private System.Windows.Forms.Label lblT1Dot2;
+        private System.Windows.Forms.Label lblCampo2T1;
+        private System.Windows.Forms.TextBox txtCampo2T1;
+        private System.Windows.Forms.Label lblT2Dot2;
+        private System.Windows.Forms.Label lblCampo2T2;
+        private System.Windows.Forms.TextBox txtCampo2T2;
+        private System.Windows.Forms.Label lblEditCampos;
+        private System.Windows.Forms.Button btnCopiar;
     }
 }

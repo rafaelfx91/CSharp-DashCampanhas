@@ -35,6 +35,7 @@
             this.gerarNomeNoSASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerarNomeNoSASV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendamentoCampanhasJIRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chamadoRedmineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validaFraseV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validaSMSSolicitanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +62,6 @@
             this.repicksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stringUpLowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chamadoRedmineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,14 +108,14 @@
             // gerarNomeNoSASToolStripMenuItem
             // 
             this.gerarNomeNoSASToolStripMenuItem.Name = "gerarNomeNoSASToolStripMenuItem";
-            this.gerarNomeNoSASToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.gerarNomeNoSASToolStripMenuItem.Size = new System.Drawing.Size(529, 42);
             this.gerarNomeNoSASToolStripMenuItem.Text = "Gerar nome campanha";
             this.gerarNomeNoSASToolStripMenuItem.Click += new System.EventHandler(this.gerarNomeNoSASToolStripMenuItem_Click);
             // 
             // gerarNomeNoSASV2ToolStripMenuItem
             // 
             this.gerarNomeNoSASV2ToolStripMenuItem.Name = "gerarNomeNoSASV2ToolStripMenuItem";
-            this.gerarNomeNoSASV2ToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.gerarNomeNoSASV2ToolStripMenuItem.Size = new System.Drawing.Size(529, 42);
             this.gerarNomeNoSASV2ToolStripMenuItem.Text = "Gerar nome campanhaV2";
             this.gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
             this.gerarNomeNoSASV2ToolStripMenuItem.Click += new System.EventHandler(this.gerarNomeNoSASV2ToolStripMenuItem_Click);
@@ -123,9 +123,16 @@
             // agendamentoCampanhasJIRAToolStripMenuItem
             // 
             this.agendamentoCampanhasJIRAToolStripMenuItem.Name = "agendamentoCampanhasJIRAToolStripMenuItem";
-            this.agendamentoCampanhasJIRAToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.agendamentoCampanhasJIRAToolStripMenuItem.Size = new System.Drawing.Size(529, 42);
             this.agendamentoCampanhasJIRAToolStripMenuItem.Text = "Agendamento campanhas (JIRA)";
             this.agendamentoCampanhasJIRAToolStripMenuItem.Click += new System.EventHandler(this.agendamentoCampanhasJIRAToolStripMenuItem_Click);
+            // 
+            // chamadoRedmineToolStripMenuItem
+            // 
+            this.chamadoRedmineToolStripMenuItem.Name = "chamadoRedmineToolStripMenuItem";
+            this.chamadoRedmineToolStripMenuItem.Size = new System.Drawing.Size(529, 42);
+            this.chamadoRedmineToolStripMenuItem.Text = "Chamado Mapeamento (redmine)";
+            this.chamadoRedmineToolStripMenuItem.Click += new System.EventHandler(this.chamadoRedmineToolStripMenuItem_Click);
             // 
             // sMSToolStripMenuItem
             // 
@@ -336,13 +343,6 @@
             this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(106, 41);
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
-            // 
-            // chamadoRedmineToolStripMenuItem
-            // 
-            this.chamadoRedmineToolStripMenuItem.Name = "chamadoRedmineToolStripMenuItem";
-            this.chamadoRedmineToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
-            this.chamadoRedmineToolStripMenuItem.Text = "Chamado redmine";
-            this.chamadoRedmineToolStripMenuItem.Click += new System.EventHandler(this.chamadoRedmineToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
