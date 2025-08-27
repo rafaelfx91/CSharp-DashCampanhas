@@ -16,6 +16,8 @@ namespace replace_campanhas
 {
     public partial class frmChamadosRedmine : Form
     {
+        private bool interruptor = false;
+
         public frmChamadosRedmine()
         {
             InitializeComponent();
@@ -39,8 +41,17 @@ namespace replace_campanhas
             cbT1.SelectedIndex = 0;
             cbT2.SelectedIndex = 0;
             
-            
-            
+            rdContrato.Visible = false;
+            rdDomicilio.Visible = false;
+            rdEmail.Visible = false;
+            rdPessoa.Visible = false;
+            rdPMEDomicilio.Visible = false;
+            rdPMEPessoaTelefone.Visible = false;
+            rdPMEPessoa.Visible = false;
+
+            btnLigaDesliga.Text = "Desabilitado";
+            btnLigaDesliga.BackColor = System.Drawing.Color.Red;
+
 
         }
 
@@ -84,7 +95,7 @@ namespace replace_campanhas
                 lblCampoT1.Visible = true;
                 lblT1Dot.Visible = true;
                 txtCampoT1.Visible = true;
-
+                btnLigaDesliga.Visible = true;
 
 
 
@@ -118,7 +129,7 @@ namespace replace_campanhas
                 lblCampoT1.Visible = false;
                 lblT1Dot.Visible = false;
                 txtCampoT1.Visible = false;
-                
+                btnLigaDesliga.Visible = false;
                 
             }
 
@@ -323,6 +334,25 @@ namespace replace_campanhas
         private void btnValidaColunas_Click(object sender, EventArgs e)
         {
             ProcessarTextoComIntervalo(txtColunas);
+        }
+
+        private void btnLigaDesliga_Click(object sender, EventArgs e)
+        {
+            interruptor = !interruptor;
+            btnLigaDesliga.Text = interruptor ? "Habilitado" : "Desabilitado";
+            btnLigaDesliga.BackColor = interruptor ? System.Drawing.Color.Green : System.Drawing.Color.Red;
+
+            if (interruptor)
+            {
+                txtCampoT1.ReadOnly = false;
+                txtTabelaT1.ReadOnly = false;
+            }
+            else
+            {
+                txtCampoT1.ReadOnly = true;
+                txtTabelaT1.ReadOnly = true;
+            }
+
         }
     }
 }

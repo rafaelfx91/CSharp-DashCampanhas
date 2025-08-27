@@ -44,6 +44,7 @@
             this.rdContrato = new System.Windows.Forms.RadioButton();
             this.rdTelefone = new System.Windows.Forms.RadioButton();
             this.tabTipo = new System.Windows.Forms.TabPage();
+            this.btnLigaDesliga = new System.Windows.Forms.Button();
             this.lblPara = new System.Windows.Forms.Label();
             this.cbT2 = new System.Windows.Forms.ComboBox();
             this.cbT1 = new System.Windows.Forms.ComboBox();
@@ -102,7 +103,7 @@
             // btnCarregar
             // 
             this.btnCarregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCarregar.Location = new System.Drawing.Point(19, 462);
+            this.btnCarregar.Location = new System.Drawing.Point(6, 357);
             this.btnCarregar.Name = "btnCarregar";
             this.btnCarregar.Size = new System.Drawing.Size(98, 43);
             this.btnCarregar.TabIndex = 34;
@@ -167,7 +168,6 @@
             this.rdPMEDomicilio.Name = "rdPMEDomicilio";
             this.rdPMEDomicilio.Size = new System.Drawing.Size(188, 29);
             this.rdPMEDomicilio.TabIndex = 7;
-            this.rdPMEDomicilio.TabStop = true;
             this.rdPMEDomicilio.Text = "PME_Domicilio";
             this.rdPMEDomicilio.UseVisualStyleBackColor = true;
             // 
@@ -178,7 +178,6 @@
             this.rdPMEPessoaTelefone.Name = "rdPMEPessoaTelefone";
             this.rdPMEPessoaTelefone.Size = new System.Drawing.Size(275, 29);
             this.rdPMEPessoaTelefone.TabIndex = 6;
-            this.rdPMEPessoaTelefone.TabStop = true;
             this.rdPMEPessoaTelefone.Text = "PME_Pessoa_Telefone";
             this.rdPMEPessoaTelefone.UseVisualStyleBackColor = true;
             // 
@@ -189,7 +188,6 @@
             this.rdPMEPessoa.Name = "rdPMEPessoa";
             this.rdPMEPessoa.Size = new System.Drawing.Size(170, 29);
             this.rdPMEPessoa.TabIndex = 5;
-            this.rdPMEPessoa.TabStop = true;
             this.rdPMEPessoa.Text = "PME_Pessoa";
             this.rdPMEPessoa.UseVisualStyleBackColor = true;
             // 
@@ -200,7 +198,6 @@
             this.rdPessoa.Name = "rdPessoa";
             this.rdPessoa.Size = new System.Drawing.Size(108, 29);
             this.rdPessoa.TabIndex = 4;
-            this.rdPessoa.TabStop = true;
             this.rdPessoa.Text = "Pessoa";
             this.rdPessoa.UseVisualStyleBackColor = true;
             // 
@@ -211,7 +208,6 @@
             this.rdEmail.Name = "rdEmail";
             this.rdEmail.Size = new System.Drawing.Size(96, 29);
             this.rdEmail.TabIndex = 3;
-            this.rdEmail.TabStop = true;
             this.rdEmail.Text = "E-mail";
             this.rdEmail.UseVisualStyleBackColor = true;
             // 
@@ -222,7 +218,6 @@
             this.rdDomicilio.Name = "rdDomicilio";
             this.rdDomicilio.Size = new System.Drawing.Size(126, 29);
             this.rdDomicilio.TabIndex = 2;
-            this.rdDomicilio.TabStop = true;
             this.rdDomicilio.Text = "Domicilio";
             this.rdDomicilio.UseVisualStyleBackColor = true;
             // 
@@ -233,7 +228,6 @@
             this.rdContrato.Name = "rdContrato";
             this.rdContrato.Size = new System.Drawing.Size(120, 29);
             this.rdContrato.TabIndex = 1;
-            this.rdContrato.TabStop = true;
             this.rdContrato.Text = "Contrato";
             this.rdContrato.UseVisualStyleBackColor = true;
             // 
@@ -244,12 +238,12 @@
             this.rdTelefone.Name = "rdTelefone";
             this.rdTelefone.Size = new System.Drawing.Size(122, 29);
             this.rdTelefone.TabIndex = 0;
-            this.rdTelefone.TabStop = true;
             this.rdTelefone.Text = "Telefone";
             this.rdTelefone.UseVisualStyleBackColor = true;
             // 
             // tabTipo
             // 
+            this.tabTipo.Controls.Add(this.btnLigaDesliga);
             this.tabTipo.Controls.Add(this.lblPara);
             this.tabTipo.Controls.Add(this.cbT2);
             this.tabTipo.Controls.Add(this.cbT1);
@@ -278,10 +272,21 @@
             this.tabTipo.Text = "Join";
             this.tabTipo.UseVisualStyleBackColor = true;
             // 
+            // btnLigaDesliga
+            // 
+            this.btnLigaDesliga.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLigaDesliga.Location = new System.Drawing.Point(8, 41);
+            this.btnLigaDesliga.Name = "btnLigaDesliga";
+            this.btnLigaDesliga.Size = new System.Drawing.Size(94, 26);
+            this.btnLigaDesliga.TabIndex = 28;
+            this.btnLigaDesliga.Text = "Desabilitado";
+            this.btnLigaDesliga.UseVisualStyleBackColor = true;
+            this.btnLigaDesliga.Click += new System.EventHandler(this.btnLigaDesliga_Click);
+            // 
             // lblPara
             // 
             this.lblPara.AutoSize = true;
-            this.lblPara.Location = new System.Drawing.Point(90, 325);
+            this.lblPara.Location = new System.Drawing.Point(87, 371);
             this.lblPara.Name = "lblPara";
             this.lblPara.Size = new System.Drawing.Size(61, 25);
             this.lblPara.TabIndex = 27;
@@ -294,7 +299,7 @@
             this.cbT2.Items.AddRange(new object[] {
             "1",
             "N"});
-            this.cbT2.Location = new System.Drawing.Point(157, 322);
+            this.cbT2.Location = new System.Drawing.Point(154, 368);
             this.cbT2.Name = "cbT2";
             this.cbT2.Size = new System.Drawing.Size(73, 33);
             this.cbT2.TabIndex = 26;
@@ -306,7 +311,7 @@
             this.cbT1.Items.AddRange(new object[] {
             "1",
             "N"});
-            this.cbT1.Location = new System.Drawing.Point(11, 322);
+            this.cbT1.Location = new System.Drawing.Point(8, 368);
             this.cbT1.Name = "cbT1";
             this.cbT1.Size = new System.Drawing.Size(73, 33);
             this.cbT1.TabIndex = 25;
@@ -314,7 +319,7 @@
             // chkT2
             // 
             this.chkT2.AutoSize = true;
-            this.chkT2.Location = new System.Drawing.Point(11, 287);
+            this.chkT2.Location = new System.Drawing.Point(8, 333);
             this.chkT2.Name = "chkT2";
             this.chkT2.Size = new System.Drawing.Size(239, 29);
             this.chkT2.TabIndex = 24;
@@ -325,7 +330,7 @@
             // chkT1
             // 
             this.chkT1.AutoSize = true;
-            this.chkT1.Location = new System.Drawing.Point(11, 252);
+            this.chkT1.Location = new System.Drawing.Point(8, 298);
             this.chkT1.Name = "chkT1";
             this.chkT1.Size = new System.Drawing.Size(239, 29);
             this.chkT1.TabIndex = 23;
@@ -336,7 +341,7 @@
             // lblObs
             // 
             this.lblObs.AutoSize = true;
-            this.lblObs.Location = new System.Drawing.Point(6, 224);
+            this.lblObs.Location = new System.Drawing.Point(3, 270);
             this.lblObs.Name = "lblObs";
             this.lblObs.Size = new System.Drawing.Size(145, 25);
             this.lblObs.TabIndex = 22;
@@ -345,7 +350,7 @@
             // lblT1Dot
             // 
             this.lblT1Dot.AutoSize = true;
-            this.lblT1Dot.Location = new System.Drawing.Point(98, 81);
+            this.lblT1Dot.Location = new System.Drawing.Point(95, 133);
             this.lblT1Dot.Name = "lblT1Dot";
             this.lblT1Dot.Size = new System.Drawing.Size(46, 25);
             this.lblT1Dot.TabIndex = 21;
@@ -354,7 +359,7 @@
             // lblCampoT1
             // 
             this.lblCampoT1.AutoSize = true;
-            this.lblCampoT1.Location = new System.Drawing.Point(6, 81);
+            this.lblCampoT1.Location = new System.Drawing.Point(3, 133);
             this.lblCampoT1.Name = "lblCampoT1";
             this.lblCampoT1.Size = new System.Drawing.Size(99, 25);
             this.lblCampoT1.TabIndex = 20;
@@ -362,7 +367,7 @@
             // 
             // txtCampoT1
             // 
-            this.txtCampoT1.Location = new System.Drawing.Point(148, 78);
+            this.txtCampoT1.Location = new System.Drawing.Point(145, 130);
             this.txtCampoT1.Name = "txtCampoT1";
             this.txtCampoT1.Size = new System.Drawing.Size(416, 31);
             this.txtCampoT1.TabIndex = 19;
@@ -370,7 +375,7 @@
             // lblT1
             // 
             this.lblT1.AutoSize = true;
-            this.lblT1.Location = new System.Drawing.Point(570, 41);
+            this.lblT1.Location = new System.Drawing.Point(567, 93);
             this.lblT1.Name = "lblT1";
             this.lblT1.Size = new System.Drawing.Size(39, 25);
             this.lblT1.TabIndex = 18;
@@ -379,7 +384,7 @@
             // lblTabelaT1
             // 
             this.lblTabelaT1.AutoSize = true;
-            this.lblTabelaT1.Location = new System.Drawing.Point(6, 38);
+            this.lblTabelaT1.Location = new System.Drawing.Point(3, 90);
             this.lblTabelaT1.Name = "lblTabelaT1";
             this.lblTabelaT1.Size = new System.Drawing.Size(91, 25);
             this.lblTabelaT1.TabIndex = 17;
@@ -387,7 +392,7 @@
             // 
             // txtTabelaT1
             // 
-            this.txtTabelaT1.Location = new System.Drawing.Point(103, 38);
+            this.txtTabelaT1.Location = new System.Drawing.Point(100, 90);
             this.txtTabelaT1.Name = "txtTabelaT1";
             this.txtTabelaT1.Size = new System.Drawing.Size(461, 31);
             this.txtTabelaT1.TabIndex = 16;
@@ -395,7 +400,7 @@
             // lblT2Dot
             // 
             this.lblT2Dot.AutoSize = true;
-            this.lblT2Dot.Location = new System.Drawing.Point(98, 171);
+            this.lblT2Dot.Location = new System.Drawing.Point(95, 223);
             this.lblT2Dot.Name = "lblT2Dot";
             this.lblT2Dot.Size = new System.Drawing.Size(46, 25);
             this.lblT2Dot.TabIndex = 15;
@@ -404,7 +409,7 @@
             // lblCampoT2
             // 
             this.lblCampoT2.AutoSize = true;
-            this.lblCampoT2.Location = new System.Drawing.Point(6, 171);
+            this.lblCampoT2.Location = new System.Drawing.Point(3, 223);
             this.lblCampoT2.Name = "lblCampoT2";
             this.lblCampoT2.Size = new System.Drawing.Size(99, 25);
             this.lblCampoT2.TabIndex = 14;
@@ -412,7 +417,7 @@
             // 
             // txtCampoT2
             // 
-            this.txtCampoT2.Location = new System.Drawing.Point(148, 168);
+            this.txtCampoT2.Location = new System.Drawing.Point(145, 220);
             this.txtCampoT2.Name = "txtCampoT2";
             this.txtCampoT2.Size = new System.Drawing.Size(416, 31);
             this.txtCampoT2.TabIndex = 13;
@@ -420,7 +425,7 @@
             // lblT2
             // 
             this.lblT2.AutoSize = true;
-            this.lblT2.Location = new System.Drawing.Point(570, 131);
+            this.lblT2.Location = new System.Drawing.Point(567, 183);
             this.lblT2.Name = "lblT2";
             this.lblT2.Size = new System.Drawing.Size(39, 25);
             this.lblT2.TabIndex = 12;
@@ -429,7 +434,7 @@
             // lblTabelaT2
             // 
             this.lblTabelaT2.AutoSize = true;
-            this.lblTabelaT2.Location = new System.Drawing.Point(6, 128);
+            this.lblTabelaT2.Location = new System.Drawing.Point(3, 180);
             this.lblTabelaT2.Name = "lblTabelaT2";
             this.lblTabelaT2.Size = new System.Drawing.Size(91, 25);
             this.lblTabelaT2.TabIndex = 11;
@@ -437,7 +442,7 @@
             // 
             // txtTabelaT2
             // 
-            this.txtTabelaT2.Location = new System.Drawing.Point(103, 128);
+            this.txtTabelaT2.Location = new System.Drawing.Point(100, 180);
             this.txtTabelaT2.Name = "txtTabelaT2";
             this.txtTabelaT2.Size = new System.Drawing.Size(461, 31);
             this.txtTabelaT2.TabIndex = 10;
@@ -510,6 +515,7 @@
             // tbSaida
             // 
             this.tbSaida.Controls.Add(this.txtSaidaChamado);
+            this.tbSaida.Controls.Add(this.btnCarregar);
             this.tbSaida.Location = new System.Drawing.Point(4, 34);
             this.tbSaida.Name = "tbSaida";
             this.tbSaida.Padding = new System.Windows.Forms.Padding(3);
@@ -520,10 +526,10 @@
             // 
             // txtSaidaChamado
             // 
-            this.txtSaidaChamado.Location = new System.Drawing.Point(6, 6);
+            this.txtSaidaChamado.Location = new System.Drawing.Point(3, 6);
             this.txtSaidaChamado.Multiline = true;
             this.txtSaidaChamado.Name = "txtSaidaChamado";
-            this.txtSaidaChamado.Size = new System.Drawing.Size(600, 394);
+            this.txtSaidaChamado.Size = new System.Drawing.Size(600, 345);
             this.txtSaidaChamado.TabIndex = 0;
             // 
             // frmChamadosRedmine
@@ -534,7 +540,6 @@
             this.Controls.Add(this.tabCampos);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.btnCarregar);
             this.Name = "frmChamadosRedmine";
             this.Text = "frmChamadosRedmine";
             this.Load += new System.EventHandler(this.frmChamadosRedmine_Load);
@@ -595,5 +600,6 @@
         private System.Windows.Forms.TextBox txtColunas;
         private System.Windows.Forms.Button btnValidaColunas;
         private System.Windows.Forms.TextBox txtSaidaChamado;
+        private System.Windows.Forms.Button btnLigaDesliga;
     }
 }
