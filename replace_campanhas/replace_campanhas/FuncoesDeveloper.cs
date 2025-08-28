@@ -15,6 +15,7 @@ namespace replace_campanhas
         private bool developer = false;
         private bool crypt = false;
         private bool fabrica = false;
+        private bool salesforce = false;
         private string cryptSenha = "";
         private string effectiveMailUser = "";
         private string effectiveMailSenha = "";
@@ -72,6 +73,8 @@ namespace replace_campanhas
                     caminhon2 = aux;
                 }
 
+                if (args[i].Contains("-sales"))
+                    salesforce = true;
 
 
             }//for (
@@ -96,11 +99,18 @@ namespace replace_campanhas
                 return false;
 
 
-        }      
-        
+        }
+
         public bool validaConfigsDev3()
         {
             if (developer)
+                return true;
+            else
+                return false;
+        }
+        public bool validaConfigsSales()
+        {
+            if (salesforce)
                 return true;
             else
                 return false;

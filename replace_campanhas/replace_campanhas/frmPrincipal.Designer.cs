@@ -36,6 +36,8 @@
             this.gerarNomeNoSASV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendamentoCampanhasJIRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chamadoRedmineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mARTECHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trocaFrasesMIGRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validaFraseV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validaSMSSolicitanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,8 +64,7 @@
             this.repicksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stringUpLowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mARTECHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trocaFrasesMIGRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pecasHtmlCPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +73,7 @@
             this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVersion.AutoSize = true;
             this.lblVersion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblVersion.Location = new System.Drawing.Point(842, 45);
+            this.lblVersion.Location = new System.Drawing.Point(-3, 45);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(43, 13);
             this.lblVersion.TabIndex = 11;
@@ -137,6 +138,22 @@
             this.chamadoRedmineToolStripMenuItem.Size = new System.Drawing.Size(529, 42);
             this.chamadoRedmineToolStripMenuItem.Text = "Chamado Mapeamento (redmine)";
             this.chamadoRedmineToolStripMenuItem.Click += new System.EventHandler(this.chamadoRedmineToolStripMenuItem_Click);
+            // 
+            // mARTECHToolStripMenuItem
+            // 
+            this.mARTECHToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trocaFrasesMIGRAToolStripMenuItem,
+            this.pecasHtmlCPToolStripMenuItem});
+            this.mARTECHToolStripMenuItem.Name = "mARTECHToolStripMenuItem";
+            this.mARTECHToolStripMenuItem.Size = new System.Drawing.Size(159, 41);
+            this.mARTECHToolStripMenuItem.Text = "MARTECH";
+            // 
+            // trocaFrasesMIGRAToolStripMenuItem
+            // 
+            this.trocaFrasesMIGRAToolStripMenuItem.Name = "trocaFrasesMIGRAToolStripMenuItem";
+            this.trocaFrasesMIGRAToolStripMenuItem.Size = new System.Drawing.Size(395, 42);
+            this.trocaFrasesMIGRAToolStripMenuItem.Text = "Troca frases (Migracao)";
+            this.trocaFrasesMIGRAToolStripMenuItem.Click += new System.EventHandler(this.trocaFrasesMIGRAToolStripMenuItem_Click);
             // 
             // sMSToolStripMenuItem
             // 
@@ -348,20 +365,12 @@
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
-            // mARTECHToolStripMenuItem
+            // pecasHtmlCPToolStripMenuItem
             // 
-            this.mARTECHToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trocaFrasesMIGRAToolStripMenuItem});
-            this.mARTECHToolStripMenuItem.Name = "mARTECHToolStripMenuItem";
-            this.mARTECHToolStripMenuItem.Size = new System.Drawing.Size(159, 41);
-            this.mARTECHToolStripMenuItem.Text = "MARTECH";
-            // 
-            // trocaFrasesMIGRAToolStripMenuItem
-            // 
-            this.trocaFrasesMIGRAToolStripMenuItem.Name = "trocaFrasesMIGRAToolStripMenuItem";
-            this.trocaFrasesMIGRAToolStripMenuItem.Size = new System.Drawing.Size(364, 42);
-            this.trocaFrasesMIGRAToolStripMenuItem.Text = "Troca frases (MIGRA)";
-            this.trocaFrasesMIGRAToolStripMenuItem.Click += new System.EventHandler(this.trocaFrasesMIGRAToolStripMenuItem_Click);
+            this.pecasHtmlCPToolStripMenuItem.Name = "pecasHtmlCPToolStripMenuItem";
+            this.pecasHtmlCPToolStripMenuItem.Size = new System.Drawing.Size(395, 42);
+            this.pecasHtmlCPToolStripMenuItem.Text = "Pecas html (CP)";
+            this.pecasHtmlCPToolStripMenuItem.Click += new System.EventHandler(this.pecasHtmlCPToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -377,6 +386,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dash";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -422,6 +432,7 @@
         private System.Windows.Forms.ToolStripMenuItem chamadoRedmineToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mARTECHToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trocaFrasesMIGRAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pecasHtmlCPToolStripMenuItem;
     }
 }
 

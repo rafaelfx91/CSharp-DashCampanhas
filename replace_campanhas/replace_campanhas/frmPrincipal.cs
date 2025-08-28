@@ -25,7 +25,7 @@ namespace replace_campanhas
         //private Mutex mutex;
         private FuncoesDeveloper fd;
         //private const bool debugVisual = true;
-        private const bool debugVisual = true;
+        private const bool debugVisual = false;
 
         /*
          replace_campanhas.exe -devS -crypt123 -emUUSUSARIO -emSSENHA
@@ -46,7 +46,7 @@ namespace replace_campanhas
             this.MinimumSize = new Size(870, 700);
             if (debugVisual)
             {
-                string [] args2 = { "-devS", "-cryptS123", "-emUuserEM" ,"-emSsenhaEM","-Fab","-n2" };//dev
+                string [] args2 = { "-devS", "-cryptS123", "-emUuserEM" ,"-emSsenhaEM","-Fab","-n2", "-sales" };//dev
                 fd = new FuncoesDeveloper(args2);//dev
             }
             else
@@ -63,7 +63,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versao: DEBUG";
             else
-                lblVersion.Text = "Versao: V3.7Fix";
+                lblVersion.Text = "Versao: V3.8M";
 
             desabilitaForms();
 
@@ -82,6 +82,7 @@ namespace replace_campanhas
             //Martech menu
             mARTECHToolStripMenuItem.Visible = false;
             trocaFrasesMIGRAToolStripMenuItem.Visible = false;
+            pecasHtmlCPToolStripMenuItem.Visible = false;
 
             //SAS Menu
             gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
@@ -108,14 +109,13 @@ namespace replace_campanhas
             //fERRAMENTASToolStripMenuItem.Visible = false;
             repicksToolStripMenuItem.Visible = false;
 
-
-
             // parametro -devS habilitado
             if (fd.validaConfigsDev3())
             {
                 //MARTECH menu
-                mARTECHToolStripMenuItem.Visible = true;
-                trocaFrasesMIGRAToolStripMenuItem.Visible = true;
+                //mARTECHToolStripMenuItem.Visible = true;
+                //trocaFrasesMIGRAToolStripMenuItem.Visible = true;
+                //pecasHtmlCPToolStripMenuItem.Visible = true;
 
                 //SAS menu
                 sASToolStripMenuItem.Visible = true;
@@ -151,11 +151,22 @@ namespace replace_campanhas
                 
             }
 
+            if (fd.validaConfigsSales())
+            {
+                //MARTECH menu
+                mARTECHToolStripMenuItem.Visible = true;
+                trocaFrasesMIGRAToolStripMenuItem.Visible = true;
+                pecasHtmlCPToolStripMenuItem.Visible = true;
+
+                lblVersion.Text += " -SALESFORCE";
+            }
+
             if (fd.returnFabrifa())
             {
                 //Martech menu
                 mARTECHToolStripMenuItem.Visible = true;
                 trocaFrasesMIGRAToolStripMenuItem.Visible = true;
+                pecasHtmlCPToolStripMenuItem.Visible = true;
 
                 //Sas Menu
                 sASToolStripMenuItem.Visible = true;
@@ -238,6 +249,20 @@ namespace replace_campanhas
                 }
             }
             frmFraseologiaHtml novoFormFilho = new frmFraseologiaHtml();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
+        private void pecasHtmlCPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmHtmlCP")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmHtmlCP novoFormFilho = new frmHtmlCP();
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
