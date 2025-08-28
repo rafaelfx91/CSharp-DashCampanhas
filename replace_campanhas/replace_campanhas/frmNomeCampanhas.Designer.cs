@@ -42,7 +42,7 @@
             // txtFraseEntrada
             // 
             this.txtFraseEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFraseEntrada.Location = new System.Drawing.Point(12, 35);
+            this.txtFraseEntrada.Location = new System.Drawing.Point(1, 37);
             this.txtFraseEntrada.Multiline = true;
             this.txtFraseEntrada.Name = "txtFraseEntrada";
             this.txtFraseEntrada.Size = new System.Drawing.Size(776, 90);

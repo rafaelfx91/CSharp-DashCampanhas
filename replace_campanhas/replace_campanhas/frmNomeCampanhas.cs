@@ -16,6 +16,7 @@ namespace replace_campanhas
         public frmNomeCampanhas()
         {
             InitializeComponent();
+
         }
 
         private void frmNomeCampanhas_Load(object sender, EventArgs e)

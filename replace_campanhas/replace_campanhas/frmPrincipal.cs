@@ -15,7 +15,6 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//ing System.Windows.Forms.show;
 
 
 namespace replace_campanhas
@@ -26,7 +25,7 @@ namespace replace_campanhas
         //private Mutex mutex;
         private FuncoesDeveloper fd;
         //private const bool debugVisual = true;
-        private const bool debugVisual = false;
+        private const bool debugVisual = true;
 
         /*
          replace_campanhas.exe -devS -crypt123 -emUUSUSARIO -emSSENHA
@@ -74,11 +73,15 @@ namespace replace_campanhas
                 TragaProgramaExistenteParaFrente();
                 Application.Exit();
             }
-           
+
+
         }
 
         public void desabilitaForms()
         {
+            //Martech menu
+            mARTECHToolStripMenuItem.Visible = false;
+            trocaFrasesMIGRAToolStripMenuItem.Visible = false;
 
             //SAS Menu
             gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
@@ -110,6 +113,10 @@ namespace replace_campanhas
             // parametro -devS habilitado
             if (fd.validaConfigsDev3())
             {
+                //MARTECH menu
+                mARTECHToolStripMenuItem.Visible = true;
+                trocaFrasesMIGRAToolStripMenuItem.Visible = true;
+
                 //SAS menu
                 sASToolStripMenuItem.Visible = true;
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
@@ -146,6 +153,10 @@ namespace replace_campanhas
 
             if (fd.returnFabrifa())
             {
+                //Martech menu
+                mARTECHToolStripMenuItem.Visible = true;
+                trocaFrasesMIGRAToolStripMenuItem.Visible = true;
+
                 //Sas Menu
                 sASToolStripMenuItem.Visible = true;
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
@@ -215,6 +226,21 @@ namespace replace_campanhas
         //BOTOES
         //
         //
+        //MARTECH MENU
+        private void trocaFrasesMIGRAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmFraseologiaHtml")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmFraseologiaHtml novoFormFilho = new frmFraseologiaHtml();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
 
         //SAS MENU
         private void gerarNomeNoSASToolStripMenuItem_Click(object sender, EventArgs e)
@@ -433,7 +459,6 @@ namespace replace_campanhas
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }
-
         private void trocaFraseologiaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form form in this.MdiChildren)

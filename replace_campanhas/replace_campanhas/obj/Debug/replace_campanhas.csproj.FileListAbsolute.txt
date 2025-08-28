@@ -79,9 +79,6 @@ C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanh
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmValidaHtmlV2ListaCoringas.resources
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmRCS4Solicitante.resources
 C:\Users\camaleao\Documents\GitHub\PlusoftDash\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmRCS4SolicitanteVisualizacao.resources
-C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\bin\Debug\replace_campanhas.exe.config
-C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\bin\Debug\replace_campanhas.exe
-C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\bin\Debug\replace_campanhas.pdb
 C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\bin\Debug\BitMiracle.LibTiff.NET.dll
 C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\bin\Debug\DotnetSpiderLite.Abstractions.dll
 C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\bin\Debug\DotnetSpiderLite.HtmlAgilityPack.dll
@@ -159,7 +156,10 @@ C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replac
 C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.csproj.GenerateResource.cache
 C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.csproj.CoreCompileInputs.cache
 C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\obj\Debug\replace_.14DAEA2D.Up2Date
-C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.exe
-C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.pdb
 C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmFraseologiaHtml.resources
 C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmChamadosRedmine.resources
+C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\bin\Debug\Dash.exe.config
+C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\bin\Debug\Dash.exe
+C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\bin\Debug\Dash.pdb
+C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\obj\Debug\Dash.exe
+C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\obj\Debug\Dash.pdb

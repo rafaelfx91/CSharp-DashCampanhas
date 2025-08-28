@@ -62,6 +62,8 @@
             this.repicksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stringUpLowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mARTECHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trocaFrasesMIGRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +71,8 @@
             // 
             this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(809, 9);
+            this.lblVersion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblVersion.Location = new System.Drawing.Point(842, 45);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(43, 13);
             this.lblVersion.TabIndex = 11;
@@ -81,6 +84,7 @@
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sASToolStripMenuItem,
+            this.mARTECHToolStripMenuItem,
             this.sMSToolStripMenuItem,
             this.pUSHToolStripMenuItem,
             this.hTMLToolStripMenuItem,
@@ -344,11 +348,25 @@
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
+            // mARTECHToolStripMenuItem
+            // 
+            this.mARTECHToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trocaFrasesMIGRAToolStripMenuItem});
+            this.mARTECHToolStripMenuItem.Name = "mARTECHToolStripMenuItem";
+            this.mARTECHToolStripMenuItem.Size = new System.Drawing.Size(159, 41);
+            this.mARTECHToolStripMenuItem.Text = "MARTECH";
+            // 
+            // trocaFrasesMIGRAToolStripMenuItem
+            // 
+            this.trocaFrasesMIGRAToolStripMenuItem.Name = "trocaFrasesMIGRAToolStripMenuItem";
+            this.trocaFrasesMIGRAToolStripMenuItem.Size = new System.Drawing.Size(364, 42);
+            this.trocaFrasesMIGRAToolStripMenuItem.Text = "Troca frases (MIGRA)";
+            this.trocaFrasesMIGRAToolStripMenuItem.Click += new System.EventHandler(this.trocaFrasesMIGRAToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::replace_campanhas.Properties.Resources.plusoft;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(945, 661);
@@ -359,8 +377,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CAMPANHAS         ";
+            this.Text = "Dash";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -403,6 +420,8 @@
         private System.Windows.Forms.ToolStripMenuItem validarRCSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trocaFraseologiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chamadoRedmineToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mARTECHToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trocaFrasesMIGRAToolStripMenuItem;
     }
 }
 
