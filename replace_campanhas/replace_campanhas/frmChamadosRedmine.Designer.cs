@@ -44,6 +44,7 @@
             this.rdContrato = new System.Windows.Forms.RadioButton();
             this.rdTelefone = new System.Windows.Forms.RadioButton();
             this.tabTipo = new System.Windows.Forms.TabPage();
+            this.lblEditCampos = new System.Windows.Forms.Label();
             this.lblT2Dot2 = new System.Windows.Forms.Label();
             this.lblCampo2T2 = new System.Windows.Forms.Label();
             this.txtCampo2T2 = new System.Windows.Forms.TextBox();
@@ -76,9 +77,9 @@
             this.lblColunas = new System.Windows.Forms.Label();
             this.txtColunas = new System.Windows.Forms.TextBox();
             this.tbSaida = new System.Windows.Forms.TabPage();
-            this.txtSaidaChamado = new System.Windows.Forms.TextBox();
-            this.lblEditCampos = new System.Windows.Forms.Label();
             this.btnCopiar = new System.Windows.Forms.Button();
+            this.txtSaidaChamado = new System.Windows.Forms.TextBox();
+            this.txtAssuntoChamado = new System.Windows.Forms.TextBox();
             this.tabCampos.SuspendLayout();
             this.tbVisao.SuspendLayout();
             this.tabTipo.SuspendLayout();
@@ -89,7 +90,7 @@
             // btnLimpar
             // 
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(401, 400);
+            this.btnLimpar.Location = new System.Drawing.Point(401, 449);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(98, 43);
             this.btnLimpar.TabIndex = 36;
@@ -100,7 +101,7 @@
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(505, 400);
+            this.btnSair.Location = new System.Drawing.Point(505, 449);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(98, 43);
             this.btnSair.TabIndex = 35;
@@ -111,7 +112,7 @@
             // btnCarregar
             // 
             this.btnCarregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCarregar.Location = new System.Drawing.Point(6, 400);
+            this.btnCarregar.Location = new System.Drawing.Point(6, 449);
             this.btnCarregar.Name = "btnCarregar";
             this.btnCarregar.Size = new System.Drawing.Size(98, 43);
             this.btnCarregar.TabIndex = 34;
@@ -129,7 +130,7 @@
             this.tabCampos.Location = new System.Drawing.Point(12, 12);
             this.tabCampos.Name = "tabCampos";
             this.tabCampos.SelectedIndex = 0;
-            this.tabCampos.Size = new System.Drawing.Size(620, 487);
+            this.tabCampos.Size = new System.Drawing.Size(620, 536);
             this.tabCampos.TabIndex = 37;
             // 
             // tbVisao
@@ -288,6 +289,15 @@
             this.tabTipo.TabIndex = 1;
             this.tabTipo.Text = "Join";
             this.tabTipo.UseVisualStyleBackColor = true;
+            // 
+            // lblEditCampos
+            // 
+            this.lblEditCampos.AutoSize = true;
+            this.lblEditCampos.Location = new System.Drawing.Point(165, 9);
+            this.lblEditCampos.Name = "lblEditCampos";
+            this.lblEditCampos.Size = new System.Drawing.Size(148, 25);
+            this.lblEditCampos.TabIndex = 35;
+            this.lblEditCampos.Text = "Edit campos:";
             // 
             // lblT2Dot2
             // 
@@ -581,6 +591,7 @@
             // 
             // tbSaida
             // 
+            this.tbSaida.Controls.Add(this.txtAssuntoChamado);
             this.tbSaida.Controls.Add(this.btnCopiar);
             this.tbSaida.Controls.Add(this.txtSaidaChamado);
             this.tbSaida.Controls.Add(this.btnSair);
@@ -589,32 +600,15 @@
             this.tbSaida.Location = new System.Drawing.Point(4, 34);
             this.tbSaida.Name = "tbSaida";
             this.tbSaida.Padding = new System.Windows.Forms.Padding(3);
-            this.tbSaida.Size = new System.Drawing.Size(612, 449);
+            this.tbSaida.Size = new System.Drawing.Size(612, 498);
             this.tbSaida.TabIndex = 3;
             this.tbSaida.Text = "Saida";
             this.tbSaida.UseVisualStyleBackColor = true;
             // 
-            // txtSaidaChamado
-            // 
-            this.txtSaidaChamado.Location = new System.Drawing.Point(3, 6);
-            this.txtSaidaChamado.Multiline = true;
-            this.txtSaidaChamado.Name = "txtSaidaChamado";
-            this.txtSaidaChamado.Size = new System.Drawing.Size(600, 388);
-            this.txtSaidaChamado.TabIndex = 0;
-            // 
-            // lblEditCampos
-            // 
-            this.lblEditCampos.AutoSize = true;
-            this.lblEditCampos.Location = new System.Drawing.Point(165, 9);
-            this.lblEditCampos.Name = "lblEditCampos";
-            this.lblEditCampos.Size = new System.Drawing.Size(148, 25);
-            this.lblEditCampos.TabIndex = 35;
-            this.lblEditCampos.Text = "Edit campos:";
-            // 
             // btnCopiar
             // 
             this.btnCopiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCopiar.Location = new System.Drawing.Point(297, 400);
+            this.btnCopiar.Location = new System.Drawing.Point(297, 449);
             this.btnCopiar.Name = "btnCopiar";
             this.btnCopiar.Size = new System.Drawing.Size(98, 43);
             this.btnCopiar.TabIndex = 37;
@@ -622,11 +616,26 @@
             this.btnCopiar.UseVisualStyleBackColor = true;
             this.btnCopiar.Click += new System.EventHandler(this.btnCopiar_Click);
             // 
+            // txtSaidaChamado
+            // 
+            this.txtSaidaChamado.Location = new System.Drawing.Point(3, 43);
+            this.txtSaidaChamado.Multiline = true;
+            this.txtSaidaChamado.Name = "txtSaidaChamado";
+            this.txtSaidaChamado.Size = new System.Drawing.Size(600, 400);
+            this.txtSaidaChamado.TabIndex = 0;
+            // 
+            // txtAssuntoChamado
+            // 
+            this.txtAssuntoChamado.Location = new System.Drawing.Point(6, 6);
+            this.txtAssuntoChamado.Name = "txtAssuntoChamado";
+            this.txtAssuntoChamado.Size = new System.Drawing.Size(597, 31);
+            this.txtAssuntoChamado.TabIndex = 38;
+            // 
             // frmChamadosRedmine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 511);
+            this.ClientSize = new System.Drawing.Size(636, 555);
             this.Controls.Add(this.tabCampos);
             this.Name = "frmChamadosRedmine";
             this.Text = "frmChamadosRedmine";
@@ -697,5 +706,6 @@
         private System.Windows.Forms.TextBox txtCampo2T2;
         private System.Windows.Forms.Label lblEditCampos;
         private System.Windows.Forms.Button btnCopiar;
+        private System.Windows.Forms.TextBox txtAssuntoChamado;
     }
 }

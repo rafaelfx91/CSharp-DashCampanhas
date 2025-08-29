@@ -258,6 +258,8 @@ namespace replace_campanhas
                 //Valida a visao que esta selecionada
                 var visao = retornoVisao();
 
+                txtAssuntoChamado.Text = "Mapeamento de uma nova tabela "+txtTabelaT2.Text;
+
                 StringBuilder textoFinal = new StringBuilder();
                 //Chamado completo
                 textoFinal.AppendLine("Solicito mapeamento de uma nova tabela.");
@@ -298,6 +300,8 @@ namespace replace_campanhas
             {
                 var visao = retornoVisao();
 
+                txtAssuntoChamado.Text = "Mapeamento de uma nova coluna da tabela " + txtTabelaT2.Text;
+
                 StringBuilder textoFinal = new StringBuilder();
 
                 textoFinal.AppendLine("Solicito mapeamento de uma nova coluna.");
@@ -329,6 +333,7 @@ namespace replace_campanhas
             txtTabelaT2.Clear();
             txtMotivo.Clear();
             txtColunas.Clear();
+            txtAssuntoChamado.Clear();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
