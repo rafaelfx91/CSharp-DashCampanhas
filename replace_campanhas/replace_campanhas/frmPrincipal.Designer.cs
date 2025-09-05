@@ -38,6 +38,7 @@
             this.chamadoRedmineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mARTECHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trocaFrasesMIGRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pecasHtmlCPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validaFraseV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validaSMSSolicitanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,7 +65,7 @@
             this.repicksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stringUpLowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pecasHtmlCPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.internalizacaoRedmineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,7 +106,8 @@
             this.gerarNomeNoSASToolStripMenuItem,
             this.gerarNomeNoSASV2ToolStripMenuItem,
             this.agendamentoCampanhasJIRAToolStripMenuItem,
-            this.chamadoRedmineToolStripMenuItem});
+            this.chamadoRedmineToolStripMenuItem,
+            this.internalizacaoRedmineToolStripMenuItem});
             this.sASToolStripMenuItem.Name = "sASToolStripMenuItem";
             this.sASToolStripMenuItem.Size = new System.Drawing.Size(78, 41);
             this.sASToolStripMenuItem.Text = "SAS";
@@ -113,14 +115,14 @@
             // gerarNomeNoSASToolStripMenuItem
             // 
             this.gerarNomeNoSASToolStripMenuItem.Name = "gerarNomeNoSASToolStripMenuItem";
-            this.gerarNomeNoSASToolStripMenuItem.Size = new System.Drawing.Size(529, 42);
+            this.gerarNomeNoSASToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
             this.gerarNomeNoSASToolStripMenuItem.Text = "Gerar nome campanha";
             this.gerarNomeNoSASToolStripMenuItem.Click += new System.EventHandler(this.gerarNomeNoSASToolStripMenuItem_Click);
             // 
             // gerarNomeNoSASV2ToolStripMenuItem
             // 
             this.gerarNomeNoSASV2ToolStripMenuItem.Name = "gerarNomeNoSASV2ToolStripMenuItem";
-            this.gerarNomeNoSASV2ToolStripMenuItem.Size = new System.Drawing.Size(529, 42);
+            this.gerarNomeNoSASV2ToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
             this.gerarNomeNoSASV2ToolStripMenuItem.Text = "Gerar nome campanhaV2";
             this.gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
             this.gerarNomeNoSASV2ToolStripMenuItem.Click += new System.EventHandler(this.gerarNomeNoSASV2ToolStripMenuItem_Click);
@@ -128,15 +130,15 @@
             // agendamentoCampanhasJIRAToolStripMenuItem
             // 
             this.agendamentoCampanhasJIRAToolStripMenuItem.Name = "agendamentoCampanhasJIRAToolStripMenuItem";
-            this.agendamentoCampanhasJIRAToolStripMenuItem.Size = new System.Drawing.Size(529, 42);
+            this.agendamentoCampanhasJIRAToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
             this.agendamentoCampanhasJIRAToolStripMenuItem.Text = "Agendamento campanhas (JIRA)";
             this.agendamentoCampanhasJIRAToolStripMenuItem.Click += new System.EventHandler(this.agendamentoCampanhasJIRAToolStripMenuItem_Click);
             // 
             // chamadoRedmineToolStripMenuItem
             // 
             this.chamadoRedmineToolStripMenuItem.Name = "chamadoRedmineToolStripMenuItem";
-            this.chamadoRedmineToolStripMenuItem.Size = new System.Drawing.Size(529, 42);
-            this.chamadoRedmineToolStripMenuItem.Text = "Chamado Mapeamento (redmine)";
+            this.chamadoRedmineToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.chamadoRedmineToolStripMenuItem.Text = "Mapeamento (Redmine)";
             this.chamadoRedmineToolStripMenuItem.Click += new System.EventHandler(this.chamadoRedmineToolStripMenuItem_Click);
             // 
             // mARTECHToolStripMenuItem
@@ -154,6 +156,13 @@
             this.trocaFrasesMIGRAToolStripMenuItem.Size = new System.Drawing.Size(395, 42);
             this.trocaFrasesMIGRAToolStripMenuItem.Text = "Troca frases (Migracao)";
             this.trocaFrasesMIGRAToolStripMenuItem.Click += new System.EventHandler(this.trocaFrasesMIGRAToolStripMenuItem_Click);
+            // 
+            // pecasHtmlCPToolStripMenuItem
+            // 
+            this.pecasHtmlCPToolStripMenuItem.Name = "pecasHtmlCPToolStripMenuItem";
+            this.pecasHtmlCPToolStripMenuItem.Size = new System.Drawing.Size(395, 42);
+            this.pecasHtmlCPToolStripMenuItem.Text = "Pecas html (CP)";
+            this.pecasHtmlCPToolStripMenuItem.Click += new System.EventHandler(this.pecasHtmlCPToolStripMenuItem_Click);
             // 
             // sMSToolStripMenuItem
             // 
@@ -365,12 +374,12 @@
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
-            // pecasHtmlCPToolStripMenuItem
+            // internalizacaoRedmineToolStripMenuItem
             // 
-            this.pecasHtmlCPToolStripMenuItem.Name = "pecasHtmlCPToolStripMenuItem";
-            this.pecasHtmlCPToolStripMenuItem.Size = new System.Drawing.Size(395, 42);
-            this.pecasHtmlCPToolStripMenuItem.Text = "Pecas html (CP)";
-            this.pecasHtmlCPToolStripMenuItem.Click += new System.EventHandler(this.pecasHtmlCPToolStripMenuItem_Click);
+            this.internalizacaoRedmineToolStripMenuItem.Name = "internalizacaoRedmineToolStripMenuItem";
+            this.internalizacaoRedmineToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.internalizacaoRedmineToolStripMenuItem.Text = "Internalizacao (Redmine)";
+            this.internalizacaoRedmineToolStripMenuItem.Click += new System.EventHandler(this.internalizacaoRedmineToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -433,6 +442,7 @@
         private System.Windows.Forms.ToolStripMenuItem mARTECHToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trocaFrasesMIGRAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pecasHtmlCPToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem internalizacaoRedmineToolStripMenuItem;
     }
 }
 

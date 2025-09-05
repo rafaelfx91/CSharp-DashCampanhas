@@ -63,7 +63,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versao: DEBUG";
             else
-                lblVersion.Text = "Versao: V3.8M";
+                lblVersion.Text = "Versao: V3.9RM";
 
             desabilitaForms();
 
@@ -88,17 +88,23 @@ namespace replace_campanhas
             gerarNomeNoSASV2ToolStripMenuItem.Visible = false;
             sASToolStripMenuItem.Visible = false;
             chamadoRedmineToolStripMenuItem.Visible = false;
+            internalizacaoRedmineToolStripMenuItem.Visible = false;
+
             //SMS Menu            
             validaFraseV2ToolStripMenuItem.Visible = false;
+
             //Push menu 
             validarFrasePUSHToolStripMenuItem.Visible = false;
             claroPayToolStripMenuItem.Visible = false;
+
             //Html Menu
             validarHtmlToolStripMenuItem.Visible = false;
+
             //RCS Menu
             RCS2validacaoToolStripMenuItem.Visible = false;
             RCS1validacaoToolStripMenuItem.Visible = false;
             RCS3validacaoToolStripMenuItem.Visible = false;
+
             //Outros menu
             hIKEToolStripMenuItem.Visible = false;
             testeToolStripMenuItem.Visible = false;
@@ -172,6 +178,7 @@ namespace replace_campanhas
                 sASToolStripMenuItem.Visible = true;
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
                 chamadoRedmineToolStripMenuItem.Visible = true;
+                internalizacaoRedmineToolStripMenuItem.Visible = true;
 
                 //SMS Menu
                 validaFraseV2ToolStripMenuItem.Visible = true;
@@ -351,6 +358,21 @@ namespace replace_campanhas
             //frmAgendamentos novoFormFilho = new frmAgendamentos(fd);
             //novoFormFilho.MdiParent = this;
             //novoFormFilho.Show();
+        }
+
+        private void internalizacaoRedmineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmInternalizacaoChamado")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmInternalizacaoChamado novoFormFilho = new frmInternalizacaoChamado();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
         }
 
         //SMS MENU

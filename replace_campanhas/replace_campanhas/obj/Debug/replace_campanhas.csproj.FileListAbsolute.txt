@@ -164,3 +164,4 @@ C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replac
 C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\obj\Debug\Dash.exe
 C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\obj\Debug\Dash.pdb
 C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmHtmlCP.resources
+C:\Users\camaleao\Documents\GitHub\CSharp-DashCampanhas\replace_campanhas\replace_campanhas\obj\Debug\replace_campanhas.frmInternalizacaoChamado.resources
