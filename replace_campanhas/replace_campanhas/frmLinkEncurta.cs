@@ -61,11 +61,10 @@ namespace replace_campanhas
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
-            sb.AppendLine(txtCentrodecusto.Text.ToUpper()+" - "+txtLink.Text);
+            sb.AppendLine(txtCentrodecusto.Text.ToUpper()+" - "+txtLink.Text.ToUpper());
             txtLink.Text = "";
             txtSaida.Text = sb.ToString();
             txtLink.Focus();
-            sb.Clear();
 
         }
 
