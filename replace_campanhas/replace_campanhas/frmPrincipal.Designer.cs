@@ -36,6 +36,7 @@
             this.gerarNomeNoSASV2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendamentoCampanhasJIRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chamadoRedmineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.internalizacaoRedmineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mARTECHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trocaFrasesMIGRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pecasHtmlCPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,13 +66,13 @@
             this.repicksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stringUpLowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.internalizacaoRedmineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.linkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblVersion
             // 
-            this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVersion.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblVersion.AutoSize = true;
             this.lblVersion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblVersion.Location = new System.Drawing.Point(-3, 45);
@@ -107,7 +108,8 @@
             this.gerarNomeNoSASV2ToolStripMenuItem,
             this.agendamentoCampanhasJIRAToolStripMenuItem,
             this.chamadoRedmineToolStripMenuItem,
-            this.internalizacaoRedmineToolStripMenuItem});
+            this.internalizacaoRedmineToolStripMenuItem,
+            this.linkToolStripMenuItem});
             this.sASToolStripMenuItem.Name = "sASToolStripMenuItem";
             this.sASToolStripMenuItem.Size = new System.Drawing.Size(78, 41);
             this.sASToolStripMenuItem.Text = "SAS";
@@ -140,6 +142,13 @@
             this.chamadoRedmineToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
             this.chamadoRedmineToolStripMenuItem.Text = "Mapeamento (Redmine)";
             this.chamadoRedmineToolStripMenuItem.Click += new System.EventHandler(this.chamadoRedmineToolStripMenuItem_Click);
+            // 
+            // internalizacaoRedmineToolStripMenuItem
+            // 
+            this.internalizacaoRedmineToolStripMenuItem.Name = "internalizacaoRedmineToolStripMenuItem";
+            this.internalizacaoRedmineToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.internalizacaoRedmineToolStripMenuItem.Text = "Internalizacao (Redmine)";
+            this.internalizacaoRedmineToolStripMenuItem.Click += new System.EventHandler(this.internalizacaoRedmineToolStripMenuItem_Click);
             // 
             // mARTECHToolStripMenuItem
             // 
@@ -374,12 +383,12 @@
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
-            // internalizacaoRedmineToolStripMenuItem
+            // linkToolStripMenuItem
             // 
-            this.internalizacaoRedmineToolStripMenuItem.Name = "internalizacaoRedmineToolStripMenuItem";
-            this.internalizacaoRedmineToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
-            this.internalizacaoRedmineToolStripMenuItem.Text = "Internalizacao (Redmine)";
-            this.internalizacaoRedmineToolStripMenuItem.Click += new System.EventHandler(this.internalizacaoRedmineToolStripMenuItem_Click);
+            this.linkToolStripMenuItem.Name = "linkToolStripMenuItem";
+            this.linkToolStripMenuItem.Size = new System.Drawing.Size(513, 42);
+            this.linkToolStripMenuItem.Text = "Link (ShortLink)";
+            this.linkToolStripMenuItem.Click += new System.EventHandler(this.linkToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -443,6 +452,7 @@
         private System.Windows.Forms.ToolStripMenuItem trocaFrasesMIGRAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pecasHtmlCPToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem internalizacaoRedmineToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem linkToolStripMenuItem;
     }
 }
 

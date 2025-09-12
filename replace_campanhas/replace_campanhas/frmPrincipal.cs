@@ -63,7 +63,7 @@ namespace replace_campanhas
             if (debugVisual)
                 lblVersion.Text = "Versao: DEBUG";
             else
-                lblVersion.Text = "Versao: V3.9RM";
+                lblVersion.Text = "Versao: V3.10L";
 
             desabilitaForms();
 
@@ -89,6 +89,7 @@ namespace replace_campanhas
             sASToolStripMenuItem.Visible = false;
             chamadoRedmineToolStripMenuItem.Visible = false;
             internalizacaoRedmineToolStripMenuItem.Visible = false;
+            linkToolStripMenuItem.Visible = false;
 
             //SMS Menu            
             validaFraseV2ToolStripMenuItem.Visible = false;
@@ -126,6 +127,7 @@ namespace replace_campanhas
                 //SAS menu
                 sASToolStripMenuItem.Visible = true;
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
+                linkToolStripMenuItem.Visible = true;
 
                 //SMS Menu
                 validaFraseV2ToolStripMenuItem.Visible = true;
@@ -179,6 +181,7 @@ namespace replace_campanhas
                 gerarNomeNoSASV2ToolStripMenuItem.Visible = true;
                 chamadoRedmineToolStripMenuItem.Visible = true;
                 internalizacaoRedmineToolStripMenuItem.Visible = true;
+                linkToolStripMenuItem.Visible = true;
 
                 //SMS Menu
                 validaFraseV2ToolStripMenuItem.Visible = true;
@@ -371,6 +374,22 @@ namespace replace_campanhas
                 }
             }
             frmInternalizacaoChamado novoFormFilho = new frmInternalizacaoChamado();
+            novoFormFilho.MdiParent = this;
+            novoFormFilho.Show();
+        }
+
+
+        private void linkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Name == "frmLinkEncurta")
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            frmLinkEncurta novoFormFilho = new frmLinkEncurta();
             novoFormFilho.MdiParent = this;
             novoFormFilho.Show();
         }

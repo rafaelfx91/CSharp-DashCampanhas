@@ -333,6 +333,12 @@
     <Compile Include="frmInternalizacaoChamado.Designer.cs">
       <DependentUpon>frmInternalizacaoChamado.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLinkEncurta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLinkEncurta.Designer.cs">
+      <DependentUpon>frmLinkEncurta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNomeCampanhasV2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -542,6 +548,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmInternalizacaoChamado.resx">
       <DependentUpon>frmInternalizacaoChamado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLinkEncurta.resx">
+      <DependentUpon>frmLinkEncurta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNomeCampanhasV2.resx">
       <DependentUpon>frmNomeCampanhasV2.cs</DependentUpon>
